@@ -9,7 +9,7 @@
     
     <title>
         
-            Linux du 命令 |
+            剑指 Offer II 049. 从根节点到叶节点的路径数字之和 |
         
         Learning Road Map
     </title>
@@ -150,7 +150,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">Linux du 命令</span>
+            <span class="title-hover-animation">剑指 Offer II 049. 从根节点到叶节点的路径数字之和</span>
         </div>
 
         
@@ -169,8 +169,8 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fas fa-edit"></i>&nbsp;
-        <span class="pc">2022-09-09 11:34:35</span>
-        <span class="mobile">2022-09-09 11:34</span>
+        <span class="pc">2022-09-11 18:02:44</span>
+        <span class="mobile">2022-09-11 18:02</span>
     </span>
     
         <span class="article-categories article-meta-item">
@@ -178,7 +178,7 @@
             <ul>
                 
                     <li>
-                        <a href="/categories/Linux-%E5%91%BD%E4%BB%A4/">Linux 命令</a>&nbsp;
+                        <a href="/categories/%E5%89%91%E6%8C%87-Offer-II/">剑指 Offer II</a>&nbsp;
                     </li>
                 
             </ul>
@@ -190,7 +190,15 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/Linux/">Linux</a>&nbsp;
+                        <a href="/tags/%E6%A0%91/">树</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/">深度优先搜索</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a>&nbsp;
                     </li>
                 
             </ul>
@@ -209,8 +217,32 @@
         
 
         <div class="article-content markdown-body">
-            <p>Linux du 命令用于查看目录或文件的大小</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">- 展示目录或子目录的大小 B/Kib/MiB:</span><br><span class="line">  du -&#123;&#123;b|k|m&#125;&#125; &#123;&#123;path/to/directory&#125;&#125;</span><br><span class="line"></span><br><span class="line">- 展示目录或文件的大小 -h便于阅读:</span><br><span class="line">  du -h &#123;&#123;path/to/directory&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Show the size of a single directory, in human-readable units:</span><br><span class="line">  du -sh &#123;&#123;path/to/directory&#125;&#125;</span><br><span class="line"></span><br><span class="line">- List the human-readable sizes of a directory and of all the files and directories within it:</span><br><span class="line">  du -ah &#123;&#123;path/to/directory&#125;&#125;</span><br><span class="line"></span><br><span class="line">- List the human-readable sizes of a directory and any subdirectories, up to N levels deep:</span><br><span class="line">  du -h --max-depth=N &#123;&#123;path/to/directory&#125;&#125;</span><br><span class="line"></span><br><span class="line">- List the human-readable size of all .jpg files in subdirectories of the current directory, and show a cumulative total at the end:</span><br><span class="line">  du -ch &#123;&#123;*/*.jpg&#125;&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+            <h1 id="剑指-Offer-II-049-从根节点到叶节点的路径数字之和"><a href="#剑指-Offer-II-049-从根节点到叶节点的路径数字之和" class="headerlink" title="剑指 Offer II 049. 从根节点到叶节点的路径数字之和"></a><a class="link"   target="_blank" rel="noopener" href="https://leetcode.cn/problems/3Etpl5/" >剑指 Offer II 049. 从根节点到叶节点的路径数字之和<i class="fas fa-external-link-alt"></i></a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
+<p>Related Topics: <a class="link"   target="_blank" rel="noopener" href="https://leetcode.cn/tag/tree/" >树<i class="fas fa-external-link-alt"></i></a>, <a class="link"   target="_blank" rel="noopener" href="https://leetcode.cn/tag/depth-first-search/" >深度优先搜索<i class="fas fa-external-link-alt"></i></a>, <a class="link"   target="_blank" rel="noopener" href="https://leetcode.cn/tag/binary-tree/" >二叉树<i class="fas fa-external-link-alt"></i></a></p>
+<p>给定一个二叉树的根节点 <code>root</code> ，树中每个节点都存放有一个 <code>0</code> 到 <code>9</code> 之间的数字。</p>
+<p>每条从根节点到叶节点的路径都代表一个数字：</p>
+<ul>
+<li>例如，从根节点到叶节点的路径 <code>1 -&gt; 2 -&gt; 3</code> 表示数字 <code>123</code> 。</li>
+</ul>
+<p>计算从根节点到叶节点生成的 <strong>所有数字之和</strong> 。</p>
+<p><strong>叶节点</strong> 是指没有子节点的节点。</p>
+<p><strong>示例 1：</strong></p>
+<p><img src="https://assets.leetcode.com/uploads/2021/02/19/num1tree.jpg"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">输入：root = [1,2,3]</span><br><span class="line">输出：25</span><br><span class="line">解释：</span><br><span class="line">从根到叶子节点路径 1-&gt;2 代表数字 12</span><br><span class="line">从根到叶子节点路径 1-&gt;3 代表数字 13</span><br><span class="line">因此，数字总和 = 12 + 13 = 25</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<p><img src="https://assets.leetcode.com/uploads/2021/02/19/num2tree.jpg"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">输入：root = [4,9,0,5,1]</span><br><span class="line">输出：1026</span><br><span class="line">解释：</span><br><span class="line">从根到叶子节点路径 4-&gt;9-&gt;5 代表数字 495</span><br><span class="line">从根到叶子节点路径 4-&gt;9-&gt;1 代表数字 491</span><br><span class="line">从根到叶子节点路径 4-&gt;0 代表数字 40</span><br><span class="line">因此，数字总和 = 495 + 491 + 40 = 1026</span><br></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li>树中节点的数目在范围 <code>[1, 1000]</code> 内</li>
+<li><code>0 &lt;= Node.val &lt;= 9</code></li>
+<li>树的深度不超过 <code>10</code></li>
+</ul>
+<p>注意：本题与主站 129 题相同： <a class="link"   target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/sum-root-to-leaf-numbers/" >https://leetcode-cn.com/problems/sum-root-to-leaf-numbers/<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * struct TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode *left;</span></span><br><span class="line"><span class="comment"> *     TreeNode *right;</span></span><br><span class="line"><span class="comment"> *     TreeNode() : val(0), left(nullptr), right(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="type">int</span> sum = <span class="number">0</span>;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">DFS</span><span class="params">(TreeNode* root, <span class="type">int</span> i)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">nullptr</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        i = i * <span class="number">10</span> + root -&gt; val;</span><br><span class="line">        <span class="keyword">if</span> (root -&gt; left == <span class="literal">nullptr</span> &amp;&amp; root -&gt; right == <span class="literal">nullptr</span>) &#123;</span><br><span class="line">            sum += i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">DFS</span>(root -&gt; left, i);</span><br><span class="line">        <span class="built_in">DFS</span>(root -&gt; right, i);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">sumNumbers</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">DFS</span>(root,<span class="number">0</span>);</span><br><span class="line">        <span class="keyword">return</span> sum;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
         </div>
 
         
@@ -219,7 +251,15 @@
             <ul class="post-tags-box">
                 
                     <li class="tag-item">
-                        <a href="/tags/Linux/">#Linux</a>&nbsp;
+                        <a href="/tags/%E6%A0%91/">#树</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item">
+                        <a href="/tags/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/">#深度优先搜索</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item">
+                        <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">#二叉树</a>&nbsp;
                     </li>
                 
             </ul>
@@ -228,21 +268,21 @@
         
             <div class="article-nav">
                 
-                    <div class="article-prev">
-                        <a class="prev"
-                           rel="prev"
-                           href="/2022/09/09/Linux-uname-%E5%91%BD%E4%BB%A4/"
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2022/09/11/%E5%89%91%E6%8C%87-Offer-II-038-%E6%AF%8F%E6%97%A5%E6%B8%A9%E5%BA%A6/"
                         >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">Linux uname 命令</span>
-                                <span class="post-nav-item">Prev posts</span>
+                                <span class="post-nav-title-item">剑指 Offer II 038. 每日温度</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
                             </span>
                         </a>
                     </div>
-                
                 
             </div>
         
