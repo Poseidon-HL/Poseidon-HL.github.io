@@ -9,7 +9,7 @@
     
     <title>
         
-            Hello World |
+            剑指 Offer II 003. 前 n 个数字二进制中 1 的个数 |
         
         Learning Road Map
     </title>
@@ -66,6 +66,30 @@
                             </a>
                         </li>
                     
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                CATEGORIES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                TAGS
+                            </a>
+                        </li>
+                    
                     
                         <li class="menu-item search search-popup-trigger">
                             <i class="fas fa-search"></i>
@@ -92,6 +116,21 @@
                        href="/">HOME</a>
                 </li>
             
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">CATEGORIES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">TAGS</a>
+                </li>
+            
         </ul>
     </div>
 
@@ -111,7 +150,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">Hello World</span>
+            <span class="title-hover-animation">剑指 Offer II 003. 前 n 个数字二进制中 1 的个数</span>
         </div>
 
         
@@ -130,8 +169,8 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fas fa-edit"></i>&nbsp;
-        <span class="pc">2022-09-09 16:13:15</span>
-        <span class="mobile">2022-09-09 16:13</span>
+        <span class="pc">2022-09-11 16:08:04</span>
+        <span class="mobile">2022-09-11 16:08</span>
     </span>
     
     
@@ -148,20 +187,28 @@
         
 
         <div class="article-content markdown-body">
-            <p>Welcome to <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/" >Hexo<i class="fas fa-external-link-alt"></i></a>! This is your very first post. Check <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/" >documentation<i class="fas fa-external-link-alt"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html" >troubleshooting<i class="fas fa-external-link-alt"></i></a> or you can ask me on <a class="link"   target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues" >GitHub<i class="fas fa-external-link-alt"></i></a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+            <h1 id="剑指-Offer-II-003-前-n-个数字二进制中-1-的个数"><a href="#剑指-Offer-II-003-前-n-个数字二进制中-1-的个数" class="headerlink" title="剑指 Offer II 003. 前 n 个数字二进制中 1 的个数"></a><a class="link"   target="_blank" rel="noopener" href="https://leetcode.cn/problems/w3tCBm/" >剑指 Offer II 003. 前 n 个数字二进制中 1 的个数<i class="fas fa-external-link-alt"></i></a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>简单</strong>  </p>
+<p>Related Topics: <a class="link"   target="_blank" rel="noopener" href="https://leetcode.cn/tag/bit-manipulation/" >位运算<i class="fas fa-external-link-alt"></i></a>, <a class="link"   target="_blank" rel="noopener" href="https://leetcode.cn/tag/dynamic-programming/" >动态规划<i class="fas fa-external-link-alt"></i></a></p>
+<p>给定一个非负整数 <code>n</code>，请计算 <code>0</code> 到 <code>n</code> 之间的每个数字的二进制表示中 1 的个数，并输出一个数组。</p>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">输入: n = 2</span><br><span class="line">输出: [0,1,1]</span><br><span class="line">解释: </span><br><span class="line">0 --&gt; 0</span><br><span class="line">1 --&gt; 1</span><br><span class="line">2 --&gt; 10</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html" >Writing<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p><strong>示例 2:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">输入: n = 5</span><br><span class="line">输出: [0,1,1,2,1,2]</span><br><span class="line">解释:</span><br><span class="line">0 --&gt; 0</span><br><span class="line">1 --&gt; 1</span><br><span class="line">2 --&gt; 10</span><br><span class="line">3 --&gt; 11</span><br><span class="line">4 --&gt; 100</span><br><span class="line">5 --&gt; 101</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/server.html" >Server<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html" >Generating<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html" >Deployment<i class="fas fa-external-link-alt"></i></a></p>
-
+<p><strong>说明 :</strong></p>
+<ul>
+<li>0 &lt;&#x3D; n &lt;&#x3D; 10<sup>5</sup></li>
+</ul>
+<p><strong>进阶:</strong></p>
+<ul>
+<li>给出时间复杂度为 <code>O(n*sizeof(integer))</code>的解答非常容易。但你可以在线性时间 <code>O(n)</code>内用一趟扫描做到吗？</li>
+<li>要求算法的空间复杂度为 <code>O(n)</code> 。</li>
+<li>你能进一步完善解法吗？要求在C++或任何其他语言中不使用任何内置函数（如 C++ 中的 <code>__builtin_popcount</code>）来执行此操作。</li>
+</ul>
+<p>注意：本题与主站 338 题相同：<a class="link"   target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/counting-bits/" >https://leetcode-cn.com/problems/counting-bits/<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">countBits</span><span class="params">(<span class="type">int</span> n)</span> </span>&#123;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; result;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt;= n;i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (i == <span class="number">0</span>) &#123;</span><br><span class="line">                result.<span class="built_in">push_back</span>(<span class="number">0</span>);</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (i % <span class="number">2</span> == <span class="number">0</span>) &#123;</span><br><span class="line">                result.<span class="built_in">push_back</span>(result[i / <span class="number">2</span>]);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                result.<span class="built_in">push_back</span>(result[i / <span class="number">2</span>] + <span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
         </div>
 
         
@@ -171,29 +218,14 @@
         
             <div class="article-nav">
                 
-                    <div class="article-prev">
-                        <a class="prev"
-                           rel="prev"
-                           href="/2022/09/09/Linux-uname-%E5%91%BD%E4%BB%A4/"
-                        >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                            <span class="title flex-center">
-                                <span class="post-nav-title-item">Linux uname 命令</span>
-                                <span class="post-nav-item">Prev posts</span>
-                            </span>
-                        </a>
-                    </div>
-                
                 
                     <div class="article-next">
                         <a class="next"
                            rel="next"
-                           href="/2022/09/09/Linux-du-%E5%91%BD%E4%BB%A4/"
+                           href="/2022/09/11/Linux-chsh-%E5%91%BD%E4%BB%A4/"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">Linux du 命令</span>
+                                <span class="post-nav-title-item">Linux chsh 命令</span>
                                 <span class="post-nav-item">Next posts</span>
                             </span>
                             <span class="right arrow-icon flex-center">

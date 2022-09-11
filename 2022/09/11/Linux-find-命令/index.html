@@ -66,6 +66,30 @@
                             </a>
                         </li>
                     
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                CATEGORIES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                TAGS
+                            </a>
+                        </li>
+                    
                     
                         <li class="menu-item search search-popup-trigger">
                             <i class="fas fa-search"></i>
@@ -90,6 +114,21 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">CATEGORIES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">TAGS</a>
                 </li>
             
         </ul>
@@ -159,7 +198,8 @@
         
 
         <div class="article-content markdown-body">
-            <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">- 通过表达式查找文件:</span><br><span class="line">  find &#123;&#123;root_path&#125;&#125; -name &#x27;&#123;&#123;*.ext&#125;&#125;&#x27;</span><br><span class="line"></span><br><span class="line">- 通过路径或文件名查找文件:</span><br><span class="line">  find &#123;&#123;root_path&#125;&#125; -path &#x27;&#123;&#123;**/path/**/*.ext&#125;&#125;&#x27; -or -name &#x27;&#123;&#123;*pattern*&#125;&#125;&#x27;</span><br><span class="line"></span><br><span class="line">- Find directories matching a given name, in case-insensitive mode:</span><br><span class="line">  find &#123;&#123;root_path&#125;&#125; -type d -iname &#x27;&#123;&#123;*lib*&#125;&#125;&#x27;</span><br><span class="line"></span><br><span class="line">- Find files matching a given pattern, excluding specific paths:</span><br><span class="line">  find &#123;&#123;root_path&#125;&#125; -name &#x27;&#123;&#123;*.py&#125;&#125;&#x27; -not -path &#x27;&#123;&#123;*/site-packages/*&#125;&#125;&#x27;</span><br><span class="line"></span><br><span class="line">- Find files matching a given size range:</span><br><span class="line">  find &#123;&#123;root_path&#125;&#125; -size &#123;&#123;+500k&#125;&#125; -size &#123;&#123;-10M&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Run a command for each file (use &#123;&#125; within the command to access the filename):</span><br><span class="line">  find &#123;&#123;root_path&#125;&#125; -name &#x27;&#123;&#123;*.ext&#125;&#125;&#x27; -exec &#123;&#123;wc -l &#123;&#125; &#125;&#125;\;</span><br><span class="line"></span><br><span class="line">- Find files modified in the last 7 days and delete them:</span><br><span class="line">  find &#123;&#123;root_path&#125;&#125; -daystart -mtime -&#123;&#123;7&#125;&#125; -delete</span><br><span class="line"></span><br><span class="line">- Find empty (0 byte) files and delete them:</span><br><span class="line">  find &#123;&#123;root_path&#125;&#125; -type &#123;&#123;f&#125;&#125; -empty -delete</span><br></pre></td></tr></table></figure>
+            <p>Linux find命令用于查找文件或目录</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">- 通过表达式查找文件:</span><br><span class="line">  find &#123;&#123;root_path&#125;&#125; -name &#x27;&#123;&#123;*.ext&#125;&#125;&#x27;</span><br><span class="line"></span><br><span class="line">- 通过路径或文件名查找文件:</span><br><span class="line">  find &#123;&#123;root_path&#125;&#125; -path &#x27;&#123;&#123;**/path/**/*.ext&#125;&#125;&#x27; -or -name &#x27;&#123;&#123;*pattern*&#125;&#125;&#x27;</span><br><span class="line"></span><br><span class="line">- Find directories matching a given name, in case-insensitive mode:</span><br><span class="line">  find &#123;&#123;root_path&#125;&#125; -type d -iname &#x27;&#123;&#123;*lib*&#125;&#125;&#x27;</span><br><span class="line"></span><br><span class="line">- Find files matching a given pattern, excluding specific paths:</span><br><span class="line">  find &#123;&#123;root_path&#125;&#125; -name &#x27;&#123;&#123;*.py&#125;&#125;&#x27; -not -path &#x27;&#123;&#123;*/site-packages/*&#125;&#125;&#x27;</span><br><span class="line"></span><br><span class="line">- Find files matching a given size range:</span><br><span class="line">  find &#123;&#123;root_path&#125;&#125; -size &#123;&#123;+500k&#125;&#125; -size &#123;&#123;-10M&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Run a command for each file (use &#123;&#125; within the command to access the filename):</span><br><span class="line">  find &#123;&#123;root_path&#125;&#125; -name &#x27;&#123;&#123;*.ext&#125;&#125;&#x27; -exec &#123;&#123;wc -l &#123;&#125; &#125;&#125;\;</span><br><span class="line"></span><br><span class="line">- Find files modified in the last 7 days and delete them:</span><br><span class="line">  find &#123;&#123;root_path&#125;&#125; -daystart -mtime -&#123;&#123;7&#125;&#125; -delete</span><br><span class="line"></span><br><span class="line">- Find empty (0 byte) files and delete them:</span><br><span class="line">  find &#123;&#123;root_path&#125;&#125; -type &#123;&#123;f&#125;&#125; -empty -delete</span><br></pre></td></tr></table></figure>
         </div>
 
         
@@ -168,6 +208,21 @@
 
         
             <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2022/09/11/Linux-chsh-%E5%91%BD%E4%BB%A4/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Linux chsh 命令</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
                 
                 
                     <div class="article-next">
