@@ -13,34 +13,10 @@
       </tags>
   </entry>
   <entry>
-    <title>Linux chmod 命令</title>
-    <url>/2022/09/16/Linux-chmod-%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<p> Linux chmod 命令用于修改文件或目录的访问权限<br> Linux 文件权限分为三级：文件所有者、用户组、其他用户</p>
- <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"> - Give the [u]ser who owns a file the right to e[x]ecute it:</span><br><span class="line">  chmod u+x &#123;&#123;path/to/file&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Give the [u]ser rights to [r]ead and [w]rite to a file/directory:</span><br><span class="line">  chmod u+rw &#123;&#123;path/to/file_or_directory&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Remove e[x]ecutable rights from the [g]roup:</span><br><span class="line">  chmod g-x &#123;&#123;path/to/file&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Give [a]ll users rights to [r]ead and e[x]ecute:</span><br><span class="line">  chmod a+rx &#123;&#123;path/to/file&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Give [o]thers (not in the file owner&#x27;s group) the same rights as the [g]roup:</span><br><span class="line">  chmod o=g &#123;&#123;path/to/file&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Remove all rights from [o]thers:</span><br><span class="line">  chmod o= &#123;&#123;path/to/file&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Change permissions recursively giving [g]roup and [o]thers the ability to [w]rite:</span><br><span class="line">  chmod -R g+w,o+w &#123;&#123;path/to/directory&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Recursively give [a]ll users [r]ead permissions to files and e[X]ecute permissions to sub-directories within a directory:</span><br><span class="line">  chmod -R a+rX &#123;&#123;path/to/directory&#125;&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Linux 命令</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Linux chown 命令</title>
     <url>/2022/09/16/Linux-chown-%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<p>Linux chown 命令用于修改文件或目录的用户与用户组</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">- Change the owner user of a file/directory:</span><br><span class="line">  chown &#123;&#123;user&#125;&#125; &#123;&#123;path/to/file_or_directory&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Change the owner user and group of a file/directory:</span><br><span class="line">  chown &#123;&#123;user&#125;&#125;:&#123;&#123;group&#125;&#125; &#123;&#123;path/to/file_or_directory&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Recursively change the owner of a directory and its contents:</span><br><span class="line">  chown -R &#123;&#123;user&#125;&#125; &#123;&#123;path/to/directory&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Change the owner of a symbolic link:</span><br><span class="line">  chown -h &#123;&#123;user&#125;&#125; &#123;&#123;path/to/symlink&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Change the owner of a file/directory to match a reference file:</span><br><span class="line">  chown --reference=&#123;&#123;path/to/reference_file&#125;&#125; &#123;&#123;path/to/file_or_directory&#125;&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Linux 命令</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Linux du 命令</title>
-    <url>/2022/09/09/Linux-du-%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<p>Linux du 命令用于查看目录或文件的大小</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">- 展示目录或子目录的大小 B/Kib/MiB:</span><br><span class="line">  du -&#123;&#123;b|k|m&#125;&#125; &#123;&#123;path/to/directory&#125;&#125;</span><br><span class="line"></span><br><span class="line">- 展示目录或文件的大小 -h便于阅读:</span><br><span class="line">  du -h &#123;&#123;path/to/directory&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Show the size of a single directory, in human-readable units:</span><br><span class="line">  du -sh &#123;&#123;path/to/directory&#125;&#125;</span><br><span class="line"></span><br><span class="line">- List the human-readable sizes of a directory and of all the files and directories within it:</span><br><span class="line">  du -ah &#123;&#123;path/to/directory&#125;&#125;</span><br><span class="line"></span><br><span class="line">- List the human-readable sizes of a directory and any subdirectories, up to N levels deep:</span><br><span class="line">  du -h --max-depth=N &#123;&#123;path/to/directory&#125;&#125;</span><br><span class="line"></span><br><span class="line">- List the human-readable size of all .jpg files in subdirectories of the current directory, and show a cumulative total at the end:</span><br><span class="line">  du -ch &#123;&#123;*/*.jpg&#125;&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>Linux 命令</category>
       </categories>
@@ -62,10 +38,34 @@
       </tags>
   </entry>
   <entry>
+    <title>Linux chmod 命令</title>
+    <url>/2022/09/16/Linux-chmod-%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<p> Linux chmod 命令用于修改文件或目录的访问权限<br> Linux 文件权限分为三级：文件所有者、用户组、其他用户</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"> - Give the [u]ser who owns a file the right to e[x]ecute it:</span><br><span class="line">  chmod u+x &#123;&#123;path/to/file&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Give the [u]ser rights to [r]ead and [w]rite to a file/directory:</span><br><span class="line">  chmod u+rw &#123;&#123;path/to/file_or_directory&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Remove e[x]ecutable rights from the [g]roup:</span><br><span class="line">  chmod g-x &#123;&#123;path/to/file&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Give [a]ll users rights to [r]ead and e[x]ecute:</span><br><span class="line">  chmod a+rx &#123;&#123;path/to/file&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Give [o]thers (not in the file owner&#x27;s group) the same rights as the [g]roup:</span><br><span class="line">  chmod o=g &#123;&#123;path/to/file&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Remove all rights from [o]thers:</span><br><span class="line">  chmod o= &#123;&#123;path/to/file&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Change permissions recursively giving [g]roup and [o]thers the ability to [w]rite:</span><br><span class="line">  chmod -R g+w,o+w &#123;&#123;path/to/directory&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Recursively give [a]ll users [r]ead permissions to files and e[X]ecute permissions to sub-directories within a directory:</span><br><span class="line">  chmod -R a+rX &#123;&#123;path/to/directory&#125;&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Linux 命令</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Linux find 命令</title>
     <url>/2022/09/11/Linux-find-%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<p>Linux find 命令用于查找文件或目录</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">- 通过表达式查找文件:</span><br><span class="line">  find &#123;&#123;root_path&#125;&#125; -name &#x27;&#123;&#123;*.ext&#125;&#125;&#x27;</span><br><span class="line"></span><br><span class="line">- 通过路径或文件名查找文件:</span><br><span class="line">  find &#123;&#123;root_path&#125;&#125; -path &#x27;&#123;&#123;**/path/**/*.ext&#125;&#125;&#x27; -or -name &#x27;&#123;&#123;*pattern*&#125;&#125;&#x27;</span><br><span class="line"></span><br><span class="line">- Find directories matching a given name, in case-insensitive mode:</span><br><span class="line">  find &#123;&#123;root_path&#125;&#125; -type d -iname &#x27;&#123;&#123;*lib*&#125;&#125;&#x27;</span><br><span class="line"></span><br><span class="line">- Find files matching a given pattern, excluding specific paths:</span><br><span class="line">  find &#123;&#123;root_path&#125;&#125; -name &#x27;&#123;&#123;*.py&#125;&#125;&#x27; -not -path &#x27;&#123;&#123;*/site-packages/*&#125;&#125;&#x27;</span><br><span class="line"></span><br><span class="line">- Find files matching a given size range:</span><br><span class="line">  find &#123;&#123;root_path&#125;&#125; -size &#123;&#123;+500k&#125;&#125; -size &#123;&#123;-10M&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Run a command for each file (use &#123;&#125; within the command to access the filename):</span><br><span class="line">  find &#123;&#123;root_path&#125;&#125; -name &#x27;&#123;&#123;*.ext&#125;&#125;&#x27; -exec &#123;&#123;wc -l &#123;&#125; &#125;&#125;\;</span><br><span class="line"></span><br><span class="line">- Find files modified in the last 7 days and delete them:</span><br><span class="line">  find &#123;&#123;root_path&#125;&#125; -daystart -mtime -&#123;&#123;7&#125;&#125; -delete</span><br><span class="line"></span><br><span class="line">- Find empty (0 byte) files and delete them:</span><br><span class="line">  find &#123;&#123;root_path&#125;&#125; -type &#123;&#123;f&#125;&#125; -empty -delete</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Linux 命令</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux du 命令</title>
+    <url>/2022/09/09/Linux-du-%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<p>Linux du 命令用于查看目录或文件的大小</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">- 展示目录或子目录的大小 B/Kib/MiB:</span><br><span class="line">  du -&#123;&#123;b|k|m&#125;&#125; &#123;&#123;path/to/directory&#125;&#125;</span><br><span class="line"></span><br><span class="line">- 展示目录或文件的大小 -h便于阅读:</span><br><span class="line">  du -h &#123;&#123;path/to/directory&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Show the size of a single directory, in human-readable units:</span><br><span class="line">  du -sh &#123;&#123;path/to/directory&#125;&#125;</span><br><span class="line"></span><br><span class="line">- List the human-readable sizes of a directory and of all the files and directories within it:</span><br><span class="line">  du -ah &#123;&#123;path/to/directory&#125;&#125;</span><br><span class="line"></span><br><span class="line">- List the human-readable sizes of a directory and any subdirectories, up to N levels deep:</span><br><span class="line">  du -h --max-depth=N &#123;&#123;path/to/directory&#125;&#125;</span><br><span class="line"></span><br><span class="line">- List the human-readable size of all .jpg files in subdirectories of the current directory, and show a cumulative total at the end:</span><br><span class="line">  du -ch &#123;&#123;*/*.jpg&#125;&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>Linux 命令</category>
       </categories>
@@ -110,6 +110,11 @@
       </tags>
   </entry>
   <entry>
+    <title>Reference Docker</title>
+    <url>/2022/09/19/Reference-Docker/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>Linux uname 命令</title>
     <url>/2022/09/09/Linux-uname-%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<p>Linux uname 命令用于显示系统信息</p>
@@ -122,18 +127,8 @@
       </tags>
   </entry>
   <entry>
-    <title>Reference Docker</title>
-    <url>/2022/09/19/Reference-Docker/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>Reference Go</title>
     <url>/2022/09/19/Reference-Go/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>Reference Hbase</title>
-    <url>/2022/09/19/Reference-Hbase/</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -171,6 +166,40 @@
 ]]></content>
   </entry>
   <entry>
+    <title>Reference Hbase</title>
+    <url>/2022/09/19/Reference-Hbase/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>SQL练习 175. 组合两个表</title>
+    <url>/2022/09/20/SQL%E7%BB%83%E4%B9%A0-175-%E7%BB%84%E5%90%88%E4%B8%A4%E4%B8%AA%E8%A1%A8/</url>
+    <content><![CDATA[<h1 id="175-组合两个表"><a href="#175-组合两个表" class="headerlink" title="175. 组合两个表"></a><a href="https://leetcode.cn/problems/combine-two-tables/">175. 组合两个表</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>简单</strong>  </p>
+<p>Related Topics: <a href="https://leetcode.cn/tag/database/">数据库</a></p>
+<p><a class="sql-schema-link__1VAC">SQL架构</a></p>
+<p>表: <code>Person</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">+-------------+---------+</span><br><span class="line">| 列名         | 类型     |</span><br><span class="line">+-------------+---------+</span><br><span class="line">| PersonId    | int     |</span><br><span class="line">| FirstName   | varchar |</span><br><span class="line">| LastName    | varchar |</span><br><span class="line">+-------------+---------+</span><br><span class="line">personId 是该表的主键列。</span><br><span class="line">该表包含一些人的 ID 和他们的姓和名的信息。</span><br></pre></td></tr></table></figure>
+
+<p>表: <code>Address</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">+-------------+---------+</span><br><span class="line">| 列名         | 类型    |</span><br><span class="line">+-------------+---------+</span><br><span class="line">| AddressId   | int     |</span><br><span class="line">| PersonId    | int     |</span><br><span class="line">| City        | varchar |</span><br><span class="line">| State       | varchar |</span><br><span class="line">+-------------+---------+</span><br><span class="line">addressId 是该表的主键列。</span><br><span class="line">该表的每一行都包含一个 ID = PersonId 的人的城市和州的信息。</span><br></pre></td></tr></table></figure>
+
+<p>编写一个SQL查询来报告 <code>Person</code> 表中每个人的姓、名、城市和州。如果 <code>personId</code> 的地址不在 <code>Address</code> 表中，则报告为空  <code>null</code> 。</p>
+<p>以 <strong>任意顺序</strong> 返回结果表。</p>
+<p>查询结果格式如下所示。</p>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入: </span><br><span class="line">Person表:</span><br><span class="line">+----------+----------+-----------+</span><br><span class="line">| personId | lastName | firstName |</span><br><span class="line">+----------+----------+-----------+</span><br><span class="line">| 1        | Wang     | Allen     |</span><br><span class="line">| 2        | Alice    | Bob       |</span><br><span class="line">+----------+----------+-----------+</span><br><span class="line">Address表:</span><br><span class="line">+-----------+----------+---------------+------------+</span><br><span class="line">| addressId | personId | city          | state      |</span><br><span class="line">+-----------+----------+---------------+------------+</span><br><span class="line">| 1         | 2        | New York City | New York   |</span><br><span class="line">| 2         | 3        | Leetcode      | California |</span><br><span class="line">+-----------+----------+---------------+------------+</span><br><span class="line">输出: </span><br><span class="line">+-----------+----------+---------------+----------+</span><br><span class="line">| firstName | lastName | city          | state    |</span><br><span class="line">+-----------+----------+---------------+----------+</span><br><span class="line">| Allen     | Wang     | Null          | Null     |</span><br><span class="line">| Bob       | Alice    | New York City | New York |</span><br><span class="line">+-----------+----------+---------------+----------+</span><br><span class="line">解释: </span><br><span class="line">地址表中没有 personId = 1 的地址，所以它们的城市和州返回 null。</span><br><span class="line">addressId = 1 包含了 personId = 2 的地址信息。</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>MySQL</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Write your MySQL query statement below</span><br><span class="line"></span><br><span class="line">select Person.FirstName as firstName, Person.LastName as lastName, Address.City as city, Address.State as state </span><br><span class="line">from Person left join Address </span><br><span class="line">on Person.PersonId = Address.PersonId </span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>SQL 练习</category>
+      </categories>
+      <tags>
+        <tag>SQL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>go sync.Cond</title>
     <url>/2022/09/18/go-sync-Cond/</url>
     <content><![CDATA[<h3 id="sync-Cond-使用场景"><a href="#sync-Cond-使用场景" class="headerlink" title="sync.Cond 使用场景"></a>sync.Cond 使用场景</h3><ul>
@@ -197,41 +226,10 @@
 </ul>
 <h4 id="Signal-唤醒单个协程"><a href="#Signal-唤醒单个协程" class="headerlink" title="Signal 唤醒单个协程"></a>Signal 唤醒单个协程</h4><h4 id="Broadcast-唤醒所有等待协程"><a href="#Broadcast-唤醒所有等待协程" class="headerlink" title="Broadcast 唤醒所有等待协程"></a>Broadcast 唤醒所有等待协程</h4><h3 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h3><figure class="highlight go"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>go Reference</category>
+        <category>go sync</category>
       </categories>
       <tags>
         <tag>go</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>剑指 Offer II 014. 字符串中的变位词</title>
-    <url>/2022/09/11/%E5%89%91%E6%8C%87-Offer-II-014-%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E5%8F%98%E4%BD%8D%E8%AF%8D/</url>
-    <content><![CDATA[<h1 id="剑指-Offer-II-014-字符串中的变位词"><a href="#剑指-Offer-II-014-字符串中的变位词" class="headerlink" title="剑指 Offer II 014. 字符串中的变位词"></a><a href="https://leetcode.cn/problems/MPnaiL/">剑指 Offer II 014. 字符串中的变位词</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
-<p>Related Topics: <a href="https://leetcode.cn/tag/hash-table/">哈希表</a>, <a href="https://leetcode.cn/tag/two-pointers/">双指针</a>, <a href="https://leetcode.cn/tag/string/">字符串</a>, <a href="https://leetcode.cn/tag/sliding-window/">滑动窗口</a></p>
-<p>给定两个字符串 <code>s1</code> 和 <code>s2</code>，写一个函数来判断 <code>s2</code> 是否包含 <code>s1</code>的某个变位词。</p>
-<p>换句话说，第一个字符串的排列之一是第二个字符串的 <strong>子串</strong> 。</p>
-<p><strong>示例 1：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入: s1 = &quot;ab&quot; s2 = &quot;eidbaooo&quot;</span><br><span class="line">输出: True</span><br><span class="line">解释: s2 包含 s1 的排列之一 (&quot;ba&quot;).</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 2：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入: s1= &quot;ab&quot; s2 = &quot;eidboaoo&quot;</span><br><span class="line">输出: False</span><br></pre></td></tr></table></figure>
-
-<p><strong>提示：</strong></p>
-<ul>
-<li>1 &lt;&#x3D; s1.length, s2.length &lt;&#x3D; 10<sup>4</sup></li>
-<li><code>s1</code> 和 <code>s2</code> 仅包含小写字母</li>
-</ul>
-<p>注意：本题与主站 567 题相同： <a href="https://leetcode-cn.com/problems/permutation-in-string/">https://leetcode-cn.com/problems/permutation-in-string/</a></p>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="type">int</span> tar[<span class="number">26</span>];</span><br><span class="line">    <span class="type">int</span> src[<span class="number">26</span>];</span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">isEqual</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; <span class="number">26</span>;i++) &#123;</span><br><span class="line">            <span class="keyword">if</span>(tar[i] != src[i]) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">checkInclusion</span><span class="params">(string s1, string s2)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (s1.<span class="built_in">length</span>() &gt; s2.<span class="built_in">length</span>()) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; s1.<span class="built_in">length</span>();i++) &#123;</span><br><span class="line">            src[s1[i] - <span class="string">&#x27;a&#x27;</span>]++;</span><br><span class="line">            tar[s2[i] - <span class="string">&#x27;a&#x27;</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> start = <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> end = s1.<span class="built_in">length</span>();</span><br><span class="line">        <span class="keyword">while</span> (end &lt; s2.<span class="built_in">length</span>()) &#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="built_in">isEqual</span>()) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            tar[s2[start++] - <span class="string">&#x27;a&#x27;</span>]--;</span><br><span class="line">            tar[s2[end++] - <span class="string">&#x27;a&#x27;</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">isEqual</span>()) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>剑指 Offer II</category>
-      </categories>
-      <tags>
-        <tag>哈希表</tag>
-        <tag>双指针</tag>
-        <tag>字符串</tag>
-        <tag>滑动窗口</tag>
       </tags>
   </entry>
   <entry>
@@ -269,35 +267,37 @@
       </tags>
   </entry>
   <entry>
-    <title>剑指 Offer II 038. 每日温度</title>
-    <url>/2022/09/11/%E5%89%91%E6%8C%87-Offer-II-038-%E6%AF%8F%E6%97%A5%E6%B8%A9%E5%BA%A6/</url>
-    <content><![CDATA[<h1 id="剑指-Offer-II-038-每日温度"><a href="#剑指-Offer-II-038-每日温度" class="headerlink" title="剑指 Offer II 038. 每日温度"></a><a href="https://leetcode.cn/problems/iIQa4I/">剑指 Offer II 038. 每日温度</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
-<p>Related Topics: <a href="https://leetcode.cn/tag/stack/">栈</a>, <a href="https://leetcode.cn/tag/array/">数组</a>, <a href="https://leetcode.cn/tag/monotonic-stack/">单调栈</a></p>
-<p>请根据每日 <code>气温</code> 列表 <code>temperatures</code> ，重新生成一个列表，要求其对应位置的输出为：要想观测到更高的气温，至少需要等待的天数。如果气温在这之后都不会升高，请在该位置用 <code>0</code> 来代替。</p>
-<p><strong>示例 1:</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入: temperatures = [73,74,75,71,69,72,76,73]</span><br><span class="line">输出: [1,1,4,2,1,1,0,0]</span><br></pre></td></tr></table></figure>
+    <title>剑指 Offer II 005. 单词长度的最大乘积</title>
+    <url>/2022/09/20/%E5%89%91%E6%8C%87-Offer-II-005-%E5%8D%95%E8%AF%8D%E9%95%BF%E5%BA%A6%E7%9A%84%E6%9C%80%E5%A4%A7%E4%B9%98%E7%A7%AF/</url>
+    <content><![CDATA[<h1 id="剑指-Offer-II-005-单词长度的最大乘积"><a href="#剑指-Offer-II-005-单词长度的最大乘积" class="headerlink" title="剑指 Offer II 005. 单词长度的最大乘积"></a><a href="https://leetcode.cn/problems/aseY1I/">剑指 Offer II 005. 单词长度的最大乘积</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
+<p>Related Topics: <a href="https://leetcode.cn/tag/bit-manipulation/">位运算</a>, <a href="https://leetcode.cn/tag/array/">数组</a>, <a href="https://leetcode.cn/tag/string/">字符串</a></p>
+<p>给定一个字符串数组 <code>words</code>，请计算当两个字符串 <code>words[i]</code> 和 <code>words[j]</code> 不包含相同字符时，它们长度的乘积的最大值。假设字符串中只包含英语的小写字母。如果没有不包含相同字符的一对字符串，返回 0。</p>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入: words = [&quot;abcw&quot;,&quot;baz&quot;,&quot;foo&quot;,&quot;bar&quot;,&quot;fxyz&quot;,&quot;abcdef&quot;]</span><br><span class="line">输出: 16 </span><br><span class="line">解释: 这两个单词为 &quot;abcw&quot;, &quot;fxyz&quot;。它们不包含相同字符，且长度的乘积最大。</span><br></pre></td></tr></table></figure>
 
 <p><strong>示例 2:</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入: temperatures = [30,40,50,60]</span><br><span class="line">输出: [1,1,1,0]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入: words = [&quot;a&quot;,&quot;ab&quot;,&quot;abc&quot;,&quot;d&quot;,&quot;cd&quot;,&quot;bcd&quot;,&quot;abcd&quot;]</span><br><span class="line">输出: 4 </span><br><span class="line">解释: 这两个单词为 &quot;ab&quot;, &quot;cd&quot;。</span><br></pre></td></tr></table></figure>
 
 <p><strong>示例 3:</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入: temperatures = [30,60,90]</span><br><span class="line">输出: [1,1,0]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入: words = [&quot;a&quot;,&quot;aa&quot;,&quot;aaa&quot;,&quot;aaaa&quot;]</span><br><span class="line">输出: 0 </span><br><span class="line">解释: 不存在这样的两个单词。</span><br></pre></td></tr></table></figure>
 
 <p><strong>提示：</strong></p>
 <ul>
-<li>1 &lt;&#x3D; temperatures.length &lt;&#x3D; 10<sup>5</sup></li>
-<li><code>30 &lt;= temperatures[i] &lt;= 100</code></li>
+<li><code>2 &lt;= words.length &lt;= 1000</code></li>
+<li><code>1 &lt;= words[i].length &lt;= 1000</code></li>
+<li><code>words[i]</code> 仅包含小写字母</li>
 </ul>
-<p>注意：本题与主站 739 题相同： <a href="https://leetcode-cn.com/problems/daily-temperatures/">https://leetcode-cn.com/problems/daily-temperatures/</a></p>
+<p>注意：本题与主站 318 题相同：<a href="https://leetcode-cn.com/problems/maximum-product-of-word-lengths/">https://leetcode-cn.com/problems/maximum-product-of-word-lengths/</a></p>
 <h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">dailyTemperatures</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; temperatures)</span> </span>&#123;</span><br><span class="line">        stack&lt;pair&lt;<span class="type">int</span>,<span class="type">int</span>&gt;&gt; tmp;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; res;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = temperatures.<span class="built_in">size</span>() - <span class="number">1</span>;i &gt;= <span class="number">0</span>;i--) &#123;</span><br><span class="line">            <span class="keyword">while</span> (tmp.<span class="built_in">size</span>() != <span class="number">0</span> &amp;&amp; temperatures[i] &gt;= tmp.<span class="built_in">top</span>().first) &#123;</span><br><span class="line">                tmp.<span class="built_in">pop</span>();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (tmp.<span class="built_in">size</span>() == <span class="number">0</span>) &#123;</span><br><span class="line">                res.<span class="built_in">push_back</span>(<span class="number">0</span>);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                res.<span class="built_in">push_back</span>(tmp.<span class="built_in">top</span>().second - i);</span><br><span class="line">            &#125;</span><br><span class="line">            tmp.<span class="built_in">push</span>(<span class="built_in">make_pair</span>(temperatures[i],i));</span><br><span class="line">        &#125;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; reverse;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = res.<span class="built_in">size</span>() - <span class="number">1</span>;i &gt;= <span class="number">0</span>;i--) &#123;</span><br><span class="line">            reverse.<span class="built_in">push_back</span>(res[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> reverse;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">getBit</span><span class="params">(string word)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> bitMap = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">char</span> c : word) &#123;</span><br><span class="line">            bitMap = bitMap | (<span class="number">1</span> &lt;&lt; (c - <span class="string">&#x27;a&#x27;</span>));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> bitMap;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">maxProduct</span><span class="params">(vector&lt;string&gt;&amp; words)</span> </span>&#123;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; wordsbit;</span><br><span class="line">        <span class="keyword">for</span> (string word : words) &#123;</span><br><span class="line">            wordsbit.<span class="built_in">push_back</span>(<span class="built_in">getBit</span>(word));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> maxNum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; wordsbit.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = i + <span class="number">1</span>;j &lt; wordsbit.<span class="built_in">size</span>(); j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (((wordsbit[i] ^ wordsbit[j]) == (wordsbit[i] | wordsbit[j]))) &#123;</span><br><span class="line">                    maxNum = <span class="built_in">max</span>(maxNum, <span class="built_in">int</span>(words[i].<span class="built_in">length</span>() * words[j].<span class="built_in">length</span>()));</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> maxNum;</span><br><span class="line">    &#125; </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+]]></content>
       <categories>
         <category>剑指 Offer II</category>
       </categories>
       <tags>
-        <tag>栈</tag>
+        <tag>位运算</tag>
         <tag>数组</tag>
-        <tag>单调栈</tag>
+        <tag>字符串</tag>
       </tags>
   </entry>
   <entry>
@@ -324,6 +324,104 @@
 <p>注意：本题与主站 513 题相同： <a href="https://leetcode-cn.com/problems/find-bottom-left-tree-value/">https://leetcode-cn.com/problems/find-bottom-left-tree-value/</a></p>
 <h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"> *     TreeNode *right;</span><br><span class="line"> *     <span class="built_in">TreeNode</span>() : <span class="built_in">val</span>(<span class="number">0</span>), <span class="built_in">left</span>(<span class="literal">nullptr</span>), <span class="built_in">right</span>(<span class="literal">nullptr</span>) &#123;&#125;</span><br><span class="line"> *     <span class="built_in">TreeNode</span>(<span class="type">int</span> x) : <span class="built_in">val</span>(x), <span class="built_in">left</span>(<span class="literal">nullptr</span>), <span class="built_in">right</span>(<span class="literal">nullptr</span>) &#123;&#125;</span><br><span class="line"> *     <span class="built_in">TreeNode</span>(<span class="type">int</span> x, TreeNode *left, TreeNode *right) : <span class="built_in">val</span>(x), <span class="built_in">left</span>(left), <span class="built_in">right</span>(right) &#123;&#125;</span><br><span class="line"> * &#125;;</span><br><span class="line"> */</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">findBottomLeftValue</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        queue&lt;TreeNode*&gt; level;</span><br><span class="line">        level.<span class="built_in">push</span>(root);</span><br><span class="line">        <span class="type">int</span> res;</span><br><span class="line">        <span class="keyword">while</span> (level.<span class="built_in">size</span>() != <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="type">int</span> levelNum = level.<span class="built_in">size</span>();</span><br><span class="line">            res = level.<span class="built_in">front</span>() -&gt; val;</span><br><span class="line">            <span class="keyword">while</span> (levelNum &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                levelNum--;</span><br><span class="line">                TreeNode* frontNode = level.<span class="built_in">front</span>();</span><br><span class="line">                <span class="keyword">if</span> (frontNode -&gt; left != <span class="literal">nullptr</span>) &#123;</span><br><span class="line">                    level.<span class="built_in">push</span>(frontNode -&gt; left);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (frontNode -&gt; right != <span class="literal">nullptr</span>) &#123;</span><br><span class="line">                    level.<span class="built_in">push</span>(frontNode -&gt; right);</span><br><span class="line">                &#125;</span><br><span class="line"> * <span class="keyword">struct</span> <span class="title class_">TreeNode</span> &#123;</span><br><span class="line"> *     <span class="type">int</span> val;</span><br><span class="line"> *     TreeNode *left;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>剑指 Offer II</category>
+      </categories>
+      <tags>
+        <tag>树</tag>
+        <tag>深度优先搜索</tag>
+        <tag>广度优先搜索</tag>
+        <tag>二叉树</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>剑指 Offer II 038. 每日温度</title>
+    <url>/2022/09/11/%E5%89%91%E6%8C%87-Offer-II-038-%E6%AF%8F%E6%97%A5%E6%B8%A9%E5%BA%A6/</url>
+    <content><![CDATA[<h1 id="剑指-Offer-II-038-每日温度"><a href="#剑指-Offer-II-038-每日温度" class="headerlink" title="剑指 Offer II 038. 每日温度"></a><a href="https://leetcode.cn/problems/iIQa4I/">剑指 Offer II 038. 每日温度</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
+<p>Related Topics: <a href="https://leetcode.cn/tag/stack/">栈</a>, <a href="https://leetcode.cn/tag/array/">数组</a>, <a href="https://leetcode.cn/tag/monotonic-stack/">单调栈</a></p>
+<p>请根据每日 <code>气温</code> 列表 <code>temperatures</code> ，重新生成一个列表，要求其对应位置的输出为：要想观测到更高的气温，至少需要等待的天数。如果气温在这之后都不会升高，请在该位置用 <code>0</code> 来代替。</p>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入: temperatures = [73,74,75,71,69,72,76,73]</span><br><span class="line">输出: [1,1,4,2,1,1,0,0]</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入: temperatures = [30,40,50,60]</span><br><span class="line">输出: [1,1,1,0]</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 3:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入: temperatures = [30,60,90]</span><br><span class="line">输出: [1,1,0]</span><br></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li>1 &lt;&#x3D; temperatures.length &lt;&#x3D; 10<sup>5</sup></li>
+<li><code>30 &lt;= temperatures[i] &lt;= 100</code></li>
+</ul>
+<p>注意：本题与主站 739 题相同： <a href="https://leetcode-cn.com/problems/daily-temperatures/">https://leetcode-cn.com/problems/daily-temperatures/</a></p>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">dailyTemperatures</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; temperatures)</span> </span>&#123;</span><br><span class="line">        stack&lt;pair&lt;<span class="type">int</span>,<span class="type">int</span>&gt;&gt; tmp;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; res;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = temperatures.<span class="built_in">size</span>() - <span class="number">1</span>;i &gt;= <span class="number">0</span>;i--) &#123;</span><br><span class="line">            <span class="keyword">while</span> (tmp.<span class="built_in">size</span>() != <span class="number">0</span> &amp;&amp; temperatures[i] &gt;= tmp.<span class="built_in">top</span>().first) &#123;</span><br><span class="line">                tmp.<span class="built_in">pop</span>();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (tmp.<span class="built_in">size</span>() == <span class="number">0</span>) &#123;</span><br><span class="line">                res.<span class="built_in">push_back</span>(<span class="number">0</span>);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                res.<span class="built_in">push_back</span>(tmp.<span class="built_in">top</span>().second - i);</span><br><span class="line">            &#125;</span><br><span class="line">            tmp.<span class="built_in">push</span>(<span class="built_in">make_pair</span>(temperatures[i],i));</span><br><span class="line">        &#125;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; reverse;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = res.<span class="built_in">size</span>() - <span class="number">1</span>;i &gt;= <span class="number">0</span>;i--) &#123;</span><br><span class="line">            reverse.<span class="built_in">push_back</span>(res[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> reverse;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>剑指 Offer II</category>
+      </categories>
+      <tags>
+        <tag>数组</tag>
+        <tag>栈</tag>
+        <tag>单调栈</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>剑指 Offer II 014. 字符串中的变位词</title>
+    <url>/2022/09/11/%E5%89%91%E6%8C%87-Offer-II-014-%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E5%8F%98%E4%BD%8D%E8%AF%8D/</url>
+    <content><![CDATA[<h1 id="剑指-Offer-II-014-字符串中的变位词"><a href="#剑指-Offer-II-014-字符串中的变位词" class="headerlink" title="剑指 Offer II 014. 字符串中的变位词"></a><a href="https://leetcode.cn/problems/MPnaiL/">剑指 Offer II 014. 字符串中的变位词</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
+<p>Related Topics: <a href="https://leetcode.cn/tag/hash-table/">哈希表</a>, <a href="https://leetcode.cn/tag/two-pointers/">双指针</a>, <a href="https://leetcode.cn/tag/string/">字符串</a>, <a href="https://leetcode.cn/tag/sliding-window/">滑动窗口</a></p>
+<p>给定两个字符串 <code>s1</code> 和 <code>s2</code>，写一个函数来判断 <code>s2</code> 是否包含 <code>s1</code>的某个变位词。</p>
+<p>换句话说，第一个字符串的排列之一是第二个字符串的 <strong>子串</strong> 。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入: s1 = &quot;ab&quot; s2 = &quot;eidbaooo&quot;</span><br><span class="line">输出: True</span><br><span class="line">解释: s2 包含 s1 的排列之一 (&quot;ba&quot;).</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入: s1= &quot;ab&quot; s2 = &quot;eidboaoo&quot;</span><br><span class="line">输出: False</span><br></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li>1 &lt;&#x3D; s1.length, s2.length &lt;&#x3D; 10<sup>4</sup></li>
+<li><code>s1</code> 和 <code>s2</code> 仅包含小写字母</li>
+</ul>
+<p>注意：本题与主站 567 题相同： <a href="https://leetcode-cn.com/problems/permutation-in-string/">https://leetcode-cn.com/problems/permutation-in-string/</a></p>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="type">int</span> tar[<span class="number">26</span>];</span><br><span class="line">    <span class="type">int</span> src[<span class="number">26</span>];</span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">isEqual</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; <span class="number">26</span>;i++) &#123;</span><br><span class="line">            <span class="keyword">if</span>(tar[i] != src[i]) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">checkInclusion</span><span class="params">(string s1, string s2)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (s1.<span class="built_in">length</span>() &gt; s2.<span class="built_in">length</span>()) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; s1.<span class="built_in">length</span>();i++) &#123;</span><br><span class="line">            src[s1[i] - <span class="string">&#x27;a&#x27;</span>]++;</span><br><span class="line">            tar[s2[i] - <span class="string">&#x27;a&#x27;</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> start = <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> end = s1.<span class="built_in">length</span>();</span><br><span class="line">        <span class="keyword">while</span> (end &lt; s2.<span class="built_in">length</span>()) &#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="built_in">isEqual</span>()) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            tar[s2[start++] - <span class="string">&#x27;a&#x27;</span>]--;</span><br><span class="line">            tar[s2[end++] - <span class="string">&#x27;a&#x27;</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">isEqual</span>()) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>剑指 Offer II</category>
+      </categories>
+      <tags>
+        <tag>字符串</tag>
+        <tag>哈希表</tag>
+        <tag>双指针</tag>
+        <tag>滑动窗口</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>剑指 Offer II 046. 二叉树的右侧视图</title>
+    <url>/2022/09/13/%E5%89%91%E6%8C%87-Offer-II-046-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%8F%B3%E4%BE%A7%E8%A7%86%E5%9B%BE/</url>
+    <content><![CDATA[<h1 id="剑指-Offer-II-046-二叉树的右侧视图"><a href="#剑指-Offer-II-046-二叉树的右侧视图" class="headerlink" title="剑指 Offer II 046. 二叉树的右侧视图"></a><a href="https://leetcode.cn/problems/WNC0Lk/">剑指 Offer II 046. 二叉树的右侧视图</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
+<p>Related Topics: <a href="https://leetcode.cn/tag/tree/">树</a>, <a href="https://leetcode.cn/tag/depth-first-search/">深度优先搜索</a>, <a href="https://leetcode.cn/tag/breadth-first-search/">广度优先搜索</a>, <a href="https://leetcode.cn/tag/binary-tree/">二叉树</a></p>
+<p>给定一个二叉树的 <strong>根节点</strong> <code>root</code>，想象自己站在它的右侧，按照从顶部到底部的顺序，返回从右侧所能看到的节点值。</p>
+<p><strong>示例 1:</strong></p>
+<p><img src="https://assets.leetcode.com/uploads/2021/02/14/tree.jpg"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入: [1,2,3,null,5,null,4]</span><br><span class="line">输出: [1,3,4]</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入: [1,null,3]</span><br><span class="line">输出: [1,3]</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 3:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入: []</span><br><span class="line">输出: []</span><br></pre></td></tr></table></figure>
+
+<p><strong>提示:</strong></p>
+<ul>
+<li>二叉树的节点个数的范围是 <code>[0,100]</code></li>
+<li><code>-100 &lt;= Node.val &lt;= 100</code></li>
+</ul>
+<p> </p>
+<p>注意：本题与主站 199 题相同：<a href="https://leetcode-cn.com/problems/binary-tree-right-side-view/">https://leetcode-cn.com/problems/binary-tree-right-side-view/</a></p>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"> *     TreeNode *left;</span><br><span class="line"> *     TreeNode *right;</span><br><span class="line"> *     <span class="built_in">TreeNode</span>() : <span class="built_in">val</span>(<span class="number">0</span>), <span class="built_in">left</span>(<span class="literal">nullptr</span>), <span class="built_in">right</span>(<span class="literal">nullptr</span>) &#123;&#125;</span><br><span class="line"> *     <span class="built_in">TreeNode</span>(<span class="type">int</span> x) : <span class="built_in">val</span>(x), <span class="built_in">left</span>(<span class="literal">nullptr</span>), <span class="built_in">right</span>(<span class="literal">nullptr</span>) &#123;&#125;</span><br><span class="line"> *     <span class="built_in">TreeNode</span>(<span class="type">int</span> x, TreeNode *left, TreeNode *right) : <span class="built_in">val</span>(x), <span class="built_in">left</span>(left), <span class="built_in">right</span>(right) &#123;&#125;</span><br><span class="line"> * &#125;;</span><br><span class="line"> */</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">// 层序遍历 用队列</span></span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; res;</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">rightSideView</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        queue&lt;TreeNode*&gt; tmp;</span><br><span class="line">        tmp.<span class="built_in">push</span>(root);</span><br><span class="line">        <span class="keyword">while</span> (tmp.<span class="built_in">size</span>() != <span class="number">0</span> &amp;&amp; root != <span class="literal">nullptr</span>) &#123;</span><br><span class="line">            <span class="type">int</span> num = tmp.<span class="built_in">size</span>();</span><br><span class="line">            <span class="keyword">while</span> (num) &#123;</span><br><span class="line">                TreeNode* topEle = tmp.<span class="built_in">front</span>();</span><br><span class="line">                tmp.<span class="built_in">pop</span>();</span><br><span class="line">                <span class="keyword">if</span> (num == <span class="number">1</span>) &#123;</span><br><span class="line">                    res.<span class="built_in">push_back</span>(topEle -&gt; val);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (topEle -&gt; left != <span class="literal">nullptr</span>) &#123;</span><br><span class="line">                    tmp.<span class="built_in">push</span>(topEle -&gt; left);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (topEle -&gt; right != <span class="literal">nullptr</span>) &#123;</span><br><span class="line">                    tmp.<span class="built_in">push</span>(topEle -&gt; right);</span><br><span class="line">                &#125;</span><br><span class="line">                num--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>剑指 Offer II</category>
       </categories>
@@ -368,37 +466,35 @@
       </tags>
   </entry>
   <entry>
-    <title>剑指 Offer II 046. 二叉树的右侧视图</title>
-    <url>/2022/09/13/%E5%89%91%E6%8C%87-Offer-II-046-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%8F%B3%E4%BE%A7%E8%A7%86%E5%9B%BE/</url>
-    <content><![CDATA[<h1 id="剑指-Offer-II-046-二叉树的右侧视图"><a href="#剑指-Offer-II-046-二叉树的右侧视图" class="headerlink" title="剑指 Offer II 046. 二叉树的右侧视图"></a><a href="https://leetcode.cn/problems/WNC0Lk/">剑指 Offer II 046. 二叉树的右侧视图</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
-<p>Related Topics: <a href="https://leetcode.cn/tag/tree/">树</a>, <a href="https://leetcode.cn/tag/depth-first-search/">深度优先搜索</a>, <a href="https://leetcode.cn/tag/breadth-first-search/">广度优先搜索</a>, <a href="https://leetcode.cn/tag/binary-tree/">二叉树</a></p>
-<p>给定一个二叉树的 <strong>根节点</strong> <code>root</code>，想象自己站在它的右侧，按照从顶部到底部的顺序，返回从右侧所能看到的节点值。</p>
-<p><strong>示例 1:</strong></p>
-<p><img src="https://assets.leetcode.com/uploads/2021/02/14/tree.jpg"></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入: [1,2,3,null,5,null,4]</span><br><span class="line">输出: [1,3,4]</span><br></pre></td></tr></table></figure>
+    <title>剑指 Offer II 050. 向下的路径节点之和</title>
+    <url>/2022/09/13/%E5%89%91%E6%8C%87-Offer-II-050-%E5%90%91%E4%B8%8B%E7%9A%84%E8%B7%AF%E5%BE%84%E8%8A%82%E7%82%B9%E4%B9%8B%E5%92%8C/</url>
+    <content><![CDATA[<h1 id="剑指-Offer-II-050-向下的路径节点之和"><a href="#剑指-Offer-II-050-向下的路径节点之和" class="headerlink" title="剑指 Offer II 050. 向下的路径节点之和"></a><a href="https://leetcode.cn/problems/6eUYwP/">剑指 Offer II 050. 向下的路径节点之和</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
+<p>Related Topics: <a href="https://leetcode.cn/tag/tree/">树</a>, <a href="https://leetcode.cn/tag/depth-first-search/">深度优先搜索</a>, <a href="https://leetcode.cn/tag/binary-tree/">二叉树</a></p>
+<p>给定一个二叉树的根节点 <code>root</code> ，和一个整数 <code>targetSum</code> ，求该二叉树里节点值之和等于 <code>targetSum</code> 的 <strong>路径</strong> 的数目。</p>
+<p><strong>路径</strong> 不需要从根节点开始，也不需要在叶子节点结束，但是路径方向必须是向下的（只能从父节点到子节点）。</p>
+<p><strong>示例 1：</strong></p>
+<p><img src="https://assets.leetcode.com/uploads/2021/04/09/pathsum3-1-tree.jpg"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：root = [10,5,-3,3,2,null,11,3,-2,null,1], targetSum = 8</span><br><span class="line">输出：3</span><br><span class="line">解释：和等于 8 的路径有 3 条，如图所示。</span><br></pre></td></tr></table></figure>
 
-<p><strong>示例 2:</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入: [1,null,3]</span><br><span class="line">输出: [1,3]</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 3:</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入: []</span><br><span class="line">输出: []</span><br></pre></td></tr></table></figure>
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：root = [5,4,8,11,null,13,4,7,2,null,null,5,1], targetSum = 22</span><br><span class="line">输出：3</span><br></pre></td></tr></table></figure>
 
 <p><strong>提示:</strong></p>
 <ul>
-<li>二叉树的节点个数的范围是 <code>[0,100]</code></li>
-<li><code>-100 &lt;= Node.val &lt;= 100</code></li>
+<li>二叉树的节点个数的范围是 <code>[0,1000]</code></li>
+<li>-10<sup><span style="font-size: 9.449999809265137px;">9</span></sup> &lt;&#x3D; Node.val &lt;&#x3D; 10<sup><span style="font-size: 9.449999809265137px;">9</span></sup> </li>
+<li><code>-1000 &lt;= targetSum &lt;= 1000</code></li>
 </ul>
 <p> </p>
-<p>注意：本题与主站 199 题相同：<a href="https://leetcode-cn.com/problems/binary-tree-right-side-view/">https://leetcode-cn.com/problems/binary-tree-right-side-view/</a></p>
+<p>注意：本题与主站 437 题相同：<a href="https://leetcode-cn.com/problems/path-sum-iii/">https://leetcode-cn.com/problems/path-sum-iii/</a></p>
 <h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"> *     TreeNode *left;</span><br><span class="line"> *     TreeNode *right;</span><br><span class="line"> *     <span class="built_in">TreeNode</span>() : <span class="built_in">val</span>(<span class="number">0</span>), <span class="built_in">left</span>(<span class="literal">nullptr</span>), <span class="built_in">right</span>(<span class="literal">nullptr</span>) &#123;&#125;</span><br><span class="line"> *     <span class="built_in">TreeNode</span>(<span class="type">int</span> x) : <span class="built_in">val</span>(x), <span class="built_in">left</span>(<span class="literal">nullptr</span>), <span class="built_in">right</span>(<span class="literal">nullptr</span>) &#123;&#125;</span><br><span class="line"> *     <span class="built_in">TreeNode</span>(<span class="type">int</span> x, TreeNode *left, TreeNode *right) : <span class="built_in">val</span>(x), <span class="built_in">left</span>(left), <span class="built_in">right</span>(right) &#123;&#125;</span><br><span class="line"> * &#125;;</span><br><span class="line"> */</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">// 层序遍历 用队列</span></span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; res;</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">rightSideView</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        queue&lt;TreeNode*&gt; tmp;</span><br><span class="line">        tmp.<span class="built_in">push</span>(root);</span><br><span class="line">        <span class="keyword">while</span> (tmp.<span class="built_in">size</span>() != <span class="number">0</span> &amp;&amp; root != <span class="literal">nullptr</span>) &#123;</span><br><span class="line">            <span class="type">int</span> num = tmp.<span class="built_in">size</span>();</span><br><span class="line">            <span class="keyword">while</span> (num) &#123;</span><br><span class="line">                TreeNode* topEle = tmp.<span class="built_in">front</span>();</span><br><span class="line">                tmp.<span class="built_in">pop</span>();</span><br><span class="line">                <span class="keyword">if</span> (num == <span class="number">1</span>) &#123;</span><br><span class="line">                    res.<span class="built_in">push_back</span>(topEle -&gt; val);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (topEle -&gt; left != <span class="literal">nullptr</span>) &#123;</span><br><span class="line">                    tmp.<span class="built_in">push</span>(topEle -&gt; left);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (topEle -&gt; right != <span class="literal">nullptr</span>) &#123;</span><br><span class="line">                    tmp.<span class="built_in">push</span>(topEle -&gt; right);</span><br><span class="line">                &#125;</span><br><span class="line">                num--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>]]></content>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"> * <span class="keyword">struct</span> <span class="title class_">TreeNode</span> &#123;</span><br><span class="line"> *     <span class="type">int</span> val;</span><br><span class="line"> *     TreeNode *left;</span><br><span class="line"> *     TreeNode *right;</span><br><span class="line"> *     <span class="built_in">TreeNode</span>() : <span class="built_in">val</span>(<span class="number">0</span>), <span class="built_in">left</span>(<span class="literal">nullptr</span>), <span class="built_in">right</span>(<span class="literal">nullptr</span>) &#123;&#125;</span><br><span class="line"> *     <span class="built_in">TreeNode</span>(<span class="type">int</span> x) : <span class="built_in">val</span>(x), <span class="built_in">left</span>(<span class="literal">nullptr</span>), <span class="built_in">right</span>(<span class="literal">nullptr</span>) &#123;&#125;</span><br><span class="line"> *     <span class="built_in">TreeNode</span>(<span class="type">int</span> x, TreeNode *left, TreeNode *right) : <span class="built_in">val</span>(x), <span class="built_in">left</span>(left), <span class="built_in">right</span>(right) &#123;&#125;</span><br><span class="line"> * &#125;;</span><br><span class="line"> */</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="type">int</span> count = <span class="number">0</span>;</span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> target = target;</span><br><span class="line">    <span class="function">vector&lt;<span class="type">long</span> <span class="type">long</span>&gt; <span class="title">DFS</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        vector&lt;<span class="type">long</span> <span class="type">long</span>&gt; res;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">nullptr</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> res;</span><br><span class="line">        &#125;</span><br><span class="line">        vector&lt;<span class="type">long</span> <span class="type">long</span>&gt; leftRes = <span class="built_in">DFS</span>(root -&gt; left);</span><br><span class="line">        vector&lt;<span class="type">long</span> <span class="type">long</span>&gt; rightRes = <span class="built_in">DFS</span>(root -&gt; right);</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; leftRes.<span class="built_in">size</span>();i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (leftRes[i] + root -&gt; val == target) &#123;</span><br><span class="line">                count++;</span><br><span class="line">            &#125;</span><br><span class="line">            res.<span class="built_in">push_back</span>(leftRes[i] + root -&gt; val);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; rightRes.<span class="built_in">size</span>();i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (rightRes[i] + root -&gt; val == target) &#123;</span><br><span class="line">                count++;</span><br><span class="line">            &#125;</span><br><span class="line">            res.<span class="built_in">push_back</span>(rightRes[i] + root -&gt; val);</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>剑指 Offer II</category>
       </categories>
       <tags>
         <tag>树</tag>
         <tag>深度优先搜索</tag>
-        <tag>广度优先搜索</tag>
         <tag>二叉树</tag>
       </tags>
   </entry>
@@ -431,39 +527,6 @@
 <p>注意：本题与主站 129 题相同： <a href="https://leetcode-cn.com/problems/sum-root-to-leaf-numbers/">https://leetcode-cn.com/problems/sum-root-to-leaf-numbers/</a></p>
 <h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * struct TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode *left;</span></span><br><span class="line"><span class="comment"> *     TreeNode *right;</span></span><br><span class="line"><span class="comment"> *     TreeNode() : val(0), left(nullptr), right(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="type">int</span> sum = <span class="number">0</span>;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">DFS</span><span class="params">(TreeNode* root, <span class="type">int</span> i)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">nullptr</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        i = i * <span class="number">10</span> + root -&gt; val;</span><br><span class="line">        <span class="keyword">if</span> (root -&gt; left == <span class="literal">nullptr</span> &amp;&amp; root -&gt; right == <span class="literal">nullptr</span>) &#123;</span><br><span class="line">            sum += i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">DFS</span>(root -&gt; left, i);</span><br><span class="line">        <span class="built_in">DFS</span>(root -&gt; right, i);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">sumNumbers</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">DFS</span>(root,<span class="number">0</span>);</span><br><span class="line">        <span class="keyword">return</span> sum;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>剑指 Offer II</category>
-      </categories>
-      <tags>
-        <tag>树</tag>
-        <tag>深度优先搜索</tag>
-        <tag>二叉树</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>剑指 Offer II 050. 向下的路径节点之和</title>
-    <url>/2022/09/13/%E5%89%91%E6%8C%87-Offer-II-050-%E5%90%91%E4%B8%8B%E7%9A%84%E8%B7%AF%E5%BE%84%E8%8A%82%E7%82%B9%E4%B9%8B%E5%92%8C/</url>
-    <content><![CDATA[<h1 id="剑指-Offer-II-050-向下的路径节点之和"><a href="#剑指-Offer-II-050-向下的路径节点之和" class="headerlink" title="剑指 Offer II 050. 向下的路径节点之和"></a><a href="https://leetcode.cn/problems/6eUYwP/">剑指 Offer II 050. 向下的路径节点之和</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
-<p>Related Topics: <a href="https://leetcode.cn/tag/tree/">树</a>, <a href="https://leetcode.cn/tag/depth-first-search/">深度优先搜索</a>, <a href="https://leetcode.cn/tag/binary-tree/">二叉树</a></p>
-<p>给定一个二叉树的根节点 <code>root</code> ，和一个整数 <code>targetSum</code> ，求该二叉树里节点值之和等于 <code>targetSum</code> 的 <strong>路径</strong> 的数目。</p>
-<p><strong>路径</strong> 不需要从根节点开始，也不需要在叶子节点结束，但是路径方向必须是向下的（只能从父节点到子节点）。</p>
-<p><strong>示例 1：</strong></p>
-<p><img src="https://assets.leetcode.com/uploads/2021/04/09/pathsum3-1-tree.jpg"></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：root = [10,5,-3,3,2,null,11,3,-2,null,1], targetSum = 8</span><br><span class="line">输出：3</span><br><span class="line">解释：和等于 8 的路径有 3 条，如图所示。</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 2：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：root = [5,4,8,11,null,13,4,7,2,null,null,5,1], targetSum = 22</span><br><span class="line">输出：3</span><br></pre></td></tr></table></figure>
-
-<p><strong>提示:</strong></p>
-<ul>
-<li>二叉树的节点个数的范围是 <code>[0,1000]</code></li>
-<li>-10<sup><span style="font-size: 9.449999809265137px;">9</span></sup> &lt;&#x3D; Node.val &lt;&#x3D; 10<sup><span style="font-size: 9.449999809265137px;">9</span></sup> </li>
-<li><code>-1000 &lt;= targetSum &lt;= 1000</code></li>
-</ul>
-<p> </p>
-<p>注意：本题与主站 437 题相同：<a href="https://leetcode-cn.com/problems/path-sum-iii/">https://leetcode-cn.com/problems/path-sum-iii/</a></p>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"> * <span class="keyword">struct</span> <span class="title class_">TreeNode</span> &#123;</span><br><span class="line"> *     <span class="type">int</span> val;</span><br><span class="line"> *     TreeNode *left;</span><br><span class="line"> *     TreeNode *right;</span><br><span class="line"> *     <span class="built_in">TreeNode</span>() : <span class="built_in">val</span>(<span class="number">0</span>), <span class="built_in">left</span>(<span class="literal">nullptr</span>), <span class="built_in">right</span>(<span class="literal">nullptr</span>) &#123;&#125;</span><br><span class="line"> *     <span class="built_in">TreeNode</span>(<span class="type">int</span> x) : <span class="built_in">val</span>(x), <span class="built_in">left</span>(<span class="literal">nullptr</span>), <span class="built_in">right</span>(<span class="literal">nullptr</span>) &#123;&#125;</span><br><span class="line"> *     <span class="built_in">TreeNode</span>(<span class="type">int</span> x, TreeNode *left, TreeNode *right) : <span class="built_in">val</span>(x), <span class="built_in">left</span>(left), <span class="built_in">right</span>(right) &#123;&#125;</span><br><span class="line"> * &#125;;</span><br><span class="line"> */</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="type">int</span> count = <span class="number">0</span>;</span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> target = target;</span><br><span class="line">    <span class="function">vector&lt;<span class="type">long</span> <span class="type">long</span>&gt; <span class="title">DFS</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        vector&lt;<span class="type">long</span> <span class="type">long</span>&gt; res;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">nullptr</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> res;</span><br><span class="line">        &#125;</span><br><span class="line">        vector&lt;<span class="type">long</span> <span class="type">long</span>&gt; leftRes = <span class="built_in">DFS</span>(root -&gt; left);</span><br><span class="line">        vector&lt;<span class="type">long</span> <span class="type">long</span>&gt; rightRes = <span class="built_in">DFS</span>(root -&gt; right);</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; leftRes.<span class="built_in">size</span>();i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (leftRes[i] + root -&gt; val == target) &#123;</span><br><span class="line">                count++;</span><br><span class="line">            &#125;</span><br><span class="line">            res.<span class="built_in">push_back</span>(leftRes[i] + root -&gt; val);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; rightRes.<span class="built_in">size</span>();i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (rightRes[i] + root -&gt; val == target) &#123;</span><br><span class="line">                count++;</span><br><span class="line">            &#125;</span><br><span class="line">            res.<span class="built_in">push_back</span>(rightRes[i] + root -&gt; val);</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>剑指 Offer II</category>
       </categories>
@@ -551,8 +614,8 @@
         <category>剑指 Offer II</category>
       </categories>
       <tags>
-        <tag>哈希表</tag>
         <tag>字符串</tag>
+        <tag>哈希表</tag>
         <tag>设计</tag>
         <tag>字典树</tag>
       </tags>
@@ -580,42 +643,9 @@
         <category>剑指 Offer II</category>
       </categories>
       <tags>
-        <tag>字符串</tag>
         <tag>动态规划</tag>
+        <tag>字符串</tag>
         <tag>回溯</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>剑指 Offer II 092. 翻转字符</title>
-    <url>/2022/09/11/%E5%89%91%E6%8C%87-Offer-II-092-%E7%BF%BB%E8%BD%AC%E5%AD%97%E7%AC%A6/</url>
-    <content><![CDATA[<h1 id="剑指-Offer-II-092-翻转字符"><a href="#剑指-Offer-II-092-翻转字符" class="headerlink" title="剑指 Offer II 092. 翻转字符"></a><a href="https://leetcode.cn/problems/cyJERH/">剑指 Offer II 092. 翻转字符</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
-<p>Related Topics: <a href="https://leetcode.cn/tag/string/">字符串</a>, <a href="https://leetcode.cn/tag/dynamic-programming/">动态规划</a></p>
-<p>如果一个由 <code>&#39;0&#39;</code> 和 <code>&#39;1&#39;</code> 组成的字符串，是以一些 <code>&#39;0&#39;</code>（可能没有 <code>&#39;0&#39;</code>）后面跟着一些 <code>&#39;1&#39;</code>（也可能没有 <code>&#39;1&#39;</code>）的形式组成的，那么该字符串是 **单调递增 **的。</p>
-<p>我们给出一个由字符 <code>&#39;0&#39;</code> 和 <code>&#39;1&#39;</code> 组成的字符串 <font face="Menlo, Monaco, Consolas, Courier New, monospace" color="#c7254e"><span style="caret-color: rgb(199, 37, 78); font-size: 12.600000381469727px; background-color: rgb(249, 242, 244);">s</span></font>，我们可以将任何 <code>&#39;0&#39;</code> 翻转为 <code>&#39;1&#39;</code> 或者将 <code>&#39;1&#39;</code> 翻转为 <code>&#39;0&#39;</code>。</p>
-<p>返回使 <font face="Menlo, Monaco, Consolas, Courier New, monospace" color="#c7254e"><span style="caret-color: rgb(199, 37, 78); font-size: 12.600000381469727px; background-color: rgb(249, 242, 244);">s</span></font> **单调递增 **的最小翻转次数。</p>
-<p><strong>示例 1：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：s = &quot;00110&quot;</span><br><span class="line">输出：1</span><br><span class="line">解释：我们翻转最后一位得到 00111.</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 2：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：s = &quot;010110&quot;</span><br><span class="line">输出：2</span><br><span class="line">解释：我们翻转得到 011111，或者是 000111。</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 3：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：s = &quot;00011000&quot;</span><br><span class="line">输出：2</span><br><span class="line">解释：我们翻转得到 00000000。</span><br></pre></td></tr></table></figure>
-
-<p><strong>提示：</strong></p>
-<ul>
-<li><code>1 &lt;= s.length &lt;= 20000</code></li>
-<li><font face="Menlo, Monaco, Consolas, Courier New, monospace" color="#c7254e"><span style="caret-color: rgb(199, 37, 78); font-size: 12.600000381469727px; background-color: rgb(249, 242, 244);">s</span></font> 中只包含字符 <code>&#39;0&#39;</code> 和 <code>&#39;1&#39;</code></li>
-</ul>
-<p>注意：本题与主站 926 题相同： <a href="https://leetcode-cn.com/problems/flip-string-to-monotone-increasing/">https://leetcode-cn.com/problems/flip-string-to-monotone-increasing/</a></p>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">minFlipsMonoIncr</span><span class="params">(string s)</span> </span>&#123;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; s1;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; s2;</span><br><span class="line">        <span class="type">int</span> leftOne = <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> rightZero = <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> j = s.<span class="built_in">length</span>() - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; s.<span class="built_in">length</span>();i++) &#123;</span><br><span class="line">            s1.<span class="built_in">push_back</span>(leftOne);</span><br><span class="line">            s2.<span class="built_in">push_back</span>(rightZero);</span><br><span class="line">            <span class="keyword">if</span> (s[i] == <span class="string">&#x27;1&#x27;</span>) &#123;</span><br><span class="line">                leftOne++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (s[j] == <span class="string">&#x27;0&#x27;</span>) &#123;</span><br><span class="line">                rightZero++;</span><br><span class="line">            &#125;</span><br><span class="line">            j--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> minRes = s.<span class="built_in">length</span>();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; s1.<span class="built_in">size</span>();i++) &#123;</span><br><span class="line">            minRes = <span class="built_in">min</span>(minRes,s1[i] + s2[s1.<span class="built_in">size</span>() - <span class="number">1</span> - i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> minRes;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>剑指 Offer II</category>
-      </categories>
-      <tags>
-        <tag>字符串</tag>
-        <tag>动态规划</tag>
       </tags>
   </entry>
   <entry>
@@ -663,6 +693,74 @@
       </tags>
   </entry>
   <entry>
+    <title>剑指 Offer II 092. 翻转字符</title>
+    <url>/2022/09/11/%E5%89%91%E6%8C%87-Offer-II-092-%E7%BF%BB%E8%BD%AC%E5%AD%97%E7%AC%A6/</url>
+    <content><![CDATA[<h1 id="剑指-Offer-II-092-翻转字符"><a href="#剑指-Offer-II-092-翻转字符" class="headerlink" title="剑指 Offer II 092. 翻转字符"></a><a href="https://leetcode.cn/problems/cyJERH/">剑指 Offer II 092. 翻转字符</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
+<p>Related Topics: <a href="https://leetcode.cn/tag/string/">字符串</a>, <a href="https://leetcode.cn/tag/dynamic-programming/">动态规划</a></p>
+<p>如果一个由 <code>&#39;0&#39;</code> 和 <code>&#39;1&#39;</code> 组成的字符串，是以一些 <code>&#39;0&#39;</code>（可能没有 <code>&#39;0&#39;</code>）后面跟着一些 <code>&#39;1&#39;</code>（也可能没有 <code>&#39;1&#39;</code>）的形式组成的，那么该字符串是 **单调递增 **的。</p>
+<p>我们给出一个由字符 <code>&#39;0&#39;</code> 和 <code>&#39;1&#39;</code> 组成的字符串 <font face="Menlo, Monaco, Consolas, Courier New, monospace" color="#c7254e"><span style="caret-color: rgb(199, 37, 78); font-size: 12.600000381469727px; background-color: rgb(249, 242, 244);">s</span></font>，我们可以将任何 <code>&#39;0&#39;</code> 翻转为 <code>&#39;1&#39;</code> 或者将 <code>&#39;1&#39;</code> 翻转为 <code>&#39;0&#39;</code>。</p>
+<p>返回使 <font face="Menlo, Monaco, Consolas, Courier New, monospace" color="#c7254e"><span style="caret-color: rgb(199, 37, 78); font-size: 12.600000381469727px; background-color: rgb(249, 242, 244);">s</span></font> **单调递增 **的最小翻转次数。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：s = &quot;00110&quot;</span><br><span class="line">输出：1</span><br><span class="line">解释：我们翻转最后一位得到 00111.</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：s = &quot;010110&quot;</span><br><span class="line">输出：2</span><br><span class="line">解释：我们翻转得到 011111，或者是 000111。</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 3：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：s = &quot;00011000&quot;</span><br><span class="line">输出：2</span><br><span class="line">解释：我们翻转得到 00000000。</span><br></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>1 &lt;= s.length &lt;= 20000</code></li>
+<li><font face="Menlo, Monaco, Consolas, Courier New, monospace" color="#c7254e"><span style="caret-color: rgb(199, 37, 78); font-size: 12.600000381469727px; background-color: rgb(249, 242, 244);">s</span></font> 中只包含字符 <code>&#39;0&#39;</code> 和 <code>&#39;1&#39;</code></li>
+</ul>
+<p>注意：本题与主站 926 题相同： <a href="https://leetcode-cn.com/problems/flip-string-to-monotone-increasing/">https://leetcode-cn.com/problems/flip-string-to-monotone-increasing/</a></p>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">minFlipsMonoIncr</span><span class="params">(string s)</span> </span>&#123;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; s1;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; s2;</span><br><span class="line">        <span class="type">int</span> leftOne = <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> rightZero = <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> j = s.<span class="built_in">length</span>() - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; s.<span class="built_in">length</span>();i++) &#123;</span><br><span class="line">            s1.<span class="built_in">push_back</span>(leftOne);</span><br><span class="line">            s2.<span class="built_in">push_back</span>(rightZero);</span><br><span class="line">            <span class="keyword">if</span> (s[i] == <span class="string">&#x27;1&#x27;</span>) &#123;</span><br><span class="line">                leftOne++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (s[j] == <span class="string">&#x27;0&#x27;</span>) &#123;</span><br><span class="line">                rightZero++;</span><br><span class="line">            &#125;</span><br><span class="line">            j--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> minRes = s.<span class="built_in">length</span>();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; s1.<span class="built_in">size</span>();i++) &#123;</span><br><span class="line">            minRes = <span class="built_in">min</span>(minRes,s1[i] + s2[s1.<span class="built_in">size</span>() - <span class="number">1</span> - i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> minRes;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>剑指 Offer II</category>
+      </categories>
+      <tags>
+        <tag>动态规划</tag>
+        <tag>字符串</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>剑指 Offer II 100. 三角形中最小路径之和</title>
+    <url>/2022/09/13/%E5%89%91%E6%8C%87-Offer-II-100-%E4%B8%89%E8%A7%92%E5%BD%A2%E4%B8%AD%E6%9C%80%E5%B0%8F%E8%B7%AF%E5%BE%84%E4%B9%8B%E5%92%8C/</url>
+    <content><![CDATA[<h1 id="剑指-Offer-II-100-三角形中最小路径之和"><a href="#剑指-Offer-II-100-三角形中最小路径之和" class="headerlink" title="剑指 Offer II 100. 三角形中最小路径之和"></a><a href="https://leetcode.cn/problems/IlPe0q/">剑指 Offer II 100. 三角形中最小路径之和</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
+<p>Related Topics: <a href="https://leetcode.cn/tag/array/">数组</a>, <a href="https://leetcode.cn/tag/dynamic-programming/">动态规划</a></p>
+<p>给定一个三角形 <code>triangle</code> ，找出自顶向下的最小路径和。</p>
+<p>每一步只能移动到下一行中相邻的结点上。<strong>相邻的结点</strong> 在这里指的是 <strong>下标</strong> 与 <strong>上一层结点下标</strong> 相同或者等于 <strong>上一层结点下标 + 1</strong> 的两个结点。也就是说，如果正位于当前行的下标 <code>i</code> ，那么下一步可以移动到下一行的下标 <code>i</code> 或 <code>i + 1</code> 。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：triangle = [[2],[3,4],[6,5,7],[4,1,8,3]]</span><br><span class="line">输出：11</span><br><span class="line">解释：如下面简图所示：</span><br><span class="line">   2</span><br><span class="line">  3 4</span><br><span class="line"> 6 5 7</span><br><span class="line">4 1 8 3</span><br><span class="line">自顶向下的最小路径和为 11（即，2 + 3 + 5 + 1 = 11）。</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：triangle = [[-10]]</span><br><span class="line">输出：-10</span><br></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>1 &lt;= triangle.length &lt;= 200</code></li>
+<li><code>triangle[0].length == 1</code></li>
+<li><code>triangle[i].length == triangle[i - 1].length + 1</code></li>
+<li>-10<sup>4</sup> &lt;&#x3D; triangle[i][j] &lt;&#x3D; 10<sup>4</sup></li>
+</ul>
+<p><strong>进阶：</strong></p>
+<ul>
+<li>你可以只使用 <code>O(n)</code> 的额外空间（<code>n</code> 为三角形的总行数）来解决这个问题吗？</li>
+</ul>
+<p>注意：本题与主站 120 题相同： <a href="https://leetcode-cn.com/problems/triangle/">https://leetcode-cn.com/problems/triangle/</a></p>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">minimumTotal</span><span class="params">(vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;&amp; triangle)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> level = <span class="number">1</span>;level &lt; triangle.<span class="built_in">size</span>();level++) &#123;</span><br><span class="line">            triangle[level][<span class="number">0</span>] += triangle[level - <span class="number">1</span>][<span class="number">0</span>];</span><br><span class="line">            triangle[level][triangle[level].<span class="built_in">size</span>() - <span class="number">1</span>] += triangle[level - <span class="number">1</span>][triangle[level - <span class="number">1</span>].<span class="built_in">size</span>() - <span class="number">1</span>];</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt; triangle[level].<span class="built_in">size</span>() - <span class="number">1</span>;i++) &#123;</span><br><span class="line">                triangle[level][i] += <span class="built_in">min</span>(triangle[level - <span class="number">1</span>][i - <span class="number">1</span>],triangle[level - <span class="number">1</span>][i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> minPath = triangle[triangle.<span class="built_in">size</span>() - <span class="number">1</span>][<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = triangle[triangle.<span class="built_in">size</span>() - <span class="number">1</span>].<span class="built_in">size</span>() - <span class="number">1</span>;i &gt;= <span class="number">0</span>;i--) &#123;</span><br><span class="line">            minPath = <span class="built_in">min</span>(minPath,triangle[triangle.<span class="built_in">size</span>() - <span class="number">1</span>][i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> minPath;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>剑指 Offer II</category>
+      </categories>
+      <tags>
+        <tag>动态规划</tag>
+        <tag>数组</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>剑指 Offer II 113. 课程顺序</title>
     <url>/2022/09/15/%E5%89%91%E6%8C%87-Offer-II-113-%E8%AF%BE%E7%A8%8B%E9%A1%BA%E5%BA%8F/</url>
     <content><![CDATA[<h1 id="剑指-Offer-II-113-课程顺序"><a href="#剑指-Offer-II-113-课程顺序" class="headerlink" title="剑指 Offer II 113. 课程顺序"></a><a href="https://leetcode.cn/problems/QA2IGt/">剑指 Offer II 113. 课程顺序</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
@@ -703,38 +801,45 @@
       </tags>
   </entry>
   <entry>
-    <title>剑指 Offer II 100. 三角形中最小路径之和</title>
-    <url>/2022/09/13/%E5%89%91%E6%8C%87-Offer-II-100-%E4%B8%89%E8%A7%92%E5%BD%A2%E4%B8%AD%E6%9C%80%E5%B0%8F%E8%B7%AF%E5%BE%84%E4%B9%8B%E5%92%8C/</url>
-    <content><![CDATA[<h1 id="剑指-Offer-II-100-三角形中最小路径之和"><a href="#剑指-Offer-II-100-三角形中最小路径之和" class="headerlink" title="剑指 Offer II 100. 三角形中最小路径之和"></a><a href="https://leetcode.cn/problems/IlPe0q/">剑指 Offer II 100. 三角形中最小路径之和</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
-<p>Related Topics: <a href="https://leetcode.cn/tag/array/">数组</a>, <a href="https://leetcode.cn/tag/dynamic-programming/">动态规划</a></p>
-<p>给定一个三角形 <code>triangle</code> ，找出自顶向下的最小路径和。</p>
-<p>每一步只能移动到下一行中相邻的结点上。<strong>相邻的结点</strong> 在这里指的是 <strong>下标</strong> 与 <strong>上一层结点下标</strong> 相同或者等于 <strong>上一层结点下标 + 1</strong> 的两个结点。也就是说，如果正位于当前行的下标 <code>i</code> ，那么下一步可以移动到下一行的下标 <code>i</code> 或 <code>i + 1</code> 。</p>
-<p><strong>示例 1：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：triangle = [[2],[3,4],[6,5,7],[4,1,8,3]]</span><br><span class="line">输出：11</span><br><span class="line">解释：如下面简图所示：</span><br><span class="line">   2</span><br><span class="line">  3 4</span><br><span class="line"> 6 5 7</span><br><span class="line">4 1 8 3</span><br><span class="line">自顶向下的最小路径和为 11（即，2 + 3 + 5 + 1 = 11）。</span><br></pre></td></tr></table></figure>
+    <title>剑指 Offer II 109. 开密码锁</title>
+    <url>/2022/09/16/%E5%89%91%E6%8C%87-Offer-II-109-%E5%BC%80%E5%AF%86%E7%A0%81%E9%94%81/</url>
+    <content><![CDATA[<h1 id="剑指-Offer-II-109-开密码锁"><a href="#剑指-Offer-II-109-开密码锁" class="headerlink" title="剑指 Offer II 109. 开密码锁"></a><a href="https://leetcode.cn/problems/zlDJc7/">剑指 Offer II 109. 开密码锁</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
+<p>Related Topics: <a href="https://leetcode.cn/tag/breadth-first-search/">广度优先搜索</a>, <a href="https://leetcode.cn/tag/array/">数组</a>, <a href="https://leetcode.cn/tag/hash-table/">哈希表</a>, <a href="https://leetcode.cn/tag/string/">字符串</a></p>
+<p>一个密码锁由 4 个环形拨轮组成，每个拨轮都有 10 个数字： <code>&#39;0&#39;, &#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;, &#39;5&#39;, &#39;6&#39;, &#39;7&#39;, &#39;8&#39;, &#39;9&#39;</code> 。每个拨轮可以自由旋转：例如把 <code>&#39;9&#39;</code> 变为 <code>&#39;0&#39;</code>，<code>&#39;0&#39;</code> 变为 <code>&#39;9&#39;</code> 。每次旋转都只能旋转一个拨轮的一位数字。</p>
+<p>锁的初始数字为 <code>&#39;0000&#39;</code> ，一个代表四个拨轮的数字的字符串。</p>
+<p>列表 <code>deadends</code> 包含了一组死亡数字，一旦拨轮的数字和列表里的任何一个元素相同，这个锁将会被永久锁定，无法再被旋转。</p>
+<p>字符串 <code>target</code> 代表可以解锁的数字，请给出解锁需要的最小旋转次数，如果无论如何不能解锁，返回 <code>-1</code> 。</p>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：deadends = [&quot;0201&quot;,&quot;0101&quot;,&quot;0102&quot;,&quot;1212&quot;,&quot;2002&quot;], target = &quot;0202&quot;</span><br><span class="line">输出：6</span><br><span class="line">解释：</span><br><span class="line">可能的移动序列为 &quot;0000&quot; -&gt; &quot;1000&quot; -&gt; &quot;1100&quot; -&gt; &quot;1200&quot; -&gt; &quot;1201&quot; -&gt; &quot;1202&quot; -&gt; &quot;0202&quot;。</span><br><span class="line">注意 &quot;0000&quot; -&gt; &quot;0001&quot; -&gt; &quot;0002&quot; -&gt; &quot;0102&quot; -&gt; &quot;0202&quot; 这样的序列是不能解锁的，因为当拨动到 &quot;0102&quot; 时这个锁就会被锁定。</span><br></pre></td></tr></table></figure>
 
-<p><strong>示例 2：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：triangle = [[-10]]</span><br><span class="line">输出：-10</span><br></pre></td></tr></table></figure>
+<p><strong>示例 2:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入: deadends = [&quot;8888&quot;], target = &quot;0009&quot;</span><br><span class="line">输出：1</span><br><span class="line">解释：</span><br><span class="line">把最后一位反向旋转一次即可 &quot;0000&quot; -&gt; &quot;0009&quot;。</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 3:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入: deadends = [&quot;8887&quot;,&quot;8889&quot;,&quot;8878&quot;,&quot;8898&quot;,&quot;8788&quot;,&quot;8988&quot;,&quot;7888&quot;,&quot;9888&quot;], target = &quot;8888&quot;</span><br><span class="line">输出：-1</span><br><span class="line">解释：</span><br><span class="line">无法旋转到目标数字且不被锁定。</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 4:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入: deadends = [&quot;0000&quot;], target = &quot;8888&quot;</span><br><span class="line">输出：-1</span><br></pre></td></tr></table></figure>
 
 <p><strong>提示：</strong></p>
 <ul>
-<li><code>1 &lt;= triangle.length &lt;= 200</code></li>
-<li><code>triangle[0].length == 1</code></li>
-<li><code>triangle[i].length == triangle[i - 1].length + 1</code></li>
-<li>-10<sup>4</sup> &lt;&#x3D; triangle[i][j] &lt;&#x3D; 10<sup>4</sup></li>
+<li><code>1 &lt;= deadends.length &lt;= 500</code></li>
+<li><code>&lt;font face=&quot;monospace&quot;&gt;deadends[i].length == 4&lt;/font&gt;</code></li>
+<li><code>&lt;font face=&quot;monospace&quot;&gt;target.length == 4&lt;/font&gt;</code></li>
+<li><code>target</code> <strong>不在</strong> <code>deadends</code> 之中</li>
+<li><code>target</code> 和 <code>deadends[i]</code> 仅由若干位数字组成</li>
 </ul>
-<p><strong>进阶：</strong></p>
-<ul>
-<li>你可以只使用 <code>O(n)</code> 的额外空间（<code>n</code> 为三角形的总行数）来解决这个问题吗？</li>
-</ul>
-<p>注意：本题与主站 120 题相同： <a href="https://leetcode-cn.com/problems/triangle/">https://leetcode-cn.com/problems/triangle/</a></p>
+<p>注意：本题与主站 752 题相同： <a href="https://leetcode-cn.com/problems/open-the-lock/">https://leetcode-cn.com/problems/open-the-lock/</a></p>
 <h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">minimumTotal</span><span class="params">(vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;&amp; triangle)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> level = <span class="number">1</span>;level &lt; triangle.<span class="built_in">size</span>();level++) &#123;</span><br><span class="line">            triangle[level][<span class="number">0</span>] += triangle[level - <span class="number">1</span>][<span class="number">0</span>];</span><br><span class="line">            triangle[level][triangle[level].<span class="built_in">size</span>() - <span class="number">1</span>] += triangle[level - <span class="number">1</span>][triangle[level - <span class="number">1</span>].<span class="built_in">size</span>() - <span class="number">1</span>];</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt; triangle[level].<span class="built_in">size</span>() - <span class="number">1</span>;i++) &#123;</span><br><span class="line">                triangle[level][i] += <span class="built_in">min</span>(triangle[level - <span class="number">1</span>][i - <span class="number">1</span>],triangle[level - <span class="number">1</span>][i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> minPath = triangle[triangle.<span class="built_in">size</span>() - <span class="number">1</span>][<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = triangle[triangle.<span class="built_in">size</span>() - <span class="number">1</span>].<span class="built_in">size</span>() - <span class="number">1</span>;i &gt;= <span class="number">0</span>;i--) &#123;</span><br><span class="line">            minPath = <span class="built_in">min</span>(minPath,triangle[triangle.<span class="built_in">size</span>() - <span class="number">1</span>][i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> minPath;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">        <span class="keyword">while</span> (thisRound.<span class="built_in">size</span>() != <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="type">int</span> round = thisRound.<span class="built_in">size</span>();</span><br><span class="line">            count++;</span><br><span class="line">            <span class="keyword">while</span> (round &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                string now = thisRound.<span class="built_in">front</span>();</span><br><span class="line">                thisRound.<span class="built_in">pop</span>();</span><br><span class="line">                <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; <span class="number">4</span>;i++) &#123;</span><br><span class="line">                    string addOne = <span class="built_in">cal</span>(now,i,<span class="string">&quot;+&quot;</span>);</span><br><span class="line">                    string subOne = <span class="built_in">cal</span>(now,i,<span class="string">&quot;-&quot;</span>);</span><br><span class="line">                    <span class="keyword">if</span> (booms.<span class="built_in">find</span>(addOne) == booms.<span class="built_in">end</span>() &amp;&amp; visited.<span class="built_in">find</span>(addOne) == visited.<span class="built_in">end</span>()) &#123;</span><br><span class="line">        &#125;</span><br><span class="line">        thisRound.<span class="built_in">push</span>(<span class="string">&quot;0000&quot;</span>);</span><br><span class="line">        visited.<span class="built_in">insert</span>(<span class="string">&quot;0000&quot;</span>);</span><br><span class="line">        count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span> (target == <span class="string">&quot;0000&quot;</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> count;</span><br><span class="line">        <span class="keyword">if</span> (booms.<span class="built_in">find</span>(<span class="string">&quot;0000&quot;</span>) != booms.<span class="built_in">end</span>()) &#123;</span><br><span class="line">            <span class="keyword">return</span> count;</span><br><span class="line">        &#125;</span><br><span class="line">            booms.<span class="built_in">insert</span>(deadend);</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">openLock</span><span class="params">(vector&lt;string&gt;&amp; deadends, string target)</span> </span>&#123;</span><br><span class="line">        queue&lt;string&gt; thisRound;</span><br><span class="line">        <span class="keyword">for</span> (string deadend: deadends) &#123;</span><br><span class="line">    set&lt;string&gt; visited;</span><br><span class="line">    set&lt;string&gt; booms;</span><br><span class="line">    <span class="type">int</span> count = <span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">return</span> src;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>剑指 Offer II</category>
       </categories>
       <tags>
-        <tag>动态规划</tag>
         <tag>数组</tag>
+        <tag>字符串</tag>
+        <tag>广度优先搜索</tag>
+        <tag>哈希表</tag>
       </tags>
   </entry>
   <entry>
@@ -777,61 +882,6 @@
       </tags>
   </entry>
   <entry>
-    <title>剑指 Offer II 109. 开密码锁</title>
-    <url>/2022/09/16/%E5%89%91%E6%8C%87-Offer-II-109-%E5%BC%80%E5%AF%86%E7%A0%81%E9%94%81/</url>
-    <content><![CDATA[<h1 id="剑指-Offer-II-109-开密码锁"><a href="#剑指-Offer-II-109-开密码锁" class="headerlink" title="剑指 Offer II 109. 开密码锁"></a><a href="https://leetcode.cn/problems/zlDJc7/">剑指 Offer II 109. 开密码锁</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
-<p>Related Topics: <a href="https://leetcode.cn/tag/breadth-first-search/">广度优先搜索</a>, <a href="https://leetcode.cn/tag/array/">数组</a>, <a href="https://leetcode.cn/tag/hash-table/">哈希表</a>, <a href="https://leetcode.cn/tag/string/">字符串</a></p>
-<p>一个密码锁由 4 个环形拨轮组成，每个拨轮都有 10 个数字： <code>&#39;0&#39;, &#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;, &#39;5&#39;, &#39;6&#39;, &#39;7&#39;, &#39;8&#39;, &#39;9&#39;</code> 。每个拨轮可以自由旋转：例如把 <code>&#39;9&#39;</code> 变为 <code>&#39;0&#39;</code>，<code>&#39;0&#39;</code> 变为 <code>&#39;9&#39;</code> 。每次旋转都只能旋转一个拨轮的一位数字。</p>
-<p>锁的初始数字为 <code>&#39;0000&#39;</code> ，一个代表四个拨轮的数字的字符串。</p>
-<p>列表 <code>deadends</code> 包含了一组死亡数字，一旦拨轮的数字和列表里的任何一个元素相同，这个锁将会被永久锁定，无法再被旋转。</p>
-<p>字符串 <code>target</code> 代表可以解锁的数字，请给出解锁需要的最小旋转次数，如果无论如何不能解锁，返回 <code>-1</code> 。</p>
-<p><strong>示例 1:</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：deadends = [&quot;0201&quot;,&quot;0101&quot;,&quot;0102&quot;,&quot;1212&quot;,&quot;2002&quot;], target = &quot;0202&quot;</span><br><span class="line">输出：6</span><br><span class="line">解释：</span><br><span class="line">可能的移动序列为 &quot;0000&quot; -&gt; &quot;1000&quot; -&gt; &quot;1100&quot; -&gt; &quot;1200&quot; -&gt; &quot;1201&quot; -&gt; &quot;1202&quot; -&gt; &quot;0202&quot;。</span><br><span class="line">注意 &quot;0000&quot; -&gt; &quot;0001&quot; -&gt; &quot;0002&quot; -&gt; &quot;0102&quot; -&gt; &quot;0202&quot; 这样的序列是不能解锁的，因为当拨动到 &quot;0102&quot; 时这个锁就会被锁定。</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 2:</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入: deadends = [&quot;8888&quot;], target = &quot;0009&quot;</span><br><span class="line">输出：1</span><br><span class="line">解释：</span><br><span class="line">把最后一位反向旋转一次即可 &quot;0000&quot; -&gt; &quot;0009&quot;。</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 3:</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入: deadends = [&quot;8887&quot;,&quot;8889&quot;,&quot;8878&quot;,&quot;8898&quot;,&quot;8788&quot;,&quot;8988&quot;,&quot;7888&quot;,&quot;9888&quot;], target = &quot;8888&quot;</span><br><span class="line">输出：-1</span><br><span class="line">解释：</span><br><span class="line">无法旋转到目标数字且不被锁定。</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 4:</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入: deadends = [&quot;0000&quot;], target = &quot;8888&quot;</span><br><span class="line">输出：-1</span><br></pre></td></tr></table></figure>
-
-<p><strong>提示：</strong></p>
-<ul>
-<li><code>1 &lt;= deadends.length &lt;= 500</code></li>
-<li><code>&lt;font face=&quot;monospace&quot;&gt;deadends[i].length == 4&lt;/font&gt;</code></li>
-<li><code>&lt;font face=&quot;monospace&quot;&gt;target.length == 4&lt;/font&gt;</code></li>
-<li><code>target</code> <strong>不在</strong> <code>deadends</code> 之中</li>
-<li><code>target</code> 和 <code>deadends[i]</code> 仅由若干位数字组成</li>
-</ul>
-<p>注意：本题与主站 752 题相同： <a href="https://leetcode-cn.com/problems/open-the-lock/">https://leetcode-cn.com/problems/open-the-lock/</a></p>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">        <span class="keyword">while</span> (thisRound.<span class="built_in">size</span>() != <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="type">int</span> round = thisRound.<span class="built_in">size</span>();</span><br><span class="line">            count++;</span><br><span class="line">            <span class="keyword">while</span> (round &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                string now = thisRound.<span class="built_in">front</span>();</span><br><span class="line">                thisRound.<span class="built_in">pop</span>();</span><br><span class="line">                <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; <span class="number">4</span>;i++) &#123;</span><br><span class="line">                    string addOne = <span class="built_in">cal</span>(now,i,<span class="string">&quot;+&quot;</span>);</span><br><span class="line">                    string subOne = <span class="built_in">cal</span>(now,i,<span class="string">&quot;-&quot;</span>);</span><br><span class="line">                    <span class="keyword">if</span> (booms.<span class="built_in">find</span>(addOne) == booms.<span class="built_in">end</span>() &amp;&amp; visited.<span class="built_in">find</span>(addOne) == visited.<span class="built_in">end</span>()) &#123;</span><br><span class="line">        &#125;</span><br><span class="line">        thisRound.<span class="built_in">push</span>(<span class="string">&quot;0000&quot;</span>);</span><br><span class="line">        visited.<span class="built_in">insert</span>(<span class="string">&quot;0000&quot;</span>);</span><br><span class="line">        count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span> (target == <span class="string">&quot;0000&quot;</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> count;</span><br><span class="line">        <span class="keyword">if</span> (booms.<span class="built_in">find</span>(<span class="string">&quot;0000&quot;</span>) != booms.<span class="built_in">end</span>()) &#123;</span><br><span class="line">            <span class="keyword">return</span> count;</span><br><span class="line">        &#125;</span><br><span class="line">            booms.<span class="built_in">insert</span>(deadend);</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">openLock</span><span class="params">(vector&lt;string&gt;&amp; deadends, string target)</span> </span>&#123;</span><br><span class="line">        queue&lt;string&gt; thisRound;</span><br><span class="line">        <span class="keyword">for</span> (string deadend: deadends) &#123;</span><br><span class="line">    set&lt;string&gt; visited;</span><br><span class="line">    set&lt;string&gt; booms;</span><br><span class="line">    <span class="type">int</span> count = <span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">return</span> src;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>剑指 Offer II</category>
-      </categories>
-      <tags>
-        <tag>哈希表</tag>
-        <tag>字符串</tag>
-        <tag>数组</tag>
-        <tag>广度优先搜索</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>算法&amp;数据结构 前缀树Trie</title>
-    <url>/2022/09/16/%E7%AE%97%E6%B3%95-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%89%8D%E7%BC%80%E6%A0%91Trie/</url>
-    <content><![CDATA[<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Trie</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    vector&lt;Trie*&gt; children;</span><br><span class="line">    <span class="type">bool</span> isEnd;</span><br><span class="line">    <span class="built_in">Trie</span>():<span class="built_in">children</span>(<span class="number">26</span>),<span class="built_in">isEnd</span>(<span class="literal">false</span>) &#123;&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">insert</span><span class="params">(string word)</span> </span>&#123;</span><br><span class="line">        Trie* node = <span class="keyword">this</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">char</span> c : word) &#123;</span><br><span class="line">            <span class="type">int</span> index = c - <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">            <span class="keyword">if</span> (node -&gt; children[index] == <span class="literal">nullptr</span>) &#123;</span><br><span class="line">                node -&gt; children[index] = <span class="keyword">new</span> <span class="built_in">Trie</span>();</span><br><span class="line">            &#125;</span><br><span class="line">            node = node -&gt; children[index];</span><br><span class="line">        &#125;</span><br><span class="line">        node -&gt; isEnd = <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">search</span><span class="params">(string word)</span> </span>&#123;</span><br><span class="line">        Trie* node = <span class="keyword">this</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">char</span> c : word) &#123;</span><br><span class="line">            <span class="type">int</span> index = c - <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">            <span class="keyword">if</span> (node -&gt; children[index] == <span class="literal">nullptr</span>) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            node = node -&gt; children[index];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> node -&gt; isEnd;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">startsWith</span><span class="params">(string prefix)</span> </span>&#123;</span><br><span class="line">        Trie* node = <span class="keyword">this</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">char</span> c : prefix) &#123;</span><br><span class="line">            <span class="type">int</span> index = c - <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">            <span class="keyword">if</span> (node -&gt; children[index] == <span class="literal">nullptr</span>) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            node = node -&gt; children[index];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>算法&amp;数据结构</category>
-      </categories>
-      <tags>
-        <tag>数据结构</tag>
-        <tag>前缀树</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>剑指 Offer II 118. 多余的边</title>
     <url>/2022/09/15/%E5%89%91%E6%8C%87-Offer-II-118-%E5%A4%9A%E4%BD%99%E7%9A%84%E8%BE%B9/</url>
     <content><![CDATA[<h1 id="剑指-Offer-II-118-多余的边"><a href="#剑指-Offer-II-118-多余的边" class="headerlink" title="剑指 Offer II 118. 多余的边"></a><a href="https://leetcode.cn/problems/7LpjUW/">剑指 Offer II 118. 多余的边</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
@@ -869,6 +919,19 @@
         <tag>广度优先搜索</tag>
         <tag>图</tag>
         <tag>并查集</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>算法&amp;数据结构 前缀树Trie</title>
+    <url>/2022/09/16/%E7%AE%97%E6%B3%95-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%89%8D%E7%BC%80%E6%A0%91Trie/</url>
+    <content><![CDATA[<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Trie</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    vector&lt;Trie*&gt; children;</span><br><span class="line">    <span class="type">bool</span> isEnd;</span><br><span class="line">    <span class="built_in">Trie</span>():<span class="built_in">children</span>(<span class="number">26</span>),<span class="built_in">isEnd</span>(<span class="literal">false</span>) &#123;&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">insert</span><span class="params">(string word)</span> </span>&#123;</span><br><span class="line">        Trie* node = <span class="keyword">this</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">char</span> c : word) &#123;</span><br><span class="line">            <span class="type">int</span> index = c - <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">            <span class="keyword">if</span> (node -&gt; children[index] == <span class="literal">nullptr</span>) &#123;</span><br><span class="line">                node -&gt; children[index] = <span class="keyword">new</span> <span class="built_in">Trie</span>();</span><br><span class="line">            &#125;</span><br><span class="line">            node = node -&gt; children[index];</span><br><span class="line">        &#125;</span><br><span class="line">        node -&gt; isEnd = <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">search</span><span class="params">(string word)</span> </span>&#123;</span><br><span class="line">        Trie* node = <span class="keyword">this</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">char</span> c : word) &#123;</span><br><span class="line">            <span class="type">int</span> index = c - <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">            <span class="keyword">if</span> (node -&gt; children[index] == <span class="literal">nullptr</span>) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            node = node -&gt; children[index];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> node -&gt; isEnd;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">startsWith</span><span class="params">(string prefix)</span> </span>&#123;</span><br><span class="line">        Trie* node = <span class="keyword">this</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">char</span> c : prefix) &#123;</span><br><span class="line">            <span class="type">int</span> index = c - <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">            <span class="keyword">if</span> (node -&gt; children[index] == <span class="literal">nullptr</span>) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            node = node -&gt; children[index];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>算法&amp;数据结构</category>
+      </categories>
+      <tags>
+        <tag>数据结构</tag>
+        <tag>前缀树</tag>
       </tags>
   </entry>
   <entry>
