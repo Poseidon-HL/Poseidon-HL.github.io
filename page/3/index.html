@@ -152,18 +152,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">41</span>
+          <span class="site-state-item-count">54</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">29</span>
+        <span class="site-state-item-count">32</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -201,7 +201,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/18/Linux-hostname-%E5%91%BD%E4%BB%A4/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/21/%E5%89%91%E6%8C%87-Offer-II-010-%E5%92%8C%E4%B8%BA-k-%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -219,7 +219,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/09/18/Linux-hostname-%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">Linux hostname 命令</a>
+          <a href="/2022/09/21/%E5%89%91%E6%8C%87-Offer-II-010-%E5%92%8C%E4%B8%BA-k-%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84/" class="post-title-link" itemprop="url">剑指 Offer II 010. 和为 k 的子数组</a>
         </h2>
 
         <div class="post-meta-container">
@@ -229,9 +229,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2022-09-18 20:33:59 / Modified: 20:36:21" itemprop="dateCreated datePublished" datetime="2022-09-18T20:33:59+08:00">2022-09-18</time>
+      <time title="Created: 2022-09-21 12:51:59" itemprop="dateCreated datePublished" datetime="2022-09-21T12:51:59+08:00">2022-09-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-09-22 16:43:23" itemprop="dateModified" datetime="2022-09-22T16:43:23+08:00">2022-09-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -239,7 +245,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Linux-%E5%91%BD%E4%BB%A4/" itemprop="url" rel="index"><span itemprop="name">Linux 命令</span></a>
+          <a href="/categories/%E5%89%91%E6%8C%87-Offer-II/" itemprop="url" rel="index"><span itemprop="name">剑指 Offer II</span></a>
         </span>
     </span>
 
@@ -253,8 +259,24 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>Linux hostname 命令用于显示系统的主机名 或用于查看IP地址</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">- Show current host name:</span><br><span class="line">  hostname</span><br><span class="line"></span><br><span class="line">- Show the network address of the host name:</span><br><span class="line">  hostname -i</span><br><span class="line"></span><br><span class="line">- Show all network addresses of the host:</span><br><span class="line">  hostname -I</span><br><span class="line"></span><br><span class="line">- Show the FQDN (Fully Qualified Domain Name):</span><br><span class="line">  hostname --fqdn</span><br><span class="line"></span><br><span class="line">- Set current host name:</span><br><span class="line">  hostname &#123;&#123;new_hostname&#125;&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+          <h1 id="剑指-Offer-II-010-和为-k-的子数组"><a href="#剑指-Offer-II-010-和为-k-的子数组" class="headerlink" title="剑指 Offer II 010. 和为 k 的子数组"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/QTMn0o/">剑指 Offer II 010. 和为 k 的子数组</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
+<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/array/">数组</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/hash-table/">哈希表</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/prefix-sum/">前缀和</a></p>
+<p>给定一个整数数组和一个整数 <code>k</code> <strong>，</strong>请找到该数组中和为 <code>k</code>的连续子数组的个数。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入:nums = [1,1,1], k = 2</span><br><span class="line">输出: 2</span><br><span class="line">解释: 此题 [1,1] 与 [1,1] 为两种不同的情况</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入:nums = [1,2,3], k = 3</span><br><span class="line">输出: 2</span><br></pre></td></tr></table></figure>
+
+<p><strong>提示:</strong></p>
+<ul>
+<li>1 &lt;&#x3D; nums.length &lt;&#x3D; 2 * 10<sup>4</sup></li>
+<li><code>-1000 &lt;= nums[i] &lt;= 1000</code></li>
+<li>-10<sup>7</sup> &lt;&#x3D; k &lt;&#x3D; 10<sup>7</sup></li>
+</ul>
+<p>注意：本题与主站 560 题相同： <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/subarray-sum-equals-k/">https://leetcode-cn.com/problems/subarray-sum-equals-k/</a></p>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">subarraySum</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> k)</span> </span>&#123;</span><br><span class="line">        map&lt;<span class="type">int</span>,<span class="type">int</span>&gt; tmp;</span><br><span class="line">        <span class="type">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> result = <span class="number">0</span>;</span><br><span class="line">        tmp[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; nums.<span class="built_in">size</span>();i++) &#123;</span><br><span class="line">            sum += nums[i];</span><br><span class="line">            <span class="keyword">if</span> (tmp.<span class="built_in">find</span>(sum - k) != (tmp.<span class="built_in">end</span>())) &#123;</span><br><span class="line">                result += tmp[sum - k];</span><br><span class="line">            &#125;</span><br><span class="line">            tmp[sum]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -280,7 +302,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/18/go-sync-Cond/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/21/%E5%89%91%E6%8C%87-Offer-II-009-%E4%B9%98%E7%A7%AF%E5%B0%8F%E4%BA%8E-K-%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -298,7 +320,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/09/18/go-sync-Cond/" class="post-title-link" itemprop="url">go sync.Cond</a>
+          <a href="/2022/09/21/%E5%89%91%E6%8C%87-Offer-II-009-%E4%B9%98%E7%A7%AF%E5%B0%8F%E4%BA%8E-K-%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84/" class="post-title-link" itemprop="url">剑指 Offer II 009. 乘积小于 K 的子数组</a>
         </h2>
 
         <div class="post-meta-container">
@@ -309,14 +331,14 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2022-09-18 17:06:01" itemprop="dateCreated datePublished" datetime="2022-09-18T17:06:01+08:00">2022-09-18</time>
+      <time title="Created: 2022-09-21 12:42:58" itemprop="dateCreated datePublished" datetime="2022-09-21T12:42:58+08:00">2022-09-21</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-09-20 19:21:28" itemprop="dateModified" datetime="2022-09-20T19:21:28+08:00">2022-09-20</time>
+      <time title="Modified: 2022-09-22 16:43:23" itemprop="dateModified" datetime="2022-09-22T16:43:23+08:00">2022-09-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -324,7 +346,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/go-sync/" itemprop="url" rel="index"><span itemprop="name">go sync</span></a>
+          <a href="/categories/%E5%89%91%E6%8C%87-Offer-II/" itemprop="url" rel="index"><span itemprop="name">剑指 Offer II</span></a>
         </span>
     </span>
 
@@ -338,29 +360,30 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h3 id="sync-Cond-使用场景"><a href="#sync-Cond-使用场景" class="headerlink" title="sync.Cond 使用场景"></a>sync.Cond 使用场景</h3><ul>
-<li>多个goroutine等待，单个goroutine通知</li>
-</ul>
-<h3 id="sync-Cond-定义-amp-方法"><a href="#sync-Cond-定义-amp-方法" class="headerlink" title="sync.Cond 定义&amp;方法"></a>sync.Cond 定义&amp;方法</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Cond <span class="keyword">struct</span> &#123;</span><br><span class="line">	noCopy noCopy</span><br><span class="line"></span><br><span class="line">	L Locker</span><br><span class="line"></span><br><span class="line">	notify  notifyList</span><br><span class="line">	checker copyChecker</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <h1 id="剑指-Offer-II-009-乘积小于-K-的子数组"><a href="#剑指-Offer-II-009-乘积小于-K-的子数组" class="headerlink" title="剑指 Offer II 009. 乘积小于 K 的子数组"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/ZVAVXX/">剑指 Offer II 009. 乘积小于 K 的子数组</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
+<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/array/">数组</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/sliding-window/">滑动窗口</a></p>
+<p>给定一个正整数数组 <code>nums</code>和整数 <code>k</code> ，请找出该数组内乘积小于 <code>k</code> 的连续的子数组的个数。</p>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入: nums = [10,5,2,6], k = 100</span><br><span class="line">输出: 8</span><br><span class="line">解释: 8 个乘积小于 100 的子数组分别为: [10], [5], [2], [6], [10,5], [5,2], [2,6], [5,2,6]。</span><br><span class="line">需要注意的是 [10,5,2] 并不是乘积小于100的子数组。</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: nums = [1,2,3], k = 0</span><br><span class="line">输出: 0</span><br></pre></td></tr></table></figure>
+
+<p>**提示: **</p>
 <ul>
-<li>noCopy通常内嵌在结构体中，避免发生结构体拷贝</li>
-<li>L为关联锁，通常为互斥锁或读写锁（*Mutex or *RWMutex）</li>
+<li>1 &lt;&#x3D; nums.length &lt;&#x3D; 3 * 10<sup>4</sup></li>
+<li><code>1 &lt;= nums[i] &lt;= 1000</code></li>
+<li>0 &lt;&#x3D; k &lt;&#x3D; 10<sup>6</sup></li>
 </ul>
-<h4 id="NewCond-创建新的Cond实例"><a href="#NewCond-创建新的Cond实例" class="headerlink" title="NewCond 创建新的Cond实例"></a>NewCond 创建新的Cond实例</h4><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">NewCond</span><span class="params">(l Locker)</span></span> *Cond &#123;</span><br><span class="line">	<span class="keyword">return</span> &amp;Cond&#123;L: l&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>注意：本题与主站 713 题相同：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/subarray-product-less-than-k/">https://leetcode-cn.com/problems/subarray-product-less-than-k/</a> </p>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">numSubarrayProductLessThanK</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> begin = <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> end = <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> result = <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> multiply = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(end &lt; nums.<span class="built_in">size</span>()) &#123;</span><br><span class="line">            <span class="keyword">while</span> (end &lt; nums.<span class="built_in">size</span>() &amp;&amp; multiply &lt; k) &#123;</span><br><span class="line">                multiply *= nums[end];</span><br><span class="line">                <span class="keyword">if</span> (multiply &gt;= k) &#123;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;   </span><br><span class="line">                result += (end - begin + <span class="number">1</span>);</span><br><span class="line">                end++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">while</span> (multiply &gt;= k &amp;&amp; begin &lt;= end) &#123;</span><br><span class="line">                multiply /= nums[begin];</span><br><span class="line">                begin++;</span><br><span class="line">                <span class="keyword">if</span> (multiply &lt; k) &#123;</span><br><span class="line">                    result += (end - begin + <span class="number">1</span>);</span><br><span class="line">                    end++;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (begin &gt; end) &#123;</span><br><span class="line">                    end++;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
 <ul>
-<li>创建Cond实例，传入需要关联的锁</li>
+<li>注意边界细节问题</li>
+<li>反向也需要相加</li>
 </ul>
-<h4 id="checker-check-检查是否发生拷贝"><a href="#checker-check-检查是否发生拷贝" class="headerlink" title="checker.check 检查是否发生拷贝"></a>checker.check 检查是否发生拷贝</h4><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> copyChecker <span class="type">uintptr</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(c *copyChecker)</span></span> check() &#123;</span><br><span class="line">	<span class="keyword">if</span> <span class="type">uintptr</span>(*c) != <span class="type">uintptr</span>(unsafe.Pointer(c)) &amp;&amp;</span><br><span class="line">		!atomic.CompareAndSwapUintptr((*<span class="type">uintptr</span>)(c), <span class="number">0</span>, <span class="type">uintptr</span>(unsafe.Pointer(c))) &amp;&amp;</span><br><span class="line">		<span class="type">uintptr</span>(*c) != <span class="type">uintptr</span>(unsafe.Pointer(c)) &#123;</span><br><span class="line">		<span class="built_in">panic</span>(<span class="string">&quot;sync.Cond is copied&quot;</span>)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>copyChecker.check 在Wait Signal Broadcast方法中均会被调用，用于检查是否发生了值拷贝</li>
-<li>第一次执行检查会完成该变量的赋值</li>
-<li>此后若发生了拷贝，则panic</li>
-</ul>
-<h4 id="Wait-等待"><a href="#Wait-等待" class="headerlink" title="Wait 等待"></a>Wait 等待</h4><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(c *Cond)</span></span> Wait() &#123;</span><br><span class="line">	c.checker.check()</span><br><span class="line">	t := runtime_notifyListAdd(&amp;c.notify)</span><br><span class="line">	c.L.Unlock()</span><br><span class="line">	runtime_notifyListWait(&amp;c.notify, t)</span><br><span class="line">	c.L.Lock()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>Wait会自动释放锁，并挂起调用Wait的协程</li>
-</ul>
-<h4 id="Signal-唤醒单个协程"><a href="#Signal-唤醒单个协程" class="headerlink" title="Signal 唤醒单个协程"></a>Signal 唤醒单个协程</h4><h4 id="Broadcast-唤醒所有等待协程"><a href="#Broadcast-唤醒所有等待协程" class="headerlink" title="Broadcast 唤醒所有等待协程"></a>Broadcast 唤醒所有等待协程</h4><h3 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -386,7 +409,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/16/Linux-chgrp-%E5%91%BD%E4%BB%A4/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/21/%E6%B5%B7%E9%87%8F%E4%BF%A1%E6%81%AF%E5%AD%98%E5%82%A8-%E7%9B%98%E9%98%B5%E5%88%97%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -404,7 +427,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/09/16/Linux-chgrp-%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">Linux chgrp 命令</a>
+          <a href="/2022/09/21/%E6%B5%B7%E9%87%8F%E4%BF%A1%E6%81%AF%E5%AD%98%E5%82%A8-%E7%9B%98%E9%98%B5%E5%88%97%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84/" class="post-title-link" itemprop="url">海量信息存储-盘阵列系统结构</a>
         </h2>
 
         <div class="post-meta-container">
@@ -415,14 +438,14 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2022-09-16 14:18:22" itemprop="dateCreated datePublished" datetime="2022-09-16T14:18:22+08:00">2022-09-16</time>
+      <time title="Created: 2022-09-21 10:46:53" itemprop="dateCreated datePublished" datetime="2022-09-21T10:46:53+08:00">2022-09-21</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-09-18 13:54:46" itemprop="dateModified" datetime="2022-09-18T13:54:46+08:00">2022-09-18</time>
+      <time title="Modified: 2022-09-22 16:43:23" itemprop="dateModified" datetime="2022-09-22T16:43:23+08:00">2022-09-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -430,7 +453,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Linux-%E5%91%BD%E4%BB%A4/" itemprop="url" rel="index"><span itemprop="name">Linux 命令</span></a>
+          <a href="/categories/%E6%B5%B7%E9%87%8F%E4%BF%A1%E6%81%AF%E5%AD%98%E5%82%A8/" itemprop="url" rel="index"><span itemprop="name">海量信息存储</span></a>
         </span>
     </span>
 
@@ -444,8 +467,25 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>Linux chgrp 命令用于修改文件或目录的用户组</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">- Change the owner group of a file/directory:</span><br><span class="line">  chgrp &#123;&#123;group&#125;&#125; &#123;&#123;path/to/file_or_directory&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Recursively change the owner group of a directory and its contents:</span><br><span class="line">  chgrp -R &#123;&#123;group&#125;&#125; &#123;&#123;path/to/directory&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Change the owner group of a symbolic link:</span><br><span class="line">  chgrp -h &#123;&#123;group&#125;&#125; &#123;&#123;path/to/symlink&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Change the owner group of a file/directory to match a reference file:</span><br><span class="line">  chgrp --reference=&#123;&#123;path/to/reference_file&#125;&#125; &#123;&#123;path/to/file_or_directory&#125;&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+          <h3 id="分布数据的方法"><a href="#分布数据的方法" class="headerlink" title="分布数据的方法"></a>分布数据的方法</h3><h4 id="分布数据的基本方法RAID0-RAID5"><a href="#分布数据的基本方法RAID0-RAID5" class="headerlink" title="分布数据的基本方法RAID0~RAID5"></a>分布数据的基本方法RAID0~RAID5</h4><ul>
+<li>RAID0<ul>
+<li>没有采用任何冗余信息的磁盘阵列</li>
+</ul>
+</li>
+<li>RAID1<ul>
+<li>镜像阵列</li>
+</ul>
+</li>
+<li>RAID10<ul>
+<li>分块的镜像阵列</li>
+</ul>
+</li>
+<li>RAID2<ul>
+<li>采用交叉存取和海明码校验的磁盘阵列</li>
+</ul>
+</li>
+</ul>
+
       
     </div>
 
@@ -471,7 +511,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/16/Linux-chown-%E5%91%BD%E4%BB%A4/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/21/%E5%89%91%E6%8C%87-Offer-II-011-0-%E5%92%8C-1-%E4%B8%AA%E6%95%B0%E7%9B%B8%E5%90%8C%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -489,7 +529,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/09/16/Linux-chown-%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">Linux chown 命令</a>
+          <a href="/2022/09/21/%E5%89%91%E6%8C%87-Offer-II-011-0-%E5%92%8C-1-%E4%B8%AA%E6%95%B0%E7%9B%B8%E5%90%8C%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84/" class="post-title-link" itemprop="url">剑指 Offer II 011. 0 和 1 个数相同的子数组</a>
         </h2>
 
         <div class="post-meta-container">
@@ -500,14 +540,14 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2022-09-16 14:17:55" itemprop="dateCreated datePublished" datetime="2022-09-16T14:17:55+08:00">2022-09-16</time>
+      <time title="Created: 2022-09-21 10:27:40" itemprop="dateCreated datePublished" datetime="2022-09-21T10:27:40+08:00">2022-09-21</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-09-18 13:54:46" itemprop="dateModified" datetime="2022-09-18T13:54:46+08:00">2022-09-18</time>
+      <time title="Modified: 2022-09-22 16:43:23" itemprop="dateModified" datetime="2022-09-22T16:43:23+08:00">2022-09-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -515,7 +555,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Linux-%E5%91%BD%E4%BB%A4/" itemprop="url" rel="index"><span itemprop="name">Linux 命令</span></a>
+          <a href="/categories/%E5%89%91%E6%8C%87-Offer-II/" itemprop="url" rel="index"><span itemprop="name">剑指 Offer II</span></a>
         </span>
     </span>
 
@@ -529,8 +569,23 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>Linux chown 命令用于修改文件或目录的用户与用户组</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">- Change the owner user of a file/directory:</span><br><span class="line">  chown &#123;&#123;user&#125;&#125; &#123;&#123;path/to/file_or_directory&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Change the owner user and group of a file/directory:</span><br><span class="line">  chown &#123;&#123;user&#125;&#125;:&#123;&#123;group&#125;&#125; &#123;&#123;path/to/file_or_directory&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Recursively change the owner of a directory and its contents:</span><br><span class="line">  chown -R &#123;&#123;user&#125;&#125; &#123;&#123;path/to/directory&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Change the owner of a symbolic link:</span><br><span class="line">  chown -h &#123;&#123;user&#125;&#125; &#123;&#123;path/to/symlink&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Change the owner of a file/directory to match a reference file:</span><br><span class="line">  chown --reference=&#123;&#123;path/to/reference_file&#125;&#125; &#123;&#123;path/to/file_or_directory&#125;&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+          <h1 id="剑指-Offer-II-011-0-和-1-个数相同的子数组"><a href="#剑指-Offer-II-011-0-和-1-个数相同的子数组" class="headerlink" title="剑指 Offer II 011. 0 和 1 个数相同的子数组"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/A1NYOS/">剑指 Offer II 011. 0 和 1 个数相同的子数组</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
+<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/array/">数组</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/hash-table/">哈希表</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/prefix-sum/">前缀和</a></p>
+<p>给定一个二进制数组 <code>nums</code> , 找到含有相同数量的 <code>0</code> 和 <code>1</code> 的最长连续子数组，并返回该子数组的长度。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: nums = [0,1]</span><br><span class="line">输出: 2</span><br><span class="line">说明: [0, 1] 是具有相同数量 0 和 1 的最长连续子数组。</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: nums = [0,1,0]</span><br><span class="line">输出: 2</span><br><span class="line">说明: [0, 1] (或 [1, 0]) 是具有相同数量 0 和 1 的最长连续子数组。</span><br></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li>1 &lt;&#x3D; nums.length &lt;&#x3D; 10<sup>5</sup></li>
+<li><code>nums[i]</code> 不是 <code>0</code> 就是 <code>1</code></li>
+</ul>
+<p>注意：本题与主站 525 题相同： <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/contiguous-array/">https://leetcode-cn.com/problems/contiguous-array/</a></p>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">findMaxLength</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> result = <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> count = <span class="number">0</span>;</span><br><span class="line">        map&lt;<span class="type">int</span>,<span class="type">int</span>&gt; index;</span><br><span class="line">        <span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line">        index[<span class="number">0</span>] = <span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">for</span> (i = <span class="number">0</span>;i &lt; nums.<span class="built_in">size</span>();i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (nums[i] == <span class="number">1</span>) &#123;</span><br><span class="line">                count++;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                count--;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (index.<span class="built_in">find</span>(count) != index.<span class="built_in">end</span>()) &#123;</span><br><span class="line">                result = <span class="built_in">max</span>(result, i - index[count]);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                index[count] = i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -556,7 +611,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/16/Linux-chmod-%E5%91%BD%E4%BB%A4/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/20/%E5%89%91%E6%8C%87-Offer-II-024-%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -574,7 +629,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/09/16/Linux-chmod-%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">Linux chmod 命令</a>
+          <a href="/2022/09/20/%E5%89%91%E6%8C%87-Offer-II-024-%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/" class="post-title-link" itemprop="url">剑指 Offer II 024. 反转链表</a>
         </h2>
 
         <div class="post-meta-container">
@@ -584,15 +639,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
+      
 
-      <time title="Created: 2022-09-16 14:17:37" itemprop="dateCreated datePublished" datetime="2022-09-16T14:17:37+08:00">2022-09-16</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-09-18 13:54:46" itemprop="dateModified" datetime="2022-09-18T13:54:46+08:00">2022-09-18</time>
+      <time title="Created: 2022-09-20 21:53:45 / Modified: 21:55:39" itemprop="dateCreated datePublished" datetime="2022-09-20T21:53:45+08:00">2022-09-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -600,7 +649,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Linux-%E5%91%BD%E4%BB%A4/" itemprop="url" rel="index"><span itemprop="name">Linux 命令</span></a>
+          <a href="/categories/%E5%89%91%E6%8C%87-Offer-II/" itemprop="url" rel="index"><span itemprop="name">剑指 Offer II</span></a>
         </span>
     </span>
 
@@ -614,8 +663,29 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p> Linux chmod 命令用于修改文件或目录的访问权限<br> Linux 文件权限分为三级：文件所有者、用户组、其他用户</p>
- <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"> - Give the [u]ser who owns a file the right to e[x]ecute it:</span><br><span class="line">  chmod u+x &#123;&#123;path/to/file&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Give the [u]ser rights to [r]ead and [w]rite to a file/directory:</span><br><span class="line">  chmod u+rw &#123;&#123;path/to/file_or_directory&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Remove e[x]ecutable rights from the [g]roup:</span><br><span class="line">  chmod g-x &#123;&#123;path/to/file&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Give [a]ll users rights to [r]ead and e[x]ecute:</span><br><span class="line">  chmod a+rx &#123;&#123;path/to/file&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Give [o]thers (not in the file owner&#x27;s group) the same rights as the [g]roup:</span><br><span class="line">  chmod o=g &#123;&#123;path/to/file&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Remove all rights from [o]thers:</span><br><span class="line">  chmod o= &#123;&#123;path/to/file&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Change permissions recursively giving [g]roup and [o]thers the ability to [w]rite:</span><br><span class="line">  chmod -R g+w,o+w &#123;&#123;path/to/directory&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Recursively give [a]ll users [r]ead permissions to files and e[X]ecute permissions to sub-directories within a directory:</span><br><span class="line">  chmod -R a+rX &#123;&#123;path/to/directory&#125;&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+          <h1 id="剑指-Offer-II-024-反转链表"><a href="#剑指-Offer-II-024-反转链表" class="headerlink" title="剑指 Offer II 024. 反转链表"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/UHnkqh/">剑指 Offer II 024. 反转链表</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>简单</strong>  </p>
+<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/recursion/">递归</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/linked-list/">链表</a></p>
+<p>给定单链表的头节点 <code>head</code> ，请反转链表，并返回反转后的链表的头节点。</p>
+<p><strong>示例 1：</strong></p>
+<p><img src="https://cdn.staticaly.com/gh/Poseidon-HL/image-hosting@master/20220915/rev1ex1.3w1dfx6h3ai0.webp" alt="rev1ex1"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：head = [1,2,3,4,5]</span><br><span class="line">输出：[5,4,3,2,1]</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<p><img src="https://cdn.staticaly.com/gh/Poseidon-HL/image-hosting@master/20220915/rev1ex2.218s7zykg7j4.webp" alt="rev1ex2"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：head = [1,2]</span><br><span class="line">输出：[2,1]</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 3：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：head = []</span><br><span class="line">输出：[]</span><br></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li>链表中节点的数目范围是 <code>[0, 5000]</code></li>
+<li><code>-5000 &lt;= Node.val &lt;= 5000</code></li>
+</ul>
+<p><strong>进阶：</strong>链表可以选用迭代或递归方式完成反转。你能否用两种方法解决这道题？</p>
+<p>注意：本题与主站 206 题相同： <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/reverse-linked-list/">https://leetcode-cn.com/problems/reverse-linked-list/</a></p>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode() : val(0), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x, ListNode *next) : val(x), next(next) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">reverseList</span><span class="params">(ListNode* head)</span> </span>&#123;</span><br><span class="line">        ListNode* helper1 = <span class="keyword">new</span> <span class="built_in">ListNode</span>();</span><br><span class="line">        ListNode* head1 = head;</span><br><span class="line">        ListNode* tmp;</span><br><span class="line">        <span class="keyword">while</span> (head1 != <span class="literal">nullptr</span>) &#123;</span><br><span class="line">            tmp = head1 -&gt; next;</span><br><span class="line">            head1 -&gt; next = helper1 -&gt; next;</span><br><span class="line">            helper1 -&gt; next = head1;</span><br><span class="line">            head1 = tmp;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> helper1 -&gt; next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -634,7 +704,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 </div>
