@@ -152,18 +152,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-count">71</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">39</span>
+        <span class="site-state-item-count">40</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -192,6 +192,319 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/21/%E5%89%91%E6%8C%87-Offer-II-020-%E5%9B%9E%E6%96%87%E5%AD%90%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E4%B8%AA%E6%95%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="👽">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="😎😴🤯">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 😎😴🤯">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/09/21/%E5%89%91%E6%8C%87-Offer-II-020-%E5%9B%9E%E6%96%87%E5%AD%90%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E4%B8%AA%E6%95%B0/" class="post-title-link" itemprop="url">剑指 Offer II 020. 回文子字符串的个数</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-09-21 15:02:15" itemprop="dateCreated datePublished" datetime="2022-09-21T15:02:15+08:00">2022-09-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-09-22 16:43:23" itemprop="dateModified" datetime="2022-09-22T16:43:23+08:00">2022-09-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%89%91%E6%8C%87-Offer-II/" itemprop="url" rel="index"><span itemprop="name">剑指 Offer II</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="剑指-Offer-II-020-回文子字符串的个数"><a href="#剑指-Offer-II-020-回文子字符串的个数" class="headerlink" title="剑指 Offer II 020. 回文子字符串的个数"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/a7VOhD/">剑指 Offer II 020. 回文子字符串的个数</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
+<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/string/">字符串</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/dynamic-programming/">动态规划</a></p>
+<p>给定一个字符串 <code>s</code> ，请计算这个字符串中有多少个回文子字符串。</p>
+<p>具有不同开始位置或结束位置的子串，即使是由相同的字符组成，也会被视作不同的子串。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;abc&quot;</span><br><span class="line">输出：3</span><br><span class="line">解释：三个回文子串: &quot;a&quot;, &quot;b&quot;, &quot;c&quot;</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;aaa&quot;</span><br><span class="line">输出：6</span><br><span class="line">解释：6个回文子串: &quot;a&quot;, &quot;a&quot;, &quot;a&quot;, &quot;aa&quot;, &quot;aa&quot;, &quot;aaa&quot;</span><br></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>1 &lt;= s.length &lt;= 1000</code></li>
+<li><code>s</code> 由小写英文字母组成</li>
+</ul>
+<p>注意：本题与主站 647 题相同：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/palindromic-substrings/">https://leetcode-cn.com/problems/palindromic-substrings/</a> </p>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    string S;</span><br><span class="line">    vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; isTrue;</span><br><span class="line">    <span class="comment">// judge(i,j)表示下表[i-j]的子串是否为回文字符串</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">judge</span><span class="params">(<span class="type">int</span> i, <span class="type">int</span> j)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (i &gt; j) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (isTrue[i][j] == <span class="number">-1</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> ((S[i] == S[j]) &amp;&amp; <span class="built_in">judge</span>(i + <span class="number">1</span>,j - <span class="number">1</span>)) &#123;</span><br><span class="line">                isTrue[i][j] = <span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                isTrue[i][j] = <span class="number">-1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> (isTrue[i][j] == <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">countSubstrings</span><span class="params">(string s)</span> </span>&#123;</span><br><span class="line">        S = s;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; s.<span class="built_in">length</span>();i++) &#123;</span><br><span class="line">            vector&lt;<span class="type">int</span>&gt; tmp;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>;j &lt; s.<span class="built_in">length</span>();j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (i == j) &#123;</span><br><span class="line">                    tmp.<span class="built_in">push_back</span>(<span class="number">1</span>);</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    tmp.<span class="built_in">push_back</span>(<span class="number">-1</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            isTrue.<span class="built_in">push_back</span>(tmp);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span> result = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; isTrue.<span class="built_in">size</span>();i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = i + <span class="number">1</span>;j &lt; isTrue[i].<span class="built_in">size</span>();j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (<span class="built_in">judge</span>(i,j)) &#123;</span><br><span class="line">                    result++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> result + S.<span class="built_in">length</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/21/%E5%89%91%E6%8C%87-Offer-II-013-%E4%BA%8C%E7%BB%B4%E5%AD%90%E7%9F%A9%E9%98%B5%E7%9A%84%E5%92%8C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="👽">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="😎😴🤯">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 😎😴🤯">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/09/21/%E5%89%91%E6%8C%87-Offer-II-013-%E4%BA%8C%E7%BB%B4%E5%AD%90%E7%9F%A9%E9%98%B5%E7%9A%84%E5%92%8C/" class="post-title-link" itemprop="url">剑指 Offer II 013. 二维子矩阵的和</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-09-21 13:15:09" itemprop="dateCreated datePublished" datetime="2022-09-21T13:15:09+08:00">2022-09-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-09-22 16:43:23" itemprop="dateModified" datetime="2022-09-22T16:43:23+08:00">2022-09-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%89%91%E6%8C%87-Offer-II/" itemprop="url" rel="index"><span itemprop="name">剑指 Offer II</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="剑指-Offer-II-013-二维子矩阵的和"><a href="#剑指-Offer-II-013-二维子矩阵的和" class="headerlink" title="剑指 Offer II 013. 二维子矩阵的和"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/O4NDxx/">剑指 Offer II 013. 二维子矩阵的和</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
+<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/design/">设计</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/array/">数组</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/matrix/">矩阵</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/prefix-sum/">前缀和</a></p>
+<p><big><small>给定一个二维矩阵 <code>matrix</code>，</small></big>以下类型的多个请求：</p>
+<ul>
+<li><big><small>计算其子矩形范围内元素的总和，该子矩阵的左上角为 <code>(row1, col1)</code> ，右下角为 <code>(row2, col2)</code> 。</small></big></li>
+</ul>
+<p>实现 <code>NumMatrix</code> 类：</p>
+<ul>
+<li><code>NumMatrix(int[][] matrix)</code> 给定整数矩阵 <code>matrix</code> 进行初始化</li>
+<li><code>int sumRegion(int row1, int col1, int row2, int col2)</code> 返回<big><small>左上角</small></big><big> <small><code>(row1, col1)</code> 、右下角 <code>(row2, col2)</code></small></big> 的子矩阵的元素总和。</li>
+</ul>
+<p><strong>示例 1：</strong></p>
+<p><img src="https://cdn.staticaly.com/gh/Poseidon-HL/image-hosting@master/20220921/1626332422-wUpUHT-image.y1zp8o1cbao.webp" alt="1626332422-wUpUHT-image"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">输入: </span><br><span class="line">[&quot;NumMatrix&quot;,&quot;sumRegion&quot;,&quot;sumRegion&quot;,&quot;sumRegion&quot;]</span><br><span class="line">[[[[3,0,1,4,2],[5,6,3,2,1],[1,2,0,1,5],[4,1,0,1,7],[1,0,3,0,5]]],[2,1,4,3],[1,1,2,2],[1,2,2,4]]</span><br><span class="line">输出: </span><br><span class="line">[null, 8, 11, 12]</span><br><span class="line"></span><br><span class="line">解释:</span><br><span class="line">NumMatrix numMatrix = new NumMatrix([[3,0,1,4,2],[5,6,3,2,1],[1,2,0,1,5],[4,1,0,1,7],[1,0,3,0,5]]]);</span><br><span class="line">numMatrix.sumRegion(2, 1, 4, 3); // return 8 (红色矩形框的元素总和)</span><br><span class="line">numMatrix.sumRegion(1, 1, 2, 2); // return 11 (绿色矩形框的元素总和)</span><br><span class="line">numMatrix.sumRegion(1, 2, 2, 4); // return 12 (蓝色矩形框的元素总和)</span><br></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>m == matrix.length</code></li>
+<li><code>n == matrix[i].length</code></li>
+<li><code>1 &lt;= m, n &lt;= 200</code></li>
+<li>-10<sup>5</sup> &lt;&#x3D; matrix[i][j] &lt;&#x3D; 10<sup>5</sup></li>
+<li><code>0 &lt;= row1 &lt;= row2 &lt; m</code></li>
+<li><code>0 &lt;= col1 &lt;= col2 &lt; n</code></li>
+<li>最多调用 10<sup>4</sup> 次 <code>sumRegion</code> 方法</li>
+</ul>
+<p>注意：本题与主站 304 题相同： <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/range-sum-query-2d-immutable/">https://leetcode-cn.com/problems/range-sum-query-2d-immutable/</a></p>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">NumMatrix</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; Matrix;</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">getSum</span><span class="params">(<span class="type">int</span> row1, <span class="type">int</span> col1)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (row1 &gt;= <span class="number">0</span> &amp;&amp; col1 &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> Matrix[row1][col1];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">NumMatrix</span>(vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;&amp; matrix) &#123;</span><br><span class="line">        Matrix = matrix;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; Matrix.<span class="built_in">size</span>();i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">1</span>;j &lt; Matrix[i].<span class="built_in">size</span>();j++) &#123;</span><br><span class="line">                Matrix[i][j] += Matrix[i][j - <span class="number">1</span>];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>;j &lt; Matrix[<span class="number">0</span>].<span class="built_in">size</span>();j++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt; Matrix.<span class="built_in">size</span>();i++) &#123;</span><br><span class="line">                Matrix[i][j] += Matrix[i - <span class="number">1</span>][j];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">sumRegion</span><span class="params">(<span class="type">int</span> row1, <span class="type">int</span> col1, <span class="type">int</span> row2, <span class="type">int</span> col2)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (<span class="built_in">getSum</span>(row2,col2) - <span class="built_in">getSum</span>(row2,col1 - <span class="number">1</span>) - <span class="built_in">getSum</span>(row1 - <span class="number">1</span>,col2) + <span class="built_in">getSum</span>(row1 - <span class="number">1</span>,col1 - <span class="number">1</span>));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Your NumMatrix object will be instantiated and called as such:</span></span><br><span class="line"><span class="comment"> * NumMatrix* obj = new NumMatrix(matrix);</span></span><br><span class="line"><span class="comment"> * int param_1 = obj-&gt;sumRegion(row1,col1,row2,col2);</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/21/%E5%89%91%E6%8C%87-Offer-II-010-%E5%92%8C%E4%B8%BA-k-%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="👽">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="😎😴🤯">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 😎😴🤯">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/09/21/%E5%89%91%E6%8C%87-Offer-II-010-%E5%92%8C%E4%B8%BA-k-%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84/" class="post-title-link" itemprop="url">剑指 Offer II 010. 和为 k 的子数组</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-09-21 12:51:59" itemprop="dateCreated datePublished" datetime="2022-09-21T12:51:59+08:00">2022-09-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-09-22 16:43:23" itemprop="dateModified" datetime="2022-09-22T16:43:23+08:00">2022-09-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%89%91%E6%8C%87-Offer-II/" itemprop="url" rel="index"><span itemprop="name">剑指 Offer II</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="剑指-Offer-II-010-和为-k-的子数组"><a href="#剑指-Offer-II-010-和为-k-的子数组" class="headerlink" title="剑指 Offer II 010. 和为 k 的子数组"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/QTMn0o/">剑指 Offer II 010. 和为 k 的子数组</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
+<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/array/">数组</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/hash-table/">哈希表</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/prefix-sum/">前缀和</a></p>
+<p>给定一个整数数组和一个整数 <code>k</code> <strong>，</strong>请找到该数组中和为 <code>k</code>的连续子数组的个数。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入:nums = [1,1,1], k = 2</span><br><span class="line">输出: 2</span><br><span class="line">解释: 此题 [1,1] 与 [1,1] 为两种不同的情况</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入:nums = [1,2,3], k = 3</span><br><span class="line">输出: 2</span><br></pre></td></tr></table></figure>
+
+<p><strong>提示:</strong></p>
+<ul>
+<li>1 &lt;&#x3D; nums.length &lt;&#x3D; 2 * 10<sup>4</sup></li>
+<li><code>-1000 &lt;= nums[i] &lt;= 1000</code></li>
+<li>-10<sup>7</sup> &lt;&#x3D; k &lt;&#x3D; 10<sup>7</sup></li>
+</ul>
+<p>注意：本题与主站 560 题相同： <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/subarray-sum-equals-k/">https://leetcode-cn.com/problems/subarray-sum-equals-k/</a></p>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">subarraySum</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> k)</span> </span>&#123;</span><br><span class="line">        map&lt;<span class="type">int</span>,<span class="type">int</span>&gt; tmp;</span><br><span class="line">        <span class="type">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> result = <span class="number">0</span>;</span><br><span class="line">        tmp[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; nums.<span class="built_in">size</span>();i++) &#123;</span><br><span class="line">            sum += nums[i];</span><br><span class="line">            <span class="keyword">if</span> (tmp.<span class="built_in">find</span>(sum - k) != (tmp.<span class="built_in">end</span>())) &#123;</span><br><span class="line">                result += tmp[sum - k];</span><br><span class="line">            &#125;</span><br><span class="line">            tmp[sum]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -402,309 +715,8 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/21/%E5%89%91%E6%8C%87-Offer-II-011-0-%E5%92%8C-1-%E4%B8%AA%E6%95%B0%E7%9B%B8%E5%90%8C%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="👽">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="😎😴🤯">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 😎😴🤯">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/09/21/%E5%89%91%E6%8C%87-Offer-II-011-0-%E5%92%8C-1-%E4%B8%AA%E6%95%B0%E7%9B%B8%E5%90%8C%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84/" class="post-title-link" itemprop="url">剑指 Offer II 011. 0 和 1 个数相同的子数组</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-09-21 10:27:40" itemprop="dateCreated datePublished" datetime="2022-09-21T10:27:40+08:00">2022-09-21</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-09-22 16:43:23" itemprop="dateModified" datetime="2022-09-22T16:43:23+08:00">2022-09-22</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%89%91%E6%8C%87-Offer-II/" itemprop="url" rel="index"><span itemprop="name">剑指 Offer II</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="剑指-Offer-II-011-0-和-1-个数相同的子数组"><a href="#剑指-Offer-II-011-0-和-1-个数相同的子数组" class="headerlink" title="剑指 Offer II 011. 0 和 1 个数相同的子数组"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/A1NYOS/">剑指 Offer II 011. 0 和 1 个数相同的子数组</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
-<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/array/">数组</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/hash-table/">哈希表</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/prefix-sum/">前缀和</a></p>
-<p>给定一个二进制数组 <code>nums</code> , 找到含有相同数量的 <code>0</code> 和 <code>1</code> 的最长连续子数组，并返回该子数组的长度。</p>
-<p><strong>示例 1：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: nums = [0,1]</span><br><span class="line">输出: 2</span><br><span class="line">说明: [0, 1] 是具有相同数量 0 和 1 的最长连续子数组。</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 2：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: nums = [0,1,0]</span><br><span class="line">输出: 2</span><br><span class="line">说明: [0, 1] (或 [1, 0]) 是具有相同数量 0 和 1 的最长连续子数组。</span><br></pre></td></tr></table></figure>
-
-<p><strong>提示：</strong></p>
-<ul>
-<li>1 &lt;&#x3D; nums.length &lt;&#x3D; 10<sup>5</sup></li>
-<li><code>nums[i]</code> 不是 <code>0</code> 就是 <code>1</code></li>
-</ul>
-<p>注意：本题与主站 525 题相同： <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/contiguous-array/">https://leetcode-cn.com/problems/contiguous-array/</a></p>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">findMaxLength</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> result = <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> count = <span class="number">0</span>;</span><br><span class="line">        map&lt;<span class="type">int</span>,<span class="type">int</span>&gt; index;</span><br><span class="line">        <span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line">        index[<span class="number">0</span>] = <span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">for</span> (i = <span class="number">0</span>;i &lt; nums.<span class="built_in">size</span>();i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (nums[i] == <span class="number">1</span>) &#123;</span><br><span class="line">                count++;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                count--;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (index.<span class="built_in">find</span>(count) != index.<span class="built_in">end</span>()) &#123;</span><br><span class="line">                result = <span class="built_in">max</span>(result, i - index[count]);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                index[count] = i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/20/%E5%89%91%E6%8C%87-Offer-II-024-%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="👽">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="😎😴🤯">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 😎😴🤯">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/09/20/%E5%89%91%E6%8C%87-Offer-II-024-%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/" class="post-title-link" itemprop="url">剑指 Offer II 024. 反转链表</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2022-09-20 21:53:45 / Modified: 21:55:39" itemprop="dateCreated datePublished" datetime="2022-09-20T21:53:45+08:00">2022-09-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%89%91%E6%8C%87-Offer-II/" itemprop="url" rel="index"><span itemprop="name">剑指 Offer II</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="剑指-Offer-II-024-反转链表"><a href="#剑指-Offer-II-024-反转链表" class="headerlink" title="剑指 Offer II 024. 反转链表"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/UHnkqh/">剑指 Offer II 024. 反转链表</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>简单</strong>  </p>
-<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/recursion/">递归</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/linked-list/">链表</a></p>
-<p>给定单链表的头节点 <code>head</code> ，请反转链表，并返回反转后的链表的头节点。</p>
-<p><strong>示例 1：</strong></p>
-<p><img src="https://cdn.staticaly.com/gh/Poseidon-HL/image-hosting@master/20220915/rev1ex1.3w1dfx6h3ai0.webp" alt="rev1ex1"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：head = [1,2,3,4,5]</span><br><span class="line">输出：[5,4,3,2,1]</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 2：</strong></p>
-<p><img src="https://cdn.staticaly.com/gh/Poseidon-HL/image-hosting@master/20220915/rev1ex2.218s7zykg7j4.webp" alt="rev1ex2"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：head = [1,2]</span><br><span class="line">输出：[2,1]</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 3：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：head = []</span><br><span class="line">输出：[]</span><br></pre></td></tr></table></figure>
-
-<p><strong>提示：</strong></p>
-<ul>
-<li>链表中节点的数目范围是 <code>[0, 5000]</code></li>
-<li><code>-5000 &lt;= Node.val &lt;= 5000</code></li>
-</ul>
-<p><strong>进阶：</strong>链表可以选用迭代或递归方式完成反转。你能否用两种方法解决这道题？</p>
-<p>注意：本题与主站 206 题相同： <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/reverse-linked-list/">https://leetcode-cn.com/problems/reverse-linked-list/</a></p>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode() : val(0), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x, ListNode *next) : val(x), next(next) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">reverseList</span><span class="params">(ListNode* head)</span> </span>&#123;</span><br><span class="line">        ListNode* helper1 = <span class="keyword">new</span> <span class="built_in">ListNode</span>();</span><br><span class="line">        ListNode* head1 = head;</span><br><span class="line">        ListNode* tmp;</span><br><span class="line">        <span class="keyword">while</span> (head1 != <span class="literal">nullptr</span>) &#123;</span><br><span class="line">            tmp = head1 -&gt; next;</span><br><span class="line">            head1 -&gt; next = helper1 -&gt; next;</span><br><span class="line">            helper1 -&gt; next = head1;</span><br><span class="line">            head1 = tmp;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> helper1 -&gt; next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/20/%E5%89%91%E6%8C%87-Offer-II-025-%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="👽">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="😎😴🤯">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 😎😴🤯">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/09/20/%E5%89%91%E6%8C%87-Offer-II-025-%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/" class="post-title-link" itemprop="url">剑指 Offer II 025. 链表中的两数相加</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2022-09-20 21:45:49 / Modified: 21:55:28" itemprop="dateCreated datePublished" datetime="2022-09-20T21:45:49+08:00">2022-09-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%89%91%E6%8C%87-Offer-II/" itemprop="url" rel="index"><span itemprop="name">剑指 Offer II</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="剑指-Offer-II-025-链表中的两数相加"><a href="#剑指-Offer-II-025-链表中的两数相加" class="headerlink" title="剑指 Offer II 025. 链表中的两数相加"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/lMSNwu/">剑指 Offer II 025. 链表中的两数相加</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
-<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/stack/">栈</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/linked-list/">链表</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/math/">数学</a></p>
-<p>给定两个 <strong>非空链表</strong> <code>l1</code>和 <code>l2</code> 来代表两个非负整数。数字最高位位于链表开始位置。它们的每个节点只存储一位数字。将这两数相加会返回一个新的链表。</p>
-<p>可以假设除了数字 0 之外，这两个数字都不会以零开头。</p>
-<p><strong>示例1：</strong></p>
-<p><img src="https://cdn.staticaly.com/gh/Poseidon-HL/image-hosting@master/20220915/1626420025-fZfzMX-image.6big64vpahg0.webp" alt="1626420025-fZfzMX-image"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：l1 = [7,2,4,3], l2 = [5,6,4]</span><br><span class="line">输出：[7,8,0,7]</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例2：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：l1 = [2,4,3], l2 = [5,6,4]</span><br><span class="line">输出：[8,0,7]</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例3：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：l1 = [0], l2 = [0]</span><br><span class="line">输出：[0]</span><br></pre></td></tr></table></figure>
-
-<p><strong>提示：</strong></p>
-<ul>
-<li>链表的长度范围为 <code>[1, 100]</code></li>
-<li><code>0 &lt;= node.val &lt;= 9</code></li>
-<li>输入数据保证链表代表的数字无前导 0</li>
-</ul>
-<p><strong>进阶：</strong>如果输入链表不能修改该如何处理？换句话说，不能对列表中的节点进行翻转。</p>
-<p>注意：本题与主站 445 题相同：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/add-two-numbers-ii/">https://leetcode-cn.com/problems/add-two-numbers-ii/</a></p>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode() : val(0), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x, ListNode *next) : val(x), next(next) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">ReverseList</span><span class="params">(ListNode* l1)</span> </span>&#123;</span><br><span class="line">        ListNode* helper1 = <span class="keyword">new</span> <span class="built_in">ListNode</span>();</span><br><span class="line">        ListNode* head1 = l1;</span><br><span class="line">        ListNode* tmp;</span><br><span class="line">        <span class="keyword">while</span> (head1 != <span class="literal">nullptr</span>) &#123;</span><br><span class="line">            tmp = head1 -&gt; next;</span><br><span class="line">            head1 -&gt; next = helper1 -&gt; next;</span><br><span class="line">            helper1 -&gt; next = head1;</span><br><span class="line">            head1 = tmp;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> helper1 -&gt; next;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">calNow</span><span class="params">(ListNode* l1, ListNode* l2, <span class="type">int</span> carry)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span> (l2 == <span class="literal">nullptr</span>) &#123;</span><br><span class="line">            sum = l1 -&gt; val + carry;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            sum = l1 -&gt; val + l2 -&gt; val + carry;</span><br><span class="line">        &#125;</span><br><span class="line">        l1 -&gt; val = sum % <span class="number">10</span>;</span><br><span class="line">        carry = sum / <span class="number">10</span>;</span><br><span class="line">        <span class="keyword">return</span> carry;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function">ListNode* <span class="title">addTwoNumbers</span><span class="params">(ListNode* l1, ListNode* l2)</span> </span>&#123;</span><br><span class="line">        ListNode* helper1 = <span class="built_in">ReverseList</span>(l1);</span><br><span class="line">        ListNode* helper2 = <span class="built_in">ReverseList</span>(l2);</span><br><span class="line">        </span><br><span class="line">        <span class="type">int</span> carry = <span class="number">0</span>;</span><br><span class="line">        ListNode* result = helper1;</span><br><span class="line">        <span class="keyword">while</span>(helper1 -&gt; next != <span class="literal">nullptr</span> &amp;&amp; helper2 -&gt; next != <span class="literal">nullptr</span>) &#123;</span><br><span class="line">            carry = <span class="built_in">calNow</span>(helper1,helper2,carry);</span><br><span class="line">            helper1 = helper1 -&gt; next;</span><br><span class="line">            helper2 = helper2 -&gt; next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (helper1 -&gt; next == <span class="literal">nullptr</span>) &#123;</span><br><span class="line">            helper1 -&gt; next = helper2 -&gt; next;</span><br><span class="line">        &#125;</span><br><span class="line">        carry = <span class="built_in">calNow</span>(helper1,helper2,carry);</span><br><span class="line">        helper1 = helper1 -&gt; next;</span><br><span class="line">        <span class="keyword">while</span> (helper1 != <span class="literal">nullptr</span> &amp;&amp; carry != <span class="number">0</span>) &#123;</span><br><span class="line">            carry = <span class="built_in">calNow</span>(helper1,<span class="literal">nullptr</span>,carry);</span><br><span class="line">            helper1 = helper1 -&gt; next;</span><br><span class="line">        &#125;</span><br><span class="line">        result = <span class="built_in">ReverseList</span>(result);</span><br><span class="line">        <span class="keyword">if</span> (carry != <span class="number">0</span>) &#123;</span><br><span class="line">            ListNode* ans = <span class="keyword">new</span> <span class="built_in">ListNode</span>(carry, result);</span><br><span class="line">            <span class="keyword">return</span> ans;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 </div>
