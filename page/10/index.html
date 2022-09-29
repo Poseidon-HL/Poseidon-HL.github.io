@@ -152,7 +152,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">71</span>
+          <span class="site-state-item-count">72</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -192,6 +192,91 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/16/Linux-chmod-%E5%91%BD%E4%BB%A4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="👽">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="😎😴🤯">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 😎😴🤯">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/09/16/Linux-chmod-%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">Linux chmod 命令</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-09-16 14:17:37" itemprop="dateCreated datePublished" datetime="2022-09-16T14:17:37+08:00">2022-09-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-09-18 13:54:46" itemprop="dateModified" datetime="2022-09-18T13:54:46+08:00">2022-09-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Linux-%E5%91%BD%E4%BB%A4/" itemprop="url" rel="index"><span itemprop="name">Linux 命令</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p> Linux chmod 命令用于修改文件或目录的访问权限<br> Linux 文件权限分为三级：文件所有者、用户组、其他用户</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"> - Give the [u]ser who owns a file the right to e[x]ecute it:</span><br><span class="line">  chmod u+x &#123;&#123;path/to/file&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Give the [u]ser rights to [r]ead and [w]rite to a file/directory:</span><br><span class="line">  chmod u+rw &#123;&#123;path/to/file_or_directory&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Remove e[x]ecutable rights from the [g]roup:</span><br><span class="line">  chmod g-x &#123;&#123;path/to/file&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Give [a]ll users rights to [r]ead and e[x]ecute:</span><br><span class="line">  chmod a+rx &#123;&#123;path/to/file&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Give [o]thers (not in the file owner&#x27;s group) the same rights as the [g]roup:</span><br><span class="line">  chmod o=g &#123;&#123;path/to/file&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Remove all rights from [o]thers:</span><br><span class="line">  chmod o= &#123;&#123;path/to/file&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Change permissions recursively giving [g]roup and [o]thers the ability to [w]rite:</span><br><span class="line">  chmod -R g+w,o+w &#123;&#123;path/to/directory&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Recursively give [a]ll users [r]ead permissions to files and e[X]ecute permissions to sub-directories within a directory:</span><br><span class="line">  chmod -R a+rX &#123;&#123;path/to/directory&#125;&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -562,91 +647,6 @@
 <p>注意：本题与主站 752 题相同： <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/open-the-lock/">https://leetcode-cn.com/problems/open-the-lock/</a></p>
 <h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">string <span class="title">cal</span><span class="params">(string src, <span class="type">int</span> idx, string op)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (op == <span class="string">&quot;+&quot;</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (src[idx] == <span class="string">&#x27;9&#x27;</span>) &#123;</span><br><span class="line">                src[idx] = <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                src[idx] = <span class="built_in">char</span>(<span class="built_in">int</span>(src[idx]) + <span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (src[idx] == <span class="string">&#x27;0&#x27;</span>) &#123;</span><br><span class="line">                src[idx] = <span class="string">&#x27;9&#x27;</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                src[idx] = <span class="built_in">char</span>(<span class="built_in">int</span>(src[idx]) - <span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> src;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    set&lt;string&gt; visited;</span><br><span class="line">    set&lt;string&gt; booms;</span><br><span class="line">    <span class="type">int</span> count = <span class="number">-1</span>;</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">openLock</span><span class="params">(vector&lt;string&gt;&amp; deadends, string target)</span> </span>&#123;</span><br><span class="line">        queue&lt;string&gt; thisRound;</span><br><span class="line">        <span class="keyword">for</span> (string deadend: deadends) &#123;</span><br><span class="line">            booms.<span class="built_in">insert</span>(deadend);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (booms.<span class="built_in">find</span>(<span class="string">&quot;0000&quot;</span>) != booms.<span class="built_in">end</span>()) &#123;</span><br><span class="line">            <span class="keyword">return</span> count;</span><br><span class="line">        &#125;</span><br><span class="line">        count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span> (target == <span class="string">&quot;0000&quot;</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> count;</span><br><span class="line">        &#125;</span><br><span class="line">        thisRound.<span class="built_in">push</span>(<span class="string">&quot;0000&quot;</span>);</span><br><span class="line">        visited.<span class="built_in">insert</span>(<span class="string">&quot;0000&quot;</span>);</span><br><span class="line">        <span class="keyword">while</span> (thisRound.<span class="built_in">size</span>() != <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="type">int</span> round = thisRound.<span class="built_in">size</span>();</span><br><span class="line">            count++;</span><br><span class="line">            <span class="keyword">while</span> (round &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                string now = thisRound.<span class="built_in">front</span>();</span><br><span class="line">                thisRound.<span class="built_in">pop</span>();</span><br><span class="line">                <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; <span class="number">4</span>;i++) &#123;</span><br><span class="line">                    string addOne = <span class="built_in">cal</span>(now,i,<span class="string">&quot;+&quot;</span>);</span><br><span class="line">                    string subOne = <span class="built_in">cal</span>(now,i,<span class="string">&quot;-&quot;</span>);</span><br><span class="line">                    <span class="keyword">if</span> (booms.<span class="built_in">find</span>(addOne) == booms.<span class="built_in">end</span>() &amp;&amp; visited.<span class="built_in">find</span>(addOne) == visited.<span class="built_in">end</span>()) &#123;</span><br><span class="line">                        <span class="keyword">if</span> (addOne == target) &#123;</span><br><span class="line">                            <span class="keyword">return</span> count;</span><br><span class="line">                        &#125;</span><br><span class="line">                        thisRound.<span class="built_in">push</span>(addOne);</span><br><span class="line">                        visited.<span class="built_in">insert</span>(addOne);</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">if</span> (booms.<span class="built_in">find</span>(subOne) == booms.<span class="built_in">end</span>()  &amp;&amp; visited.<span class="built_in">find</span>(subOne) == visited.<span class="built_in">end</span>()) &#123;</span><br><span class="line">                        <span class="keyword">if</span> (subOne == target) &#123;</span><br><span class="line">                            <span class="keyword">return</span> count;</span><br><span class="line">                        &#125;</span><br><span class="line">                        thisRound.<span class="built_in">push</span>(subOne);</span><br><span class="line">                        visited.<span class="built_in">insert</span>(subOne);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                round--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/15/Linux-passwd-%E5%91%BD%E4%BB%A4/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="👽">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="😎😴🤯">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 😎😴🤯">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/09/15/Linux-passwd-%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">Linux passwd 命令</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-09-15 21:47:29" itemprop="dateCreated datePublished" datetime="2022-09-15T21:47:29+08:00">2022-09-15</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-09-20 15:56:52" itemprop="dateModified" datetime="2022-09-20T15:56:52+08:00">2022-09-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Linux-%E5%91%BD%E4%BB%A4/" itemprop="url" rel="index"><span itemprop="name">Linux 命令</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>passwd 用于改变用户密码</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">- Change the password of the current user interactively:</span><br><span class="line">  passwd</span><br><span class="line"></span><br><span class="line">- Change the password of a specific user:</span><br><span class="line">  passwd &#123;&#123;username&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Get the current status of the user:</span><br><span class="line">  passwd -S</span><br><span class="line"></span><br><span class="line">- Make the password of the account blank (it will set the named account passwordless):</span><br><span class="line">  passwd -d</span><br></pre></td></tr></table></figure>
       
     </div>
 
