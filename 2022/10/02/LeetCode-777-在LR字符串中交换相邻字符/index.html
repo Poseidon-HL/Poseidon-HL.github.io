@@ -21,14 +21,18 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.13.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta property="og:type" content="article">
+    <meta name="description" content="777. 在LR字符串中交换相邻字符DescriptionDifficulty: 中等   Related Topics: 双指针, 字符串 在一个由 &#39;L&#39; , &#39;R&#39; 和 &#39;X&#39; 三个字符组成的字符串（例如&quot;RXXLRXRXL&quot;）中进行移动操作。一次移动操作指用一个&quot;LX&quot;替换一个&quot;XL&amp;quot">
+<meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode 777. 在LR字符串中交换相邻字符">
 <meta property="og:url" content="http://example.com/2022/10/02/LeetCode-777-%E5%9C%A8LR%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E4%BA%A4%E6%8D%A2%E7%9B%B8%E9%82%BB%E5%AD%97%E7%AC%A6/index.html">
 <meta property="og:site_name" content="😎😴🤯">
+<meta property="og:description" content="777. 在LR字符串中交换相邻字符DescriptionDifficulty: 中等   Related Topics: 双指针, 字符串 在一个由 &#39;L&#39; , &#39;R&#39; 和 &#39;X&#39; 三个字符组成的字符串（例如&quot;RXXLRXRXL&quot;）中进行移动操作。一次移动操作指用一个&quot;LX&quot;替换一个&quot;XL&amp;quot">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-10-02T06:44:42.000Z">
-<meta property="article:modified_time" content="2022-10-02T06:44:42.215Z">
+<meta property="article:modified_time" content="2022-10-02T06:59:57.738Z">
 <meta property="article:author" content="👽">
+<meta property="article:tag" content="字符串">
+<meta property="article:tag" content="双指针">
 <meta name="twitter:card" content="summary">
 
 
@@ -129,7 +133,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -142,6 +146,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#777-%E5%9C%A8LR%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E4%BA%A4%E6%8D%A2%E7%9B%B8%E9%82%BB%E5%AD%97%E7%AC%A6"><span class="nav-number">1.</span> <span class="nav-text">777. 在LR字符串中交换相邻字符</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Description"><span class="nav-number">1.1.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution"><span class="nav-number">1.2.</span> <span class="nav-text">Solution</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -154,7 +159,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">78</span>
+          <span class="site-state-item-count">82</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -165,7 +170,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">40</span>
+        <span class="site-state-item-count">41</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -232,8 +237,18 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
+      
 
-      <time title="Created: 2022-10-02 14:44:42" itemprop="dateCreated datePublished" datetime="2022-10-02T14:44:42+08:00">2022-10-02</time>
+      <time title="Created: 2022-10-02 14:44:42 / Modified: 14:59:57" itemprop="dateCreated datePublished" datetime="2022-10-02T14:44:42+08:00">2022-10-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
+        </span>
     </span>
 
   
@@ -246,7 +261,19 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        
+        <h1 id="777-在LR字符串中交换相邻字符"><a href="#777-在LR字符串中交换相邻字符" class="headerlink" title="777. 在LR字符串中交换相邻字符"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/swap-adjacent-in-lr-string/">777. 在LR字符串中交换相邻字符</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
+<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/two-pointers/">双指针</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/string/">字符串</a></p>
+<p>在一个由 <code>&#39;L&#39;</code> , <code>&#39;R&#39;</code> 和 <code>&#39;X&#39;</code> 三个字符组成的字符串（例如<code>&quot;RXXLRXRXL&quot;</code>）中进行移动操作。一次移动操作指用一个<code>&quot;LX&quot;</code>替换一个<code>&quot;XL&quot;</code>，或者用一个<code>&quot;XR&quot;</code>替换一个<code>&quot;RX&quot;</code>。现给定起始字符串<code>start</code>和结束字符串<code>end</code>，请编写代码，当且仅当存在一系列移动操作使得<code>start</code>可以转换成<code>end</code>时， 返回<code>True</code>。</p>
+<p><strong>示例 :</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">输入: start = &quot;RXXLRXRXL&quot;, end = &quot;XRLXXRRLX&quot;</span><br><span class="line">输出: True</span><br><span class="line">解释:</span><br><span class="line">我们可以通过以下几步将start转换成end:</span><br><span class="line">RXXLRXRXL -&gt;</span><br><span class="line">XRXLRXRXL -&gt;</span><br><span class="line">XRLXRXRXL -&gt;</span><br><span class="line">XRLXXRRXL -&gt;</span><br><span class="line">XRLXXRRLX</span><br></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>1 &lt;= len(start) = len(end) &lt;= 10000</code>。</li>
+<li><code>start</code>和<code>end</code>中的字符串仅限于<code>&#39;L&#39;</code>, <code>&#39;R&#39;</code>和<code>&#39;X&#39;</code>。</li>
+</ul>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">canTransform</span><span class="params">(string start, string end)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// L只能向左移动</span></span><br><span class="line">        <span class="comment">// R只能向右移动 且两者的相对顺序无法改变</span></span><br><span class="line">        string tmp1;</span><br><span class="line">        string tmp2;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; idx1;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; idx2;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; start.<span class="built_in">length</span>(); i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (start[i] != <span class="string">&#x27;X&#x27;</span>) &#123;</span><br><span class="line">                tmp1 += start[i];</span><br><span class="line">                idx1.<span class="built_in">push_back</span>(i);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (end[i] != <span class="string">&#x27;X&#x27;</span>) &#123;</span><br><span class="line">                tmp2 += end[i];</span><br><span class="line">                idx2.<span class="built_in">push_back</span>(i);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (tmp1 != tmp2) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; tmp1.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (tmp1[i] == <span class="string">&#x27;L&#x27;</span>) &#123;</span><br><span class="line">                <span class="keyword">if</span> (idx1[i] &lt; idx2[i]) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">if</span> (idx1[i] &gt; idx2[i]) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -254,6 +281,10 @@
     
 
     <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" rel="tag"># 字符串</a>
+              <a href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/" rel="tag"># 双指针</a>
+          </div>
 
         
 
@@ -264,8 +295,8 @@
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2022/10/02/test-road-map/" rel="next" title="test road map">
-                  test road map <i class="fa fa-chevron-right"></i>
+                <a href="/2022/10/02/LeetCode-1624-%E4%B8%A4%E4%B8%AA%E7%9B%B8%E5%90%8C%E5%AD%97%E7%AC%A6%E4%B9%8B%E9%97%B4%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E5%AD%97%E7%AC%A6%E4%B8%B2/" rel="next" title="LeetCode 1624. 两个相同字符之间的最长子字符串">
+                  LeetCode 1624. 两个相同字符之间的最长子字符串 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -308,6 +339,8 @@
 <script src="/js/third-party/search/local-search.js"></script>
 
 
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.1.6/mermaid.min.js","integrity":"sha256-ZfzwelSToHk5YAcr9wbXAmWgyn9Jyq08fSLrLhZE89w="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
 
 
 
