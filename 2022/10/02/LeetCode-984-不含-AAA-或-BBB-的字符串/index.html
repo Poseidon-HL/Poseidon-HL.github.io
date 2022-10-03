@@ -21,15 +21,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.13.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="984. 不含 AAA 或 BBB 的字符串DescriptionDifficulty: 中等   Related Topics: 贪心, 字符串 给定两个整数 a 和 b ，返回 任意 字符串 s ，要求满足：  s 的长度为 a + b，且正好包含&lt;font color&#x3D;&quot;#c7254e&quot;&gt;&lt;font face&#x3D;&quot;Menlo, Monaco, C">
+    <meta name="description" content="984. 不含 AAA 或 BBB 的字符串DescriptionDifficulty: 中等   Related Topics: 贪心, 字符串 给定两个整数 a 和 b ，返回 任意 字符串 s ，要求满足：  s 的长度为 a + b，且正好包含a 个 &#39;a&#39; 字母与 b 个 &#39;b&#39; 字母； 子串 &#39;aaa&#39; 没有出现在 s 中； 子串 &amp;#3">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode 984. 不含 AAA 或 BBB 的字符串">
 <meta property="og:url" content="http://example.com/2022/10/02/LeetCode-984-%E4%B8%8D%E5%90%AB-AAA-%E6%88%96-BBB-%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2/index.html">
 <meta property="og:site_name" content="😎😴🤯">
-<meta property="og:description" content="984. 不含 AAA 或 BBB 的字符串DescriptionDifficulty: 中等   Related Topics: 贪心, 字符串 给定两个整数 a 和 b ，返回 任意 字符串 s ，要求满足：  s 的长度为 a + b，且正好包含&lt;font color&#x3D;&quot;#c7254e&quot;&gt;&lt;font face&#x3D;&quot;Menlo, Monaco, C">
+<meta property="og:description" content="984. 不含 AAA 或 BBB 的字符串DescriptionDifficulty: 中等   Related Topics: 贪心, 字符串 给定两个整数 a 和 b ，返回 任意 字符串 s ，要求满足：  s 的长度为 a + b，且正好包含a 个 &#39;a&#39; 字母与 b 个 &#39;b&#39; 字母； 子串 &#39;aaa&#39; 没有出现在 s 中； 子串 &amp;#3">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-10-02T15:13:24.000Z">
-<meta property="article:modified_time" content="2022-10-02T15:14:02.342Z">
+<meta property="article:modified_time" content="2022-10-03T07:40:40.622Z">
 <meta property="article:author" content="👽">
 <meta property="article:tag" content="字符串">
 <meta property="article:tag" content="贪心">
@@ -159,7 +159,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">82</span>
+          <span class="site-state-item-count">87</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -170,7 +170,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">41</span>
+        <span class="site-state-item-count">42</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -237,9 +237,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2022-10-02 23:13:24 / Modified: 23:14:02" itemprop="dateCreated datePublished" datetime="2022-10-02T23:13:24+08:00">2022-10-02</time>
+      <time title="Created: 2022-10-02 23:13:24" itemprop="dateCreated datePublished" datetime="2022-10-02T23:13:24+08:00">2022-10-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-10-03 15:40:40" itemprop="dateModified" datetime="2022-10-03T15:40:40+08:00">2022-10-03</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -265,7 +271,7 @@
 <p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/greedy/">贪心</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/string/">字符串</a></p>
 <p>给定两个整数 <code>a</code> 和 <code>b</code> ，返回 <strong>任意</strong> 字符串 <code>s</code> ，要求满足：</p>
 <ul>
-<li><code>s</code> 的长度为 <code>a + b</code>，且正好包含<code>&lt;font color=&quot;#c7254e&quot;&gt;&lt;font face=&quot;Menlo, Monaco, Consolas, Courier New, monospace&quot;&gt;&lt;span style=&quot;font-size:12.600000381469727px&quot;&gt;&lt;span style=&quot;caret-color:#c7254e&quot;&gt;&lt;span style=&quot;background-color:#f9f2f4&quot;&gt;a&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;/font&gt;</code> 个 <code>&#39;a&#39;</code> 字母与 <code>&lt;font color=&quot;#c7254e&quot;&gt;&lt;font face=&quot;Menlo, Monaco, Consolas, Courier New, monospace&quot;&gt;&lt;span style=&quot;font-size:12.600000381469727px&quot;&gt;&lt;span style=&quot;caret-color:#c7254e&quot;&gt;&lt;span style=&quot;background-color:#f9f2f4&quot;&gt;b&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;/font&gt;</code> 个 <code>&#39;b&#39;</code> 字母；</li>
+<li><code>s</code> 的长度为 <code>a + b</code>，且正好包含<code>a</code> 个 <code>&#39;a&#39;</code> 字母与 <code>b</code> 个 <code>&#39;b&#39;</code> 字母；</li>
 <li>子串 <code>&#39;aaa&#39;</code> 没有出现在 <code>s</code> 中；</li>
 <li>子串 <code>&#39;bbb&#39;</code> 没有出现在 <code>s</code> 中。</li>
 </ul>
@@ -305,6 +311,9 @@
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2022/10/03/LeetCode-1170-%E6%AF%94%E8%BE%83%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%9C%80%E5%B0%8F%E5%AD%97%E6%AF%8D%E5%87%BA%E7%8E%B0%E9%A2%91%E6%AC%A1/" rel="next" title="LeetCode 1170. 比较字符串最小字母出现频次">
+                  LeetCode 1170. 比较字符串最小字母出现频次 <i class="fa fa-chevron-right"></i>
+                </a>
             </div>
           </div>
     </footer>
