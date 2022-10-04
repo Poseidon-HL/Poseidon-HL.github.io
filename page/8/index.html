@@ -152,7 +152,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">87</span>
+          <span class="site-state-item-count">89</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -192,6 +192,201 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/22/LeetCode-948-%E4%BB%A4%E7%89%8C%E6%94%BE%E7%BD%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="👽">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="😎😴🤯">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 😎😴🤯">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/09/22/LeetCode-948-%E4%BB%A4%E7%89%8C%E6%94%BE%E7%BD%AE/" class="post-title-link" itemprop="url">LeetCode 948. 令牌放置</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-09-22 21:26:40 / Modified: 21:27:25" itemprop="dateCreated datePublished" datetime="2022-09-22T21:26:40+08:00">2022-09-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="948-令牌放置"><a href="#948-令牌放置" class="headerlink" title="948. 令牌放置"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/bag-of-tokens/">948. 令牌放置</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
+<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/greedy/">贪心</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/array/">数组</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/two-pointers/">双指针</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/sorting/">排序</a></p>
+<p>你的初始 <strong>能量</strong> 为 <code>P</code>，初始 <strong>分数</strong> 为 <code>0</code>，只有一包令牌 <code>tokens</code> 。其中 <code>tokens[i]</code> 是第 <code>i</code> 个令牌的值（下标从 0 开始）。</p>
+<p>令牌可能的两种使用方法如下：</p>
+<ul>
+<li>如果你至少有 <code>token[i]</code> 点 <strong>能量</strong> ，可以将令牌 <code>i</code> 置为正面朝上，失去 <code>token[i]</code> 点 <strong>能量</strong> ，并得到 <code>1</code> <strong>分</strong> 。</li>
+<li>如果我们至少有 <code>1</code> <strong>分</strong> ，可以将令牌 <code>i</code> 置为反面朝上，获得 <code>token[i]</code> 点 <strong>能量</strong> ，并失去 <code>1</code> <strong>分</strong> 。</li>
+</ul>
+<p>每个令牌 <strong>最多</strong> 只能使用一次，使用 <strong>顺序不限</strong> ，<strong>不需</strong> 使用所有令牌。</p>
+<p>在使用任意数量的令牌后，返回我们可以得到的最大 <strong>分数</strong> 。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：tokens = [100], P = 50</span><br><span class="line">输出：0</span><br><span class="line">解释：无法使用唯一的令牌，因为能量和分数都太少了。</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：tokens = [100,200], P = 150</span><br><span class="line">输出：1</span><br><span class="line">解释：令牌 0 正面朝上，能量变为 50，分数变为 1 。不必使用令牌 1 ，因为你无法使用它来提高分数。</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 3：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">输入：tokens = [100,200,300,400], P = 200</span><br><span class="line">输出：2</span><br><span class="line">解释：按下面顺序使用令牌可以得到 2 分：</span><br><span class="line">1\. 令牌 0 正面朝上，能量变为 100 ，分数变为 1</span><br><span class="line">2\. 令牌 3 正面朝下，能量变为 500 ，分数变为 0</span><br><span class="line">3\. 令牌 1 正面朝上，能量变为 300 ，分数变为 1</span><br><span class="line">4\. 令牌 2 正面朝上，能量变为 0 ，分数变为 2</span><br></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>0 &lt;= tokens.length &lt;= 1000</code></li>
+<li>0 &lt;&#x3D; tokens[i], P &lt; 10<sup>4</sup></li>
+</ul>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">bagOfTokensScore</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; tokens, <span class="type">int</span> power)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">sort</span>(tokens.<span class="built_in">begin</span>(), tokens.<span class="built_in">end</span>());</span><br><span class="line">        <span class="type">int</span> score = <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> result = <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> left = <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> right = tokens.<span class="built_in">size</span>() - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (left &lt;= right) &#123;</span><br><span class="line">            <span class="keyword">while</span>(left &lt; tokens.<span class="built_in">size</span>() &amp;&amp; left &lt;= right &amp;&amp; power &gt;= tokens[left]) &#123;</span><br><span class="line">                power -= tokens[left];</span><br><span class="line">                left++;</span><br><span class="line">                score++;</span><br><span class="line">                result = <span class="built_in">max</span>(result, score);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (score &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                power += tokens[right];</span><br><span class="line">                score--;</span><br><span class="line">                right--;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/22/%E9%9D%A2%E8%AF%95%E9%A2%98-04-12-%E6%B1%82%E5%92%8C%E8%B7%AF%E5%BE%84/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="👽">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="😎😴🤯">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 😎😴🤯">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/09/22/%E9%9D%A2%E8%AF%95%E9%A2%98-04-12-%E6%B1%82%E5%92%8C%E8%B7%AF%E5%BE%84/" class="post-title-link" itemprop="url">面试题 04.12. 求和路径</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-09-22 17:33:24 / Modified: 17:34:06" itemprop="dateCreated datePublished" datetime="2022-09-22T17:33:24+08:00">2022-09-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/" itemprop="url" rel="index"><span itemprop="name">面试题</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="面试题-04-12-求和路径"><a href="#面试题-04-12-求和路径" class="headerlink" title="面试题 04.12. 求和路径"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/paths-with-sum-lcci/">面试题 04.12. 求和路径</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
+<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/tree/">树</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/depth-first-search/">深度优先搜索</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/binary-tree/">二叉树</a></p>
+<p>给定一棵二叉树，其中每个节点都含有一个整数数值(该值或正或负)。设计一个算法，打印节点数值总和等于某个给定值的所有路径的数量。注意，路径不一定非得从二叉树的根节点或叶节点开始或结束，但是其方向必须向下(只能从父节点指向子节点方向)。</p>
+<p><strong>示例:</strong><br>给定如下二叉树，以及目标和 <code>sum = 22</code>，</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">      5</span><br><span class="line">     / \</span><br><span class="line">    4   8</span><br><span class="line">   /   / \</span><br><span class="line">  11  13  4</span><br><span class="line"> /  \    / \</span><br><span class="line">7    2  5   1</span><br></pre></td></tr></table></figure>
+
+<p>返回:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">解释：和为 22 的路径有：[5,4,11,2], [5,8,4,5], [4,11,7]</span><br></pre></td></tr></table></figure>
+
+<p>提示：</p>
+<ul>
+<li><code>节点总数 &lt;= 10000</code></li>
+</ul>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * struct TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode *left;</span></span><br><span class="line"><span class="comment"> *     TreeNode *right;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x) : val(x), left(NULL), right(NULL) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="type">int</span> result = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> S;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">update</span><span class="params">(map&lt;<span class="type">int</span>,<span class="type">int</span>&gt;&amp; generate, map&lt;<span class="type">int</span>,<span class="type">int</span>&gt;&amp; source, <span class="type">int</span> val)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">auto</span> ite = source.<span class="built_in">begin</span>(); ite != source.<span class="built_in">end</span>(); ite++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (ite -&gt; first + val == S) &#123;</span><br><span class="line">                result += ite -&gt; second;</span><br><span class="line">            &#125;</span><br><span class="line">            generate[ite -&gt; first + val] += ite -&gt; second;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function">map&lt;<span class="type">int</span>,<span class="type">int</span>&gt; <span class="title">Traverse</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        map&lt;<span class="type">int</span>,<span class="type">int</span>&gt; generate;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">NULL</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> generate;</span><br><span class="line">        &#125;</span><br><span class="line">        map&lt;<span class="type">int</span>,<span class="type">int</span>&gt; leftRes = <span class="built_in">Traverse</span>(root -&gt; left);</span><br><span class="line">        map&lt;<span class="type">int</span>,<span class="type">int</span>&gt; rightRes = <span class="built_in">Traverse</span>(root -&gt; right);</span><br><span class="line">        <span class="built_in">update</span>(generate, leftRes, root -&gt; val);</span><br><span class="line">        <span class="built_in">update</span>(generate, rightRes, root -&gt; val);</span><br><span class="line">        <span class="keyword">if</span> (root -&gt; val == S) &#123;</span><br><span class="line">            result++;</span><br><span class="line">        &#125;</span><br><span class="line">        generate[root -&gt; val]++;</span><br><span class="line">        <span class="keyword">return</span> generate;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">pathSum</span><span class="params">(TreeNode* root, <span class="type">int</span> sum)</span> </span>&#123;</span><br><span class="line">        S = sum;</span><br><span class="line">        <span class="built_in">Traverse</span>(root);</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -468,204 +663,6 @@
 </ul>
 <h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * struct TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode *left;</span></span><br><span class="line"><span class="comment"> *     TreeNode *right;</span></span><br><span class="line"><span class="comment"> *     TreeNode() : val(0), left(nullptr), right(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="type">int</span> result = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function">pair&lt;<span class="type">int</span>,<span class="type">int</span>&gt; <span class="title">Traverse</span><span class="params">(TreeNode* root, <span class="type">int</span> val)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">nullptr</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">make_pair</span>(val,val);</span><br><span class="line">        &#125;</span><br><span class="line">        pair&lt;<span class="type">int</span>,<span class="type">int</span>&gt; leftVal = <span class="built_in">Traverse</span>(root -&gt; left,root -&gt; val);</span><br><span class="line">        pair&lt;<span class="type">int</span>,<span class="type">int</span>&gt; rightVal = <span class="built_in">Traverse</span>(root -&gt; right,root -&gt; val);</span><br><span class="line">        <span class="type">int</span> minChild = <span class="built_in">min</span>(leftVal.first, rightVal.second);</span><br><span class="line">        <span class="type">int</span> maxChild = <span class="built_in">max</span>(leftVal.first, rightVal.second);</span><br><span class="line">        result = <span class="built_in">max</span>(result, <span class="built_in">abs</span>(root -&gt; val - minChild));</span><br><span class="line">        result = <span class="built_in">max</span>(result, <span class="built_in">abs</span>(root -&gt; val - maxChild));</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">make_pair</span>(<span class="built_in">min</span>(root -&gt; val, minChild), <span class="built_in">max</span>(root -&gt; val, maxChild));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">maxAncestorDiff</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">Traverse</span>(root,root -&gt; val);</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/21/LeetCode-2110-%E8%82%A1%E7%A5%A8%E5%B9%B3%E6%BB%91%E4%B8%8B%E8%B7%8C%E9%98%B6%E6%AE%B5%E7%9A%84%E6%95%B0%E7%9B%AE/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="👽">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="😎😴🤯">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 😎😴🤯">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/09/21/LeetCode-2110-%E8%82%A1%E7%A5%A8%E5%B9%B3%E6%BB%91%E4%B8%8B%E8%B7%8C%E9%98%B6%E6%AE%B5%E7%9A%84%E6%95%B0%E7%9B%AE/" class="post-title-link" itemprop="url">LeetCode 2110. 股票平滑下跌阶段的数目</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-09-21 16:24:08" itemprop="dateCreated datePublished" datetime="2022-09-21T16:24:08+08:00">2022-09-21</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-09-22 16:43:23" itemprop="dateModified" datetime="2022-09-22T16:43:23+08:00">2022-09-22</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="2110-股票平滑下跌阶段的数目"><a href="#2110-股票平滑下跌阶段的数目" class="headerlink" title="2110. 股票平滑下跌阶段的数目"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/number-of-smooth-descent-periods-of-a-stock/">2110. 股票平滑下跌阶段的数目</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
-<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/array/">数组</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/math/">数学</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/dynamic-programming/">动态规划</a></p>
-<p>给你一个整数数组 <code>prices</code> ，表示一支股票的历史每日股价，其中 <code>prices[i]</code> 是这支股票第 <code>i</code> 天的价格。</p>
-<p>一个 <strong>平滑下降的阶段</strong> 定义为：对于 <strong>连续一天或者多天</strong> ，每日股价都比 <strong>前一日股价恰好少</strong> <code>1</code> ，这个阶段第一天的股价没有限制。</p>
-<p>请你返回 <strong>平滑下降阶段</strong> 的数目。</p>
-<p><strong>示例 1：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入：prices = [3,2,1,4]</span><br><span class="line">输出：7</span><br><span class="line">解释：总共有 7 个平滑下降阶段：</span><br><span class="line">[3], [2], [1], [4], [3,2], [2,1] 和 [3,2,1]</span><br><span class="line">注意，仅一天按照定义也是平滑下降阶段。</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 2：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入：prices = [8,6,7,7]</span><br><span class="line">输出：4</span><br><span class="line">解释：总共有 4 个连续平滑下降阶段：[8], [6], [7] 和 [7]</span><br><span class="line">由于 8 - 6 ≠ 1 ，所以 [8,6] 不是平滑下降阶段。</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 3：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：prices = [1]</span><br><span class="line">输出：1</span><br><span class="line">解释：总共有 1 个平滑下降阶段：[1]</span><br></pre></td></tr></table></figure>
-
-<p><strong>提示：</strong></p>
-<ul>
-<li>1 &lt;&#x3D; prices.length &lt;&#x3D; 10<sup>5</sup></li>
-<li>1 &lt;&#x3D; prices[i] &lt;&#x3D; 10<sup>5</sup></li>
-</ul>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">long</span> <span class="type">long</span> <span class="title">calSum</span><span class="params">(<span class="type">long</span> <span class="type">long</span> begin, <span class="type">long</span> <span class="type">long</span> end, <span class="type">long</span> <span class="type">long</span> count)</span> </span>&#123;</span><br><span class="line">        <span class="type">long</span> <span class="type">long</span> result = (begin + end) * count / <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">long</span> <span class="type">long</span> <span class="title">getDescentPeriods</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; prices)</span> </span>&#123;</span><br><span class="line">        <span class="type">long</span> <span class="type">long</span> result = <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> begin = <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> end = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (end &lt; prices.<span class="built_in">size</span>()) &#123;</span><br><span class="line">            <span class="keyword">while</span> (end + <span class="number">1</span> &lt; prices.<span class="built_in">size</span>() &amp;&amp; prices[end + <span class="number">1</span>] == prices[end] - <span class="number">1</span>) &#123;</span><br><span class="line">                end++;</span><br><span class="line">            &#125;</span><br><span class="line">            result += <span class="built_in">calSum</span>(<span class="number">1</span>,end - begin + <span class="number">1</span>,end - begin + <span class="number">1</span>);</span><br><span class="line">            end++;</span><br><span class="line">            begin = end;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/21/%E5%89%91%E6%8C%87-Offer-28-%E5%AF%B9%E7%A7%B0%E7%9A%84%E4%BA%8C%E5%8F%89%E6%A0%91/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="👽">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="😎😴🤯">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 😎😴🤯">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/09/21/%E5%89%91%E6%8C%87-Offer-28-%E5%AF%B9%E7%A7%B0%E7%9A%84%E4%BA%8C%E5%8F%89%E6%A0%91/" class="post-title-link" itemprop="url">剑指 Offer 28. 对称的二叉树</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-09-21 16:02:47" itemprop="dateCreated datePublished" datetime="2022-09-21T16:02:47+08:00">2022-09-21</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-09-22 16:43:23" itemprop="dateModified" datetime="2022-09-22T16:43:23+08:00">2022-09-22</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%89%91%E6%8C%87-Offer/" itemprop="url" rel="index"><span itemprop="name">剑指 Offer</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="剑指-Offer-28-对称的二叉树"><a href="#剑指-Offer-28-对称的二叉树" class="headerlink" title="剑指 Offer 28. 对称的二叉树"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/dui-cheng-de-er-cha-shu-lcof/">剑指 Offer 28. 对称的二叉树</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>简单</strong>  </p>
-<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/tree/">树</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/depth-first-search/">深度优先搜索</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/breadth-first-search/">广度优先搜索</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/binary-tree/">二叉树</a></p>
-<p>请实现一个函数，用来判断一棵二叉树是不是对称的。如果一棵二叉树和它的镜像一样，那么它是对称的。</p>
-<p>例如，二叉树 [1,2,2,3,4,4,3] 是对称的。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">    1  </span><br><span class="line">   / \  </span><br><span class="line">  2   2  </span><br><span class="line"> / \ / \  </span><br><span class="line">3  4 4  3</span><br><span class="line">```  </span><br><span class="line">但是下面这个 [1,2,2,null,3,null,3] 则不是镜像对称的:</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>    1<br>   &#x2F; \<br>  2   2<br>   \   \<br>   3    3</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">**示例 1：**</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>输入：root &#x3D; [1,2,2,3,4,4,3]<br>输出：true</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">**示例 2：**</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>输入：root &#x3D; [1,2,2,null,3,null,3]<br>输出：false</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">**限制：**</span><br><span class="line"></span><br><span class="line">`0 &lt;= 节点个数 &lt;= 1000`</span><br><span class="line"></span><br><span class="line">注意：本题与主站 101 题相同：[https://leetcode-cn.com/problems/symmetric-tree/](https://leetcode-cn.com/problems/symmetric-tree/)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## Solution</span><br><span class="line"></span><br><span class="line">Language: **C++**</span><br><span class="line"></span><br><span class="line">```c++</span><br><span class="line">/**</span><br><span class="line"> * Definition for a binary tree node.</span><br><span class="line"> * struct TreeNode &#123;</span><br><span class="line"> *     int val;</span><br><span class="line"> *     TreeNode *left;</span><br><span class="line"> *     TreeNode *right;</span><br><span class="line"> *     TreeNode(int x) : val(x), left(NULL), right(NULL) &#123;&#125;</span><br><span class="line"> * &#125;;</span><br><span class="line"> */</span><br><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    bool Judge(TreeNode* l, TreeNode* r) &#123;</span><br><span class="line">        if (l == NULL &amp;&amp; r == NULL) &#123;</span><br><span class="line">            return true;</span><br><span class="line">        &#125;</span><br><span class="line">        if ((l == NULL || r == NULL) || (l -&gt; val != r -&gt; val)) &#123;</span><br><span class="line">            return false;</span><br><span class="line">        &#125;</span><br><span class="line">        return Judge(l -&gt; left, r -&gt; right) &amp; Judge(l -&gt; right, r -&gt; left);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    bool isSymmetric(TreeNode* root) &#123;</span><br><span class="line">        return root == NULL ? true: Judge(root -&gt; left, root -&gt; right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
       
     </div>
 

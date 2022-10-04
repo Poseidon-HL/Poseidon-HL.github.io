@@ -152,7 +152,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">87</span>
+          <span class="site-state-item-count">89</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -192,6 +192,188 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/30/%E9%9D%A2%E8%AF%95%E9%A2%98-16-21-%E4%BA%A4%E6%8D%A2%E5%92%8C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="👽">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="😎😴🤯">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 😎😴🤯">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/09/30/%E9%9D%A2%E8%AF%95%E9%A2%98-16-21-%E4%BA%A4%E6%8D%A2%E5%92%8C/" class="post-title-link" itemprop="url">面试题 16.21. 交换和</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-09-30 17:23:39 / Modified: 17:24:10" itemprop="dateCreated datePublished" datetime="2022-09-30T17:23:39+08:00">2022-09-30</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="面试题-16-21-交换和"><a href="#面试题-16-21-交换和" class="headerlink" title="面试题 16.21. 交换和"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/sum-swap-lcci/">面试题 16.21. 交换和</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
+<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/array/">数组</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/hash-table/">哈希表</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/binary-search/">二分查找</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/sorting/">排序</a></p>
+<p>给定两个整数数组，请交换一对数值（每个数组中取一个数值），使得两个数组所有元素的和相等。</p>
+<p>返回一个数组，第一个元素是第一个数组中要交换的元素，第二个元素是第二个数组中要交换的元素。若有多个答案，返回任意一个均可。若无满足条件的数值，返回空数组。</p>
+<p><strong>示例:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: array1 = [4, 1, 2, 1, 1, 2], array2 = [3, 6, 3, 3]</span><br><span class="line">输出: [1, 3]</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: array1 = [1, 2, 3], array2 = [4, 5, 6]</span><br><span class="line">输出: []</span><br></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>1 &lt;= array1.length, array2.length &lt;= 100000</code></li>
+</ul>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; res;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">getRes</span><span class="params">(set&lt;<span class="type">int</span>&gt;&amp; map1, set&lt;<span class="type">int</span>&gt; &amp;map2, <span class="type">int</span> sum1, <span class="type">int</span> sum2, <span class="type">bool</span> needReverse)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">auto</span> it = map2.<span class="built_in">begin</span>(); it != map2.<span class="built_in">end</span>(); it++) &#123;</span><br><span class="line">                <span class="keyword">auto</span> it1 = map1.<span class="built_in">find</span>((sum2 - sum1) / <span class="number">2</span> + *it);</span><br><span class="line">                <span class="keyword">if</span> (it1 != map1.<span class="built_in">end</span>() &amp;&amp; (*it - *it1) * <span class="number">2</span> == (sum1 - sum2)) &#123;</span><br><span class="line">                    res.<span class="built_in">push_back</span>(*it1); </span><br><span class="line">                    res.<span class="built_in">push_back</span>(*it);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                it1 = map1.<span class="built_in">find</span>((sum1 - sum2) / <span class="number">2</span> + *it);</span><br><span class="line">                <span class="keyword">if</span> (it1 != map1.<span class="built_in">end</span>() &amp;&amp; (*it - *it1) * <span class="number">2</span> == (sum2 - sum1)) &#123;</span><br><span class="line">                    res.<span class="built_in">push_back</span>(*it1); </span><br><span class="line">                    res.<span class="built_in">push_back</span>(*it);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (needReverse) &#123;</span><br><span class="line">            <span class="built_in">reverse</span>(res.<span class="built_in">begin</span>(), res.<span class="built_in">end</span>());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">findSwapValues</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; array1, vector&lt;<span class="type">int</span>&gt;&amp; array2)</span> </span>&#123;</span><br><span class="line">        set&lt;<span class="type">int</span>&gt; map1;</span><br><span class="line">        set&lt;<span class="type">int</span>&gt; map2;</span><br><span class="line">        <span class="type">int</span> sum1 = <span class="number">0</span>, sum2 = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i : array1) &#123;</span><br><span class="line">            map1.<span class="built_in">insert</span>(i);</span><br><span class="line">            sum1 += i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i : array2) &#123;</span><br><span class="line">            map2.<span class="built_in">insert</span>(i);</span><br><span class="line">            sum2 += i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (map2.<span class="built_in">size</span>() &lt; map1.<span class="built_in">size</span>()) &#123;</span><br><span class="line">            <span class="built_in">getRes</span>(map1, map2, sum1, sum2, <span class="literal">false</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="built_in">getRes</span>(map2, map1, sum2, sum1, <span class="literal">true</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/30/LeetCode-863-%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E6%89%80%E6%9C%89%E8%B7%9D%E7%A6%BB%E4%B8%BA-K-%E7%9A%84%E7%BB%93%E7%82%B9/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="👽">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="😎😴🤯">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 😎😴🤯">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/09/30/LeetCode-863-%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E6%89%80%E6%9C%89%E8%B7%9D%E7%A6%BB%E4%B8%BA-K-%E7%9A%84%E7%BB%93%E7%82%B9/" class="post-title-link" itemprop="url">LeetCode 863. 二叉树中所有距离为 K 的结点</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-09-30 16:52:21 / Modified: 16:53:54" itemprop="dateCreated datePublished" datetime="2022-09-30T16:52:21+08:00">2022-09-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="863-二叉树中所有距离为-K-的结点"><a href="#863-二叉树中所有距离为-K-的结点" class="headerlink" title="863. 二叉树中所有距离为 K 的结点"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/all-nodes-distance-k-in-binary-tree/">863. 二叉树中所有距离为 K 的结点</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
+<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/tree/">树</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/depth-first-search/">深度优先搜索</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/breadth-first-search/">广度优先搜索</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/binary-tree/">二叉树</a></p>
+<p>给定一个二叉树（具有根结点 <code>root</code>）， 一个目标结点 <code>target</code> ，和一个整数值 <code>k</code> 。</p>
+<p>返回到目标结点 <code>target</code> 距离为 <code>k</code> 的所有结点的值的列表。 答案可以以 <strong>任何顺序</strong> 返回。</p>
+<p><strong>示例 1：</strong></p>
+<p><img src="https://cdn.staticaly.com/gh/Poseidon-HL/image-hosting@master/20220930/sketch0.45pxp127u7c0.webp" alt="sketch0"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：root = [3,5,1,6,2,0,8,null,null,7,4], target = 5, k = 2</span><br><span class="line">输出：[7,4,1]</span><br><span class="line">解释：所求结点为与目标结点（值为 5）距离为 2 的结点，值分别为 7，4，以及 1</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: root = [1], target = 1, k = 3</span><br><span class="line">输出: []</span><br></pre></td></tr></table></figure>
+
+<p><strong>提示:</strong></p>
+<ul>
+<li>节点数在 <code>[1, 500]</code> 范围内</li>
+<li><code>0 &lt;= Node.val &lt;= 500</code></li>
+<li><code>Node.val</code> 中所有值 <strong>不同</strong></li>
+<li>目标结点 <code>target</code> 是树上的结点。</li>
+<li><code>0 &lt;= k &lt;= 1000</code></li>
+</ul>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * struct TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode *left;</span></span><br><span class="line"><span class="comment"> *     TreeNode *right;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x) : val(x), left(NULL), right(NULL) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="type">int</span> targetVal;</span><br><span class="line">    vector&lt;TreeNode*&gt; srcNode;</span><br><span class="line">    set&lt;<span class="type">int</span>&gt; visited;</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; res;</span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">findParent</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">NULL</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (root -&gt; val == targetVal) &#123;</span><br><span class="line">            srcNode.<span class="built_in">push_back</span>(root);</span><br><span class="line">            visited.<span class="built_in">insert</span>(root -&gt; val);</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">findParent</span>(root -&gt; left) || <span class="built_in">findParent</span>(root -&gt; right)) &#123;</span><br><span class="line">            srcNode.<span class="built_in">push_back</span>(root);</span><br><span class="line">            visited.<span class="built_in">insert</span>(root -&gt; val);</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">isSubTree</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (root == <span class="literal">NULL</span> || visited.<span class="built_in">find</span>(root -&gt; val) != visited.<span class="built_in">end</span>()); </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">findDistance</span><span class="params">(TreeNode* root, <span class="type">int</span> distance)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">NULL</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> ;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (distance == <span class="number">0</span>) &#123;</span><br><span class="line">            res.<span class="built_in">push_back</span>(root -&gt; val);</span><br><span class="line">            <span class="keyword">return</span> ;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (!<span class="built_in">isSubTree</span>(root -&gt; left)) &#123;</span><br><span class="line">            <span class="built_in">findDistance</span>(root -&gt; left, distance - <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (!<span class="built_in">isSubTree</span>(root -&gt; right)) &#123;</span><br><span class="line">            <span class="built_in">findDistance</span>(root -&gt; right, distance - <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">distanceK</span><span class="params">(TreeNode* root, TreeNode* target, <span class="type">int</span> k)</span> </span>&#123;</span><br><span class="line">        targetVal = target -&gt; val;</span><br><span class="line">        <span class="built_in">findParent</span>(root);</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; srcNode.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            <span class="built_in">findDistance</span>(srcNode[i], k - i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -441,203 +623,6 @@
     <div class="post-body" itemprop="articleBody">
           <div class="note primary"><h4 id="Operating-Systems-Three-Easy-Pieces"><a href="#Operating-Systems-Three-Easy-Pieces" class="headerlink" title="Operating Systems: Three Easy Pieces"></a>Operating Systems: Three Easy Pieces</h4><p><a target="_blank" rel="noopener" href="https://pages.cs.wisc.edu/~remzi/Classes/537/Spring2018/">Link🔗</a></p>
 </div>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/29/LCP-41-%E9%BB%91%E7%99%BD%E7%BF%BB%E8%BD%AC%E6%A3%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="👽">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="😎😴🤯">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 😎😴🤯">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/09/29/LCP-41-%E9%BB%91%E7%99%BD%E7%BF%BB%E8%BD%AC%E6%A3%8B/" class="post-title-link" itemprop="url">LCP 41. 黑白翻转棋</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2022-09-29 13:42:54 / Modified: 14:01:46" itemprop="dateCreated datePublished" datetime="2022-09-29T13:42:54+08:00">2022-09-29</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LCP/" itemprop="url" rel="index"><span itemprop="name">LCP</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="LCP-41-黑白翻转棋"><a href="#LCP-41-黑白翻转棋" class="headerlink" title="LCP 41. 黑白翻转棋"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/fHi6rV/">LCP 41. 黑白翻转棋</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
-<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/breadth-first-search/problemset/">广度优先搜索</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/array/problemset/">数组</a></p>
-<p>在 <code>n*m</code> 大小的棋盘中，有黑白两种棋子，黑棋记作字母 <code>&quot;X&quot;</code>, 白棋记作字母 <code>&quot;O&quot;</code>，空余位置记作 <code>&quot;.&quot;</code>。当落下的棋子与其他相同颜色的棋子在行、列或对角线完全包围（中间不存在空白位置）另一种颜色的棋子，则可以翻转这些棋子的颜色。</p>
-<p><img src="https://cdn.staticaly.com/gh/Poseidon-HL/image-hosting@master/20220929/1630396029-eTgzpN-6da662e67368466a96d203f67bb6e793.5xhib4u9bao.gif" alt="1630396029-eTgzpN-6da662e67368466a96d203f67bb6e793"></p>
-<p><img src="https://cdn.staticaly.com/gh/Poseidon-HL/image-hosting@master/20220929/1630396240-nMvdcc-8e4261afe9f60e05a4f740694b439b6b.7et6ha07nlw0.gif" alt="1630396240-nMvdcc-8e4261afe9f60e05a4f740694b439b6b"></p>
-<p><img src="https://cdn.staticaly.com/gh/Poseidon-HL/image-hosting@master/20220929/1630396291-kEtzLL-6fcb682daeecb5c3f56eb88b23c81d33.3vnl6mehy7w0.gif" alt="1630396291-kEtzLL-6fcb682daeecb5c3f56eb88b23c81d33"></p>
-<p><strong>示例1:</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">输入：chessboard = [&quot;....X.&quot;,&quot;....X.&quot;,&quot;XOOO..&quot;,&quot;......&quot;,&quot;......&quot;]</span><br><span class="line"></span><br><span class="line">输出：3</span><br><span class="line"></span><br><span class="line">解释：</span><br><span class="line">可以选择下在 [2,4] 处，能够翻转白方三枚棋子。</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例2:</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">输入：chessboard = [&quot;.X.&quot;,&quot;.O.&quot;,&quot;XO.&quot;]</span><br><span class="line"></span><br><span class="line">输出：2</span><br><span class="line"></span><br><span class="line">解释：</span><br><span class="line">可以选择下在 [2,2] 处，能够翻转白方两枚棋子</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.staticaly.com/gh/Poseidon-HL/image-hosting@master/20220929/1626683255-OBtBud-2126c1d21b1b9a9924c639d449cc6e65.5y6ja6c0u3w0.gif" alt="1626683255-OBtBud-2126c1d21b1b9a9924c639d449cc6e65"></p>
-<p><strong>示例3:</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">输入：chessboard = [&quot;.......&quot;,&quot;.......&quot;,&quot;.......&quot;,&quot;X......&quot;,&quot;.O.....&quot;,&quot;..O....&quot;,&quot;....OOX&quot;]</span><br><span class="line"></span><br><span class="line">输出：4</span><br><span class="line"></span><br><span class="line">解释：</span><br><span class="line">可以选择下在 [6,3] 处，能够翻转白方四枚棋子。</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.staticaly.com/gh/Poseidon-HL/image-hosting@master/20220929/1630393770-Puyked-803f2f04098b6174397d6c696f54d709.2gw3h3h7y6e0.gif" alt="1630393770-Puyked-803f2f04098b6174397d6c696f54d709"></p>
-<p><strong>提示：</strong></p>
-<ol>
-<li><code>1 &lt;= chessboard.length, chessboard[i].length &lt;= 8</code></li>
-<li><code>chessboard[i] 仅包含 &quot;.&quot;、&quot;O&quot; 和 &quot;X&quot;</code></li>
-</ol>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">// 筛选坐标</span></span><br><span class="line">    <span class="comment">// 搜索判断</span></span><br><span class="line">    vector&lt;string&gt; C;</span><br><span class="line">    vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; weights;</span><br><span class="line">    set&lt;pair&lt;<span class="type">int</span>,<span class="type">int</span>&gt;&gt; points;</span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">isValidIJ</span><span class="params">(<span class="type">int</span> i, <span class="type">int</span> j)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (i &gt;=<span class="number">0</span> &amp;&amp; j &gt;= <span class="number">0</span> &amp;&amp; i &lt; C.<span class="built_in">size</span>() &amp;&amp; j &lt; C[i].<span class="built_in">length</span>());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">showBoard</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; C.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>;j &lt; C[i].<span class="built_in">size</span>(); j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (C[i][j] == <span class="string">&#x27;.&#x27;</span>) &#123;</span><br><span class="line">                    cout &lt;&lt; <span class="string">&quot;T &quot;</span>;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    cout &lt;&lt; C[i][j] &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            cout &lt;&lt; endl;</span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;--------------------------&quot;</span> &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">isValid</span><span class="params">(<span class="type">int</span> i1, <span class="type">int</span> j1, <span class="type">int</span> i2, <span class="type">int</span> j2)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 两个坐标都不合法 pass</span></span><br><span class="line">        <span class="comment">// 两个坐标只有一个合法 那么另一个必须为黑色</span></span><br><span class="line">        <span class="comment">// 两个坐标都合法 那么同样的其中之一也必须为黑色</span></span><br><span class="line">        <span class="type">bool</span> firstValid = <span class="literal">false</span>, secondValid = <span class="literal">false</span>;</span><br><span class="line">        firstValid = <span class="built_in">isValidIJ</span>(i1, j1);</span><br><span class="line">        secondValid = <span class="built_in">isValidIJ</span>(i2, j2);</span><br><span class="line">        <span class="keyword">if</span> (!firstValid &amp;&amp; !secondValid) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (firstValid &amp;&amp; !secondValid) &#123;</span><br><span class="line">            <span class="keyword">return</span> C[i1][j1] == <span class="string">&#x27;X&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (!firstValid &amp;&amp; secondValid) &#123;</span><br><span class="line">            <span class="keyword">return</span> C[i2][j2] == <span class="string">&#x27;X&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> C[i1][j1] == <span class="string">&#x27;X&#x27;</span> || C[i2][j2] == <span class="string">&#x27;X&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">addW</span><span class="params">(<span class="type">int</span> i1, <span class="type">int</span> j1, <span class="type">int</span> i2, <span class="type">int</span> j2)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">isValidIJ</span>(i1,j1) &amp;&amp; C[i1][j1] != <span class="string">&#x27;X&#x27;</span>) &#123;</span><br><span class="line">            points.<span class="built_in">insert</span>(<span class="built_in">make_pair</span>(i1, j1));</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="built_in">isValidIJ</span>(i2,j2) &amp;&amp; C[i2][j2] != <span class="string">&#x27;X&#x27;</span>) &#123;</span><br><span class="line">            points.<span class="built_in">insert</span>(<span class="built_in">make_pair</span>(i2, j2));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">Cal</span><span class="params">(<span class="type">int</span> i, <span class="type">int</span> j, <span class="type">int</span> countX)</span> </span>&#123;</span><br><span class="line">        C[i][j] = <span class="string">&#x27;X&#x27;</span>;</span><br><span class="line">        <span class="comment">// cout &lt;&lt; &quot;Result: &quot; &lt;&lt; i &lt;&lt; &quot; &quot; &lt;&lt; j &lt;&lt; endl;</span></span><br><span class="line">        <span class="type">int</span> countXAfter = countX;</span><br><span class="line">        <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">            <span class="type">int</span> origin = countXAfter;</span><br><span class="line">            countXAfter = <span class="number">0</span>;</span><br><span class="line">            <span class="comment">// showBoard();</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; weights.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>;j &lt; C[i].<span class="built_in">length</span>(); j++) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (C[i][j] == <span class="string">&#x27;O&#x27;</span>) &#123;</span><br><span class="line">                        <span class="built_in">AddWeight</span>(i , j, <span class="literal">true</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">if</span> (C[i][j] == <span class="string">&#x27;X&#x27;</span>) &#123;</span><br><span class="line">                        countXAfter++;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (origin == countXAfter) &#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> countXAfter;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">AllBlack</span><span class="params">(<span class="type">int</span> i1, <span class="type">int</span> j1, <span class="type">int</span> i2, <span class="type">int</span> j2)</span> </span>&#123;</span><br><span class="line">        <span class="type">bool</span> firstValid = <span class="built_in">isValidIJ</span>(i1, j1);</span><br><span class="line">        <span class="type">bool</span> secondValid = <span class="built_in">isValidIJ</span>(i2, j2);</span><br><span class="line">        <span class="keyword">if</span> (!firstValid || !secondValid) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> C[i1][j1] == <span class="string">&#x27;X&#x27;</span> &amp;&amp; C[i2][j2] == <span class="string">&#x27;X&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">AddWeight</span><span class="params">(<span class="type">int</span> i, <span class="type">int</span> j, <span class="type">bool</span> flag)</span> </span>&#123;</span><br><span class="line">        <span class="type">bool</span> needBeBlack;</span><br><span class="line">        <span class="comment">// cout &lt;&lt; &quot;[AddWeight]: &quot; &lt;&lt; i &lt;&lt; &quot; &quot; &lt;&lt; j &lt;&lt; endl;</span></span><br><span class="line">        <span class="type">int</span> up = i, down = i, left = j, right = j;</span><br><span class="line">        <span class="type">int</span> rightUpi = i, rightUpj = j, rightDowni = i, rightDownj = j, leftUpi = i, leftUpj =j, leftDowni = i, leftDownj = j;</span><br><span class="line">        <span class="keyword">while</span> (up &gt;= <span class="number">0</span> &amp;&amp; C[up][j] == <span class="string">&#x27;O&#x27;</span>) &#123; up--; &#125;</span><br><span class="line">        <span class="comment">// cout &lt;&lt; &quot;1&quot; &lt;&lt; endl;</span></span><br><span class="line">        <span class="keyword">while</span> (down &lt; C.<span class="built_in">size</span>() &amp;&amp; C[down][j] == <span class="string">&#x27;O&#x27;</span>) &#123; down++; &#125;</span><br><span class="line">        <span class="comment">// cout &lt;&lt; &quot;2&quot; &lt;&lt; endl;</span></span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">isValid</span>(up, j, down, j)) &#123; <span class="built_in">addW</span>(up, j, down, j); &#125;</span><br><span class="line">        <span class="keyword">if</span> (flag &amp;&amp; <span class="built_in">AllBlack</span>(up, j, down, j)) &#123;</span><br><span class="line">            C[i][j] = <span class="string">&#x27;X&#x27;</span>;</span><br><span class="line">            <span class="keyword">return</span> ;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span> (left &gt;= <span class="number">0</span> &amp;&amp; C[i][left] == <span class="string">&#x27;O&#x27;</span>) &#123; left--; &#125;</span><br><span class="line">        <span class="keyword">while</span> (right &lt; C[i].<span class="built_in">size</span>() &amp;&amp; C[i][right] == <span class="string">&#x27;O&#x27;</span>) &#123; right++; &#125;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">isValid</span>(i, left, i, right)) &#123; <span class="built_in">addW</span>(i, left, i, right); &#125;</span><br><span class="line">        <span class="keyword">if</span> (flag &amp;&amp; <span class="built_in">AllBlack</span>(i, left, i, right)) &#123;</span><br><span class="line">            C[i][j] = <span class="string">&#x27;X&#x27;</span>;</span><br><span class="line">            <span class="keyword">return</span> ;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span> (rightUpi &gt;= <span class="number">0</span> &amp;&amp; rightUpj &lt; C[i].<span class="built_in">size</span>() &amp;&amp; C[rightUpi][rightUpj] == <span class="string">&#x27;O&#x27;</span>) &#123;</span><br><span class="line">            rightUpi--;</span><br><span class="line">            rightUpj++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span> (leftDowni &lt; C.<span class="built_in">size</span>() &amp;&amp; leftDownj &gt;= <span class="number">0</span> &amp;&amp; C[leftDowni][leftDownj] == <span class="string">&#x27;O&#x27;</span>) &#123;</span><br><span class="line">            leftDowni++;</span><br><span class="line">            leftDownj--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">isValid</span>(rightUpi, rightUpj, leftDowni, leftDownj)) &#123; <span class="built_in">addW</span>(rightUpi, rightUpj, leftDowni, leftDownj); &#125;</span><br><span class="line">        <span class="keyword">if</span> (flag &amp;&amp; <span class="built_in">AllBlack</span>(rightUpi, rightUpj, leftDowni, leftDownj)) &#123;</span><br><span class="line">            C[i][j] = <span class="string">&#x27;X&#x27;</span>;</span><br><span class="line">            <span class="keyword">return</span> ;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span> (rightDowni &lt; C.<span class="built_in">size</span>() &amp;&amp; rightDownj &lt; C[i].<span class="built_in">size</span>() &amp;&amp; C[rightDowni][rightDownj] == <span class="string">&#x27;O&#x27;</span>) &#123;</span><br><span class="line">            rightDowni++;</span><br><span class="line">            rightDownj++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span> (leftUpi &gt;= <span class="number">0</span> &amp;&amp; leftUpj &gt;= <span class="number">0</span> &amp;&amp; C[leftUpi][leftUpj] == <span class="string">&#x27;O&#x27;</span>) &#123;</span><br><span class="line">            leftUpi--;</span><br><span class="line">            leftUpj--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">isValid</span>(rightDowni, rightDownj, leftUpi, leftUpj)) &#123; <span class="built_in">addW</span>(rightDowni, rightDownj, leftUpi, leftUpj); &#125;</span><br><span class="line">        <span class="keyword">if</span> (flag &amp;&amp; <span class="built_in">AllBlack</span>(rightDowni, rightDownj, leftUpi, leftUpj)) &#123;</span><br><span class="line">            C[i][j] = <span class="string">&#x27;X&#x27;</span>;</span><br><span class="line">            <span class="keyword">return</span> ;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">flipChess</span><span class="params">(vector&lt;string&gt;&amp; chessboard)</span> </span>&#123;</span><br><span class="line">        weights.<span class="built_in">resize</span>(chessboard.<span class="built_in">size</span>());</span><br><span class="line">        C = chessboard;</span><br><span class="line">        <span class="comment">// showBoard();</span></span><br><span class="line">        <span class="type">int</span> countX = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; weights.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">char</span> c : chessboard[i]) &#123;</span><br><span class="line">                weights[i].<span class="built_in">push_back</span>(<span class="number">0</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; weights.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>;j &lt; chessboard[i].<span class="built_in">length</span>(); j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (chessboard[i][j] == <span class="string">&#x27;O&#x27;</span>) &#123;</span><br><span class="line">                    <span class="built_in">AddWeight</span>(i , j, <span class="literal">false</span>);</span><br><span class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span> (chessboard[i][j] == <span class="string">&#x27;X&#x27;</span>) &#123;</span><br><span class="line">                    countX++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> result = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">auto</span> it = points.<span class="built_in">begin</span>(); it != points.<span class="built_in">end</span>(); it++) &#123;</span><br><span class="line">            vector&lt;string&gt; C_backup = C;</span><br><span class="line">            result = <span class="built_in">max</span>(result, <span class="built_in">Cal</span>((*it).first, (*it).second, countX));</span><br><span class="line">            C = C_backup;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> result - countX - <span class="number">1</span> &gt;= <span class="number">0</span> ? result - countX - <span class="number">1</span>: <span class="number">0</span>;    </span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/29/%E9%9D%A2%E8%AF%95%E9%A2%98-01-09-%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AE%E8%BD%AC/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="👽">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="😎😴🤯">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 😎😴🤯">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/09/29/%E9%9D%A2%E8%AF%95%E9%A2%98-01-09-%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AE%E8%BD%AC/" class="post-title-link" itemprop="url">面试题 01.09. 字符串轮转</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2022-09-29 13:21:40 / Modified: 13:22:09" itemprop="dateCreated datePublished" datetime="2022-09-29T13:21:40+08:00">2022-09-29</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/" itemprop="url" rel="index"><span itemprop="name">面试题</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="面试题-01-09-字符串轮转"><a href="#面试题-01-09-字符串轮转" class="headerlink" title="面试题 01.09. 字符串轮转"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/string-rotation-lcci/">面试题 01.09. 字符串轮转</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>简单</strong>  </p>
-<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/string/">字符串</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/string-matching/">字符串匹配</a></p>
-<p>字符串轮转。给定两个字符串<code>s1</code>和<code>s2</code>，请编写代码检查<code>s2</code>是否为<code>s1</code>旋转而成（比如，<code>waterbottle</code>是<code>erbottlewat</code>旋转后的字符串）。</p>
-<p><strong>示例1:</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：s1 = &quot;waterbottle&quot;, s2 = &quot;erbottlewat&quot;</span><br><span class="line">输出：True</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例2:</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：s1 = &quot;aa&quot;, s2 = &quot;aba&quot;</span><br><span class="line">输出：False</span><br></pre></td></tr></table></figure>
-
-<p><strong>提示：</strong></p>
-<ol>
-<li>字符串长度在[0, 100000]范围内。</li>
-</ol>
-<p><strong>说明:</strong></p>
-<ol>
-<li>你能只调用一次检查子串的方法吗？</li>
-</ol>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">isFlipedString</span><span class="params">(string s1, string s2)</span> </span>&#123;</span><br><span class="line">        string S = s2 + s2;</span><br><span class="line">        <span class="keyword">return</span> s1.<span class="built_in">length</span>() != s2.<span class="built_in">length</span>() ? <span class="literal">false</span> : S.<span class="built_in">find</span>(s1) != <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
       
     </div>
 

@@ -152,7 +152,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">87</span>
+          <span class="site-state-item-count">89</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -192,6 +192,203 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/16/%E7%AE%97%E6%B3%95-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%89%8D%E7%BC%80%E6%A0%91Trie/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="👽">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="😎😴🤯">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 😎😴🤯">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/09/16/%E7%AE%97%E6%B3%95-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%89%8D%E7%BC%80%E6%A0%91Trie/" class="post-title-link" itemprop="url">算法&数据结构 前缀树Trie</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-09-16 11:10:48" itemprop="dateCreated datePublished" datetime="2022-09-16T11:10:48+08:00">2022-09-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-09-18 13:54:46" itemprop="dateModified" datetime="2022-09-18T13:54:46+08:00">2022-09-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AE%97%E6%B3%95-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index"><span itemprop="name">算法&数据结构</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Trie</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    vector&lt;Trie*&gt; children;</span><br><span class="line">    <span class="type">bool</span> isEnd;</span><br><span class="line">    <span class="built_in">Trie</span>():<span class="built_in">children</span>(<span class="number">26</span>),<span class="built_in">isEnd</span>(<span class="literal">false</span>) &#123;&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">insert</span><span class="params">(string word)</span> </span>&#123;</span><br><span class="line">        Trie* node = <span class="keyword">this</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">char</span> c : word) &#123;</span><br><span class="line">            <span class="type">int</span> index = c - <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">            <span class="keyword">if</span> (node -&gt; children[index] == <span class="literal">nullptr</span>) &#123;</span><br><span class="line">                node -&gt; children[index] = <span class="keyword">new</span> <span class="built_in">Trie</span>();</span><br><span class="line">            &#125;</span><br><span class="line">            node = node -&gt; children[index];</span><br><span class="line">        &#125;</span><br><span class="line">        node -&gt; isEnd = <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">search</span><span class="params">(string word)</span> </span>&#123;</span><br><span class="line">        Trie* node = <span class="keyword">this</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">char</span> c : word) &#123;</span><br><span class="line">            <span class="type">int</span> index = c - <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">            <span class="keyword">if</span> (node -&gt; children[index] == <span class="literal">nullptr</span>) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            node = node -&gt; children[index];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> node -&gt; isEnd;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">startsWith</span><span class="params">(string prefix)</span> </span>&#123;</span><br><span class="line">        Trie* node = <span class="keyword">this</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">char</span> c : prefix) &#123;</span><br><span class="line">            <span class="type">int</span> index = c - <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">            <span class="keyword">if</span> (node -&gt; children[index] == <span class="literal">nullptr</span>) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            node = node -&gt; children[index];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/16/%E5%89%91%E6%8C%87-Offer-II-109-%E5%BC%80%E5%AF%86%E7%A0%81%E9%94%81/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="👽">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="😎😴🤯">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 😎😴🤯">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/09/16/%E5%89%91%E6%8C%87-Offer-II-109-%E5%BC%80%E5%AF%86%E7%A0%81%E9%94%81/" class="post-title-link" itemprop="url">剑指 Offer II 109. 开密码锁</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-09-16 10:59:32" itemprop="dateCreated datePublished" datetime="2022-09-16T10:59:32+08:00">2022-09-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-09-20 20:15:14" itemprop="dateModified" datetime="2022-09-20T20:15:14+08:00">2022-09-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%89%91%E6%8C%87-Offer-II/" itemprop="url" rel="index"><span itemprop="name">剑指 Offer II</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="剑指-Offer-II-109-开密码锁"><a href="#剑指-Offer-II-109-开密码锁" class="headerlink" title="剑指 Offer II 109. 开密码锁"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/zlDJc7/">剑指 Offer II 109. 开密码锁</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
+<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/breadth-first-search/">广度优先搜索</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/array/">数组</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/hash-table/">哈希表</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/string/">字符串</a></p>
+<p>一个密码锁由 4 个环形拨轮组成，每个拨轮都有 10 个数字： <code>&#39;0&#39;, &#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;, &#39;5&#39;, &#39;6&#39;, &#39;7&#39;, &#39;8&#39;, &#39;9&#39;</code> 。每个拨轮可以自由旋转：例如把 <code>&#39;9&#39;</code> 变为 <code>&#39;0&#39;</code>，<code>&#39;0&#39;</code> 变为 <code>&#39;9&#39;</code> 。每次旋转都只能旋转一个拨轮的一位数字。</p>
+<p>锁的初始数字为 <code>&#39;0000&#39;</code> ，一个代表四个拨轮的数字的字符串。</p>
+<p>列表 <code>deadends</code> 包含了一组死亡数字，一旦拨轮的数字和列表里的任何一个元素相同，这个锁将会被永久锁定，无法再被旋转。</p>
+<p>字符串 <code>target</code> 代表可以解锁的数字，请给出解锁需要的最小旋转次数，如果无论如何不能解锁，返回 <code>-1</code> 。</p>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入：deadends = [&quot;0201&quot;,&quot;0101&quot;,&quot;0102&quot;,&quot;1212&quot;,&quot;2002&quot;], target = &quot;0202&quot;</span><br><span class="line">输出：6</span><br><span class="line">解释：</span><br><span class="line">可能的移动序列为 &quot;0000&quot; -&gt; &quot;1000&quot; -&gt; &quot;1100&quot; -&gt; &quot;1200&quot; -&gt; &quot;1201&quot; -&gt; &quot;1202&quot; -&gt; &quot;0202&quot;。</span><br><span class="line">注意 &quot;0000&quot; -&gt; &quot;0001&quot; -&gt; &quot;0002&quot; -&gt; &quot;0102&quot; -&gt; &quot;0202&quot; 这样的序列是不能解锁的，因为当拨动到 &quot;0102&quot; 时这个锁就会被锁定。</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入: deadends = [&quot;8888&quot;], target = &quot;0009&quot;</span><br><span class="line">输出：1</span><br><span class="line">解释：</span><br><span class="line">把最后一位反向旋转一次即可 &quot;0000&quot; -&gt; &quot;0009&quot;。</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 3:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入: deadends = [&quot;8887&quot;,&quot;8889&quot;,&quot;8878&quot;,&quot;8898&quot;,&quot;8788&quot;,&quot;8988&quot;,&quot;7888&quot;,&quot;9888&quot;], target = &quot;8888&quot;</span><br><span class="line">输出：-1</span><br><span class="line">解释：</span><br><span class="line">无法旋转到目标数字且不被锁定。</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 4:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: deadends = [&quot;0000&quot;], target = &quot;8888&quot;</span><br><span class="line">输出：-1</span><br></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>1 &lt;= deadends.length &lt;= 500</code></li>
+<li><code>&lt;font face=&quot;monospace&quot;&gt;deadends[i].length == 4&lt;/font&gt;</code></li>
+<li><code>&lt;font face=&quot;monospace&quot;&gt;target.length == 4&lt;/font&gt;</code></li>
+<li><code>target</code> <strong>不在</strong> <code>deadends</code> 之中</li>
+<li><code>target</code> 和 <code>deadends[i]</code> 仅由若干位数字组成</li>
+</ul>
+<p>注意：本题与主站 752 题相同： <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/open-the-lock/">https://leetcode-cn.com/problems/open-the-lock/</a></p>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">string <span class="title">cal</span><span class="params">(string src, <span class="type">int</span> idx, string op)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (op == <span class="string">&quot;+&quot;</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (src[idx] == <span class="string">&#x27;9&#x27;</span>) &#123;</span><br><span class="line">                src[idx] = <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                src[idx] = <span class="built_in">char</span>(<span class="built_in">int</span>(src[idx]) + <span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (src[idx] == <span class="string">&#x27;0&#x27;</span>) &#123;</span><br><span class="line">                src[idx] = <span class="string">&#x27;9&#x27;</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                src[idx] = <span class="built_in">char</span>(<span class="built_in">int</span>(src[idx]) - <span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> src;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    set&lt;string&gt; visited;</span><br><span class="line">    set&lt;string&gt; booms;</span><br><span class="line">    <span class="type">int</span> count = <span class="number">-1</span>;</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">openLock</span><span class="params">(vector&lt;string&gt;&amp; deadends, string target)</span> </span>&#123;</span><br><span class="line">        queue&lt;string&gt; thisRound;</span><br><span class="line">        <span class="keyword">for</span> (string deadend: deadends) &#123;</span><br><span class="line">            booms.<span class="built_in">insert</span>(deadend);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (booms.<span class="built_in">find</span>(<span class="string">&quot;0000&quot;</span>) != booms.<span class="built_in">end</span>()) &#123;</span><br><span class="line">            <span class="keyword">return</span> count;</span><br><span class="line">        &#125;</span><br><span class="line">        count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span> (target == <span class="string">&quot;0000&quot;</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> count;</span><br><span class="line">        &#125;</span><br><span class="line">        thisRound.<span class="built_in">push</span>(<span class="string">&quot;0000&quot;</span>);</span><br><span class="line">        visited.<span class="built_in">insert</span>(<span class="string">&quot;0000&quot;</span>);</span><br><span class="line">        <span class="keyword">while</span> (thisRound.<span class="built_in">size</span>() != <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="type">int</span> round = thisRound.<span class="built_in">size</span>();</span><br><span class="line">            count++;</span><br><span class="line">            <span class="keyword">while</span> (round &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                string now = thisRound.<span class="built_in">front</span>();</span><br><span class="line">                thisRound.<span class="built_in">pop</span>();</span><br><span class="line">                <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; <span class="number">4</span>;i++) &#123;</span><br><span class="line">                    string addOne = <span class="built_in">cal</span>(now,i,<span class="string">&quot;+&quot;</span>);</span><br><span class="line">                    string subOne = <span class="built_in">cal</span>(now,i,<span class="string">&quot;-&quot;</span>);</span><br><span class="line">                    <span class="keyword">if</span> (booms.<span class="built_in">find</span>(addOne) == booms.<span class="built_in">end</span>() &amp;&amp; visited.<span class="built_in">find</span>(addOne) == visited.<span class="built_in">end</span>()) &#123;</span><br><span class="line">                        <span class="keyword">if</span> (addOne == target) &#123;</span><br><span class="line">                            <span class="keyword">return</span> count;</span><br><span class="line">                        &#125;</span><br><span class="line">                        thisRound.<span class="built_in">push</span>(addOne);</span><br><span class="line">                        visited.<span class="built_in">insert</span>(addOne);</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">if</span> (booms.<span class="built_in">find</span>(subOne) == booms.<span class="built_in">end</span>()  &amp;&amp; visited.<span class="built_in">find</span>(subOne) == visited.<span class="built_in">end</span>()) &#123;</span><br><span class="line">                        <span class="keyword">if</span> (subOne == target) &#123;</span><br><span class="line">                            <span class="keyword">return</span> count;</span><br><span class="line">                        &#125;</span><br><span class="line">                        thisRound.<span class="built_in">push</span>(subOne);</span><br><span class="line">                        visited.<span class="built_in">insert</span>(subOne);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                round--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -455,226 +652,6 @@
 <p>注意：本题与主站 210 题相同：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/course-schedule-ii/">https://leetcode-cn.com/problems/course-schedule-ii/</a></p>
 <h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; degree;</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; res;</span><br><span class="line">    vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; graph;</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">findOrder</span><span class="params">(<span class="type">int</span> numCourses, vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;&amp; prerequisites)</span> </span>&#123;</span><br><span class="line">        degree = <span class="built_in">vector</span>&lt;<span class="type">int</span>&gt; (numCourses);</span><br><span class="line">        graph = vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; (numCourses);</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; prerequisites.<span class="built_in">size</span>();i++) &#123;</span><br><span class="line">            degree[prerequisites[i][<span class="number">0</span>]]++;</span><br><span class="line">            graph[prerequisites[i][<span class="number">1</span>]].<span class="built_in">push_back</span>(prerequisites[i][<span class="number">0</span>]);</span><br><span class="line">        &#125;</span><br><span class="line">        queue&lt;<span class="type">int</span>&gt; now;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; degree.<span class="built_in">size</span>();i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (degree[i] == <span class="number">0</span>) &#123;</span><br><span class="line">                now.<span class="built_in">push</span>(i);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span> (now.<span class="built_in">size</span>() != <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="type">int</span> ele = now.<span class="built_in">front</span>();</span><br><span class="line">            now.<span class="built_in">pop</span>();</span><br><span class="line">            res.<span class="built_in">push_back</span>(ele);</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; graph[ele].<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">                degree[graph[ele][i]]--;</span><br><span class="line">                <span class="keyword">if</span> (degree[graph[ele][i]] == <span class="number">0</span>) &#123;</span><br><span class="line">                    now.<span class="built_in">push</span>(graph[ele][i]);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; degree.<span class="built_in">size</span>();i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (degree[i] != <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;(<span class="number">0</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/15/%E5%89%91%E6%8C%87-Offer-II-062-%E5%AE%9E%E7%8E%B0%E5%89%8D%E7%BC%80%E6%A0%91/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="👽">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="😎😴🤯">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 😎😴🤯">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/09/15/%E5%89%91%E6%8C%87-Offer-II-062-%E5%AE%9E%E7%8E%B0%E5%89%8D%E7%BC%80%E6%A0%91/" class="post-title-link" itemprop="url">剑指 Offer II 062. 实现前缀树</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-09-15 17:18:11" itemprop="dateCreated datePublished" datetime="2022-09-15T17:18:11+08:00">2022-09-15</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-09-20 20:14:04" itemprop="dateModified" datetime="2022-09-20T20:14:04+08:00">2022-09-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%89%91%E6%8C%87-Offer-II/" itemprop="url" rel="index"><span itemprop="name">剑指 Offer II</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="剑指-Offer-II-062-实现前缀树"><a href="#剑指-Offer-II-062-实现前缀树" class="headerlink" title="剑指 Offer II 062. 实现前缀树"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/QC3q1f/">剑指 Offer II 062. 实现前缀树</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
-<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/design/">设计</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/trie/">字典树</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/hash-table/">哈希表</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/string/">字符串</a></p>
-<p>**<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%AD%97%E5%85%B8%E6%A0%91/9825209?fr=aladdin">Trie</a>**（发音类似 “try”）或者说 <strong>前缀树</strong> 是一种树形数据结构，用于高效地存储和检索字符串数据集中的键。这一数据结构有相当多的应用情景，例如自动补完和拼写检查。</p>
-<p>请你实现 Trie 类：</p>
-<ul>
-<li><code>Trie()</code> 初始化前缀树对象。</li>
-<li><code>void insert(String word)</code> 向前缀树中插入字符串 <code>word</code> 。</li>
-<li><code>boolean search(String word)</code> 如果字符串 <code>word</code> 在前缀树中，返回 <code>true</code>（即，在检索之前已经插入）；否则，返回 <code>false</code> 。</li>
-<li><code>boolean startsWith(String prefix)</code> 如果之前已经插入的字符串 <code>word</code> 的前缀之一为 <code>prefix</code> ，返回 <code>true</code> ；否则，返回 <code>false</code> 。</li>
-</ul>
-<p><strong>示例：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">输入</span><br><span class="line">inputs = [&quot;Trie&quot;, &quot;insert&quot;, &quot;search&quot;, &quot;search&quot;, &quot;startsWith&quot;, &quot;insert&quot;, &quot;search&quot;]</span><br><span class="line">inputs = [[], [&quot;apple&quot;], [&quot;apple&quot;], [&quot;app&quot;], [&quot;app&quot;], [&quot;app&quot;], [&quot;app&quot;]]</span><br><span class="line">输出</span><br><span class="line">[null, null, true, false, true, null, true]</span><br><span class="line"></span><br><span class="line">解释</span><br><span class="line">Trie trie = new Trie();</span><br><span class="line">trie.insert(&quot;apple&quot;);</span><br><span class="line">trie.search(&quot;apple&quot;);   // 返回 True</span><br><span class="line">trie.search(&quot;app&quot;);     // 返回 False</span><br><span class="line">trie.startsWith(&quot;app&quot;); // 返回 True</span><br><span class="line">trie.insert(&quot;app&quot;);</span><br><span class="line">trie.search(&quot;app&quot;);     // 返回 True</span><br></pre></td></tr></table></figure>
-
-<p><strong>提示：</strong></p>
-<ul>
-<li><code>1 &lt;= word.length, prefix.length &lt;= 2000</code></li>
-<li><code>word</code> 和 <code>prefix</code> 仅由小写英文字母组成</li>
-<li><code>insert</code>、<code>search</code> 和 <code>startsWith</code> 调用次数 <strong>总计</strong> 不超过 3 * 10<sup>4</sup> 次</li>
-</ul>
-<p>注意：本题与主站 208 题相同：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/implement-trie-prefix-tree/">https://leetcode-cn.com/problems/implement-trie-prefix-tree/</a> </p>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Trie</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">/** Initialize your data structure here. */</span></span><br><span class="line">    vector&lt;Trie*&gt; children;</span><br><span class="line">    <span class="type">bool</span> isEnd;</span><br><span class="line">    <span class="built_in">Trie</span>():<span class="built_in">children</span>(<span class="number">26</span>),<span class="built_in">isEnd</span>(<span class="literal">false</span>) &#123;&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/** Inserts a word into the trie. */</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">insert</span><span class="params">(string word)</span> </span>&#123;</span><br><span class="line">        Trie* node = <span class="keyword">this</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">char</span> c : word) &#123;</span><br><span class="line">            <span class="type">int</span> index = c - <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">            <span class="keyword">if</span> (node -&gt; children[index] == <span class="literal">nullptr</span>) &#123;</span><br><span class="line">                node -&gt; children[index] = <span class="keyword">new</span> <span class="built_in">Trie</span>();</span><br><span class="line">            &#125;</span><br><span class="line">            node = node -&gt; children[index];</span><br><span class="line">        &#125;</span><br><span class="line">        node -&gt; isEnd = <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/** Returns if the word is in the trie. */</span></span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">search</span><span class="params">(string word)</span> </span>&#123;</span><br><span class="line">        Trie* node = <span class="keyword">this</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">char</span> c : word) &#123;</span><br><span class="line">            <span class="type">int</span> index = c - <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">            <span class="keyword">if</span> (node -&gt; children[index] == <span class="literal">nullptr</span>) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            node = node -&gt; children[index];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> node -&gt; isEnd;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/** Returns if there is any word in the trie that starts with the given prefix. */</span></span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">startsWith</span><span class="params">(string prefix)</span> </span>&#123;</span><br><span class="line">        Trie* node = <span class="keyword">this</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">char</span> c : prefix) &#123;</span><br><span class="line">            <span class="type">int</span> index = c - <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">            <span class="keyword">if</span> (node -&gt; children[index] == <span class="literal">nullptr</span>) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            node = node -&gt; children[index];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Your Trie object will be instantiated and called as such:</span></span><br><span class="line"><span class="comment"> * Trie* obj = new Trie();</span></span><br><span class="line"><span class="comment"> * obj-&gt;insert(word);</span></span><br><span class="line"><span class="comment"> * bool param_2 = obj-&gt;search(word);</span></span><br><span class="line"><span class="comment"> * bool param_3 = obj-&gt;startsWith(prefix);</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/15/%E5%89%91%E6%8C%87-Offer-II-110-%E6%89%80%E6%9C%89%E8%B7%AF%E5%BE%84/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="👽">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="😎😴🤯">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 😎😴🤯">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/09/15/%E5%89%91%E6%8C%87-Offer-II-110-%E6%89%80%E6%9C%89%E8%B7%AF%E5%BE%84/" class="post-title-link" itemprop="url">剑指 Offer II 110. 所有路径</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-09-15 14:51:16" itemprop="dateCreated datePublished" datetime="2022-09-15T14:51:16+08:00">2022-09-15</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-09-20 15:56:52" itemprop="dateModified" datetime="2022-09-20T15:56:52+08:00">2022-09-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%89%91%E6%8C%87-Offer-II/" itemprop="url" rel="index"><span itemprop="name">剑指 Offer II</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="剑指-Offer-II-110-所有路径"><a href="#剑指-Offer-II-110-所有路径" class="headerlink" title="剑指 Offer II 110. 所有路径"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/bP4bmD/">剑指 Offer II 110. 所有路径</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
-<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/depth-first-search/">深度优先搜索</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/breadth-first-search/">广度优先搜索</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/graph/">图</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/backtracking/">回溯</a></p>
-<p>给定一个有 <code>n</code> 个节点的有向无环图，用二维数组 <code>graph</code> 表示，请找到所有从 <code>0</code> 到 <code>n-1</code> 的路径并输出（不要求按顺序）。</p>
-<p><code>graph</code> 的第 <code>i</code> 个数组中的单元都表示有向图中 <code>i</code> 号节点所能到达的下一些结点（译者注：有向图是有方向的，即规定了 a→b 你就不能从 b→a ），若为空，就是没有下一个节点了。</p>
-<p><strong>示例 1：</strong></p>
-<p><img src="https://cdn.staticaly.com/gh/Poseidon-HL/image-hosting@master/20220915/all_1.5xiwjx00sus0.webp" alt="all_1"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：graph = [[1,2],[3],[3],[]]</span><br><span class="line">输出：[[0,1,3],[0,2,3]]</span><br><span class="line">解释：有两条路径 0 -&gt; 1 -&gt; 3 和 0 -&gt; 2 -&gt; 3</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 2：</strong></p>
-<p><img src="https://cdn.staticaly.com/gh/Poseidon-HL/image-hosting@master/20220915/all_2.7a34rwz7nh80.webp" alt="all_2"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：graph = [[4,3,1],[3,2,4],[3],[4],[]]</span><br><span class="line">输出：[[0,4],[0,3,4],[0,1,3,4],[0,1,2,3,4],[0,1,4]]</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 3：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：graph = [[1],[]]</span><br><span class="line">输出：[[0,1]]</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 4：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：graph = [[1,2,3],[2],[3],[]]</span><br><span class="line">输出：[[0,1,2,3],[0,2,3],[0,3]]</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 5：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：graph = [[1,3],[2],[3],[]]</span><br><span class="line">输出：[[0,1,2,3],[0,3]]</span><br></pre></td></tr></table></figure>
-
-<p><strong>提示：</strong></p>
-<ul>
-<li><code>n == graph.length</code></li>
-<li><code>2 &lt;= n &lt;= 15</code></li>
-<li><code>0 &lt;= graph[i][j] &lt; n</code></li>
-<li><code>graph[i][j] != i</code> </li>
-<li>保证输入为有向无环图 <code>(GAD)</code></li>
-</ul>
-<p>注意：本题与主站 797 题相同：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/all-paths-from-source-to-target/">https://leetcode-cn.com/problems/all-paths-from-source-to-target/</a></p>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    set&lt;<span class="type">int</span>&gt; visited;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; res;</span><br><span class="line">    vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; graphS;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">DFS</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; path,<span class="type">int</span> num)</span> </span>&#123;</span><br><span class="line">        path.<span class="built_in">push_back</span>(num);</span><br><span class="line">        visited.<span class="built_in">insert</span>(num);</span><br><span class="line">        <span class="keyword">if</span> (num == n) &#123;</span><br><span class="line">            res.<span class="built_in">push_back</span>(path);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; graphS[num].<span class="built_in">size</span>();i++) &#123;</span><br><span class="line">                <span class="built_in">DFS</span>(path,graphS[num][i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        visited.<span class="built_in">erase</span>(num);</span><br><span class="line">        path.<span class="built_in">pop_back</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; <span class="built_in">allPathsSourceTarget</span>(vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;&amp; graph) &#123;</span><br><span class="line">        n = graph.<span class="built_in">size</span>() - <span class="number">1</span>;</span><br><span class="line">        graphS = graph;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; path;</span><br><span class="line">        <span class="built_in">DFS</span>(path,<span class="number">0</span>);</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
       
     </div>
 

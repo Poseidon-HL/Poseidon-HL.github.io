@@ -152,7 +152,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">87</span>
+          <span class="site-state-item-count">89</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -192,6 +192,207 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/02/%E5%89%91%E6%8C%87-Offer-II-112-%E6%9C%80%E9%95%BF%E9%80%92%E5%A2%9E%E8%B7%AF%E5%BE%84/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="👽">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="😎😴🤯">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 😎😴🤯">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/10/02/%E5%89%91%E6%8C%87-Offer-II-112-%E6%9C%80%E9%95%BF%E9%80%92%E5%A2%9E%E8%B7%AF%E5%BE%84/" class="post-title-link" itemprop="url">剑指 Offer II 112. 最长递增路径</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-10-02 17:42:30 / Modified: 17:50:39" itemprop="dateCreated datePublished" datetime="2022-10-02T17:42:30+08:00">2022-10-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%89%91%E6%8C%87-Offer-II/" itemprop="url" rel="index"><span itemprop="name">剑指 Offer II</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="剑指-Offer-II-112-最长递增路径"><a href="#剑指-Offer-II-112-最长递增路径" class="headerlink" title="剑指 Offer II 112. 最长递增路径"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/fpTFWP/">剑指 Offer II 112. 最长递增路径</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>困难</strong>  </p>
+<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/depth-first-search/">深度优先搜索</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/breadth-first-search/">广度优先搜索</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/graph/">图</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/topological-sort/">拓扑排序</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/memoization/">记忆化搜索</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/array/">数组</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/dynamic-programming/">动态规划</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/matrix/">矩阵</a></p>
+<p>给定一个 <code>m x n</code> 整数矩阵 <code>matrix</code> ，找出其中 <strong>最长递增路径</strong> 的长度。</p>
+<p>对于每个单元格，你可以往上，下，左，右四个方向移动。 <strong>不能</strong> 在 <strong>对角线</strong> 方向上移动或移动到 <strong>边界外</strong>（即不允许环绕）。</p>
+<p><strong>示例 1：</strong></p>
+<p><img src="https://cdn.staticaly.com/gh/Poseidon-HL/image-hosting@master/20221002/grid1.32wqcd2m28w0.webp" alt="grid1"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：matrix = [[9,9,4],[6,6,8],[2,1,1]]</span><br><span class="line">输出：4 </span><br><span class="line">解释：最长递增路径为 [1, 2, 6, 9]。</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<p><img src="https://cdn.staticaly.com/gh/Poseidon-HL/image-hosting@master/20221002/tmp-grid.5a8yi866r30.webp" alt="tmp-grid"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：matrix = [[3,4,5],[3,2,6],[2,2,1]]</span><br><span class="line">输出：4 </span><br><span class="line">解释：最长递增路径是 [3, 4, 5, 6]。注意不允许在对角线方向上移动。</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 3：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：matrix = [[1]]</span><br><span class="line">输出：1</span><br></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>m == matrix.length</code></li>
+<li><code>n == matrix[i].length</code></li>
+<li><code>1 &lt;= m, n &lt;= 200</code></li>
+<li>0 &lt;&#x3D; matrix[i][j] &lt;&#x3D; 2<sup>31</sup> - 1</li>
+</ul>
+<p>注意：本题与主站 329 题相同： <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/longest-increasing-path-in-a-matrix/">https://leetcode-cn.com/problems/longest-increasing-path-in-a-matrix/</a></p>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; M;</span><br><span class="line">    vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; PathLength;</span><br><span class="line">    <span class="type">int</span> indexX[<span class="number">4</span>] = &#123;<span class="number">-1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>&#125;;</span><br><span class="line">    <span class="type">int</span> indexY[<span class="number">4</span>] = &#123;<span class="number">0</span>, <span class="number">0</span>, <span class="number">-1</span>, <span class="number">1</span>&#125;;</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">DFS</span><span class="params">(<span class="type">int</span> i, <span class="type">int</span> j, <span class="type">int</span> num, <span class="type">bool</span> flag)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// cout &lt;&lt; i &lt;&lt; &quot; &quot; &lt;&lt; j &lt;&lt; endl;</span></span><br><span class="line">        <span class="keyword">if</span> (i &lt; <span class="number">0</span> || i &gt;= M.<span class="built_in">size</span>() || j &lt; <span class="number">0</span> || j &gt;= M[i].<span class="built_in">size</span>()) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (num &gt;= M[i][j] &amp;&amp; flag) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (PathLength[i][j] != <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> PathLength[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> maxPath = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> idx = <span class="number">0</span>;idx &lt; <span class="number">4</span>; idx++) &#123;</span><br><span class="line">            maxPath = <span class="built_in">max</span>(maxPath, <span class="built_in">DFS</span>(i + indexX[idx], j + indexY[idx], M[i][j], <span class="literal">true</span>));</span><br><span class="line">        &#125;</span><br><span class="line">        PathLength[i][j] = maxPath + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">return</span> PathLength[i][j];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">longestIncreasingPath</span><span class="params">(vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;&amp; matrix)</span> </span>&#123;</span><br><span class="line">        M = matrix;</span><br><span class="line">        PathLength.<span class="built_in">resize</span>(M.<span class="built_in">size</span>());</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; matrix.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            PathLength[i].<span class="built_in">resize</span>(matrix[i].<span class="built_in">size</span>());</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>;j &lt; PathLength[i].<span class="built_in">size</span>(); j++) &#123;</span><br><span class="line">                PathLength[i][j] = <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; matrix.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>;j &lt; matrix[i].<span class="built_in">size</span>(); j++) &#123;</span><br><span class="line">                res = <span class="built_in">max</span>(res, <span class="built_in">DFS</span>(i, j, M[i][j], <span class="literal">false</span>));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/02/LeetCode-1020-%E9%A3%9E%E5%9C%B0%E7%9A%84%E6%95%B0%E9%87%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="👽">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="😎😴🤯">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 😎😴🤯">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/10/02/LeetCode-1020-%E9%A3%9E%E5%9C%B0%E7%9A%84%E6%95%B0%E9%87%8F/" class="post-title-link" itemprop="url">LeetCode 1020. 飞地的数量</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-10-02 16:27:14 / Modified: 16:39:06" itemprop="dateCreated datePublished" datetime="2022-10-02T16:27:14+08:00">2022-10-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="1020-飞地的数量"><a href="#1020-飞地的数量" class="headerlink" title="1020. 飞地的数量"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/number-of-enclaves/">1020. 飞地的数量</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
+<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/depth-first-search/">深度优先搜索</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/breadth-first-search/">广度优先搜索</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/union-find/">并查集</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/array/">数组</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/matrix/">矩阵</a></p>
+<p>给你一个大小为 <code>m x n</code> 的二进制矩阵 <code>grid</code> ，其中 <code>0</code> 表示一个海洋单元格、<code>1</code> 表示一个陆地单元格。</p>
+<p>一次 <strong>移动</strong> 是指从一个陆地单元格走到另一个相邻（<strong>上、下、左、右</strong>）的陆地单元格或跨过 <code>grid</code> 的边界。</p>
+<p>返回网格中 <strong>无法</strong> 在任意次数的移动中离开网格边界的陆地单元格的数量。</p>
+<p><strong>示例 1：</strong></p>
+<p><img src="https://cdn.staticaly.com/gh/Poseidon-HL/image-hosting@master/20221002/enclaves1.1054b6pxnecw.webp" alt="enclaves1"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：grid = [[0,0,0,0],[1,0,1,0],[0,1,1,0],[0,0,0,0]]</span><br><span class="line">输出：3</span><br><span class="line">解释：有三个 1 被 0 包围。一个 1 没有被包围，因为它在边界上。</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<p><img src="https://cdn.staticaly.com/gh/Poseidon-HL/image-hosting@master/20221002/enclaves2.4zphtxsx9mc0.webp" alt="enclaves2"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：grid = [[0,1,1,0],[0,0,1,0],[0,0,1,0],[0,0,0,0]]</span><br><span class="line">输出：0</span><br><span class="line">解释：所有 1 都在边界上或可以到达边界。</span><br></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>m == grid.length</code></li>
+<li><code>n == grid[i].length</code></li>
+<li><code>1 &lt;= m, n &lt;= 500</code></li>
+<li><code>grid[i][j]</code> 的值为 <code>0</code> 或 <code>1</code></li>
+</ul>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; G;</span><br><span class="line">    vector&lt;vector&lt;<span class="type">bool</span>&gt;&gt; isAble2Grid;</span><br><span class="line">    vector&lt;vector&lt;<span class="type">bool</span>&gt;&gt; visited;</span><br><span class="line">    <span class="type">int</span> indexI[<span class="number">4</span>] = &#123;<span class="number">0</span>, <span class="number">0</span>, <span class="number">-1</span>, <span class="number">1</span>&#125;;</span><br><span class="line">    <span class="type">int</span> indexJ[<span class="number">4</span>] = &#123;<span class="number">-1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>&#125;;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">Spread</span><span class="params">(<span class="type">int</span> i, <span class="type">int</span> j)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (i &lt; <span class="number">0</span> || i &gt;= G.<span class="built_in">size</span>() || j &lt; <span class="number">0</span> || j &gt;= G[i].<span class="built_in">size</span>() || G[i][j] == <span class="number">0</span> || visited[i][j]) &#123;</span><br><span class="line">            <span class="keyword">return</span> ;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (isAble2Grid[i][j]) &#123;</span><br><span class="line">            <span class="keyword">return</span> ;</span><br><span class="line">        &#125;</span><br><span class="line">        visited[i][j] = <span class="literal">true</span>;</span><br><span class="line">        isAble2Grid[i][j] = <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> idx = <span class="number">0</span>;idx &lt; <span class="number">4</span>; idx++) &#123;</span><br><span class="line">            <span class="built_in">Spread</span>(i + indexI[idx], j + indexJ[idx]);</span><br><span class="line">        &#125;</span><br><span class="line">        visited[i][j] = <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">numEnclaves</span><span class="params">(vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;&amp; grid)</span> </span>&#123;</span><br><span class="line">        G = grid;</span><br><span class="line">        isAble2Grid.<span class="built_in">resize</span>(G.<span class="built_in">size</span>());</span><br><span class="line">        visited.<span class="built_in">resize</span>(G.<span class="built_in">size</span>());</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; grid.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            isAble2Grid[i].<span class="built_in">resize</span>(G[i].<span class="built_in">size</span>());</span><br><span class="line">            visited[i].<span class="built_in">resize</span>(G[i].<span class="built_in">size</span>());</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; grid.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            <span class="built_in">Spread</span>(i,<span class="number">0</span>);</span><br><span class="line">            <span class="built_in">Spread</span>(i, G[i].<span class="built_in">size</span>() - <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>;j &lt; grid[<span class="number">0</span>].<span class="built_in">size</span>(); j++) &#123;</span><br><span class="line">            <span class="built_in">Spread</span>(<span class="number">0</span>,j);</span><br><span class="line">            <span class="built_in">Spread</span>(G.<span class="built_in">size</span>() - <span class="number">1</span>, j);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; G.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>;j &lt; G[i].<span class="built_in">size</span>();j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (grid[i][j] == <span class="number">1</span>) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (!isAble2Grid[i][j]) &#123;</span><br><span class="line">                        res++;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -462,188 +663,6 @@
 </ul>
 <h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">minFallingPathSum</span><span class="params">(vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;&amp; grid)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt; grid.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>;j &lt; grid[i].<span class="built_in">size</span>(); j++) &#123;</span><br><span class="line">                <span class="type">int</span> tmp = INT_MAX;</span><br><span class="line">                <span class="keyword">for</span> (<span class="type">int</span> j2 = <span class="number">0</span>; j2 &lt; grid[i].<span class="built_in">size</span>(); j2++) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (j2 != j) &#123;</span><br><span class="line">                        tmp = <span class="built_in">min</span>(tmp, grid[i - <span class="number">1</span>][j2]);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                grid[i][j] += tmp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> result = INT_MAX;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>;j &lt; grid[grid.<span class="built_in">size</span>() - <span class="number">1</span>].<span class="built_in">size</span>();j++) &#123;</span><br><span class="line">            result = <span class="built_in">min</span>(result, grid[grid.<span class="built_in">size</span>() - <span class="number">1</span>][j]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/30/%E9%9D%A2%E8%AF%95%E9%A2%98-16-21-%E4%BA%A4%E6%8D%A2%E5%92%8C/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="👽">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="😎😴🤯">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 😎😴🤯">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/09/30/%E9%9D%A2%E8%AF%95%E9%A2%98-16-21-%E4%BA%A4%E6%8D%A2%E5%92%8C/" class="post-title-link" itemprop="url">面试题 16.21. 交换和</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2022-09-30 17:23:39 / Modified: 17:24:10" itemprop="dateCreated datePublished" datetime="2022-09-30T17:23:39+08:00">2022-09-30</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="面试题-16-21-交换和"><a href="#面试题-16-21-交换和" class="headerlink" title="面试题 16.21. 交换和"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/sum-swap-lcci/">面试题 16.21. 交换和</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
-<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/array/">数组</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/hash-table/">哈希表</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/binary-search/">二分查找</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/sorting/">排序</a></p>
-<p>给定两个整数数组，请交换一对数值（每个数组中取一个数值），使得两个数组所有元素的和相等。</p>
-<p>返回一个数组，第一个元素是第一个数组中要交换的元素，第二个元素是第二个数组中要交换的元素。若有多个答案，返回任意一个均可。若无满足条件的数值，返回空数组。</p>
-<p><strong>示例:</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: array1 = [4, 1, 2, 1, 1, 2], array2 = [3, 6, 3, 3]</span><br><span class="line">输出: [1, 3]</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例:</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: array1 = [1, 2, 3], array2 = [4, 5, 6]</span><br><span class="line">输出: []</span><br></pre></td></tr></table></figure>
-
-<p><strong>提示：</strong></p>
-<ul>
-<li><code>1 &lt;= array1.length, array2.length &lt;= 100000</code></li>
-</ul>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; res;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">getRes</span><span class="params">(set&lt;<span class="type">int</span>&gt;&amp; map1, set&lt;<span class="type">int</span>&gt; &amp;map2, <span class="type">int</span> sum1, <span class="type">int</span> sum2, <span class="type">bool</span> needReverse)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">auto</span> it = map2.<span class="built_in">begin</span>(); it != map2.<span class="built_in">end</span>(); it++) &#123;</span><br><span class="line">                <span class="keyword">auto</span> it1 = map1.<span class="built_in">find</span>((sum2 - sum1) / <span class="number">2</span> + *it);</span><br><span class="line">                <span class="keyword">if</span> (it1 != map1.<span class="built_in">end</span>() &amp;&amp; (*it - *it1) * <span class="number">2</span> == (sum1 - sum2)) &#123;</span><br><span class="line">                    res.<span class="built_in">push_back</span>(*it1); </span><br><span class="line">                    res.<span class="built_in">push_back</span>(*it);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                it1 = map1.<span class="built_in">find</span>((sum1 - sum2) / <span class="number">2</span> + *it);</span><br><span class="line">                <span class="keyword">if</span> (it1 != map1.<span class="built_in">end</span>() &amp;&amp; (*it - *it1) * <span class="number">2</span> == (sum2 - sum1)) &#123;</span><br><span class="line">                    res.<span class="built_in">push_back</span>(*it1); </span><br><span class="line">                    res.<span class="built_in">push_back</span>(*it);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (needReverse) &#123;</span><br><span class="line">            <span class="built_in">reverse</span>(res.<span class="built_in">begin</span>(), res.<span class="built_in">end</span>());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">findSwapValues</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; array1, vector&lt;<span class="type">int</span>&gt;&amp; array2)</span> </span>&#123;</span><br><span class="line">        set&lt;<span class="type">int</span>&gt; map1;</span><br><span class="line">        set&lt;<span class="type">int</span>&gt; map2;</span><br><span class="line">        <span class="type">int</span> sum1 = <span class="number">0</span>, sum2 = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i : array1) &#123;</span><br><span class="line">            map1.<span class="built_in">insert</span>(i);</span><br><span class="line">            sum1 += i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i : array2) &#123;</span><br><span class="line">            map2.<span class="built_in">insert</span>(i);</span><br><span class="line">            sum2 += i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (map2.<span class="built_in">size</span>() &lt; map1.<span class="built_in">size</span>()) &#123;</span><br><span class="line">            <span class="built_in">getRes</span>(map1, map2, sum1, sum2, <span class="literal">false</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="built_in">getRes</span>(map2, map1, sum2, sum1, <span class="literal">true</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/30/LeetCode-863-%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E6%89%80%E6%9C%89%E8%B7%9D%E7%A6%BB%E4%B8%BA-K-%E7%9A%84%E7%BB%93%E7%82%B9/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="👽">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="😎😴🤯">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 😎😴🤯">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/09/30/LeetCode-863-%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E6%89%80%E6%9C%89%E8%B7%9D%E7%A6%BB%E4%B8%BA-K-%E7%9A%84%E7%BB%93%E7%82%B9/" class="post-title-link" itemprop="url">LeetCode 863. 二叉树中所有距离为 K 的结点</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2022-09-30 16:52:21 / Modified: 16:53:54" itemprop="dateCreated datePublished" datetime="2022-09-30T16:52:21+08:00">2022-09-30</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="863-二叉树中所有距离为-K-的结点"><a href="#863-二叉树中所有距离为-K-的结点" class="headerlink" title="863. 二叉树中所有距离为 K 的结点"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/all-nodes-distance-k-in-binary-tree/">863. 二叉树中所有距离为 K 的结点</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
-<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/tree/">树</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/depth-first-search/">深度优先搜索</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/breadth-first-search/">广度优先搜索</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/binary-tree/">二叉树</a></p>
-<p>给定一个二叉树（具有根结点 <code>root</code>）， 一个目标结点 <code>target</code> ，和一个整数值 <code>k</code> 。</p>
-<p>返回到目标结点 <code>target</code> 距离为 <code>k</code> 的所有结点的值的列表。 答案可以以 <strong>任何顺序</strong> 返回。</p>
-<p><strong>示例 1：</strong></p>
-<p><img src="https://cdn.staticaly.com/gh/Poseidon-HL/image-hosting@master/20220930/sketch0.45pxp127u7c0.webp" alt="sketch0"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：root = [3,5,1,6,2,0,8,null,null,7,4], target = 5, k = 2</span><br><span class="line">输出：[7,4,1]</span><br><span class="line">解释：所求结点为与目标结点（值为 5）距离为 2 的结点，值分别为 7，4，以及 1</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 2:</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: root = [1], target = 1, k = 3</span><br><span class="line">输出: []</span><br></pre></td></tr></table></figure>
-
-<p><strong>提示:</strong></p>
-<ul>
-<li>节点数在 <code>[1, 500]</code> 范围内</li>
-<li><code>0 &lt;= Node.val &lt;= 500</code></li>
-<li><code>Node.val</code> 中所有值 <strong>不同</strong></li>
-<li>目标结点 <code>target</code> 是树上的结点。</li>
-<li><code>0 &lt;= k &lt;= 1000</code></li>
-</ul>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * struct TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode *left;</span></span><br><span class="line"><span class="comment"> *     TreeNode *right;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x) : val(x), left(NULL), right(NULL) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="type">int</span> targetVal;</span><br><span class="line">    vector&lt;TreeNode*&gt; srcNode;</span><br><span class="line">    set&lt;<span class="type">int</span>&gt; visited;</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; res;</span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">findParent</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">NULL</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (root -&gt; val == targetVal) &#123;</span><br><span class="line">            srcNode.<span class="built_in">push_back</span>(root);</span><br><span class="line">            visited.<span class="built_in">insert</span>(root -&gt; val);</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">findParent</span>(root -&gt; left) || <span class="built_in">findParent</span>(root -&gt; right)) &#123;</span><br><span class="line">            srcNode.<span class="built_in">push_back</span>(root);</span><br><span class="line">            visited.<span class="built_in">insert</span>(root -&gt; val);</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">isSubTree</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (root == <span class="literal">NULL</span> || visited.<span class="built_in">find</span>(root -&gt; val) != visited.<span class="built_in">end</span>()); </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">findDistance</span><span class="params">(TreeNode* root, <span class="type">int</span> distance)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">NULL</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> ;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (distance == <span class="number">0</span>) &#123;</span><br><span class="line">            res.<span class="built_in">push_back</span>(root -&gt; val);</span><br><span class="line">            <span class="keyword">return</span> ;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (!<span class="built_in">isSubTree</span>(root -&gt; left)) &#123;</span><br><span class="line">            <span class="built_in">findDistance</span>(root -&gt; left, distance - <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (!<span class="built_in">isSubTree</span>(root -&gt; right)) &#123;</span><br><span class="line">            <span class="built_in">findDistance</span>(root -&gt; right, distance - <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">distanceK</span><span class="params">(TreeNode* root, TreeNode* target, <span class="type">int</span> k)</span> </span>&#123;</span><br><span class="line">        targetVal = target -&gt; val;</span><br><span class="line">        <span class="built_in">findParent</span>(root);</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; srcNode.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            <span class="built_in">findDistance</span>(srcNode[i], k - i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
       
     </div>
 
