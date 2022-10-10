@@ -152,7 +152,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">94</span>
+          <span class="site-state-item-count">96</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -284,6 +284,198 @@
 </div></div>
 
 
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/10/LCP-62-%E4%BA%A4%E9%80%9A%E6%9E%A2%E7%BA%BD/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="👽">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="😎😴🤯">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 😎😴🤯">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/10/10/LCP-62-%E4%BA%A4%E9%80%9A%E6%9E%A2%E7%BA%BD/" class="post-title-link" itemprop="url">LCP 62. 交通枢纽</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-10-10 20:11:34 / Modified: 20:20:29" itemprop="dateCreated datePublished" datetime="2022-10-10T20:11:34+08:00">2022-10-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LCP/" itemprop="url" rel="index"><span itemprop="name">LCP</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="LCP-62-交通枢纽"><a href="#LCP-62-交通枢纽" class="headerlink" title="LCP 62. 交通枢纽"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/D9PW8w/">LCP 62. 交通枢纽</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
+<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/graph/problemset/">图</a></p>
+<p>为了缓解「力扣嘉年华」期间的人流压力，组委会在活动期间开设了一些交通专线。<code>path[i] = [a, b]</code> 表示有一条从地点 a通往地点 b 的 单向 交通专线。<br>若存在一个地点，满足以下要求，我们则称之为 交通枢纽：</p>
+<ul>
+<li>所有地点（除自身外）均有一条 单向 专线 直接 通往该地点；</li>
+<li>该地点不存在任何 通往其他地点 的单向专线。<br>请返回交通专线的 交通枢纽。若不存在，则返回 -1。</li>
+</ul>
+<p>注意：</p>
+<p>对于任意一个地点，至少被一条专线连通。</p>
+<p>示例 1：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：path = [[0,1],[0,3],[1,3],[2,0],[2,3]]</span><br><span class="line"></span><br><span class="line">输出：3</span><br></pre></td></tr></table></figure>
+<p>解释：如下图所示：<br>地点 0,1,2 各有一条通往地点 3 的交通专线，<br>且地点 3 不存在任何通往其他地点的交通专线。</p>
+<p><img src="https://cdn.staticaly.com/gh/Poseidon-HL/image-hosting@master/20221010/1663902572-yOlUCr-image.6fxv1oztcoo0.webp" alt="1663902572-yOlUCr-image"></p>
+<p>示例 2：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：path = [[0,3],[1,0],[1,3],[2,0],[3,0],[3,2]]</span><br><span class="line"></span><br><span class="line">输出：-1</span><br></pre></td></tr></table></figure>
+<p>解释：如下图所示：不存在满足 交通枢纽 的地点。<br><img src="https://cdn.staticaly.com/gh/Poseidon-HL/image-hosting@master/20221010/1663902595-McsEkY-image.3olcralm1c80.webp" alt="1663902595-McsEkY-image"></p>
+<p>提示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1 &lt;= path.length &lt;= 1000</span><br><span class="line">0 &lt;= path[i][0], path[i][1] &lt;= 1000</span><br><span class="line">path[i][0] 与 path[i][1] 不相等</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">transportationHub</span><span class="params">(vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;&amp; path)</span> </span>&#123;</span><br><span class="line">        map&lt;<span class="type">int</span>, <span class="type">int</span>&gt; tmp;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; path.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            tmp[path[i][<span class="number">0</span>]]--;</span><br><span class="line">            tmp[path[i][<span class="number">1</span>]]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">auto</span> it = tmp.<span class="built_in">begin</span>(); it != tmp.<span class="built_in">end</span>(); it++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (it -&gt; second == tmp.<span class="built_in">size</span>() - <span class="number">1</span>) &#123;</span><br><span class="line">                <span class="keyword">return</span> it -&gt; first;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/10/LeetCode-611-%E6%9C%89%E6%95%88%E4%B8%89%E8%A7%92%E5%BD%A2%E7%9A%84%E4%B8%AA%E6%95%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="👽">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="😎😴🤯">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 😎😴🤯">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/10/10/LeetCode-611-%E6%9C%89%E6%95%88%E4%B8%89%E8%A7%92%E5%BD%A2%E7%9A%84%E4%B8%AA%E6%95%B0/" class="post-title-link" itemprop="url">LeetCode 611. 有效三角形的个数</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-10-10 20:04:32 / Modified: 20:05:05" itemprop="dateCreated datePublished" datetime="2022-10-10T20:04:32+08:00">2022-10-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="611-有效三角形的个数"><a href="#611-有效三角形的个数" class="headerlink" title="611. 有效三角形的个数"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/valid-triangle-number/">611. 有效三角形的个数</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
+<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/greedy/">贪心</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/array/">数组</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/two-pointers/">双指针</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/binary-search/">二分查找</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/sorting/">排序</a></p>
+<p>给定一个包含非负整数的数组 <code>nums</code> ，返回其中可以组成三角形三条边的三元组个数。</p>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">输入: nums = [2,2,3,4]</span><br><span class="line">输出: 3</span><br><span class="line">解释:有效的组合是: </span><br><span class="line">2,3,4 (使用第一个 2)</span><br><span class="line">2,3,4 (使用第二个 2)</span><br><span class="line">2,2,3</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: nums = [4,2,3,4]</span><br><span class="line">输出: 4</span><br></pre></td></tr></table></figure>
+
+<p><strong>提示:</strong></p>
+<ul>
+<li><code>1 &lt;= nums.length &lt;= 1000</code></li>
+<li><code>0 &lt;= nums[i] &lt;= 1000</code></li>
+</ul>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; N;</span><br><span class="line">    <span class="comment">// 找到小于target的数</span></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">find</span><span class="params">(<span class="type">int</span> target, <span class="type">int</span> begin, <span class="type">int</span> end)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> mid = begin + (end - begin) / <span class="number">2</span>;</span><br><span class="line">        <span class="type">int</span> res = mid;</span><br><span class="line">        <span class="keyword">while</span> (begin &lt;= end) &#123;</span><br><span class="line">            mid = begin + (end - begin) / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span> (N[mid] &gt;= target) &#123;</span><br><span class="line">                end = mid - <span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                res = mid;</span><br><span class="line">                begin = mid + <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">triangleNumber</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">sort</span>(nums.<span class="built_in">begin</span>(), nums.<span class="built_in">end</span>());</span><br><span class="line">        N = nums;</span><br><span class="line">        <span class="type">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; <span class="built_in">int</span>(nums.<span class="built_in">size</span>() - <span class="number">2</span>); i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = i + <span class="number">1</span>; j &lt; <span class="built_in">int</span>(nums.<span class="built_in">size</span>() - <span class="number">1</span>); j++) &#123;</span><br><span class="line">                <span class="type">int</span> idx = <span class="built_in">find</span>(nums[i] + nums[j], j + <span class="number">1</span>, nums.<span class="built_in">size</span>() - <span class="number">1</span>);</span><br><span class="line">                res += (nums[i] + nums[j] &gt; nums[idx] ? idx - j : <span class="number">0</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -500,204 +692,8 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/07/LeetCode-2131-%E8%BF%9E%E6%8E%A5%E4%B8%A4%E5%AD%97%E6%AF%8D%E5%8D%95%E8%AF%8D%E5%BE%97%E5%88%B0%E7%9A%84%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E4%B8%B2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="👽">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="😎😴🤯">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 😎😴🤯">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/10/07/LeetCode-2131-%E8%BF%9E%E6%8E%A5%E4%B8%A4%E5%AD%97%E6%AF%8D%E5%8D%95%E8%AF%8D%E5%BE%97%E5%88%B0%E7%9A%84%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E4%B8%B2/" class="post-title-link" itemprop="url">LeetCode 2131. 连接两字母单词得到的最长回文串</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2022-10-07 16:02:16 / Modified: 16:06:51" itemprop="dateCreated datePublished" datetime="2022-10-07T16:02:16+08:00">2022-10-07</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="2131-连接两字母单词得到的最长回文串"><a href="#2131-连接两字母单词得到的最长回文串" class="headerlink" title="2131. 连接两字母单词得到的最长回文串"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/longest-palindrome-by-concatenating-two-letter-words/">2131. 连接两字母单词得到的最长回文串</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
-<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/greedy/">贪心</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/array/">数组</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/hash-table/">哈希表</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/string/">字符串</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/counting/">计数</a></p>
-<p>给你一个字符串数组 <code>words</code> 。<code>words</code> 中每个元素都是一个包含 <strong>两个</strong> 小写英文字母的单词。</p>
-<p>请你从 <code>words</code> 中选择一些元素并按 <strong>任意顺序</strong> 连接它们，并得到一个 <strong>尽可能长的回文串</strong> 。每个元素 <strong>至多</strong> 只能使用一次。</p>
-<p>请你返回你能得到的最长回文串的 <strong>长度</strong> 。如果没办法得到任何一个回文串，请你返回 <code>0</code> 。</p>
-<p><strong>回文串</strong> 指的是从前往后和从后往前读一样的字符串。</p>
-<p><strong>示例 1：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入：words = [&quot;lc&quot;,&quot;cl&quot;,&quot;gg&quot;]</span><br><span class="line">输出：6</span><br><span class="line">解释：一个最长的回文串为 &quot;lc&quot; + &quot;gg&quot; + &quot;cl&quot; = &quot;lcggcl&quot; ，长度为 6 。</span><br><span class="line">&quot;clgglc&quot; 是另一个可以得到的最长回文串。</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 2：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入：words = [&quot;ab&quot;,&quot;ty&quot;,&quot;yt&quot;,&quot;lc&quot;,&quot;cl&quot;,&quot;ab&quot;]</span><br><span class="line">输出：8</span><br><span class="line">解释：最长回文串是 &quot;ty&quot; + &quot;lc&quot; + &quot;cl&quot; + &quot;yt&quot; = &quot;tylcclyt&quot; ，长度为 8 。</span><br><span class="line">&quot;lcyttycl&quot; 是另一个可以得到的最长回文串。</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 3：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入：words = [&quot;cc&quot;,&quot;ll&quot;,&quot;xx&quot;]</span><br><span class="line">输出：2</span><br><span class="line">解释：最长回文串是 &quot;cc&quot; ，长度为 2 。</span><br><span class="line">&quot;ll&quot; 是另一个可以得到的最长回文串。&quot;xx&quot; 也是。</span><br></pre></td></tr></table></figure>
-
-<p><strong>提示：</strong></p>
-<ul>
-<li>1 &lt;&#x3D; words.length &lt;&#x3D; 10<sup>5</sup></li>
-<li><code>words[i].length == 2</code></li>
-<li><code>words[i]</code> 仅包含小写英文字母。</li>
-</ul>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    map&lt;string, <span class="type">int</span>&gt; findSet;</span><br><span class="line">    <span class="type">int</span> res = <span class="number">0</span>, isSame = <span class="number">0</span>;</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">longestPalindrome</span><span class="params">(vector&lt;string&gt;&amp; words)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (string s : words) &#123;</span><br><span class="line">            string reverseS = s;</span><br><span class="line">            <span class="built_in">reverse</span>(reverseS.<span class="built_in">begin</span>(), reverseS.<span class="built_in">end</span>());</span><br><span class="line">            <span class="keyword">if</span> (findSet.<span class="built_in">find</span>(reverseS) != findSet.<span class="built_in">end</span>()) &#123;</span><br><span class="line">                <span class="keyword">if</span> (findSet[reverseS] &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                    findSet[reverseS]--;</span><br><span class="line">                    res += <span class="number">4</span>;</span><br><span class="line">                    isSame -= reverseS == s ? <span class="number">1</span> : <span class="number">0</span>;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    isSame += reverseS == s ? <span class="number">1</span> : <span class="number">0</span>;</span><br><span class="line">                    findSet[s] += <span class="number">1</span>;    </span><br><span class="line">                &#125;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                isSame += reverseS == s ? <span class="number">1</span> : <span class="number">0</span>;</span><br><span class="line">                findSet[s] += <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        res += isSame &gt; <span class="number">0</span> ? <span class="number">2</span> : <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/07/LeetCode-1343-%E5%A4%A7%E5%B0%8F%E4%B8%BA-K-%E4%B8%94%E5%B9%B3%E5%9D%87%E5%80%BC%E5%A4%A7%E4%BA%8E%E7%AD%89%E4%BA%8E%E9%98%88%E5%80%BC%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84%E6%95%B0%E7%9B%AE/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="👽">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="😎😴🤯">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 😎😴🤯">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/10/07/LeetCode-1343-%E5%A4%A7%E5%B0%8F%E4%B8%BA-K-%E4%B8%94%E5%B9%B3%E5%9D%87%E5%80%BC%E5%A4%A7%E4%BA%8E%E7%AD%89%E4%BA%8E%E9%98%88%E5%80%BC%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84%E6%95%B0%E7%9B%AE/" class="post-title-link" itemprop="url">LeetCode 1343. 大小为 K 且平均值大于等于阈值的子数组数目</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2022-10-07 15:25:23 / Modified: 15:25:55" itemprop="dateCreated datePublished" datetime="2022-10-07T15:25:23+08:00">2022-10-07</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="1343-大小为-K-且平均值大于等于阈值的子数组数目"><a href="#1343-大小为-K-且平均值大于等于阈值的子数组数目" class="headerlink" title="1343. 大小为 K 且平均值大于等于阈值的子数组数目"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold/">1343. 大小为 K 且平均值大于等于阈值的子数组数目</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
-<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/array/">数组</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/sliding-window/">滑动窗口</a></p>
-<p>给你一个整数数组 <code>arr</code> 和两个整数 <code>k</code> 和 <code>threshold</code> 。</p>
-<p>请你返回长度为 <code>k</code> 且平均值大于等于 <code>threshold</code> 的子数组数目。</p>
-<p><strong>示例 1：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：arr = [2,2,2,2,5,5,5,8], k = 3, threshold = 4</span><br><span class="line">输出：3</span><br><span class="line">解释：子数组 [2,5,5],[5,5,5] 和 [5,5,8] 的平均值分别为 4，5 和 6 。其他长度为 3 的子数组的平均值都小于 4 （threshold 的值)。</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 2：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：arr = [11,13,17,23,29,31,7,5,2,3], k = 3, threshold = 5</span><br><span class="line">输出：6</span><br><span class="line">解释：前 6 个长度为 3 的子数组平均值都大于 5 。注意平均值不是整数。</span><br></pre></td></tr></table></figure>
-
-<p><strong>提示：</strong></p>
-<ul>
-<li>1 &lt;&#x3D; arr.length &lt;&#x3D; 10<sup>5</sup></li>
-<li>1 &lt;&#x3D; arr[i] &lt;&#x3D; 10<sup>4</sup></li>
-<li><code>1 &lt;= k &lt;= arr.length</code></li>
-<li>0 &lt;&#x3D; threshold &lt;&#x3D; 10<sup>4</sup></li>
-</ul>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">numOfSubarrays</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; arr, <span class="type">int</span> k, <span class="type">int</span> threshold)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> sum = <span class="number">0</span>, target = k * threshold, left = <span class="number">0</span>, right = k - <span class="number">1</span>, res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; k;i++) &#123;</span><br><span class="line">            sum += arr[i];</span><br><span class="line">        &#125;</span><br><span class="line">        res += sum &gt;= target ? <span class="number">1</span> : <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (right &lt; arr.<span class="built_in">size</span>() - <span class="number">1</span>) &#123;</span><br><span class="line">            sum -= arr[left++];</span><br><span class="line">            sum += arr[++right];</span><br><span class="line">            res += sum &gt;= target ? <span class="number">1</span> : <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/">20</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 </div>
