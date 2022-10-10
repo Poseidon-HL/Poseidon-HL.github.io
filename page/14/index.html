@@ -152,7 +152,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">89</span>
+          <span class="site-state-item-count">94</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -163,7 +163,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">42</span>
+        <span class="site-state-item-count">43</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -201,7 +201,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/16/%E7%AE%97%E6%B3%95-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%89%8D%E7%BC%80%E6%A0%91Trie/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/16/Linux-chgrp-%E5%91%BD%E4%BB%A4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -219,7 +219,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/09/16/%E7%AE%97%E6%B3%95-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%89%8D%E7%BC%80%E6%A0%91Trie/" class="post-title-link" itemprop="url">算法&数据结构 前缀树Trie</a>
+          <a href="/2022/09/16/Linux-chgrp-%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">Linux chgrp 命令</a>
         </h2>
 
         <div class="post-meta-container">
@@ -230,7 +230,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2022-09-16 11:10:48" itemprop="dateCreated datePublished" datetime="2022-09-16T11:10:48+08:00">2022-09-16</time>
+      <time title="Created: 2022-09-16 14:18:22" itemprop="dateCreated datePublished" datetime="2022-09-16T14:18:22+08:00">2022-09-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -238,203 +238,6 @@
       </span>
       <span class="post-meta-item-text">Edited on</span>
       <time title="Modified: 2022-09-18 13:54:46" itemprop="dateModified" datetime="2022-09-18T13:54:46+08:00">2022-09-18</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%AE%97%E6%B3%95-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index"><span itemprop="name">算法&数据结构</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Trie</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    vector&lt;Trie*&gt; children;</span><br><span class="line">    <span class="type">bool</span> isEnd;</span><br><span class="line">    <span class="built_in">Trie</span>():<span class="built_in">children</span>(<span class="number">26</span>),<span class="built_in">isEnd</span>(<span class="literal">false</span>) &#123;&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">insert</span><span class="params">(string word)</span> </span>&#123;</span><br><span class="line">        Trie* node = <span class="keyword">this</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">char</span> c : word) &#123;</span><br><span class="line">            <span class="type">int</span> index = c - <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">            <span class="keyword">if</span> (node -&gt; children[index] == <span class="literal">nullptr</span>) &#123;</span><br><span class="line">                node -&gt; children[index] = <span class="keyword">new</span> <span class="built_in">Trie</span>();</span><br><span class="line">            &#125;</span><br><span class="line">            node = node -&gt; children[index];</span><br><span class="line">        &#125;</span><br><span class="line">        node -&gt; isEnd = <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">search</span><span class="params">(string word)</span> </span>&#123;</span><br><span class="line">        Trie* node = <span class="keyword">this</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">char</span> c : word) &#123;</span><br><span class="line">            <span class="type">int</span> index = c - <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">            <span class="keyword">if</span> (node -&gt; children[index] == <span class="literal">nullptr</span>) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            node = node -&gt; children[index];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> node -&gt; isEnd;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">startsWith</span><span class="params">(string prefix)</span> </span>&#123;</span><br><span class="line">        Trie* node = <span class="keyword">this</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">char</span> c : prefix) &#123;</span><br><span class="line">            <span class="type">int</span> index = c - <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">            <span class="keyword">if</span> (node -&gt; children[index] == <span class="literal">nullptr</span>) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            node = node -&gt; children[index];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/16/%E5%89%91%E6%8C%87-Offer-II-109-%E5%BC%80%E5%AF%86%E7%A0%81%E9%94%81/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="👽">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="😎😴🤯">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 😎😴🤯">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/09/16/%E5%89%91%E6%8C%87-Offer-II-109-%E5%BC%80%E5%AF%86%E7%A0%81%E9%94%81/" class="post-title-link" itemprop="url">剑指 Offer II 109. 开密码锁</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-09-16 10:59:32" itemprop="dateCreated datePublished" datetime="2022-09-16T10:59:32+08:00">2022-09-16</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-09-20 20:15:14" itemprop="dateModified" datetime="2022-09-20T20:15:14+08:00">2022-09-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%89%91%E6%8C%87-Offer-II/" itemprop="url" rel="index"><span itemprop="name">剑指 Offer II</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="剑指-Offer-II-109-开密码锁"><a href="#剑指-Offer-II-109-开密码锁" class="headerlink" title="剑指 Offer II 109. 开密码锁"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/zlDJc7/">剑指 Offer II 109. 开密码锁</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
-<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/breadth-first-search/">广度优先搜索</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/array/">数组</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/hash-table/">哈希表</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/string/">字符串</a></p>
-<p>一个密码锁由 4 个环形拨轮组成，每个拨轮都有 10 个数字： <code>&#39;0&#39;, &#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;, &#39;5&#39;, &#39;6&#39;, &#39;7&#39;, &#39;8&#39;, &#39;9&#39;</code> 。每个拨轮可以自由旋转：例如把 <code>&#39;9&#39;</code> 变为 <code>&#39;0&#39;</code>，<code>&#39;0&#39;</code> 变为 <code>&#39;9&#39;</code> 。每次旋转都只能旋转一个拨轮的一位数字。</p>
-<p>锁的初始数字为 <code>&#39;0000&#39;</code> ，一个代表四个拨轮的数字的字符串。</p>
-<p>列表 <code>deadends</code> 包含了一组死亡数字，一旦拨轮的数字和列表里的任何一个元素相同，这个锁将会被永久锁定，无法再被旋转。</p>
-<p>字符串 <code>target</code> 代表可以解锁的数字，请给出解锁需要的最小旋转次数，如果无论如何不能解锁，返回 <code>-1</code> 。</p>
-<p><strong>示例 1:</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入：deadends = [&quot;0201&quot;,&quot;0101&quot;,&quot;0102&quot;,&quot;1212&quot;,&quot;2002&quot;], target = &quot;0202&quot;</span><br><span class="line">输出：6</span><br><span class="line">解释：</span><br><span class="line">可能的移动序列为 &quot;0000&quot; -&gt; &quot;1000&quot; -&gt; &quot;1100&quot; -&gt; &quot;1200&quot; -&gt; &quot;1201&quot; -&gt; &quot;1202&quot; -&gt; &quot;0202&quot;。</span><br><span class="line">注意 &quot;0000&quot; -&gt; &quot;0001&quot; -&gt; &quot;0002&quot; -&gt; &quot;0102&quot; -&gt; &quot;0202&quot; 这样的序列是不能解锁的，因为当拨动到 &quot;0102&quot; 时这个锁就会被锁定。</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 2:</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入: deadends = [&quot;8888&quot;], target = &quot;0009&quot;</span><br><span class="line">输出：1</span><br><span class="line">解释：</span><br><span class="line">把最后一位反向旋转一次即可 &quot;0000&quot; -&gt; &quot;0009&quot;。</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 3:</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入: deadends = [&quot;8887&quot;,&quot;8889&quot;,&quot;8878&quot;,&quot;8898&quot;,&quot;8788&quot;,&quot;8988&quot;,&quot;7888&quot;,&quot;9888&quot;], target = &quot;8888&quot;</span><br><span class="line">输出：-1</span><br><span class="line">解释：</span><br><span class="line">无法旋转到目标数字且不被锁定。</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 4:</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: deadends = [&quot;0000&quot;], target = &quot;8888&quot;</span><br><span class="line">输出：-1</span><br></pre></td></tr></table></figure>
-
-<p><strong>提示：</strong></p>
-<ul>
-<li><code>1 &lt;= deadends.length &lt;= 500</code></li>
-<li><code>&lt;font face=&quot;monospace&quot;&gt;deadends[i].length == 4&lt;/font&gt;</code></li>
-<li><code>&lt;font face=&quot;monospace&quot;&gt;target.length == 4&lt;/font&gt;</code></li>
-<li><code>target</code> <strong>不在</strong> <code>deadends</code> 之中</li>
-<li><code>target</code> 和 <code>deadends[i]</code> 仅由若干位数字组成</li>
-</ul>
-<p>注意：本题与主站 752 题相同： <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/open-the-lock/">https://leetcode-cn.com/problems/open-the-lock/</a></p>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">string <span class="title">cal</span><span class="params">(string src, <span class="type">int</span> idx, string op)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (op == <span class="string">&quot;+&quot;</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (src[idx] == <span class="string">&#x27;9&#x27;</span>) &#123;</span><br><span class="line">                src[idx] = <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                src[idx] = <span class="built_in">char</span>(<span class="built_in">int</span>(src[idx]) + <span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (src[idx] == <span class="string">&#x27;0&#x27;</span>) &#123;</span><br><span class="line">                src[idx] = <span class="string">&#x27;9&#x27;</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                src[idx] = <span class="built_in">char</span>(<span class="built_in">int</span>(src[idx]) - <span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> src;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    set&lt;string&gt; visited;</span><br><span class="line">    set&lt;string&gt; booms;</span><br><span class="line">    <span class="type">int</span> count = <span class="number">-1</span>;</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">openLock</span><span class="params">(vector&lt;string&gt;&amp; deadends, string target)</span> </span>&#123;</span><br><span class="line">        queue&lt;string&gt; thisRound;</span><br><span class="line">        <span class="keyword">for</span> (string deadend: deadends) &#123;</span><br><span class="line">            booms.<span class="built_in">insert</span>(deadend);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (booms.<span class="built_in">find</span>(<span class="string">&quot;0000&quot;</span>) != booms.<span class="built_in">end</span>()) &#123;</span><br><span class="line">            <span class="keyword">return</span> count;</span><br><span class="line">        &#125;</span><br><span class="line">        count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span> (target == <span class="string">&quot;0000&quot;</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> count;</span><br><span class="line">        &#125;</span><br><span class="line">        thisRound.<span class="built_in">push</span>(<span class="string">&quot;0000&quot;</span>);</span><br><span class="line">        visited.<span class="built_in">insert</span>(<span class="string">&quot;0000&quot;</span>);</span><br><span class="line">        <span class="keyword">while</span> (thisRound.<span class="built_in">size</span>() != <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="type">int</span> round = thisRound.<span class="built_in">size</span>();</span><br><span class="line">            count++;</span><br><span class="line">            <span class="keyword">while</span> (round &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                string now = thisRound.<span class="built_in">front</span>();</span><br><span class="line">                thisRound.<span class="built_in">pop</span>();</span><br><span class="line">                <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; <span class="number">4</span>;i++) &#123;</span><br><span class="line">                    string addOne = <span class="built_in">cal</span>(now,i,<span class="string">&quot;+&quot;</span>);</span><br><span class="line">                    string subOne = <span class="built_in">cal</span>(now,i,<span class="string">&quot;-&quot;</span>);</span><br><span class="line">                    <span class="keyword">if</span> (booms.<span class="built_in">find</span>(addOne) == booms.<span class="built_in">end</span>() &amp;&amp; visited.<span class="built_in">find</span>(addOne) == visited.<span class="built_in">end</span>()) &#123;</span><br><span class="line">                        <span class="keyword">if</span> (addOne == target) &#123;</span><br><span class="line">                            <span class="keyword">return</span> count;</span><br><span class="line">                        &#125;</span><br><span class="line">                        thisRound.<span class="built_in">push</span>(addOne);</span><br><span class="line">                        visited.<span class="built_in">insert</span>(addOne);</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">if</span> (booms.<span class="built_in">find</span>(subOne) == booms.<span class="built_in">end</span>()  &amp;&amp; visited.<span class="built_in">find</span>(subOne) == visited.<span class="built_in">end</span>()) &#123;</span><br><span class="line">                        <span class="keyword">if</span> (subOne == target) &#123;</span><br><span class="line">                            <span class="keyword">return</span> count;</span><br><span class="line">                        &#125;</span><br><span class="line">                        thisRound.<span class="built_in">push</span>(subOne);</span><br><span class="line">                        visited.<span class="built_in">insert</span>(subOne);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                round--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/15/Linux-passwd-%E5%91%BD%E4%BB%A4/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="👽">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="😎😴🤯">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 😎😴🤯">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/09/15/Linux-passwd-%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">Linux passwd 命令</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-09-15 21:47:29" itemprop="dateCreated datePublished" datetime="2022-09-15T21:47:29+08:00">2022-09-15</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-09-20 15:56:52" itemprop="dateModified" datetime="2022-09-20T15:56:52+08:00">2022-09-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -456,8 +259,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>passwd 用于改变用户密码</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">- Change the password of the current user interactively:</span><br><span class="line">  passwd</span><br><span class="line"></span><br><span class="line">- Change the password of a specific user:</span><br><span class="line">  passwd &#123;&#123;username&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Get the current status of the user:</span><br><span class="line">  passwd -S</span><br><span class="line"></span><br><span class="line">- Make the password of the account blank (it will set the named account passwordless):</span><br><span class="line">  passwd -d</span><br></pre></td></tr></table></figure>
+          <p>Linux chgrp 命令用于修改文件或目录的用户组</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">- Change the owner group of a file/directory:</span><br><span class="line">  chgrp &#123;&#123;group&#125;&#125; &#123;&#123;path/to/file_or_directory&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Recursively change the owner group of a directory and its contents:</span><br><span class="line">  chgrp -R &#123;&#123;group&#125;&#125; &#123;&#123;path/to/directory&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Change the owner group of a symbolic link:</span><br><span class="line">  chgrp -h &#123;&#123;group&#125;&#125; &#123;&#123;path/to/symlink&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Change the owner group of a file/directory to match a reference file:</span><br><span class="line">  chgrp --reference=&#123;&#123;path/to/reference_file&#125;&#125; &#123;&#123;path/to/file_or_directory&#125;&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -483,7 +286,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/15/%E7%AE%97%E6%B3%95-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%B9%B6%E6%9F%A5%E9%9B%86/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/16/Linux-chown-%E5%91%BD%E4%BB%A4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -501,7 +304,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/09/15/%E7%AE%97%E6%B3%95-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%B9%B6%E6%9F%A5%E9%9B%86/" class="post-title-link" itemprop="url">算法&数据结构 并查集</a>
+          <a href="/2022/09/16/Linux-chown-%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">Linux chown 命令</a>
         </h2>
 
         <div class="post-meta-container">
@@ -512,7 +315,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2022-09-15 21:40:34" itemprop="dateCreated datePublished" datetime="2022-09-15T21:40:34+08:00">2022-09-15</time>
+      <time title="Created: 2022-09-16 14:17:55" itemprop="dateCreated datePublished" datetime="2022-09-16T14:17:55+08:00">2022-09-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -527,7 +330,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%AE%97%E6%B3%95-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index"><span itemprop="name">算法&数据结构</span></a>
+          <a href="/categories/Linux-%E5%91%BD%E4%BB%A4/" itemprop="url" rel="index"><span itemprop="name">Linux 命令</span></a>
         </span>
     </span>
 
@@ -541,7 +344,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">UFS</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; father;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">findFather</span><span class="params">(<span class="type">int</span> i)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (i == father[i]) &#123;</span><br><span class="line">            <span class="keyword">return</span> i;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            f = <span class="built_in">findFather</span>(father[i]);</span><br><span class="line">            father[i] = f;</span><br><span class="line">            <span class="keyword">return</span> f;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">unionij</span><span class="params">(<span class="type">int</span> i, <span class="type">int</span> j)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> fi = <span class="built_in">findFather</span>(i);</span><br><span class="line">        <span class="type">int</span> fj = <span class="built_in">findFather</span>(j);</span><br><span class="line">        <span class="keyword">if</span> (fi != fj) &#123;</span><br><span class="line">            father[fi] = fj;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <p>Linux chown 命令用于修改文件或目录的用户与用户组</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">- Change the owner user of a file/directory:</span><br><span class="line">  chown &#123;&#123;user&#125;&#125; &#123;&#123;path/to/file_or_directory&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Change the owner user and group of a file/directory:</span><br><span class="line">  chown &#123;&#123;user&#125;&#125;:&#123;&#123;group&#125;&#125; &#123;&#123;path/to/file_or_directory&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Recursively change the owner of a directory and its contents:</span><br><span class="line">  chown -R &#123;&#123;user&#125;&#125; &#123;&#123;path/to/directory&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Change the owner of a symbolic link:</span><br><span class="line">  chown -h &#123;&#123;user&#125;&#125; &#123;&#123;path/to/symlink&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Change the owner of a file/directory to match a reference file:</span><br><span class="line">  chown --reference=&#123;&#123;path/to/reference_file&#125;&#125; &#123;&#123;path/to/file_or_directory&#125;&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -567,7 +371,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/15/%E5%89%91%E6%8C%87-Offer-II-113-%E8%AF%BE%E7%A8%8B%E9%A1%BA%E5%BA%8F/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/16/Linux-chmod-%E5%91%BD%E4%BB%A4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -585,7 +389,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/09/15/%E5%89%91%E6%8C%87-Offer-II-113-%E8%AF%BE%E7%A8%8B%E9%A1%BA%E5%BA%8F/" class="post-title-link" itemprop="url">剑指 Offer II 113. 课程顺序</a>
+          <a href="/2022/09/16/Linux-chmod-%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">Linux chmod 命令</a>
         </h2>
 
         <div class="post-meta-container">
@@ -596,14 +400,184 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2022-09-15 21:04:30" itemprop="dateCreated datePublished" datetime="2022-09-15T21:04:30+08:00">2022-09-15</time>
+      <time title="Created: 2022-09-16 14:17:37" itemprop="dateCreated datePublished" datetime="2022-09-16T14:17:37+08:00">2022-09-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-09-20 20:15:53" itemprop="dateModified" datetime="2022-09-20T20:15:53+08:00">2022-09-20</time>
+      <time title="Modified: 2022-09-18 13:54:46" itemprop="dateModified" datetime="2022-09-18T13:54:46+08:00">2022-09-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Linux-%E5%91%BD%E4%BB%A4/" itemprop="url" rel="index"><span itemprop="name">Linux 命令</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p> Linux chmod 命令用于修改文件或目录的访问权限<br> Linux 文件权限分为三级：文件所有者、用户组、其他用户</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"> - Give the [u]ser who owns a file the right to e[x]ecute it:</span><br><span class="line">  chmod u+x &#123;&#123;path/to/file&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Give the [u]ser rights to [r]ead and [w]rite to a file/directory:</span><br><span class="line">  chmod u+rw &#123;&#123;path/to/file_or_directory&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Remove e[x]ecutable rights from the [g]roup:</span><br><span class="line">  chmod g-x &#123;&#123;path/to/file&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Give [a]ll users rights to [r]ead and e[x]ecute:</span><br><span class="line">  chmod a+rx &#123;&#123;path/to/file&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Give [o]thers (not in the file owner&#x27;s group) the same rights as the [g]roup:</span><br><span class="line">  chmod o=g &#123;&#123;path/to/file&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Remove all rights from [o]thers:</span><br><span class="line">  chmod o= &#123;&#123;path/to/file&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Change permissions recursively giving [g]roup and [o]thers the ability to [w]rite:</span><br><span class="line">  chmod -R g+w,o+w &#123;&#123;path/to/directory&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Recursively give [a]ll users [r]ead permissions to files and e[X]ecute permissions to sub-directories within a directory:</span><br><span class="line">  chmod -R a+rX &#123;&#123;path/to/directory&#125;&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/16/Linux-type-%E5%91%BD%E4%BB%A4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="👽">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="😎😴🤯">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 😎😴🤯">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/09/16/Linux-type-%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">Linux type 命令</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-09-16 14:13:19" itemprop="dateCreated datePublished" datetime="2022-09-16T14:13:19+08:00">2022-09-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-09-18 13:54:46" itemprop="dateModified" datetime="2022-09-18T13:54:46+08:00">2022-09-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Linux-%E5%91%BD%E4%BB%A4/" itemprop="url" rel="index"><span itemprop="name">Linux 命令</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>Linux type 命令用于查看shell执行命令的种类</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">- Display the type of a command:</span><br><span class="line">  type &#123;&#123;command&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Display all locations containing the specified executable:</span><br><span class="line">  type -a &#123;&#123;command&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Display the name of the disk file that would be executed:</span><br><span class="line">  type -p &#123;&#123;command&#125;&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/16/%E5%89%91%E6%8C%87-Offer-II-045-%E4%BA%8C%E5%8F%89%E6%A0%91%E6%9C%80%E5%BA%95%E5%B1%82%E6%9C%80%E5%B7%A6%E8%BE%B9%E7%9A%84%E5%80%BC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="👽">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="😎😴🤯">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 😎😴🤯">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/09/16/%E5%89%91%E6%8C%87-Offer-II-045-%E4%BA%8C%E5%8F%89%E6%A0%91%E6%9C%80%E5%BA%95%E5%B1%82%E6%9C%80%E5%B7%A6%E8%BE%B9%E7%9A%84%E5%80%BC/" class="post-title-link" itemprop="url">剑指 Offer II 045. 二叉树最底层最左边的值</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-09-16 12:09:52" itemprop="dateCreated datePublished" datetime="2022-09-16T12:09:52+08:00">2022-09-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-09-20 20:10:23" itemprop="dateModified" datetime="2022-09-20T20:10:23+08:00">2022-09-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -625,33 +599,27 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="剑指-Offer-II-113-课程顺序"><a href="#剑指-Offer-II-113-课程顺序" class="headerlink" title="剑指 Offer II 113. 课程顺序"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/QA2IGt/">剑指 Offer II 113. 课程顺序</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
-<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/depth-first-search/">深度优先搜索</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/breadth-first-search/">广度优先搜索</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/graph/">图</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/topological-sort/">拓扑排序</a></p>
-<p>现在总共有 <code>numCourses</code> 门课需要选，记为 <code>0</code> 到 <code>numCourses-1</code>。</p>
-<p>给定一个数组 <code>prerequisites</code> ，它的每一个元素 <code>prerequisites[i]</code> 表示两门课程之间的先修顺序。 例如 prerequisites[i] &#x3D; [a<sub>i</sub>, b<sub>i</sub>] 表示想要学习课程 a<sub>i</sub> ，需要先完成课程 b<sub>i</sub> 。</p>
-<p>请根据给出的总课程数  <code>numCourses</code> 和表示先修顺序的 <code>prerequisites</code> 得出一个可行的修课序列。</p>
-<p>可能会有多个正确的顺序，只要任意返回一种就可以了。如果不可能完成所有课程，返回一个空数组。</p>
-<p><strong>示例 1:</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: numCourses = 2, prerequisites = [[1,0]] </span><br><span class="line">输出: [0,1]</span><br><span class="line">解释: 总共有 2 门课程。要学习课程 1，你需要先完成课程 0。因此，正确的课程顺序为 [0,1] 。</span><br></pre></td></tr></table></figure>
+          <h1 id="剑指-Offer-II-045-二叉树最底层最左边的值"><a href="#剑指-Offer-II-045-二叉树最底层最左边的值" class="headerlink" title="剑指 Offer II 045. 二叉树最底层最左边的值"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/LwUNpT/">剑指 Offer II 045. 二叉树最底层最左边的值</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
+<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/tree/">树</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/depth-first-search/">深度优先搜索</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/breadth-first-search/">广度优先搜索</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/binary-tree/">二叉树</a></p>
+<p>给定一个二叉树的 <strong>根节点</strong> <code>root</code>，请找出该二叉树的 **最底层 最左边 **节点的值。</p>
+<p>假设二叉树中至少有一个节点。</p>
+<p><strong>示例 1:</strong></p>
+<p><img src="https://cdn.staticaly.com/gh/Poseidon-HL/image-hosting@master/20220916/tree1.2pjca8hlfoa0.webp" alt="tree1"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: root = [2,1,3]</span><br><span class="line">输出: 1</span><br></pre></td></tr></table></figure>
 
-<p><strong>示例 2:</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入: numCourses = 4, prerequisites = [[1,0],[2,0],[3,1],[3,2]]</span><br><span class="line">输出: [0,1,2,3] or [0,2,1,3]</span><br><span class="line">解释: 总共有 4 门课程。要学习课程 3，你应该先完成课程 1 和课程 2。并且课程 1 和课程 2 都应该排在课程 0 之后。</span><br><span class="line"> 因此，一个正确的课程顺序是 [0,1,2,3] 。另一个正确的排序是 [0,2,1,3] 。</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 3:</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: numCourses = 1, prerequisites = [] </span><br><span class="line">输出: [0]</span><br><span class="line">解释: 总共 1 门课，直接修第一门课就可。</span><br></pre></td></tr></table></figure>
+<p><strong>示例 2:</strong></p>
+<p><img src="https://cdn.staticaly.com/gh/Poseidon-HL/image-hosting@master/20220916/tree2.tb23ekbs3hs.webp" alt="tree2"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: [1,2,3,4,null,5,6,null,null,7]</span><br><span class="line">输出: 7</span><br></pre></td></tr></table></figure>
 
 <p><strong>提示:</strong></p>
 <ul>
-<li><code>1 &lt;= numCourses &lt;= 2000</code></li>
-<li><code>0 &lt;= prerequisites.length &lt;= numCourses * (numCourses - 1)</code></li>
-<li><code>prerequisites[i].length == 2</code></li>
-<li><code>0 &lt;= ai, bi &lt; numCourses</code></li>
-<li><code>ai != bi</code></li>
-<li><code>prerequisites</code> 中不存在重复元素</li>
+<li>二叉树的节点个数的范围是 [1,10<sup>4</sup>]</li>
+<li>-2<sup>31</sup> &lt;&#x3D; Node.val &lt;&#x3D; 2<sup>31</sup> - 1</li>
 </ul>
-<p>注意：本题与主站 210 题相同：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/course-schedule-ii/">https://leetcode-cn.com/problems/course-schedule-ii/</a></p>
+<p> </p>
+<p>注意：本题与主站 513 题相同： <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/find-bottom-left-tree-value/">https://leetcode-cn.com/problems/find-bottom-left-tree-value/</a></p>
 <h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; degree;</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; res;</span><br><span class="line">    vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; graph;</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">findOrder</span><span class="params">(<span class="type">int</span> numCourses, vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;&amp; prerequisites)</span> </span>&#123;</span><br><span class="line">        degree = <span class="built_in">vector</span>&lt;<span class="type">int</span>&gt; (numCourses);</span><br><span class="line">        graph = vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; (numCourses);</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; prerequisites.<span class="built_in">size</span>();i++) &#123;</span><br><span class="line">            degree[prerequisites[i][<span class="number">0</span>]]++;</span><br><span class="line">            graph[prerequisites[i][<span class="number">1</span>]].<span class="built_in">push_back</span>(prerequisites[i][<span class="number">0</span>]);</span><br><span class="line">        &#125;</span><br><span class="line">        queue&lt;<span class="type">int</span>&gt; now;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; degree.<span class="built_in">size</span>();i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (degree[i] == <span class="number">0</span>) &#123;</span><br><span class="line">                now.<span class="built_in">push</span>(i);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span> (now.<span class="built_in">size</span>() != <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="type">int</span> ele = now.<span class="built_in">front</span>();</span><br><span class="line">            now.<span class="built_in">pop</span>();</span><br><span class="line">            res.<span class="built_in">push_back</span>(ele);</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; graph[ele].<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">                degree[graph[ele][i]]--;</span><br><span class="line">                <span class="keyword">if</span> (degree[graph[ele][i]] == <span class="number">0</span>) &#123;</span><br><span class="line">                    now.<span class="built_in">push</span>(graph[ele][i]);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; degree.<span class="built_in">size</span>();i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (degree[i] != <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;(<span class="number">0</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * struct TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode *left;</span></span><br><span class="line"><span class="comment"> *     TreeNode *right;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x) : val(x), left(NULL), right(NULL) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">Traverse</span><span class="params">(TreeNode* root,<span class="type">int</span> level,<span class="type">int</span> &amp;maxlevel,<span class="type">int</span> &amp;finalData)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(root == <span class="literal">NULL</span>)</span><br><span class="line">            <span class="keyword">return</span> ;</span><br><span class="line">        <span class="keyword">if</span>(level &gt; maxlevel)</span><br><span class="line">        &#123;</span><br><span class="line">            finalData = root -&gt; val;</span><br><span class="line">            maxlevel = level;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">Traverse</span>(root -&gt; left,level + <span class="number">1</span>,maxlevel,finalData);</span><br><span class="line">        <span class="built_in">Traverse</span>(root -&gt; right,level + <span class="number">1</span>,maxlevel,finalData);</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">findBottomLeftValue</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(root == <span class="literal">NULL</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> finalData = root -&gt; val;</span><br><span class="line">        <span class="type">int</span> maxlevel = <span class="number">0</span>;</span><br><span class="line">        <span class="built_in">Traverse</span>(root,<span class="number">0</span>,maxlevel,finalData);</span><br><span class="line">        <span class="keyword">return</span> finalData;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -670,7 +638,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/13/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><span class="page-number current">14</span><a class="page-number" href="/page/15/">15</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/">18</a><a class="extend next" rel="next" href="/page/15/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/13/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><span class="page-number current">14</span><a class="page-number" href="/page/15/">15</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/15/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 </div>
