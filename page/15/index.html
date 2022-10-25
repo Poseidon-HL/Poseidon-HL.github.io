@@ -152,7 +152,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">102</span>
+          <span class="site-state-item-count">110</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -163,7 +163,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">44</span>
+        <span class="site-state-item-count">45</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -201,7 +201,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/19/Reference-Go/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/20/%E5%89%91%E6%8C%87-Offer-II-024-%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -219,7 +219,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/09/19/Reference-Go/" class="post-title-link" itemprop="url">Reference Go</a>
+          <a href="/2022/09/20/%E5%89%91%E6%8C%87-Offer-II-024-%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/" class="post-title-link" itemprop="url">剑指 Offer II 024. 反转链表</a>
         </h2>
 
         <div class="post-meta-container">
@@ -229,15 +229,18 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
+      
 
-      <time title="Created: 2022-09-19 20:55:01" itemprop="dateCreated datePublished" datetime="2022-09-19T20:55:01+08:00">2022-09-19</time>
+      <time title="Created: 2022-09-20 21:53:45 / Modified: 21:55:39" itemprop="dateCreated datePublished" datetime="2022-09-20T21:53:45+08:00">2022-09-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
+        <i class="far fa-folder"></i>
       </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-09-20 15:56:52" itemprop="dateModified" datetime="2022-09-20T15:56:52+08:00">2022-09-20</time>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%89%91%E6%8C%87-Offer-II/" itemprop="url" rel="index"><span itemprop="name">剑指 Offer II</span></a>
+        </span>
     </span>
 
   
@@ -250,7 +253,29 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          
+          <h1 id="剑指-Offer-II-024-反转链表"><a href="#剑指-Offer-II-024-反转链表" class="headerlink" title="剑指 Offer II 024. 反转链表"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/UHnkqh/">剑指 Offer II 024. 反转链表</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>简单</strong>  </p>
+<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/recursion/">递归</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/linked-list/">链表</a></p>
+<p>给定单链表的头节点 <code>head</code> ，请反转链表，并返回反转后的链表的头节点。</p>
+<p><strong>示例 1：</strong></p>
+<p><img src="https://cdn.staticaly.com/gh/Poseidon-HL/image-hosting@master/20220915/rev1ex1.3w1dfx6h3ai0.webp" alt="rev1ex1"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：head = [1,2,3,4,5]</span><br><span class="line">输出：[5,4,3,2,1]</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<p><img src="https://cdn.staticaly.com/gh/Poseidon-HL/image-hosting@master/20220915/rev1ex2.218s7zykg7j4.webp" alt="rev1ex2"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：head = [1,2]</span><br><span class="line">输出：[2,1]</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 3：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：head = []</span><br><span class="line">输出：[]</span><br></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li>链表中节点的数目范围是 <code>[0, 5000]</code></li>
+<li><code>-5000 &lt;= Node.val &lt;= 5000</code></li>
+</ul>
+<p><strong>进阶：</strong>链表可以选用迭代或递归方式完成反转。你能否用两种方法解决这道题？</p>
+<p>注意：本题与主站 206 题相同： <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/reverse-linked-list/">https://leetcode-cn.com/problems/reverse-linked-list/</a></p>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode() : val(0), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x, ListNode *next) : val(x), next(next) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">reverseList</span><span class="params">(ListNode* head)</span> </span>&#123;</span><br><span class="line">        ListNode* helper1 = <span class="keyword">new</span> <span class="built_in">ListNode</span>();</span><br><span class="line">        ListNode* head1 = head;</span><br><span class="line">        ListNode* tmp;</span><br><span class="line">        <span class="keyword">while</span> (head1 != <span class="literal">nullptr</span>) &#123;</span><br><span class="line">            tmp = head1 -&gt; next;</span><br><span class="line">            head1 -&gt; next = helper1 -&gt; next;</span><br><span class="line">            helper1 -&gt; next = head1;</span><br><span class="line">            head1 = tmp;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> helper1 -&gt; next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -276,7 +301,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/18/Linux-hostname-%E5%91%BD%E4%BB%A4/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/20/%E5%89%91%E6%8C%87-Offer-II-025-%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -294,7 +319,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/09/18/Linux-hostname-%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">Linux hostname 命令</a>
+          <a href="/2022/09/20/%E5%89%91%E6%8C%87-Offer-II-025-%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/" class="post-title-link" itemprop="url">剑指 Offer II 025. 链表中的两数相加</a>
         </h2>
 
         <div class="post-meta-container">
@@ -306,7 +331,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-09-18 20:33:59 / Modified: 20:36:21" itemprop="dateCreated datePublished" datetime="2022-09-18T20:33:59+08:00">2022-09-18</time>
+      <time title="Created: 2022-09-20 21:45:49 / Modified: 21:55:28" itemprop="dateCreated datePublished" datetime="2022-09-20T21:45:49+08:00">2022-09-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -314,7 +339,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Linux-%E5%91%BD%E4%BB%A4/" itemprop="url" rel="index"><span itemprop="name">Linux 命令</span></a>
+          <a href="/categories/%E5%89%91%E6%8C%87-Offer-II/" itemprop="url" rel="index"><span itemprop="name">剑指 Offer II</span></a>
         </span>
     </span>
 
@@ -328,8 +353,30 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>Linux hostname 命令用于显示系统的主机名 或用于查看IP地址</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">- Show current host name:</span><br><span class="line">  hostname</span><br><span class="line"></span><br><span class="line">- Show the network address of the host name:</span><br><span class="line">  hostname -i</span><br><span class="line"></span><br><span class="line">- Show all network addresses of the host:</span><br><span class="line">  hostname -I</span><br><span class="line"></span><br><span class="line">- Show the FQDN (Fully Qualified Domain Name):</span><br><span class="line">  hostname --fqdn</span><br><span class="line"></span><br><span class="line">- Set current host name:</span><br><span class="line">  hostname &#123;&#123;new_hostname&#125;&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+          <h1 id="剑指-Offer-II-025-链表中的两数相加"><a href="#剑指-Offer-II-025-链表中的两数相加" class="headerlink" title="剑指 Offer II 025. 链表中的两数相加"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/lMSNwu/">剑指 Offer II 025. 链表中的两数相加</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
+<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/stack/">栈</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/linked-list/">链表</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/math/">数学</a></p>
+<p>给定两个 <strong>非空链表</strong> <code>l1</code>和 <code>l2</code> 来代表两个非负整数。数字最高位位于链表开始位置。它们的每个节点只存储一位数字。将这两数相加会返回一个新的链表。</p>
+<p>可以假设除了数字 0 之外，这两个数字都不会以零开头。</p>
+<p><strong>示例1：</strong></p>
+<p><img src="https://cdn.staticaly.com/gh/Poseidon-HL/image-hosting@master/20220915/1626420025-fZfzMX-image.6big64vpahg0.webp" alt="1626420025-fZfzMX-image"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：l1 = [7,2,4,3], l2 = [5,6,4]</span><br><span class="line">输出：[7,8,0,7]</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例2：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：l1 = [2,4,3], l2 = [5,6,4]</span><br><span class="line">输出：[8,0,7]</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例3：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：l1 = [0], l2 = [0]</span><br><span class="line">输出：[0]</span><br></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li>链表的长度范围为 <code>[1, 100]</code></li>
+<li><code>0 &lt;= node.val &lt;= 9</code></li>
+<li>输入数据保证链表代表的数字无前导 0</li>
+</ul>
+<p><strong>进阶：</strong>如果输入链表不能修改该如何处理？换句话说，不能对列表中的节点进行翻转。</p>
+<p>注意：本题与主站 445 题相同：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/add-two-numbers-ii/">https://leetcode-cn.com/problems/add-two-numbers-ii/</a></p>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode() : val(0), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x, ListNode *next) : val(x), next(next) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">ReverseList</span><span class="params">(ListNode* l1)</span> </span>&#123;</span><br><span class="line">        ListNode* helper1 = <span class="keyword">new</span> <span class="built_in">ListNode</span>();</span><br><span class="line">        ListNode* head1 = l1;</span><br><span class="line">        ListNode* tmp;</span><br><span class="line">        <span class="keyword">while</span> (head1 != <span class="literal">nullptr</span>) &#123;</span><br><span class="line">            tmp = head1 -&gt; next;</span><br><span class="line">            head1 -&gt; next = helper1 -&gt; next;</span><br><span class="line">            helper1 -&gt; next = head1;</span><br><span class="line">            head1 = tmp;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> helper1 -&gt; next;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">calNow</span><span class="params">(ListNode* l1, ListNode* l2, <span class="type">int</span> carry)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span> (l2 == <span class="literal">nullptr</span>) &#123;</span><br><span class="line">            sum = l1 -&gt; val + carry;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            sum = l1 -&gt; val + l2 -&gt; val + carry;</span><br><span class="line">        &#125;</span><br><span class="line">        l1 -&gt; val = sum % <span class="number">10</span>;</span><br><span class="line">        carry = sum / <span class="number">10</span>;</span><br><span class="line">        <span class="keyword">return</span> carry;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function">ListNode* <span class="title">addTwoNumbers</span><span class="params">(ListNode* l1, ListNode* l2)</span> </span>&#123;</span><br><span class="line">        ListNode* helper1 = <span class="built_in">ReverseList</span>(l1);</span><br><span class="line">        ListNode* helper2 = <span class="built_in">ReverseList</span>(l2);</span><br><span class="line">        </span><br><span class="line">        <span class="type">int</span> carry = <span class="number">0</span>;</span><br><span class="line">        ListNode* result = helper1;</span><br><span class="line">        <span class="keyword">while</span>(helper1 -&gt; next != <span class="literal">nullptr</span> &amp;&amp; helper2 -&gt; next != <span class="literal">nullptr</span>) &#123;</span><br><span class="line">            carry = <span class="built_in">calNow</span>(helper1,helper2,carry);</span><br><span class="line">            helper1 = helper1 -&gt; next;</span><br><span class="line">            helper2 = helper2 -&gt; next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (helper1 -&gt; next == <span class="literal">nullptr</span>) &#123;</span><br><span class="line">            helper1 -&gt; next = helper2 -&gt; next;</span><br><span class="line">        &#125;</span><br><span class="line">        carry = <span class="built_in">calNow</span>(helper1,helper2,carry);</span><br><span class="line">        helper1 = helper1 -&gt; next;</span><br><span class="line">        <span class="keyword">while</span> (helper1 != <span class="literal">nullptr</span> &amp;&amp; carry != <span class="number">0</span>) &#123;</span><br><span class="line">            carry = <span class="built_in">calNow</span>(helper1,<span class="literal">nullptr</span>,carry);</span><br><span class="line">            helper1 = helper1 -&gt; next;</span><br><span class="line">        &#125;</span><br><span class="line">        result = <span class="built_in">ReverseList</span>(result);</span><br><span class="line">        <span class="keyword">if</span> (carry != <span class="number">0</span>) &#123;</span><br><span class="line">            ListNode* ans = <span class="keyword">new</span> <span class="built_in">ListNode</span>(carry, result);</span><br><span class="line">            <span class="keyword">return</span> ans;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -355,7 +402,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/18/go-sync-Cond/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/20/SQL%E7%BB%83%E4%B9%A0-181-%E8%B6%85%E8%BF%87%E7%BB%8F%E7%90%86%E6%94%B6%E5%85%A5%E7%9A%84%E5%91%98%E5%B7%A5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -373,7 +420,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/09/18/go-sync-Cond/" class="post-title-link" itemprop="url">go sync.Cond</a>
+          <a href="/2022/09/20/SQL%E7%BB%83%E4%B9%A0-181-%E8%B6%85%E8%BF%87%E7%BB%8F%E7%90%86%E6%94%B6%E5%85%A5%E7%9A%84%E5%91%98%E5%B7%A5/" class="post-title-link" itemprop="url">SQL练习 181. 超过经理收入的员工</a>
         </h2>
 
         <div class="post-meta-container">
@@ -383,15 +430,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
+      
 
-      <time title="Created: 2022-09-18 17:06:01" itemprop="dateCreated datePublished" datetime="2022-09-18T17:06:01+08:00">2022-09-18</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-09-20 19:21:28" itemprop="dateModified" datetime="2022-09-20T19:21:28+08:00">2022-09-20</time>
+      <time title="Created: 2022-09-20 20:35:05 / Modified: 20:35:37" itemprop="dateCreated datePublished" datetime="2022-09-20T20:35:05+08:00">2022-09-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -399,7 +440,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/go-sync/" itemprop="url" rel="index"><span itemprop="name">go sync</span></a>
+          <a href="/categories/SQL-%E7%BB%83%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">SQL 练习</span></a>
         </span>
     </span>
 
@@ -413,29 +454,21 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h3 id="sync-Cond-使用场景"><a href="#sync-Cond-使用场景" class="headerlink" title="sync.Cond 使用场景"></a>sync.Cond 使用场景</h3><ul>
-<li>多个goroutine等待，单个goroutine通知</li>
-</ul>
-<h3 id="sync-Cond-定义-amp-方法"><a href="#sync-Cond-定义-amp-方法" class="headerlink" title="sync.Cond 定义&amp;方法"></a>sync.Cond 定义&amp;方法</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Cond <span class="keyword">struct</span> &#123;</span><br><span class="line">	noCopy noCopy</span><br><span class="line"></span><br><span class="line">	L Locker</span><br><span class="line"></span><br><span class="line">	notify  notifyList</span><br><span class="line">	checker copyChecker</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>noCopy通常内嵌在结构体中，避免发生结构体拷贝</li>
-<li>L为关联锁，通常为互斥锁或读写锁（*Mutex or *RWMutex）</li>
-</ul>
-<h4 id="NewCond-创建新的Cond实例"><a href="#NewCond-创建新的Cond实例" class="headerlink" title="NewCond 创建新的Cond实例"></a>NewCond 创建新的Cond实例</h4><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">NewCond</span><span class="params">(l Locker)</span></span> *Cond &#123;</span><br><span class="line">	<span class="keyword">return</span> &amp;Cond&#123;L: l&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>创建Cond实例，传入需要关联的锁</li>
-</ul>
-<h4 id="checker-check-检查是否发生拷贝"><a href="#checker-check-检查是否发生拷贝" class="headerlink" title="checker.check 检查是否发生拷贝"></a>checker.check 检查是否发生拷贝</h4><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> copyChecker <span class="type">uintptr</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(c *copyChecker)</span></span> check() &#123;</span><br><span class="line">	<span class="keyword">if</span> <span class="type">uintptr</span>(*c) != <span class="type">uintptr</span>(unsafe.Pointer(c)) &amp;&amp;</span><br><span class="line">		!atomic.CompareAndSwapUintptr((*<span class="type">uintptr</span>)(c), <span class="number">0</span>, <span class="type">uintptr</span>(unsafe.Pointer(c))) &amp;&amp;</span><br><span class="line">		<span class="type">uintptr</span>(*c) != <span class="type">uintptr</span>(unsafe.Pointer(c)) &#123;</span><br><span class="line">		<span class="built_in">panic</span>(<span class="string">&quot;sync.Cond is copied&quot;</span>)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>copyChecker.check 在Wait Signal Broadcast方法中均会被调用，用于检查是否发生了值拷贝</li>
-<li>第一次执行检查会完成该变量的赋值</li>
-<li>此后若发生了拷贝，则panic</li>
-</ul>
-<h4 id="Wait-等待"><a href="#Wait-等待" class="headerlink" title="Wait 等待"></a>Wait 等待</h4><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(c *Cond)</span></span> Wait() &#123;</span><br><span class="line">	c.checker.check()</span><br><span class="line">	t := runtime_notifyListAdd(&amp;c.notify)</span><br><span class="line">	c.L.Unlock()</span><br><span class="line">	runtime_notifyListWait(&amp;c.notify, t)</span><br><span class="line">	c.L.Lock()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>Wait会自动释放锁，并挂起调用Wait的协程</li>
-</ul>
-<h4 id="Signal-唤醒单个协程"><a href="#Signal-唤醒单个协程" class="headerlink" title="Signal 唤醒单个协程"></a>Signal 唤醒单个协程</h4><h4 id="Broadcast-唤醒所有等待协程"><a href="#Broadcast-唤醒所有等待协程" class="headerlink" title="Broadcast 唤醒所有等待协程"></a>Broadcast 唤醒所有等待协程</h4><h3 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+          <h1 id="181-超过经理收入的员工"><a href="#181-超过经理收入的员工" class="headerlink" title="181. 超过经理收入的员工"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/employees-earning-more-than-their-managers/">181. 超过经理收入的员工</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>简单</strong>  </p>
+<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/database/">数据库</a></p>
+<p><a class="sql-schema-link__1VAC">SQL架构</a></p>
+<p>表：<code>Employee</code> </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">+-------------+---------+</span><br><span class="line">| Column Name | Type    |</span><br><span class="line">+-------------+---------+</span><br><span class="line">| id          | int     |</span><br><span class="line">| name        | varchar |</span><br><span class="line">| salary      | int     |</span><br><span class="line">| managerId   | int     |</span><br><span class="line">+-------------+---------+</span><br><span class="line">Id是该表的主键。</span><br><span class="line">该表的每一行都表示雇员的ID、姓名、工资和经理的ID。</span><br></pre></td></tr></table></figure>
+
+<p>编写一个SQL查询来查找收入比经理高的员工。</p>
+<p>以 <strong>任意顺序</strong> 返回结果表。</p>
+<p>查询结果格式如下所示。</p>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">输入: </span><br><span class="line">Employee 表:</span><br><span class="line">+----+-------+--------+-----------+</span><br><span class="line">| id | name  | salary | managerId |</span><br><span class="line">+----+-------+--------+-----------+</span><br><span class="line">| 1  | Joe   | 70000  | 3         |</span><br><span class="line">| 2  | Henry | 80000  | 4         |</span><br><span class="line">| 3  | Sam   | 60000  | Null      |</span><br><span class="line">| 4  | Max   | 90000  | Null      |</span><br><span class="line">+----+-------+--------+-----------+</span><br><span class="line">输出: </span><br><span class="line">+----------+</span><br><span class="line">| Employee |</span><br><span class="line">+----------+</span><br><span class="line">| Joe      |</span><br><span class="line">+----------+</span><br><span class="line">解释: Joe 是唯一挣得比经理多的雇员。</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>MySQL</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Write your MySQL query statement below</span><br><span class="line"></span><br><span class="line">select e1.name as Employee </span><br><span class="line">where e1.managerId = e2.id</span><br><span class="line">from Employee as e1 , Employee as e2 </span><br><span class="line">and e1.salary &gt; e2.salary </span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -461,7 +494,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/16/Linux-chgrp-%E5%91%BD%E4%BB%A4/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/20/SQL%E7%BB%83%E4%B9%A0-175-%E7%BB%84%E5%90%88%E4%B8%A4%E4%B8%AA%E8%A1%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -479,7 +512,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/09/16/Linux-chgrp-%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">Linux chgrp 命令</a>
+          <a href="/2022/09/20/SQL%E7%BB%83%E4%B9%A0-175-%E7%BB%84%E5%90%88%E4%B8%A4%E4%B8%AA%E8%A1%A8/" class="post-title-link" itemprop="url">SQL练习 175. 组合两个表</a>
         </h2>
 
         <div class="post-meta-container">
@@ -489,15 +522,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
+      
 
-      <time title="Created: 2022-09-16 14:18:22" itemprop="dateCreated datePublished" datetime="2022-09-16T14:18:22+08:00">2022-09-16</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-09-18 13:54:46" itemprop="dateModified" datetime="2022-09-18T13:54:46+08:00">2022-09-18</time>
+      <time title="Created: 2022-09-20 19:58:19 / Modified: 19:58:56" itemprop="dateCreated datePublished" datetime="2022-09-20T19:58:19+08:00">2022-09-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -505,7 +532,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Linux-%E5%91%BD%E4%BB%A4/" itemprop="url" rel="index"><span itemprop="name">Linux 命令</span></a>
+          <a href="/categories/SQL-%E7%BB%83%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">SQL 练习</span></a>
         </span>
     </span>
 
@@ -519,8 +546,25 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>Linux chgrp 命令用于修改文件或目录的用户组</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">- Change the owner group of a file/directory:</span><br><span class="line">  chgrp &#123;&#123;group&#125;&#125; &#123;&#123;path/to/file_or_directory&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Recursively change the owner group of a directory and its contents:</span><br><span class="line">  chgrp -R &#123;&#123;group&#125;&#125; &#123;&#123;path/to/directory&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Change the owner group of a symbolic link:</span><br><span class="line">  chgrp -h &#123;&#123;group&#125;&#125; &#123;&#123;path/to/symlink&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Change the owner group of a file/directory to match a reference file:</span><br><span class="line">  chgrp --reference=&#123;&#123;path/to/reference_file&#125;&#125; &#123;&#123;path/to/file_or_directory&#125;&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+          <h1 id="175-组合两个表"><a href="#175-组合两个表" class="headerlink" title="175. 组合两个表"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/combine-two-tables/">175. 组合两个表</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>简单</strong>  </p>
+<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/database/">数据库</a></p>
+<p><a class="sql-schema-link__1VAC">SQL架构</a></p>
+<p>表: <code>Person</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">+-------------+---------+</span><br><span class="line">| 列名         | 类型     |</span><br><span class="line">+-------------+---------+</span><br><span class="line">| PersonId    | int     |</span><br><span class="line">| FirstName   | varchar |</span><br><span class="line">| LastName    | varchar |</span><br><span class="line">+-------------+---------+</span><br><span class="line">personId 是该表的主键列。</span><br><span class="line">该表包含一些人的 ID 和他们的姓和名的信息。</span><br></pre></td></tr></table></figure>
+
+<p>表: <code>Address</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">+-------------+---------+</span><br><span class="line">| 列名         | 类型    |</span><br><span class="line">+-------------+---------+</span><br><span class="line">| AddressId   | int     |</span><br><span class="line">| PersonId    | int     |</span><br><span class="line">| City        | varchar |</span><br><span class="line">| State       | varchar |</span><br><span class="line">+-------------+---------+</span><br><span class="line">addressId 是该表的主键列。</span><br><span class="line">该表的每一行都包含一个 ID = PersonId 的人的城市和州的信息。</span><br></pre></td></tr></table></figure>
+
+<p>编写一个SQL查询来报告 <code>Person</code> 表中每个人的姓、名、城市和州。如果 <code>personId</code> 的地址不在 <code>Address</code> 表中，则报告为空  <code>null</code> 。</p>
+<p>以 <strong>任意顺序</strong> 返回结果表。</p>
+<p>查询结果格式如下所示。</p>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">输入: </span><br><span class="line">Person表:</span><br><span class="line">+----------+----------+-----------+</span><br><span class="line">| personId | lastName | firstName |</span><br><span class="line">+----------+----------+-----------+</span><br><span class="line">| 1        | Wang     | Allen     |</span><br><span class="line">| 2        | Alice    | Bob       |</span><br><span class="line">+----------+----------+-----------+</span><br><span class="line">Address表:</span><br><span class="line">+-----------+----------+---------------+------------+</span><br><span class="line">| addressId | personId | city          | state      |</span><br><span class="line">+-----------+----------+---------------+------------+</span><br><span class="line">| 1         | 2        | New York City | New York   |</span><br><span class="line">| 2         | 3        | Leetcode      | California |</span><br><span class="line">+-----------+----------+---------------+------------+</span><br><span class="line">输出: </span><br><span class="line">+-----------+----------+---------------+----------+</span><br><span class="line">| firstName | lastName | city          | state    |</span><br><span class="line">+-----------+----------+---------------+----------+</span><br><span class="line">| Allen     | Wang     | Null          | Null     |</span><br><span class="line">| Bob       | Alice    | New York City | New York |</span><br><span class="line">+-----------+----------+---------------+----------+</span><br><span class="line">解释: </span><br><span class="line">地址表中没有 personId = 1 的地址，所以它们的城市和州返回 null。</span><br><span class="line">addressId = 1 包含了 personId = 2 的地址信息。</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>MySQL</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Write your MySQL query statement below</span><br><span class="line"></span><br><span class="line">select Person.FirstName as firstName, Person.LastName as lastName, Address.City as city, Address.State as state </span><br><span class="line">from Person left join Address </span><br><span class="line">on Person.PersonId = Address.PersonId </span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -546,7 +590,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/16/Linux-chown-%E5%91%BD%E4%BB%A4/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/20/%E5%89%91%E6%8C%87-Offer-II-005-%E5%8D%95%E8%AF%8D%E9%95%BF%E5%BA%A6%E7%9A%84%E6%9C%80%E5%A4%A7%E4%B9%98%E7%A7%AF/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -564,7 +608,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/09/16/Linux-chown-%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">Linux chown 命令</a>
+          <a href="/2022/09/20/%E5%89%91%E6%8C%87-Offer-II-005-%E5%8D%95%E8%AF%8D%E9%95%BF%E5%BA%A6%E7%9A%84%E6%9C%80%E5%A4%A7%E4%B9%98%E7%A7%AF/" class="post-title-link" itemprop="url">剑指 Offer II 005. 单词长度的最大乘积</a>
         </h2>
 
         <div class="post-meta-container">
@@ -574,15 +618,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
+      
 
-      <time title="Created: 2022-09-16 14:17:55" itemprop="dateCreated datePublished" datetime="2022-09-16T14:17:55+08:00">2022-09-16</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-09-18 13:54:46" itemprop="dateModified" datetime="2022-09-18T13:54:46+08:00">2022-09-18</time>
+      <time title="Created: 2022-09-20 19:46:41 / Modified: 19:47:26" itemprop="dateCreated datePublished" datetime="2022-09-20T19:46:41+08:00">2022-09-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -590,7 +628,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Linux-%E5%91%BD%E4%BB%A4/" itemprop="url" rel="index"><span itemprop="name">Linux 命令</span></a>
+          <a href="/categories/%E5%89%91%E6%8C%87-Offer-II/" itemprop="url" rel="index"><span itemprop="name">剑指 Offer II</span></a>
         </span>
     </span>
 
@@ -604,8 +642,28 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>Linux chown 命令用于修改文件或目录的用户与用户组</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">- Change the owner user of a file/directory:</span><br><span class="line">  chown &#123;&#123;user&#125;&#125; &#123;&#123;path/to/file_or_directory&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Change the owner user and group of a file/directory:</span><br><span class="line">  chown &#123;&#123;user&#125;&#125;:&#123;&#123;group&#125;&#125; &#123;&#123;path/to/file_or_directory&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Recursively change the owner of a directory and its contents:</span><br><span class="line">  chown -R &#123;&#123;user&#125;&#125; &#123;&#123;path/to/directory&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Change the owner of a symbolic link:</span><br><span class="line">  chown -h &#123;&#123;user&#125;&#125; &#123;&#123;path/to/symlink&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Change the owner of a file/directory to match a reference file:</span><br><span class="line">  chown --reference=&#123;&#123;path/to/reference_file&#125;&#125; &#123;&#123;path/to/file_or_directory&#125;&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+          <h1 id="剑指-Offer-II-005-单词长度的最大乘积"><a href="#剑指-Offer-II-005-单词长度的最大乘积" class="headerlink" title="剑指 Offer II 005. 单词长度的最大乘积"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/aseY1I/">剑指 Offer II 005. 单词长度的最大乘积</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
+<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/bit-manipulation/">位运算</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/array/">数组</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/string/">字符串</a></p>
+<p>给定一个字符串数组 <code>words</code>，请计算当两个字符串 <code>words[i]</code> 和 <code>words[j]</code> 不包含相同字符时，它们长度的乘积的最大值。假设字符串中只包含英语的小写字母。如果没有不包含相同字符的一对字符串，返回 0。</p>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: words = [&quot;abcw&quot;,&quot;baz&quot;,&quot;foo&quot;,&quot;bar&quot;,&quot;fxyz&quot;,&quot;abcdef&quot;]</span><br><span class="line">输出: 16 </span><br><span class="line">解释: 这两个单词为 &quot;abcw&quot;, &quot;fxyz&quot;。它们不包含相同字符，且长度的乘积最大。</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: words = [&quot;a&quot;,&quot;ab&quot;,&quot;abc&quot;,&quot;d&quot;,&quot;cd&quot;,&quot;bcd&quot;,&quot;abcd&quot;]</span><br><span class="line">输出: 4 </span><br><span class="line">解释: 这两个单词为 &quot;ab&quot;, &quot;cd&quot;。</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 3:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: words = [&quot;a&quot;,&quot;aa&quot;,&quot;aaa&quot;,&quot;aaaa&quot;]</span><br><span class="line">输出: 0 </span><br><span class="line">解释: 不存在这样的两个单词。</span><br></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>2 &lt;= words.length &lt;= 1000</code></li>
+<li><code>1 &lt;= words[i].length &lt;= 1000</code></li>
+<li><code>words[i]</code> 仅包含小写字母</li>
+</ul>
+<p>注意：本题与主站 318 题相同：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/maximum-product-of-word-lengths/">https://leetcode-cn.com/problems/maximum-product-of-word-lengths/</a></p>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">getBit</span><span class="params">(string word)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> bitMap = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">char</span> c : word) &#123;</span><br><span class="line">            bitMap = bitMap | (<span class="number">1</span> &lt;&lt; (c - <span class="string">&#x27;a&#x27;</span>));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> bitMap;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">maxProduct</span><span class="params">(vector&lt;string&gt;&amp; words)</span> </span>&#123;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; wordsbit;</span><br><span class="line">        <span class="keyword">for</span> (string word : words) &#123;</span><br><span class="line">            wordsbit.<span class="built_in">push_back</span>(<span class="built_in">getBit</span>(word));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> maxNum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; wordsbit.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = i + <span class="number">1</span>;j &lt; wordsbit.<span class="built_in">size</span>(); j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (((wordsbit[i] ^ wordsbit[j]) == (wordsbit[i] | wordsbit[j]))) &#123;</span><br><span class="line">                    maxNum = <span class="built_in">max</span>(maxNum, <span class="built_in">int</span>(words[i].<span class="built_in">length</span>() * words[j].<span class="built_in">length</span>()));</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> maxNum;</span><br><span class="line">    &#125; </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -624,7 +682,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/14/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><span class="page-number current">15</span><a class="page-number" href="/page/16/">16</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/">21</a><a class="extend next" rel="next" href="/page/16/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/14/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><span class="page-number current">15</span><a class="page-number" href="/page/16/">16</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><a class="extend next" rel="next" href="/page/16/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 </div>

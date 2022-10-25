@@ -152,7 +152,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">102</span>
+          <span class="site-state-item-count">110</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -163,7 +163,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">44</span>
+        <span class="site-state-item-count">45</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -201,7 +201,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/04/LeetCode-1138-%E5%AD%97%E6%AF%8D%E6%9D%BF%E4%B8%8A%E7%9A%84%E8%B7%AF%E5%BE%84/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/10/LCP-62-%E4%BA%A4%E9%80%9A%E6%9E%A2%E7%BA%BD/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -219,7 +219,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/10/04/LeetCode-1138-%E5%AD%97%E6%AF%8D%E6%9D%BF%E4%B8%8A%E7%9A%84%E8%B7%AF%E5%BE%84/" class="post-title-link" itemprop="url">LeetCode 1138. 字母板上的路径</a>
+          <a href="/2022/10/10/LCP-62-%E4%BA%A4%E9%80%9A%E6%9E%A2%E7%BA%BD/" class="post-title-link" itemprop="url">LCP 62. 交通枢纽</a>
         </h2>
 
         <div class="post-meta-container">
@@ -231,7 +231,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-10-04 19:12:53 / Modified: 19:14:25" itemprop="dateCreated datePublished" datetime="2022-10-04T19:12:53+08:00">2022-10-04</time>
+      <time title="Created: 2022-10-10 20:11:34 / Modified: 20:20:29" itemprop="dateCreated datePublished" datetime="2022-10-10T20:11:34+08:00">2022-10-10</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -239,7 +239,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
+          <a href="/categories/LCP/" itemprop="url" rel="index"><span itemprop="name">LCP</span></a>
         </span>
     </span>
 
@@ -253,34 +253,28 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="1138-字母板上的路径"><a href="#1138-字母板上的路径" class="headerlink" title="1138. 字母板上的路径"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/alphabet-board-path/">1138. 字母板上的路径</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
-<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/hash-table/">哈希表</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/string/">字符串</a></p>
-<p>我们从一块字母板上的位置 <code>(0, 0)</code> 出发，该坐标对应的字符为 <code>board[0][0]</code>。</p>
-<p>在本题里，字母板为<code>board = [&quot;abcde&quot;, &quot;fghij&quot;, &quot;klmno&quot;, &quot;pqrst&quot;, &quot;uvwxy&quot;, &quot;z&quot;]</code>，如下所示。</p>
-<p><img src="https://cdn.staticaly.com/gh/Poseidon-HL/image-hosting@master/20221004/azboard.45g6rpi3maw0.webp" alt="azboard"></p>
-<p>我们可以按下面的指令规则行动：</p>
+          <h1 id="LCP-62-交通枢纽"><a href="#LCP-62-交通枢纽" class="headerlink" title="LCP 62. 交通枢纽"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/D9PW8w/">LCP 62. 交通枢纽</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
+<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/graph/problemset/">图</a></p>
+<p>为了缓解「力扣嘉年华」期间的人流压力，组委会在活动期间开设了一些交通专线。<code>path[i] = [a, b]</code> 表示有一条从地点 a通往地点 b 的 单向 交通专线。<br>若存在一个地点，满足以下要求，我们则称之为 交通枢纽：</p>
 <ul>
-<li>如果方格存在，<code>&#39;U&#39;</code> 意味着将我们的位置上移一行；</li>
-<li>如果方格存在，<code>&#39;D&#39;</code> 意味着将我们的位置下移一行；</li>
-<li>如果方格存在，<code>&#39;L&#39;</code> 意味着将我们的位置左移一列；</li>
-<li>如果方格存在，<code>&#39;R&#39;</code> 意味着将我们的位置右移一列；</li>
-<li><code>&#39;!&#39;</code> 会把在我们当前位置 <code>(r, c)</code> 的字符 <code>board[r][c]</code> 添加到答案中。</li>
+<li>所有地点（除自身外）均有一条 单向 专线 直接 通往该地点；</li>
+<li>该地点不存在任何 通往其他地点 的单向专线。<br>请返回交通专线的 交通枢纽。若不存在，则返回 -1。</li>
 </ul>
-<p>（注意，字母板上只存在有字母的位置。）</p>
-<p>返回指令序列，用最小的行动次数让答案和目标 <code>target</code> 相同。你可以返回任何达成目标的路径。</p>
-<p><strong>示例 1：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：target = &quot;leet&quot;</span><br><span class="line">输出：&quot;DDR!UURRR!!DDD!&quot;</span><br></pre></td></tr></table></figure>
+<p>注意：</p>
+<p>对于任意一个地点，至少被一条专线连通。</p>
+<p>示例 1：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：path = [[0,1],[0,3],[1,3],[2,0],[2,3]]</span><br><span class="line"></span><br><span class="line">输出：3</span><br></pre></td></tr></table></figure>
+<p>解释：如下图所示：<br>地点 0,1,2 各有一条通往地点 3 的交通专线，<br>且地点 3 不存在任何通往其他地点的交通专线。</p>
+<p><img src="https://cdn.staticaly.com/gh/Poseidon-HL/image-hosting@master/20221010/1663902572-yOlUCr-image.6fxv1oztcoo0.webp" alt="1663902572-yOlUCr-image"></p>
+<p>示例 2：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：path = [[0,3],[1,0],[1,3],[2,0],[3,0],[3,2]]</span><br><span class="line"></span><br><span class="line">输出：-1</span><br></pre></td></tr></table></figure>
+<p>解释：如下图所示：不存在满足 交通枢纽 的地点。<br><img src="https://cdn.staticaly.com/gh/Poseidon-HL/image-hosting@master/20221010/1663902595-McsEkY-image.3olcralm1c80.webp" alt="1663902595-McsEkY-image"></p>
+<p>提示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1 &lt;= path.length &lt;= 1000</span><br><span class="line">0 &lt;= path[i][0], path[i][1] &lt;= 1000</span><br><span class="line">path[i][0] 与 path[i][1] 不相等</span><br></pre></td></tr></table></figure>
 
-<p><strong>示例 2：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：target = &quot;code&quot;</span><br><span class="line">输出：&quot;RR!DDRR!UUL!R!&quot;</span><br></pre></td></tr></table></figure>
 
-<p><strong>提示：</strong></p>
-<ul>
-<li><code>1 &lt;= target.length &lt;= 100</code></li>
-<li><code>target</code> 仅含有小写英文字母。</li>
-</ul>
 <h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    map&lt;<span class="type">char</span>, pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt;&gt; positions;</span><br><span class="line">    string result;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">initMap</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt;= <span class="number">26</span>; i++) &#123;</span><br><span class="line">            positions[<span class="built_in">char</span>(<span class="string">&#x27;a&#x27;</span> + i)] = <span class="built_in">make_pair</span>(i / <span class="number">5</span>, i % <span class="number">5</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function">string <span class="title">CalDistance</span><span class="params">(<span class="type">char</span> src, <span class="type">char</span> dst)</span> </span>&#123;</span><br><span class="line">        string move = <span class="string">&quot;&quot;</span>;</span><br><span class="line">        <span class="keyword">if</span> (src == <span class="string">&#x27;z&#x27;</span> &amp;&amp; dst != <span class="string">&#x27;z&#x27;</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;U&quot;</span> + <span class="built_in">CalDistance</span>(<span class="string">&#x27;u&#x27;</span>, dst);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (dst == <span class="string">&#x27;z&#x27;</span> &amp;&amp; src != <span class="string">&#x27;z&#x27;</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">CalDistance</span>(src, <span class="string">&#x27;u&#x27;</span>) + <span class="string">&quot;D&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> Xdistance = positions[dst].first - positions[src].first;</span><br><span class="line">        <span class="type">int</span> Ydistance = positions[dst].second - positions[src].second;</span><br><span class="line">        <span class="type">char</span> xMove = Xdistance &lt; <span class="number">0</span> ? <span class="string">&#x27;U&#x27;</span> : <span class="string">&#x27;D&#x27;</span>;</span><br><span class="line">        <span class="type">char</span> yMove = Ydistance &lt; <span class="number">0</span> ? <span class="string">&#x27;L&#x27;</span> : <span class="string">&#x27;R&#x27;</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; <span class="built_in">abs</span>(Xdistance); i++) &#123;</span><br><span class="line">            move += xMove;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; <span class="built_in">abs</span>(Ydistance); i++) &#123;</span><br><span class="line">            move += yMove;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> move;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function">string <span class="title">alphabetBoardPath</span><span class="params">(string target)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">initMap</span>();</span><br><span class="line">        <span class="type">char</span> start = <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; target.<span class="built_in">length</span>(); i++) &#123;</span><br><span class="line">            result += <span class="built_in">CalDistance</span>(start, target[i]);</span><br><span class="line">            start = target[i];</span><br><span class="line">            result += <span class="string">&#x27;!&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">transportationHub</span><span class="params">(vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;&amp; path)</span> </span>&#123;</span><br><span class="line">        map&lt;<span class="type">int</span>, <span class="type">int</span>&gt; tmp;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; path.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            tmp[path[i][<span class="number">0</span>]]--;</span><br><span class="line">            tmp[path[i][<span class="number">1</span>]]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">auto</span> it = tmp.<span class="built_in">begin</span>(); it != tmp.<span class="built_in">end</span>(); it++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (it -&gt; second == tmp.<span class="built_in">size</span>() - <span class="number">1</span>) &#123;</span><br><span class="line">                <span class="keyword">return</span> it -&gt; first;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -306,7 +300,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/03/LeetCode-2033-%E8%8E%B7%E5%8F%96%E5%8D%95%E5%80%BC%E7%BD%91%E6%A0%BC%E7%9A%84%E6%9C%80%E5%B0%8F%E6%93%8D%E4%BD%9C%E6%95%B0/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/10/LeetCode-611-%E6%9C%89%E6%95%88%E4%B8%89%E8%A7%92%E5%BD%A2%E7%9A%84%E4%B8%AA%E6%95%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -324,7 +318,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/10/03/LeetCode-2033-%E8%8E%B7%E5%8F%96%E5%8D%95%E5%80%BC%E7%BD%91%E6%A0%BC%E7%9A%84%E6%9C%80%E5%B0%8F%E6%93%8D%E4%BD%9C%E6%95%B0/" class="post-title-link" itemprop="url">LeetCode 2033. 获取单值网格的最小操作数</a>
+          <a href="/2022/10/10/LeetCode-611-%E6%9C%89%E6%95%88%E4%B8%89%E8%A7%92%E5%BD%A2%E7%9A%84%E4%B8%AA%E6%95%B0/" class="post-title-link" itemprop="url">LeetCode 611. 有效三角形的个数</a>
         </h2>
 
         <div class="post-meta-container">
@@ -336,7 +330,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-10-03 19:34:36 / Modified: 19:36:40" itemprop="dateCreated datePublished" datetime="2022-10-03T19:34:36+08:00">2022-10-03</time>
+      <time title="Created: 2022-10-10 20:04:32 / Modified: 20:05:05" itemprop="dateCreated datePublished" datetime="2022-10-10T20:04:32+08:00">2022-10-10</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -358,33 +352,22 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="2033-获取单值网格的最小操作数"><a href="#2033-获取单值网格的最小操作数" class="headerlink" title="2033. 获取单值网格的最小操作数"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/minimum-operations-to-make-a-uni-value-grid/">2033. 获取单值网格的最小操作数</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
-<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/array/">数组</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/math/">数学</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/matrix/">矩阵</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/sorting/">排序</a></p>
-<p>给你一个大小为 <code>m x n</code> 的二维整数网格 <code>grid</code> 和一个整数 <code>x</code> 。每一次操作，你可以对 <code>grid</code> 中的任一元素 <strong>加</strong> <code>x</code> 或 <strong>减</strong> <code>x</code> 。</p>
-<p><strong>单值网格</strong> 是全部元素都相等的网格。</p>
-<p>返回使网格化为单值网格所需的 <strong>最小</strong> 操作数。如果不能，返回 <code>-1</code> 。</p>
-<p><strong>示例 1：</strong></p>
-<p><img src="https://cdn.staticaly.com/gh/Poseidon-HL/image-hosting@master/20221003/gridtxt.7ajdnh8hy6s0.webp" alt="gridtxt"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">输入：grid = [[2,4],[6,8]], x = 2</span><br><span class="line">输出：4</span><br><span class="line">解释：可以执行下述操作使所有元素都等于 4 ： </span><br><span class="line">- 2 加 x 一次。</span><br><span class="line">- 6 减 x 一次。</span><br><span class="line">- 8 减 x 两次。</span><br><span class="line">共计 4 次操作。</span><br></pre></td></tr></table></figure>
+          <h1 id="611-有效三角形的个数"><a href="#611-有效三角形的个数" class="headerlink" title="611. 有效三角形的个数"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/valid-triangle-number/">611. 有效三角形的个数</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
+<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/greedy/">贪心</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/array/">数组</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/two-pointers/">双指针</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/binary-search/">二分查找</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/sorting/">排序</a></p>
+<p>给定一个包含非负整数的数组 <code>nums</code> ，返回其中可以组成三角形三条边的三元组个数。</p>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">输入: nums = [2,2,3,4]</span><br><span class="line">输出: 3</span><br><span class="line">解释:有效的组合是: </span><br><span class="line">2,3,4 (使用第一个 2)</span><br><span class="line">2,3,4 (使用第二个 2)</span><br><span class="line">2,2,3</span><br></pre></td></tr></table></figure>
 
-<p><strong>示例 2：</strong></p>
-<p><img src="https://cdn.staticaly.com/gh/Poseidon-HL/image-hosting@master/20221003/gridtxt-1.60ldpmkd15k0.webp" alt="gridtxt-1"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：grid = [[1,5],[2,3]], x = 1</span><br><span class="line">输出：5</span><br><span class="line">解释：可以使所有元素都等于 3 。</span><br></pre></td></tr></table></figure>
+<p><strong>示例 2:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: nums = [4,2,3,4]</span><br><span class="line">输出: 4</span><br></pre></td></tr></table></figure>
 
-<p><strong>示例 3：</strong></p>
-<p><img src="https://cdn.staticaly.com/gh/Poseidon-HL/image-hosting@master/20221003/gridtxt-2.197q3eeff22o.webp" alt="gridtxt-2"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：grid = [[1,2],[3,4]], x = 2</span><br><span class="line">输出：-1</span><br><span class="line">解释：无法使所有元素相等。</span><br></pre></td></tr></table></figure>
-
-<p><strong>提示：</strong></p>
+<p><strong>提示:</strong></p>
 <ul>
-<li><code>m == grid.length</code></li>
-<li><code>n == grid[i].length</code></li>
-<li>1 &lt;&#x3D; m, n &lt;&#x3D; 10<sup>5</sup></li>
-<li>1 &lt;&#x3D; m * n &lt;&#x3D; 10<sup>5</sup></li>
-<li>1 &lt;&#x3D; x, grid[i][j] &lt;&#x3D; 10<sup>4</sup></li>
+<li><code>1 &lt;= nums.length &lt;= 1000</code></li>
+<li><code>0 &lt;= nums[i] &lt;= 1000</code></li>
 </ul>
 <h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">minOperations</span><span class="params">(vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;&amp; grid, <span class="type">int</span> x)</span> </span>&#123;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; tmp;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; grid.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>;j &lt; grid[i].<span class="built_in">size</span>(); j++) &#123;</span><br><span class="line">                tmp.<span class="built_in">push_back</span>(grid[i][j]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">sort</span>(tmp.<span class="built_in">begin</span>(), tmp.<span class="built_in">end</span>());</span><br><span class="line">        <span class="type">int</span> target_1 = tmp[tmp.<span class="built_in">size</span>() / <span class="number">2</span>];</span><br><span class="line">        <span class="type">int</span> target_2 = tmp[(tmp.<span class="built_in">size</span>() - <span class="number">1</span>) / <span class="number">2</span>];</span><br><span class="line">        <span class="type">int</span> res1 = <span class="number">0</span>, res2 = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; grid.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>;j &lt; grid[i].<span class="built_in">size</span>(); j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (<span class="built_in">abs</span>(grid[i][j] - target_1) % x != <span class="number">0</span>) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                res1 += <span class="built_in">abs</span>(grid[i][j] - target_1) / x;</span><br><span class="line">                res2 += <span class="built_in">abs</span>(grid[i][j] - target_2) / x;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">min</span>(res1, res2);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; N;</span><br><span class="line">    <span class="comment">// 找到小于target的数</span></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">find</span><span class="params">(<span class="type">int</span> target, <span class="type">int</span> begin, <span class="type">int</span> end)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> mid = begin + (end - begin) / <span class="number">2</span>;</span><br><span class="line">        <span class="type">int</span> res = mid;</span><br><span class="line">        <span class="keyword">while</span> (begin &lt;= end) &#123;</span><br><span class="line">            mid = begin + (end - begin) / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span> (N[mid] &gt;= target) &#123;</span><br><span class="line">                end = mid - <span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                res = mid;</span><br><span class="line">                begin = mid + <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">triangleNumber</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">sort</span>(nums.<span class="built_in">begin</span>(), nums.<span class="built_in">end</span>());</span><br><span class="line">        N = nums;</span><br><span class="line">        <span class="type">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; <span class="built_in">int</span>(nums.<span class="built_in">size</span>() - <span class="number">2</span>); i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = i + <span class="number">1</span>; j &lt; <span class="built_in">int</span>(nums.<span class="built_in">size</span>() - <span class="number">1</span>); j++) &#123;</span><br><span class="line">                <span class="type">int</span> idx = <span class="built_in">find</span>(nums[i] + nums[j], j + <span class="number">1</span>, nums.<span class="built_in">size</span>() - <span class="number">1</span>);</span><br><span class="line">                res += (nums[i] + nums[j] &gt; nums[idx] ? idx - j : <span class="number">0</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -410,7 +393,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/03/LeetCode-2390-%E4%BB%8E%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%A7%BB%E9%99%A4%E6%98%9F%E5%8F%B7/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/10/LeetCode-738-%E5%8D%95%E8%B0%83%E9%80%92%E5%A2%9E%E7%9A%84%E6%95%B0%E5%AD%97/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -428,7 +411,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/10/03/LeetCode-2390-%E4%BB%8E%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%A7%BB%E9%99%A4%E6%98%9F%E5%8F%B7/" class="post-title-link" itemprop="url">LeetCode 2390. 从字符串中移除星号</a>
+          <a href="/2022/10/10/LeetCode-738-%E5%8D%95%E8%B0%83%E9%80%92%E5%A2%9E%E7%9A%84%E6%95%B0%E5%AD%97/" class="post-title-link" itemprop="url">LeetCode 738. 单调递增的数字</a>
         </h2>
 
         <div class="post-meta-container">
@@ -440,7 +423,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-10-03 18:11:53 / Modified: 18:12:24" itemprop="dateCreated datePublished" datetime="2022-10-03T18:11:53+08:00">2022-10-03</time>
+      <time title="Created: 2022-10-10 19:05:18 / Modified: 19:07:09" itemprop="dateCreated datePublished" datetime="2022-10-10T19:05:18+08:00">2022-10-10</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -462,34 +445,128 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="2390-从字符串中移除星号"><a href="#2390-从字符串中移除星号" class="headerlink" title="2390. 从字符串中移除星号"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/removing-stars-from-a-string/">2390. 从字符串中移除星号</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
-<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/stack/">栈</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/string/">字符串</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/simulation/">模拟</a></p>
-<p>给你一个包含若干星号 <code>*</code> 的字符串 <code>s</code> 。</p>
-<p>在一步操作中，你可以：</p>
+          <h1 id="738-单调递增的数字"><a href="#738-单调递增的数字" class="headerlink" title="738. 单调递增的数字"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/monotone-increasing-digits/">738. 单调递增的数字</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
+<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/greedy/">贪心</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/math/">数学</a></p>
+<p>当且仅当每个相邻位数上的数字 <code>x</code> 和 <code>y</code> 满足 <code>x &lt;= y</code> 时，我们称这个整数是<strong>单调递增</strong>的。</p>
+<p>给定一个整数 <code>n</code> ，返回 <em>小于或等于 <code>n</code> 的最大数字，且数字呈 <strong>单调递增</strong></em> 。</p>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: n = 10</span><br><span class="line">输出: 9</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: n = 1234</span><br><span class="line">输出: 1234</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 3:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: n = 332</span><br><span class="line">输出: 299</span><br></pre></td></tr></table></figure>
+
+<p><strong>提示:</strong></p>
 <ul>
-<li>选中 <code>s</code> 中的一个星号。</li>
-<li>移除星号 <strong>左侧</strong> 最近的那个 <strong>非星号</strong> 字符，并移除该星号自身。</li>
+<li>0 &lt;&#x3D; n &lt;&#x3D; 10<sup>9</sup></li>
 </ul>
-<p>返回移除 <strong>所有</strong> 星号之后的字符串<strong>。</strong></p>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">monotoneIncreasingDigits</span><span class="params">(<span class="type">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 找到第一个比右边最小的数大的数即可，如果有相同的数字，则取最左侧的位置</span></span><br><span class="line">        <span class="comment">// 找到之后，还需要找到已经有序的位置</span></span><br><span class="line">        <span class="type">int</span> ans = n;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; tmp;</span><br><span class="line">        <span class="keyword">if</span> (!n) &#123;</span><br><span class="line">            <span class="keyword">return</span> n;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span> (n) &#123;</span><br><span class="line">            tmp.<span class="built_in">push_back</span>(n % <span class="number">10</span>);</span><br><span class="line">            n /= <span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">reverse</span>(tmp.<span class="built_in">begin</span>(), tmp.<span class="built_in">end</span>());</span><br><span class="line">        <span class="type">int</span> minNum = tmp[tmp.<span class="built_in">size</span>() - <span class="number">1</span>], index = <span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = tmp.<span class="built_in">size</span>() - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">            <span class="keyword">if</span> (tmp[i] &lt; minNum) &#123;</span><br><span class="line">                minNum = tmp[i];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (tmp[i] &gt; minNum) &#123;</span><br><span class="line">                index = i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> beforeIndex = index;</span><br><span class="line">        <span class="keyword">if</span> (index != <span class="number">-1</span>) &#123;</span><br><span class="line">            <span class="keyword">while</span> (index &lt; tmp.<span class="built_in">size</span>() - <span class="number">1</span> &amp;&amp; (tmp[index + <span class="number">1</span>] &gt;= tmp[index])) &#123;</span><br><span class="line">                index++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">while</span> (index &gt; <span class="number">0</span> &amp;&amp; tmp[index - <span class="number">1</span>] == tmp[index]) &#123;</span><br><span class="line">                index--;</span><br><span class="line">            &#125;</span><br><span class="line">            ans = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; index; i++) &#123;</span><br><span class="line">                ans = ans * <span class="number">10</span> + tmp[i];</span><br><span class="line">            &#125;</span><br><span class="line">            ans = ans * <span class="number">10</span> + tmp[index] - <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> i = index + <span class="number">1</span>;i &lt; tmp.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">                ans = ans * <span class="number">10</span> + <span class="number">9</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans; </span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/10/LeetCode-801-%E4%BD%BF%E5%BA%8F%E5%88%97%E9%80%92%E5%A2%9E%E7%9A%84%E6%9C%80%E5%B0%8F%E4%BA%A4%E6%8D%A2%E6%AC%A1%E6%95%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="👽">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="😎😴🤯">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 😎😴🤯">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/10/10/LeetCode-801-%E4%BD%BF%E5%BA%8F%E5%88%97%E9%80%92%E5%A2%9E%E7%9A%84%E6%9C%80%E5%B0%8F%E4%BA%A4%E6%8D%A2%E6%AC%A1%E6%95%B0/" class="post-title-link" itemprop="url">LeetCode 801. 使序列递增的最小交换次数</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-10-10 16:51:23 / Modified: 17:18:27" itemprop="dateCreated datePublished" datetime="2022-10-10T16:51:23+08:00">2022-10-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="801-使序列递增的最小交换次数"><a href="#801-使序列递增的最小交换次数" class="headerlink" title="801. 使序列递增的最小交换次数"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/minimum-swaps-to-make-sequences-increasing/">801. 使序列递增的最小交换次数</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>困难</strong>  </p>
+<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/array/">数组</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/dynamic-programming/">动态规划</a></p>
+<p>我们有两个长度相等且不为空的整型数组 <code>nums1</code> 和 <code>nums2</code> 。在一次操作中，我们可以交换 <code>nums1[i]</code> 和 <code>nums2[i]</code>的元素。</p>
+<ul>
+<li>例如，如果 <code>nums1 = [1,2,3,8</code> ， <code>nums2 =[5,6,7,4]</code> ，你可以交换 <code>i = 3</code> 处的元素，得到 <code>nums1 =[1,2,3,4]</code> 和 <code>nums2 =[5,6,7,8]</code> 。</li>
+</ul>
+<p>返回 <em>使 <code>nums1</code> 和 <code>nums2</code> **严格递增 **所需操作的最小次数</em> 。</p>
+<p>数组 <code>arr</code> <strong>严格递增</strong> 且  <code>arr[0] &lt; arr[1] &lt; arr[2] &lt; ... &lt; arr[arr.length - 1]</code> 。</p>
 <p><strong>注意：</strong></p>
 <ul>
-<li>生成的输入保证总是可以执行题面中描述的操作。</li>
-<li>可以证明结果字符串是唯一的。</li>
+<li>用例保证可以实现操作。</li>
 </ul>
-<p><strong>示例 1：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;leet**cod*e&quot;</span><br><span class="line">输出：&quot;lecoe&quot;</span><br><span class="line">解释：从左到右执行移除操作：</span><br><span class="line">- 距离第 1 个星号最近的字符是 &quot;leet**cod*e&quot; 中的 &#x27;t&#x27; ，s 变为 &quot;lee*cod*e&quot; 。</span><br><span class="line">- 距离第 2 个星号最近的字符是 &quot;lee*cod*e&quot; 中的 &#x27;e&#x27; ，s 变为 &quot;lecod*e&quot; 。</span><br><span class="line">- 距离第 3 个星号最近的字符是 &quot;lecod*e&quot; 中的 &#x27;d&#x27; ，s 变为 &quot;lecoe&quot; 。</span><br><span class="line">不存在其他星号，返回 &quot;lecoe&quot; 。</span><br></pre></td></tr></table></figure>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">输入: nums1 = [1,3,5,4], nums2 = [1,2,3,7]</span><br><span class="line">输出: 1</span><br><span class="line">解释: </span><br><span class="line">交换 A[3] 和 B[3] 后，两个数组如下:</span><br><span class="line">A = [1, 3, 5, 7] ， B = [1, 2, 3, 4]</span><br><span class="line">两个数组均为严格递增的。</span><br></pre></td></tr></table></figure>
 
-<p><strong>示例 2：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;erase*****&quot;</span><br><span class="line">输出：&quot;&quot;</span><br><span class="line">解释：整个字符串都会被移除，所以返回空字符串。</span><br></pre></td></tr></table></figure>
+<p><strong>示例 2:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: nums1 = [0,3,5,8,9], nums2 = [2,1,4,6,9]</span><br><span class="line">输出: 1</span><br></pre></td></tr></table></figure>
 
-<p><strong>提示：</strong></p>
+<p><strong>提示:</strong></p>
 <ul>
-<li>1 &lt;&#x3D; s.length &lt;&#x3D; 10<sup>5</sup></li>
-<li><code>s</code> 由小写英文字母和星号 <code>*</code> 组成</li>
-<li><code>s</code> 可以执行上述操作</li>
+<li>2 &lt;&#x3D; nums1.length &lt;&#x3D; 10<sup>5</sup></li>
+<li><code>nums2.length == nums1.length</code></li>
+<li>0 &lt;&#x3D; nums1[i], nums2[i] &lt;&#x3D; 2 * 10<sup>5</sup></li>
 </ul>
 <h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">string <span class="title">removeStars</span><span class="params">(string s)</span> </span>&#123;</span><br><span class="line">        deque&lt;<span class="type">char</span>&gt; save;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">char</span> c : s) &#123;</span><br><span class="line">            <span class="keyword">if</span> (!save.<span class="built_in">size</span>()) &#123;</span><br><span class="line">                save.<span class="built_in">push_back</span>(c);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">if</span> (c == <span class="string">&#x27;*&#x27;</span> &amp;&amp; save.<span class="built_in">back</span>() != <span class="string">&#x27;*&#x27;</span>) &#123;</span><br><span class="line">                    save.<span class="built_in">pop_back</span>();</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    save.<span class="built_in">push_back</span>(c);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        string res;</span><br><span class="line">        <span class="keyword">while</span> (save.<span class="built_in">size</span>()) &#123;</span><br><span class="line">            res += save.<span class="built_in">front</span>();</span><br><span class="line">            save.<span class="built_in">pop_front</span>();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">minSwap</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums1, vector&lt;<span class="type">int</span>&gt;&amp; nums2)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// DP[n][i]  i = 0不交换当前位置元素 i = 1交换当前位置元素</span></span><br><span class="line">        vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; res;</span><br><span class="line">        res.<span class="built_in">resize</span>(nums1.<span class="built_in">size</span>());</span><br><span class="line">        res[<span class="number">0</span>] = &#123;<span class="number">0</span>, <span class="number">1</span>&#125;;</span><br><span class="line">        res[<span class="number">0</span>][<span class="number">1</span>] = nums2[<span class="number">0</span>] == nums1[<span class="number">0</span>] ? <span class="number">0</span> : <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt; res.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            res[i].<span class="built_in">resize</span>(<span class="number">2</span>);</span><br><span class="line">            <span class="keyword">if</span> (nums1[i] == nums2[i]) &#123;</span><br><span class="line">                res[i][<span class="number">0</span>] = <span class="built_in">min</span>(res[i - <span class="number">1</span>][<span class="number">0</span>], res[i - <span class="number">1</span>][<span class="number">1</span>]);</span><br><span class="line">                res[i][<span class="number">1</span>] = res[i][<span class="number">0</span>];</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 如果交换前满足并且交换后也满足的话，可以取最小值，否则只能取其一</span></span><br><span class="line">            <span class="type">bool</span> satisfied1 = ((nums1[i] &gt; nums1[i - <span class="number">1</span>]) &amp;&amp; (nums2[i] &gt; nums2[i - <span class="number">1</span>]));</span><br><span class="line">            <span class="type">bool</span> satisfied2 = ((nums1[i] &gt; nums2[i - <span class="number">1</span>]) &amp;&amp; (nums2[i] &gt; nums1[i - <span class="number">1</span>]));</span><br><span class="line">            <span class="keyword">if</span> (satisfied1 &amp;&amp; satisfied2) &#123;</span><br><span class="line">                res[i][<span class="number">0</span>] = <span class="built_in">min</span>(res[i - <span class="number">1</span>][<span class="number">0</span>], res[i - <span class="number">1</span>][<span class="number">1</span>]);</span><br><span class="line">                res[i][<span class="number">1</span>] = <span class="built_in">min</span>(res[i - <span class="number">1</span>][<span class="number">1</span>], res[i - <span class="number">1</span>][<span class="number">0</span>]) + <span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (satisfied1) &#123;</span><br><span class="line">                res[i][<span class="number">0</span>] = res[i - <span class="number">1</span>][<span class="number">0</span>];</span><br><span class="line">                res[i][<span class="number">1</span>] = res[i - <span class="number">1</span>][<span class="number">1</span>] + <span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                res[i][<span class="number">1</span>] = res[i - <span class="number">1</span>][<span class="number">0</span>] + <span class="number">1</span>;</span><br><span class="line">                res[i][<span class="number">0</span>] = res[i - <span class="number">1</span>][<span class="number">1</span>];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">min</span>(res[res.<span class="built_in">size</span>() - <span class="number">1</span>][<span class="number">0</span>], res[res.<span class="built_in">size</span>() - <span class="number">1</span>][<span class="number">1</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -515,7 +592,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/03/LeetCode-2365-%E4%BB%BB%E5%8A%A1%E8%B0%83%E5%BA%A6%E5%99%A8-II/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/07/LeetCode-2131-%E8%BF%9E%E6%8E%A5%E4%B8%A4%E5%AD%97%E6%AF%8D%E5%8D%95%E8%AF%8D%E5%BE%97%E5%88%B0%E7%9A%84%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E4%B8%B2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -533,7 +610,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/10/03/LeetCode-2365-%E4%BB%BB%E5%8A%A1%E8%B0%83%E5%BA%A6%E5%99%A8-II/" class="post-title-link" itemprop="url">LeetCode 2365. 任务调度器 II</a>
+          <a href="/2022/10/07/LeetCode-2131-%E8%BF%9E%E6%8E%A5%E4%B8%A4%E5%AD%97%E6%AF%8D%E5%8D%95%E8%AF%8D%E5%BE%97%E5%88%B0%E7%9A%84%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E4%B8%B2/" class="post-title-link" itemprop="url">LeetCode 2131. 连接两字母单词得到的最长回文串</a>
         </h2>
 
         <div class="post-meta-container">
@@ -545,7 +622,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-10-03 17:51:56 / Modified: 17:52:45" itemprop="dateCreated datePublished" datetime="2022-10-03T17:51:56+08:00">2022-10-03</time>
+      <time title="Created: 2022-10-07 16:02:16 / Modified: 16:06:51" itemprop="dateCreated datePublished" datetime="2022-10-07T16:02:16+08:00">2022-10-07</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -567,133 +644,29 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="2365-任务调度器-II"><a href="#2365-任务调度器-II" class="headerlink" title="2365. 任务调度器 II"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/task-scheduler-ii/">2365. 任务调度器 II</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
-<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/array/">数组</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/hash-table/">哈希表</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/simulation/">模拟</a></p>
-<p>给你一个下标从 <strong>0</strong> 开始的正整数数组 <code>tasks</code> ，表示需要 <strong>按顺序</strong> 完成的任务，其中 <code>tasks[i]</code> 表示第 <code>i</code> 件任务的 <strong>类型</strong> 。</p>
-<p>同时给你一个正整数 <code>space</code> ，表示一个任务完成 <strong>后</strong> ，另一个 <strong>相同</strong> 类型任务完成前需要间隔的 <strong>最少</strong> 天数。</p>
-<p>在所有任务完成前的每一天，你都必须进行以下两种操作中的一种：</p>
-<ul>
-<li>完成 <code>tasks</code> 中的下一个任务</li>
-<li>休息一天</li>
-</ul>
-<p>请你返回完成所有任务所需的 <strong>最少</strong> 天数。</p>
+          <h1 id="2131-连接两字母单词得到的最长回文串"><a href="#2131-连接两字母单词得到的最长回文串" class="headerlink" title="2131. 连接两字母单词得到的最长回文串"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/longest-palindrome-by-concatenating-two-letter-words/">2131. 连接两字母单词得到的最长回文串</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
+<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/greedy/">贪心</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/array/">数组</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/hash-table/">哈希表</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/string/">字符串</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/counting/">计数</a></p>
+<p>给你一个字符串数组 <code>words</code> 。<code>words</code> 中每个元素都是一个包含 <strong>两个</strong> 小写英文字母的单词。</p>
+<p>请你从 <code>words</code> 中选择一些元素并按 <strong>任意顺序</strong> 连接它们，并得到一个 <strong>尽可能长的回文串</strong> 。每个元素 <strong>至多</strong> 只能使用一次。</p>
+<p>请你返回你能得到的最长回文串的 <strong>长度</strong> 。如果没办法得到任何一个回文串，请你返回 <code>0</code> 。</p>
+<p><strong>回文串</strong> 指的是从前往后和从后往前读一样的字符串。</p>
 <p><strong>示例 1：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">输入：tasks = [1,2,1,2,3,1], space = 3</span><br><span class="line">输出：9</span><br><span class="line">解释：</span><br><span class="line">9 天完成所有任务的一种方法是：</span><br><span class="line">第 1 天：完成任务 0 。</span><br><span class="line">第 2 天：完成任务 1 。</span><br><span class="line">第 3 天：休息。</span><br><span class="line">第 4 天：休息。</span><br><span class="line">第 5 天：完成任务 2 。</span><br><span class="line">第 6 天：完成任务 3 。</span><br><span class="line">第 7 天：休息。</span><br><span class="line">第 8 天：完成任务 4 。</span><br><span class="line">第 9 天：完成任务 5 。</span><br><span class="line">可以证明无法少于 9 天完成所有任务。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入：words = [&quot;lc&quot;,&quot;cl&quot;,&quot;gg&quot;]</span><br><span class="line">输出：6</span><br><span class="line">解释：一个最长的回文串为 &quot;lc&quot; + &quot;gg&quot; + &quot;cl&quot; = &quot;lcggcl&quot; ，长度为 6 。</span><br><span class="line">&quot;clgglc&quot; 是另一个可以得到的最长回文串。</span><br></pre></td></tr></table></figure>
 
 <p><strong>示例 2：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">输入：tasks = [5,8,8,5], space = 2</span><br><span class="line">输出：6</span><br><span class="line">解释：</span><br><span class="line">6 天完成所有任务的一种方法是：</span><br><span class="line">第 1 天：完成任务 0 。</span><br><span class="line">第 2 天：完成任务 1 。</span><br><span class="line">第 3 天：休息。</span><br><span class="line">第 4 天：休息。</span><br><span class="line">第 5 天：完成任务 2 。</span><br><span class="line">第 6 天：完成任务 3 。</span><br><span class="line">可以证明无法少于 6 天完成所有任务。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入：words = [&quot;ab&quot;,&quot;ty&quot;,&quot;yt&quot;,&quot;lc&quot;,&quot;cl&quot;,&quot;ab&quot;]</span><br><span class="line">输出：8</span><br><span class="line">解释：最长回文串是 &quot;ty&quot; + &quot;lc&quot; + &quot;cl&quot; + &quot;yt&quot; = &quot;tylcclyt&quot; ，长度为 8 。</span><br><span class="line">&quot;lcyttycl&quot; 是另一个可以得到的最长回文串。</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 3：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入：words = [&quot;cc&quot;,&quot;ll&quot;,&quot;xx&quot;]</span><br><span class="line">输出：2</span><br><span class="line">解释：最长回文串是 &quot;cc&quot; ，长度为 2 。</span><br><span class="line">&quot;ll&quot; 是另一个可以得到的最长回文串。&quot;xx&quot; 也是。</span><br></pre></td></tr></table></figure>
 
 <p><strong>提示：</strong></p>
 <ul>
-<li>1 &lt;&#x3D; tasks.length &lt;&#x3D; 10<sup>5</sup></li>
-<li>1 &lt;&#x3D; tasks[i] &lt;&#x3D; 10<sup>9</sup></li>
-<li><code>1 &lt;= space &lt;= tasks.length</code></li>
+<li>1 &lt;&#x3D; words.length &lt;&#x3D; 10<sup>5</sup></li>
+<li><code>words[i].length == 2</code></li>
+<li><code>words[i]</code> 仅包含小写英文字母。</li>
 </ul>
 <h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">long</span> <span class="type">long</span> <span class="title">taskSchedulerII</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; tasks, <span class="type">int</span> space)</span> </span>&#123;</span><br><span class="line">        <span class="type">long</span> <span class="type">long</span> res = <span class="number">0</span>;</span><br><span class="line">        map&lt;<span class="type">int</span>, <span class="type">long</span> <span class="type">long</span>&gt; costTime;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> t : tasks) &#123;</span><br><span class="line">            <span class="keyword">if</span> (costTime.<span class="built_in">find</span>(t) == costTime.<span class="built_in">end</span>()) &#123;</span><br><span class="line">                res++;</span><br><span class="line">                costTime[t] = res + space;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">if</span> (costTime[t] &gt; res) &#123;</span><br><span class="line">                    res = costTime[t];</span><br><span class="line">                    res++;</span><br><span class="line">                    costTime[t] = res + space;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    res++;</span><br><span class="line">                    costTime[t] = res + space;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/03/LeetCode-75-%E9%A2%9C%E8%89%B2%E5%88%86%E7%B1%BB/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="👽">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="😎😴🤯">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 😎😴🤯">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/10/03/LeetCode-75-%E9%A2%9C%E8%89%B2%E5%88%86%E7%B1%BB/" class="post-title-link" itemprop="url">LeetCode 75. 颜色分类</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2022-10-03 16:43:34 / Modified: 16:46:21" itemprop="dateCreated datePublished" datetime="2022-10-03T16:43:34+08:00">2022-10-03</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="75-颜色分类"><a href="#75-颜色分类" class="headerlink" title="75. 颜色分类"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/sort-colors/">75. 颜色分类</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
-<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/array/">数组</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/two-pointers/">双指针</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/sorting/">排序</a></p>
-<p>给定一个包含红色、白色和蓝色、共 <code>n</code>个元素的数组 <code>nums</code> ，**<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95">原地</a>**对它们进行排序，使得相同颜色的元素相邻，并按照红色、白色、蓝色顺序排列。</p>
-<p>我们使用整数 <code>0</code>、 <code>1</code> 和 <code>2</code> 分别表示红色、白色和蓝色。</p>
-<p>必须在不使用库的sort函数的情况下解决这个问题。</p>
-<p><strong>示例 1：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：nums = [2,0,2,1,1,0]</span><br><span class="line">输出：[0,0,1,1,2,2]</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 2：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：nums = [2,0,1]</span><br><span class="line">输出：[0,1,2]</span><br></pre></td></tr></table></figure>
-
-<p><strong>提示：</strong></p>
-<ul>
-<li><code>n == nums.length</code></li>
-<li><code>1 &lt;= n &lt;= 300</code></li>
-<li><code>nums[i]</code> 为 <code>0</code>、<code>1</code> 或 <code>2</code></li>
-</ul>
-<p><strong>进阶：</strong></p>
-<ul>
-<li>你可以不使用代码库中的排序函数来解决这道题吗？</li>
-<li>你能想出一个仅使用常数空间的一趟扫描算法吗？</li>
-</ul>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
-<p>根据限制要求，使用一次遍历以及常数的时间复杂度和空间复杂度，用指针记录从前往后遍历的位置，如果当前位置为红色，则如果有在之前的白色，交换二者，如果当前位置为白色，则如果之前没有白色的则记录当前白色位置，否则无需操作，如果当前位置为蓝色，则与需要被交换的蓝色位置进行交换，再判断即可</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">sortColors</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> blue = nums.<span class="built_in">size</span>() - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (blue &gt;= <span class="number">0</span> &amp;&amp; nums[blue] == <span class="number">2</span>) &#123;</span><br><span class="line">            blue--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> red = <span class="number">0</span>, white = <span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">while</span> (red &lt;= blue) &#123;</span><br><span class="line">            <span class="comment">// cout &lt;&lt; &quot;nums: &quot;;</span></span><br><span class="line">            <span class="comment">// for (int n : nums) &#123;</span></span><br><span class="line">            <span class="comment">//     cout &lt;&lt; n &lt;&lt; &quot; &quot;;</span></span><br><span class="line">            <span class="comment">// &#125;</span></span><br><span class="line">            <span class="comment">// cout &lt;&lt; endl;</span></span><br><span class="line">            <span class="comment">// cout &lt;&lt; red &lt;&lt; &quot; &quot; &lt;&lt; blue &lt;&lt; endl;</span></span><br><span class="line">            <span class="keyword">switch</span> (nums[red]) &#123;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">0</span>:</span><br><span class="line">                    <span class="comment">// cout &lt;&lt; &quot;case 0 called&quot; &lt;&lt; endl;</span></span><br><span class="line">                    <span class="keyword">if</span> (white != <span class="number">-1</span>) &#123;</span><br><span class="line">                        nums[white] = <span class="number">0</span>;</span><br><span class="line">                        nums[red] = <span class="number">1</span>;</span><br><span class="line">                        <span class="keyword">for</span> ( ; white &lt;= red &amp;&amp; nums[white] != <span class="number">1</span>; white++) &#123; &#125;</span><br><span class="line">                        red++;</span><br><span class="line">                    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                        red++;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">                    <span class="comment">// cout &lt;&lt; &quot;case 1 called&quot; &lt;&lt; endl;</span></span><br><span class="line">                    <span class="keyword">if</span> (white == <span class="number">-1</span>) &#123;</span><br><span class="line">                        white = red;</span><br><span class="line">                        red++;</span><br><span class="line">                    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                        red++;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">                    <span class="comment">// cout &lt;&lt; &quot;case 2 called&quot; &lt;&lt; endl;</span></span><br><span class="line">                    nums[red] = nums[blue];</span><br><span class="line">                    nums[blue] = <span class="number">2</span>;</span><br><span class="line">                    <span class="keyword">while</span> (blue &gt;= <span class="number">0</span> &amp;&amp; nums[blue] == <span class="number">2</span>) &#123;</span><br><span class="line">                        blue--;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    map&lt;string, <span class="type">int</span>&gt; findSet;</span><br><span class="line">    <span class="type">int</span> res = <span class="number">0</span>, isSame = <span class="number">0</span>;</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">longestPalindrome</span><span class="params">(vector&lt;string&gt;&amp; words)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (string s : words) &#123;</span><br><span class="line">            string reverseS = s;</span><br><span class="line">            <span class="built_in">reverse</span>(reverseS.<span class="built_in">begin</span>(), reverseS.<span class="built_in">end</span>());</span><br><span class="line">            <span class="keyword">if</span> (findSet.<span class="built_in">find</span>(reverseS) != findSet.<span class="built_in">end</span>()) &#123;</span><br><span class="line">                <span class="keyword">if</span> (findSet[reverseS] &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                    findSet[reverseS]--;</span><br><span class="line">                    res += <span class="number">4</span>;</span><br><span class="line">                    isSame -= reverseS == s ? <span class="number">1</span> : <span class="number">0</span>;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    isSame += reverseS == s ? <span class="number">1</span> : <span class="number">0</span>;</span><br><span class="line">                    findSet[s] += <span class="number">1</span>;    </span><br><span class="line">                &#125;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                isSame += reverseS == s ? <span class="number">1</span> : <span class="number">0</span>;</span><br><span class="line">                findSet[s] += <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        res += isSame &gt; <span class="number">0</span> ? <span class="number">2</span> : <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -712,7 +685,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/">21</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 </div>

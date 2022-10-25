@@ -152,7 +152,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">102</span>
+          <span class="site-state-item-count">110</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -163,7 +163,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">44</span>
+        <span class="site-state-item-count">45</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -201,7 +201,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/11/%E5%89%91%E6%8C%87-Offer-II-038-%E6%AF%8F%E6%97%A5%E6%B8%A9%E5%BA%A6/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/13/%E5%89%91%E6%8C%87-Offer-II-085-%E7%94%9F%E6%88%90%E5%8C%B9%E9%85%8D%E7%9A%84%E6%8B%AC%E5%8F%B7/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -219,7 +219,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/09/11/%E5%89%91%E6%8C%87-Offer-II-038-%E6%AF%8F%E6%97%A5%E6%B8%A9%E5%BA%A6/" class="post-title-link" itemprop="url">剑指 Offer II 038. 每日温度</a>
+          <a href="/2022/09/13/%E5%89%91%E6%8C%87-Offer-II-085-%E7%94%9F%E6%88%90%E5%8C%B9%E9%85%8D%E7%9A%84%E6%8B%AC%E5%8F%B7/" class="post-title-link" itemprop="url">剑指 Offer II 085. 生成匹配的括号</a>
         </h2>
 
         <div class="post-meta-container">
@@ -230,7 +230,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2022-09-11 17:48:12" itemprop="dateCreated datePublished" datetime="2022-09-11T17:48:12+08:00">2022-09-11</time>
+      <time title="Created: 2022-09-13 15:04:58" itemprop="dateCreated datePublished" datetime="2022-09-13T15:04:58+08:00">2022-09-13</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -259,127 +259,22 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="剑指-Offer-II-038-每日温度"><a href="#剑指-Offer-II-038-每日温度" class="headerlink" title="剑指 Offer II 038. 每日温度"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/iIQa4I/">剑指 Offer II 038. 每日温度</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
-<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/stack/">栈</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/array/">数组</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/monotonic-stack/">单调栈</a></p>
-<p>请根据每日 <code>气温</code> 列表 <code>temperatures</code> ，重新生成一个列表，要求其对应位置的输出为：要想观测到更高的气温，至少需要等待的天数。如果气温在这之后都不会升高，请在该位置用 <code>0</code> 来代替。</p>
-<p><strong>示例 1:</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: temperatures = [73,74,75,71,69,72,76,73]</span><br><span class="line">输出: [1,1,4,2,1,1,0,0]</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 2:</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: temperatures = [30,40,50,60]</span><br><span class="line">输出: [1,1,1,0]</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 3:</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: temperatures = [30,60,90]</span><br><span class="line">输出: [1,1,0]</span><br></pre></td></tr></table></figure>
-
-<p><strong>提示：</strong></p>
-<ul>
-<li>1 &lt;&#x3D; temperatures.length &lt;&#x3D; 10<sup>5</sup></li>
-<li><code>30 &lt;= temperatures[i] &lt;= 100</code></li>
-</ul>
-<p>注意：本题与主站 739 题相同： <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/daily-temperatures/">https://leetcode-cn.com/problems/daily-temperatures/</a></p>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">dailyTemperatures</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; temperatures)</span> </span>&#123;</span><br><span class="line">        stack&lt;pair&lt;<span class="type">int</span>,<span class="type">int</span>&gt;&gt; tmp;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; res;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = temperatures.<span class="built_in">size</span>() - <span class="number">1</span>;i &gt;= <span class="number">0</span>;i--) &#123;</span><br><span class="line">            <span class="keyword">while</span> (tmp.<span class="built_in">size</span>() != <span class="number">0</span> &amp;&amp; temperatures[i] &gt;= tmp.<span class="built_in">top</span>().first) &#123;</span><br><span class="line">                tmp.<span class="built_in">pop</span>();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (tmp.<span class="built_in">size</span>() == <span class="number">0</span>) &#123;</span><br><span class="line">                res.<span class="built_in">push_back</span>(<span class="number">0</span>);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                res.<span class="built_in">push_back</span>(tmp.<span class="built_in">top</span>().second - i);</span><br><span class="line">            &#125;</span><br><span class="line">            tmp.<span class="built_in">push</span>(<span class="built_in">make_pair</span>(temperatures[i],i));</span><br><span class="line">        &#125;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; reverse;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = res.<span class="built_in">size</span>() - <span class="number">1</span>;i &gt;= <span class="number">0</span>;i--) &#123;</span><br><span class="line">            reverse.<span class="built_in">push_back</span>(res[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> reverse;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/11/%E5%89%91%E6%8C%87-Offer-II-014-%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E5%8F%98%E4%BD%8D%E8%AF%8D/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="👽">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="😎😴🤯">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 😎😴🤯">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/09/11/%E5%89%91%E6%8C%87-Offer-II-014-%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E5%8F%98%E4%BD%8D%E8%AF%8D/" class="post-title-link" itemprop="url">剑指 Offer II 014. 字符串中的变位词</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-09-11 16:32:01" itemprop="dateCreated datePublished" datetime="2022-09-11T16:32:01+08:00">2022-09-11</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-09-20 20:17:33" itemprop="dateModified" datetime="2022-09-20T20:17:33+08:00">2022-09-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%89%91%E6%8C%87-Offer-II/" itemprop="url" rel="index"><span itemprop="name">剑指 Offer II</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="剑指-Offer-II-014-字符串中的变位词"><a href="#剑指-Offer-II-014-字符串中的变位词" class="headerlink" title="剑指 Offer II 014. 字符串中的变位词"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/MPnaiL/">剑指 Offer II 014. 字符串中的变位词</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
-<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/hash-table/">哈希表</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/two-pointers/">双指针</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/string/">字符串</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/sliding-window/">滑动窗口</a></p>
-<p>给定两个字符串 <code>s1</code> 和 <code>s2</code>，写一个函数来判断 <code>s2</code> 是否包含 <code>s1</code>的某个变位词。</p>
-<p>换句话说，第一个字符串的排列之一是第二个字符串的 <strong>子串</strong> 。</p>
+          <h1 id="剑指-Offer-II-085-生成匹配的括号"><a href="#剑指-Offer-II-085-生成匹配的括号" class="headerlink" title="剑指 Offer II 085. 生成匹配的括号"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/IDBivT/">剑指 Offer II 085. 生成匹配的括号</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
+<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/string/">字符串</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/dynamic-programming/">动态规划</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/backtracking/">回溯</a></p>
+<p>正整数 <code>n</code> 代表生成括号的对数，请设计一个函数，用于能够生成所有可能的并且 <strong>有效的</strong> 括号组合。</p>
 <p><strong>示例 1：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: s1 = &quot;ab&quot; s2 = &quot;eidbaooo&quot;</span><br><span class="line">输出: True</span><br><span class="line">解释: s2 包含 s1 的排列之一 (&quot;ba&quot;).</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：n = 3</span><br><span class="line">输出：[&quot;((()))&quot;,&quot;(()())&quot;,&quot;(())()&quot;,&quot;()(())&quot;,&quot;()()()&quot;]</span><br></pre></td></tr></table></figure>
 
 <p><strong>示例 2：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: s1= &quot;ab&quot; s2 = &quot;eidboaoo&quot;</span><br><span class="line">输出: False</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：n = 1</span><br><span class="line">输出：[&quot;()&quot;]</span><br></pre></td></tr></table></figure>
 
 <p><strong>提示：</strong></p>
 <ul>
-<li>1 &lt;&#x3D; s1.length, s2.length &lt;&#x3D; 10<sup>4</sup></li>
-<li><code>s1</code> 和 <code>s2</code> 仅包含小写字母</li>
+<li><code>1 &lt;= n &lt;= 8</code></li>
 </ul>
-<p>注意：本题与主站 567 题相同： <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/permutation-in-string/">https://leetcode-cn.com/problems/permutation-in-string/</a></p>
+<p>注意：本题与主站 22 题相同： <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/generate-parentheses/">https://leetcode-cn.com/problems/generate-parentheses/</a></p>
 <h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="type">int</span> tar[<span class="number">26</span>];</span><br><span class="line">    <span class="type">int</span> src[<span class="number">26</span>];</span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">isEqual</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; <span class="number">26</span>;i++) &#123;</span><br><span class="line">            <span class="keyword">if</span>(tar[i] != src[i]) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">checkInclusion</span><span class="params">(string s1, string s2)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (s1.<span class="built_in">length</span>() &gt; s2.<span class="built_in">length</span>()) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; s1.<span class="built_in">length</span>();i++) &#123;</span><br><span class="line">            src[s1[i] - <span class="string">&#x27;a&#x27;</span>]++;</span><br><span class="line">            tar[s2[i] - <span class="string">&#x27;a&#x27;</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> start = <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> end = s1.<span class="built_in">length</span>();</span><br><span class="line">        <span class="keyword">while</span> (end &lt; s2.<span class="built_in">length</span>()) &#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="built_in">isEqual</span>()) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            tar[s2[start++] - <span class="string">&#x27;a&#x27;</span>]--;</span><br><span class="line">            tar[s2[end++] - <span class="string">&#x27;a&#x27;</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">isEqual</span>()) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    vector&lt;string&gt; res;</span><br><span class="line">    <span class="type">int</span> N;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">DFS</span><span class="params">(<span class="type">int</span> left, <span class="type">int</span> right, string now)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (left &lt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (now.<span class="built_in">length</span>() == N) &#123;</span><br><span class="line">            res.<span class="built_in">push_back</span>(now);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (left &lt; right) &#123;</span><br><span class="line">            <span class="built_in">DFS</span>(left,right - <span class="number">1</span>, now + <span class="string">&quot;)&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">DFS</span>(left - <span class="number">1</span>, right, now + <span class="string">&quot;(&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function">vector&lt;string&gt; <span class="title">generateParenthesis</span><span class="params">(<span class="type">int</span> n)</span> </span>&#123;</span><br><span class="line">        N = n * <span class="number">2</span>;</span><br><span class="line">        <span class="built_in">DFS</span>(n,n,<span class="string">&quot;&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -405,7 +300,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/11/%E5%89%91%E6%8C%87-Offer-II-003-%E5%89%8D-n-%E4%B8%AA%E6%95%B0%E5%AD%97%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%B8%AD-1-%E7%9A%84%E4%B8%AA%E6%95%B0/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/13/%E5%89%91%E6%8C%87-Offer-II-100-%E4%B8%89%E8%A7%92%E5%BD%A2%E4%B8%AD%E6%9C%80%E5%B0%8F%E8%B7%AF%E5%BE%84%E4%B9%8B%E5%92%8C/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -423,7 +318,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/09/11/%E5%89%91%E6%8C%87-Offer-II-003-%E5%89%8D-n-%E4%B8%AA%E6%95%B0%E5%AD%97%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%B8%AD-1-%E7%9A%84%E4%B8%AA%E6%95%B0/" class="post-title-link" itemprop="url">剑指 Offer II 003. 前 n 个数字二进制中 1 的个数</a>
+          <a href="/2022/09/13/%E5%89%91%E6%8C%87-Offer-II-100-%E4%B8%89%E8%A7%92%E5%BD%A2%E4%B8%AD%E6%9C%80%E5%B0%8F%E8%B7%AF%E5%BE%84%E4%B9%8B%E5%92%8C/" class="post-title-link" itemprop="url">剑指 Offer II 100. 三角形中最小路径之和</a>
         </h2>
 
         <div class="post-meta-container">
@@ -433,9 +328,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2022-09-11 16:08:04 / Modified: 16:11:19" itemprop="dateCreated datePublished" datetime="2022-09-11T16:08:04+08:00">2022-09-11</time>
+      <time title="Created: 2022-09-13 14:24:58" itemprop="dateCreated datePublished" datetime="2022-09-13T14:24:58+08:00">2022-09-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-09-15 16:42:43" itemprop="dateModified" datetime="2022-09-15T16:42:43+08:00">2022-09-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -457,28 +358,30 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="剑指-Offer-II-003-前-n-个数字二进制中-1-的个数"><a href="#剑指-Offer-II-003-前-n-个数字二进制中-1-的个数" class="headerlink" title="剑指 Offer II 003. 前 n 个数字二进制中 1 的个数"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/w3tCBm/">剑指 Offer II 003. 前 n 个数字二进制中 1 的个数</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>简单</strong>  </p>
-<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/bit-manipulation/">位运算</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/dynamic-programming/">动态规划</a></p>
-<p>给定一个非负整数 <code>n</code>，请计算 <code>0</code> 到 <code>n</code> 之间的每个数字的二进制表示中 1 的个数，并输出一个数组。</p>
-<p><strong>示例 1:</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">输入: n = 2</span><br><span class="line">输出: [0,1,1]</span><br><span class="line">解释: </span><br><span class="line">0 --&gt; 0</span><br><span class="line">1 --&gt; 1</span><br><span class="line">2 --&gt; 10</span><br></pre></td></tr></table></figure>
+          <h1 id="剑指-Offer-II-100-三角形中最小路径之和"><a href="#剑指-Offer-II-100-三角形中最小路径之和" class="headerlink" title="剑指 Offer II 100. 三角形中最小路径之和"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/IlPe0q/">剑指 Offer II 100. 三角形中最小路径之和</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
+<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/array/">数组</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/dynamic-programming/">动态规划</a></p>
+<p>给定一个三角形 <code>triangle</code> ，找出自顶向下的最小路径和。</p>
+<p>每一步只能移动到下一行中相邻的结点上。<strong>相邻的结点</strong> 在这里指的是 <strong>下标</strong> 与 <strong>上一层结点下标</strong> 相同或者等于 <strong>上一层结点下标 + 1</strong> 的两个结点。也就是说，如果正位于当前行的下标 <code>i</code> ，那么下一步可以移动到下一行的下标 <code>i</code> 或 <code>i + 1</code> 。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">输入：triangle = [[2],[3,4],[6,5,7],[4,1,8,3]]</span><br><span class="line">输出：11</span><br><span class="line">解释：如下面简图所示：</span><br><span class="line">   2</span><br><span class="line">  3 4</span><br><span class="line"> 6 5 7</span><br><span class="line">4 1 8 3</span><br><span class="line">自顶向下的最小路径和为 11（即，2 + 3 + 5 + 1 = 11）。</span><br></pre></td></tr></table></figure>
 
-<p><strong>示例 2:</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">输入: n = 5</span><br><span class="line">输出: [0,1,1,2,1,2]</span><br><span class="line">解释:</span><br><span class="line">0 --&gt; 0</span><br><span class="line">1 --&gt; 1</span><br><span class="line">2 --&gt; 10</span><br><span class="line">3 --&gt; 11</span><br><span class="line">4 --&gt; 100</span><br><span class="line">5 --&gt; 101</span><br></pre></td></tr></table></figure>
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：triangle = [[-10]]</span><br><span class="line">输出：-10</span><br></pre></td></tr></table></figure>
 
-<p><strong>说明 :</strong></p>
+<p><strong>提示：</strong></p>
 <ul>
-<li>0 &lt;&#x3D; n &lt;&#x3D; 10<sup>5</sup></li>
+<li><code>1 &lt;= triangle.length &lt;= 200</code></li>
+<li><code>triangle[0].length == 1</code></li>
+<li><code>triangle[i].length == triangle[i - 1].length + 1</code></li>
+<li>-10<sup>4</sup> &lt;&#x3D; triangle[i][j] &lt;&#x3D; 10<sup>4</sup></li>
 </ul>
-<p><strong>进阶:</strong></p>
+<p><strong>进阶：</strong></p>
 <ul>
-<li>给出时间复杂度为 <code>O(n*sizeof(integer))</code>的解答非常容易。但你可以在线性时间 <code>O(n)</code>内用一趟扫描做到吗？</li>
-<li>要求算法的空间复杂度为 <code>O(n)</code> 。</li>
-<li>你能进一步完善解法吗？要求在C++或任何其他语言中不使用任何内置函数（如 C++ 中的 <code>__builtin_popcount</code>）来执行此操作。</li>
+<li>你可以只使用 <code>O(n)</code> 的额外空间（<code>n</code> 为三角形的总行数）来解决这个问题吗？</li>
 </ul>
-<p>注意：本题与主站 338 题相同：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/counting-bits/">https://leetcode-cn.com/problems/counting-bits/</a></p>
+<p>注意：本题与主站 120 题相同： <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/triangle/">https://leetcode-cn.com/problems/triangle/</a></p>
 <h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">countBits</span><span class="params">(<span class="type">int</span> n)</span> </span>&#123;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; result;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt;= n;i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (i == <span class="number">0</span>) &#123;</span><br><span class="line">                result.<span class="built_in">push_back</span>(<span class="number">0</span>);</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (i % <span class="number">2</span> == <span class="number">0</span>) &#123;</span><br><span class="line">                result.<span class="built_in">push_back</span>(result[i / <span class="number">2</span>]);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                result.<span class="built_in">push_back</span>(result[i / <span class="number">2</span>] + <span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">minimumTotal</span><span class="params">(vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;&amp; triangle)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> level = <span class="number">1</span>;level &lt; triangle.<span class="built_in">size</span>();level++) &#123;</span><br><span class="line">            triangle[level][<span class="number">0</span>] += triangle[level - <span class="number">1</span>][<span class="number">0</span>];</span><br><span class="line">            triangle[level][triangle[level].<span class="built_in">size</span>() - <span class="number">1</span>] += triangle[level - <span class="number">1</span>][triangle[level - <span class="number">1</span>].<span class="built_in">size</span>() - <span class="number">1</span>];</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt; triangle[level].<span class="built_in">size</span>() - <span class="number">1</span>;i++) &#123;</span><br><span class="line">                triangle[level][i] += <span class="built_in">min</span>(triangle[level - <span class="number">1</span>][i - <span class="number">1</span>],triangle[level - <span class="number">1</span>][i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> minPath = triangle[triangle.<span class="built_in">size</span>() - <span class="number">1</span>][<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = triangle[triangle.<span class="built_in">size</span>() - <span class="number">1</span>].<span class="built_in">size</span>() - <span class="number">1</span>;i &gt;= <span class="number">0</span>;i--) &#123;</span><br><span class="line">            minPath = <span class="built_in">min</span>(minPath,triangle[triangle.<span class="built_in">size</span>() - <span class="number">1</span>][i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> minPath;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -504,7 +407,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/11/Linux-chsh-%E5%91%BD%E4%BB%A4/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/13/%E5%89%91%E6%8C%87-Offer-II-047-%E4%BA%8C%E5%8F%89%E6%A0%91%E5%89%AA%E6%9E%9D/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -522,7 +425,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/09/11/Linux-chsh-%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">Linux chsh 命令</a>
+          <a href="/2022/09/13/%E5%89%91%E6%8C%87-Offer-II-047-%E4%BA%8C%E5%8F%89%E6%A0%91%E5%89%AA%E6%9E%9D/" class="post-title-link" itemprop="url">剑指 Offer II 047. 二叉树剪枝</a>
         </h2>
 
         <div class="post-meta-container">
@@ -533,14 +436,14 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2022-09-11 14:31:19" itemprop="dateCreated datePublished" datetime="2022-09-11T14:31:19+08:00">2022-09-11</time>
+      <time title="Created: 2022-09-13 14:09:28" itemprop="dateCreated datePublished" datetime="2022-09-13T14:09:28+08:00">2022-09-13</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-09-20 15:56:52" itemprop="dateModified" datetime="2022-09-20T15:56:52+08:00">2022-09-20</time>
+      <time title="Modified: 2022-09-20 20:11:52" itemprop="dateModified" datetime="2022-09-20T20:11:52+08:00">2022-09-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -548,7 +451,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Linux-%E5%91%BD%E4%BB%A4/" itemprop="url" rel="index"><span itemprop="name">Linux 命令</span></a>
+          <a href="/categories/%E5%89%91%E6%8C%87-Offer-II/" itemprop="url" rel="index"><span itemprop="name">剑指 Offer II</span></a>
         </span>
     </span>
 
@@ -562,9 +465,27 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>Linux chsh 命令用于更换用户shell</p>
-<p>在<code>/etc/shells</code>文件中存储了可使用的shell信息，可以在查看后再进行选择修改</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">- 修改当前用户的shell:</span><br><span class="line">  chsh</span><br><span class="line"></span><br><span class="line">- Change the login shell of the current user:</span><br><span class="line">  chsh -s &#123;&#123;path/to/shell&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Change the login shell for a given user:</span><br><span class="line">  chsh -s &#123;&#123;path/to/shell&#125;&#125; &#123;&#123;username&#125;&#125;</span><br><span class="line"></span><br><span class="line">- List available shells:</span><br><span class="line">  chsh --list-shells</span><br></pre></td></tr></table></figure>
+          <h1 id="剑指-Offer-II-047-二叉树剪枝"><a href="#剑指-Offer-II-047-二叉树剪枝" class="headerlink" title="剑指 Offer II 047. 二叉树剪枝"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/pOCWxh/">剑指 Offer II 047. 二叉树剪枝</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
+<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/tree/">树</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/depth-first-search/">深度优先搜索</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/binary-tree/">二叉树</a></p>
+<p>给定一个二叉树 <strong>根节点</strong> <code>root</code> ，树的每个节点的值要么是 <code>0</code>，要么是 <code>1</code>。请剪除该二叉树中所有节点的值为 <code>0</code> 的子树。</p>
+<p>节点 <code>node</code> 的子树为 <code>node</code> 本身，以及所有 <code>node</code> 的后代。</p>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">输入: [1,null,0,0,1]</span><br><span class="line">输出: [1,null,0,null,1] </span><br><span class="line">解释: </span><br><span class="line">只有红色节点满足条件“所有不包含 1 的子树”。</span><br><span class="line">右图为返回的答案。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入: [1,0,1,0,0,0,1]</span><br><span class="line">输出: [1,null,1,null,1]</span><br><span class="line">解释: </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 3:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入: [1,1,0,1,1,0,1,0]</span><br><span class="line">输出: [1,1,0,1,1,null,1]</span><br><span class="line">解释: </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>提示:</strong></p>
+<ul>
+<li>二叉树的节点个数的范围是 <code>[1,200]</code></li>
+<li>二叉树节点的值只会是 <code>0</code> 或 <code>1</code></li>
+</ul>
+<p>注意：本题与主站 814 题相同：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/binary-tree-pruning/">https://leetcode-cn.com/problems/binary-tree-pruning/</a></p>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * struct TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode *left;</span></span><br><span class="line"><span class="comment"> *     TreeNode *right;</span></span><br><span class="line"><span class="comment"> *     TreeNode() : val(0), left(nullptr), right(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">DFS</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">nullptr</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">bool</span> leftRes = <span class="built_in">DFS</span>(root -&gt; left);</span><br><span class="line">        <span class="type">bool</span> rightRes = <span class="built_in">DFS</span>(root -&gt; right);</span><br><span class="line">        <span class="keyword">if</span> (leftRes) &#123;</span><br><span class="line">            root -&gt; left = <span class="literal">nullptr</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (rightRes) &#123;</span><br><span class="line">            root -&gt; right = <span class="literal">nullptr</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (leftRes &amp;&amp; rightRes &amp;&amp; root -&gt; val == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function">TreeNode* <span class="title">pruneTree</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">DFS</span>(root)) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">nullptr</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> root;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -590,7 +511,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/11/Linux-find-%E5%91%BD%E4%BB%A4/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/13/%E5%89%91%E6%8C%87-Offer-II-046-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%8F%B3%E4%BE%A7%E8%A7%86%E5%9B%BE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -608,7 +529,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/09/11/Linux-find-%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">Linux find 命令</a>
+          <a href="/2022/09/13/%E5%89%91%E6%8C%87-Offer-II-046-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%8F%B3%E4%BE%A7%E8%A7%86%E5%9B%BE/" class="post-title-link" itemprop="url">剑指 Offer II 046. 二叉树的右侧视图</a>
         </h2>
 
         <div class="post-meta-container">
@@ -619,14 +540,14 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2022-09-11 13:42:16" itemprop="dateCreated datePublished" datetime="2022-09-11T13:42:16+08:00">2022-09-11</time>
+      <time title="Created: 2022-09-13 13:48:48" itemprop="dateCreated datePublished" datetime="2022-09-13T13:48:48+08:00">2022-09-13</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-09-20 15:56:52" itemprop="dateModified" datetime="2022-09-20T15:56:52+08:00">2022-09-20</time>
+      <time title="Modified: 2022-09-20 20:11:10" itemprop="dateModified" datetime="2022-09-20T20:11:10+08:00">2022-09-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -634,7 +555,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Linux-%E5%91%BD%E4%BB%A4/" itemprop="url" rel="index"><span itemprop="name">Linux 命令</span></a>
+          <a href="/categories/%E5%89%91%E6%8C%87-Offer-II/" itemprop="url" rel="index"><span itemprop="name">剑指 Offer II</span></a>
         </span>
     </span>
 
@@ -648,8 +569,132 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>Linux find 命令用于查找文件或目录</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">- 通过表达式查找文件:</span><br><span class="line">  find &#123;&#123;root_path&#125;&#125; -name &#x27;&#123;&#123;*.ext&#125;&#125;&#x27;</span><br><span class="line"></span><br><span class="line">- 通过路径或文件名查找文件:</span><br><span class="line">  find &#123;&#123;root_path&#125;&#125; -path &#x27;&#123;&#123;**/path/**/*.ext&#125;&#125;&#x27; -or -name &#x27;&#123;&#123;*pattern*&#125;&#125;&#x27;</span><br><span class="line"></span><br><span class="line">- Find directories matching a given name, in case-insensitive mode:</span><br><span class="line">  find &#123;&#123;root_path&#125;&#125; -type d -iname &#x27;&#123;&#123;*lib*&#125;&#125;&#x27;</span><br><span class="line"></span><br><span class="line">- Find files matching a given pattern, excluding specific paths:</span><br><span class="line">  find &#123;&#123;root_path&#125;&#125; -name &#x27;&#123;&#123;*.py&#125;&#125;&#x27; -not -path &#x27;&#123;&#123;*/site-packages/*&#125;&#125;&#x27;</span><br><span class="line"></span><br><span class="line">- Find files matching a given size range:</span><br><span class="line">  find &#123;&#123;root_path&#125;&#125; -size &#123;&#123;+500k&#125;&#125; -size &#123;&#123;-10M&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Run a command for each file (use &#123;&#125; within the command to access the filename):</span><br><span class="line">  find &#123;&#123;root_path&#125;&#125; -name &#x27;&#123;&#123;*.ext&#125;&#125;&#x27; -exec &#123;&#123;wc -l &#123;&#125; &#125;&#125;\;</span><br><span class="line"></span><br><span class="line">- Find files modified in the last 7 days and delete them:</span><br><span class="line">  find &#123;&#123;root_path&#125;&#125; -daystart -mtime -&#123;&#123;7&#125;&#125; -delete</span><br><span class="line"></span><br><span class="line">- Find empty (0 byte) files and delete them:</span><br><span class="line">  find &#123;&#123;root_path&#125;&#125; -type &#123;&#123;f&#125;&#125; -empty -delete</span><br></pre></td></tr></table></figure>
+          <h1 id="剑指-Offer-II-046-二叉树的右侧视图"><a href="#剑指-Offer-II-046-二叉树的右侧视图" class="headerlink" title="剑指 Offer II 046. 二叉树的右侧视图"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/WNC0Lk/">剑指 Offer II 046. 二叉树的右侧视图</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
+<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/tree/">树</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/depth-first-search/">深度优先搜索</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/breadth-first-search/">广度优先搜索</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/binary-tree/">二叉树</a></p>
+<p>给定一个二叉树的 <strong>根节点</strong> <code>root</code>，想象自己站在它的右侧，按照从顶部到底部的顺序，返回从右侧所能看到的节点值。</p>
+<p><strong>示例 1:</strong></p>
+<p><img src="https://assets.leetcode.com/uploads/2021/02/14/tree.jpg"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: [1,2,3,null,5,null,4]</span><br><span class="line">输出: [1,3,4]</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: [1,null,3]</span><br><span class="line">输出: [1,3]</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 3:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: []</span><br><span class="line">输出: []</span><br></pre></td></tr></table></figure>
+
+<p><strong>提示:</strong></p>
+<ul>
+<li>二叉树的节点个数的范围是 <code>[0,100]</code></li>
+<li><code>-100 &lt;= Node.val &lt;= 100</code></li>
+</ul>
+<p> </p>
+<p>注意：本题与主站 199 题相同：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/binary-tree-right-side-view/">https://leetcode-cn.com/problems/binary-tree-right-side-view/</a></p>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * struct TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode *left;</span></span><br><span class="line"><span class="comment"> *     TreeNode *right;</span></span><br><span class="line"><span class="comment"> *     TreeNode() : val(0), left(nullptr), right(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">// 层序遍历 用队列</span></span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; res;</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">rightSideView</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        queue&lt;TreeNode*&gt; tmp;</span><br><span class="line">        tmp.<span class="built_in">push</span>(root);</span><br><span class="line">        <span class="keyword">while</span> (tmp.<span class="built_in">size</span>() != <span class="number">0</span> &amp;&amp; root != <span class="literal">nullptr</span>) &#123;</span><br><span class="line">            <span class="type">int</span> num = tmp.<span class="built_in">size</span>();</span><br><span class="line">            <span class="keyword">while</span> (num) &#123;</span><br><span class="line">                TreeNode* topEle = tmp.<span class="built_in">front</span>();</span><br><span class="line">                tmp.<span class="built_in">pop</span>();</span><br><span class="line">                <span class="keyword">if</span> (num == <span class="number">1</span>) &#123;</span><br><span class="line">                    res.<span class="built_in">push_back</span>(topEle -&gt; val);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (topEle -&gt; left != <span class="literal">nullptr</span>) &#123;</span><br><span class="line">                    tmp.<span class="built_in">push</span>(topEle -&gt; left);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (topEle -&gt; right != <span class="literal">nullptr</span>) &#123;</span><br><span class="line">                    tmp.<span class="built_in">push</span>(topEle -&gt; right);</span><br><span class="line">                &#125;</span><br><span class="line">                num--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/13/%E5%89%91%E6%8C%87-Offer-II-050-%E5%90%91%E4%B8%8B%E7%9A%84%E8%B7%AF%E5%BE%84%E8%8A%82%E7%82%B9%E4%B9%8B%E5%92%8C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="👽">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="😎😴🤯">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 😎😴🤯">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/09/13/%E5%89%91%E6%8C%87-Offer-II-050-%E5%90%91%E4%B8%8B%E7%9A%84%E8%B7%AF%E5%BE%84%E8%8A%82%E7%82%B9%E4%B9%8B%E5%92%8C/" class="post-title-link" itemprop="url">剑指 Offer II 050. 向下的路径节点之和</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-09-13 13:40:00" itemprop="dateCreated datePublished" datetime="2022-09-13T13:40:00+08:00">2022-09-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-09-20 20:13:25" itemprop="dateModified" datetime="2022-09-20T20:13:25+08:00">2022-09-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%89%91%E6%8C%87-Offer-II/" itemprop="url" rel="index"><span itemprop="name">剑指 Offer II</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="剑指-Offer-II-050-向下的路径节点之和"><a href="#剑指-Offer-II-050-向下的路径节点之和" class="headerlink" title="剑指 Offer II 050. 向下的路径节点之和"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/6eUYwP/">剑指 Offer II 050. 向下的路径节点之和</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
+<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/tree/">树</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/depth-first-search/">深度优先搜索</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/binary-tree/">二叉树</a></p>
+<p>给定一个二叉树的根节点 <code>root</code> ，和一个整数 <code>targetSum</code> ，求该二叉树里节点值之和等于 <code>targetSum</code> 的 <strong>路径</strong> 的数目。</p>
+<p><strong>路径</strong> 不需要从根节点开始，也不需要在叶子节点结束，但是路径方向必须是向下的（只能从父节点到子节点）。</p>
+<p><strong>示例 1：</strong></p>
+<p><img src="https://assets.leetcode.com/uploads/2021/04/09/pathsum3-1-tree.jpg"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：root = [10,5,-3,3,2,null,11,3,-2,null,1], targetSum = 8</span><br><span class="line">输出：3</span><br><span class="line">解释：和等于 8 的路径有 3 条，如图所示。</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：root = [5,4,8,11,null,13,4,7,2,null,null,5,1], targetSum = 22</span><br><span class="line">输出：3</span><br></pre></td></tr></table></figure>
+
+<p><strong>提示:</strong></p>
+<ul>
+<li>二叉树的节点个数的范围是 <code>[0,1000]</code></li>
+<li>-10<sup><span style="font-size: 9.449999809265137px;">9</span></sup> &lt;&#x3D; Node.val &lt;&#x3D; 10<sup><span style="font-size: 9.449999809265137px;">9</span></sup> </li>
+<li><code>-1000 &lt;= targetSum &lt;= 1000</code></li>
+</ul>
+<p> </p>
+<p>注意：本题与主站 437 题相同：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/path-sum-iii/">https://leetcode-cn.com/problems/path-sum-iii/</a></p>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="type">int</span> count = <span class="number">0</span>;</span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> target = target;</span><br><span class="line">    <span class="function">vector&lt;<span class="type">long</span> <span class="type">long</span>&gt; <span class="title">DFS</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        vector&lt;<span class="type">long</span> <span class="type">long</span>&gt; res;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">nullptr</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> res;</span><br><span class="line">        &#125;</span><br><span class="line">        vector&lt;<span class="type">long</span> <span class="type">long</span>&gt; leftRes = <span class="built_in">DFS</span>(root -&gt; left);</span><br><span class="line">        vector&lt;<span class="type">long</span> <span class="type">long</span>&gt; rightRes = <span class="built_in">DFS</span>(root -&gt; right);</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; leftRes.<span class="built_in">size</span>();i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (leftRes[i] + root -&gt; val == target) &#123;</span><br><span class="line">                count++;</span><br><span class="line">            &#125;</span><br><span class="line">            res.<span class="built_in">push_back</span>(leftRes[i] + root -&gt; val);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; rightRes.<span class="built_in">size</span>();i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (rightRes[i] + root -&gt; val == target) &#123;</span><br><span class="line">                count++;</span><br><span class="line">            &#125;</span><br><span class="line">            res.<span class="built_in">push_back</span>(rightRes[i] + root -&gt; val);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (root -&gt; val == target) &#123;</span><br><span class="line">            count++;</span><br><span class="line">        &#125;</span><br><span class="line">        res.<span class="built_in">push_back</span>(root -&gt; val);</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">pathSum</span><span class="params">(TreeNode* root, <span class="type">int</span> targetSum)</span> </span>&#123;</span><br><span class="line">        target = targetSum;</span><br><span class="line">        <span class="built_in">DFS</span>(root);</span><br><span class="line">        <span class="keyword">return</span> count;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -668,7 +713,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/19/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><span class="page-number current">20</span><a class="page-number" href="/page/21/">21</a><a class="extend next" rel="next" href="/page/21/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/19/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><span class="page-number current">20</span><a class="page-number" href="/page/21/">21</a><a class="page-number" href="/page/22/">22</a><a class="extend next" rel="next" href="/page/21/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 </div>
