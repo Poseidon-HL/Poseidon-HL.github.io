@@ -152,13 +152,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">110</span>
+          <span class="site-state-item-count">111</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -192,6 +192,91 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/16/Linux-type-%E5%91%BD%E4%BB%A4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="👽">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="😎😴🤯">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 😎😴🤯">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/09/16/Linux-type-%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">Linux type 命令</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-09-16 14:13:19" itemprop="dateCreated datePublished" datetime="2022-09-16T14:13:19+08:00">2022-09-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-09-18 13:54:46" itemprop="dateModified" datetime="2022-09-18T13:54:46+08:00">2022-09-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Linux-%E5%91%BD%E4%BB%A4/" itemprop="url" rel="index"><span itemprop="name">Linux 命令</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>Linux type 命令用于查看shell执行命令的种类</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">- Display the type of a command:</span><br><span class="line">  type &#123;&#123;command&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Display all locations containing the specified executable:</span><br><span class="line">  type -a &#123;&#123;command&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Display the name of the disk file that would be executed:</span><br><span class="line">  type -p &#123;&#123;command&#125;&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -265,21 +350,14 @@
 <p>假设二叉树中至少有一个节点。</p>
 <p><strong>示例 1:</strong></p>
 <p><img src="https://cdn.staticaly.com/gh/Poseidon-HL/image-hosting@master/20220916/tree1.2pjca8hlfoa0.webp" alt="tree1"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: root = [2,1,3]</span><br><span class="line">输出: 1</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 2:</strong></p>
-<p><img src="https://cdn.staticaly.com/gh/Poseidon-HL/image-hosting@master/20220916/tree2.tb23ekbs3hs.webp" alt="tree2"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: [1,2,3,4,null,5,6,null,null,7]</span><br><span class="line">输出: 7</span><br></pre></td></tr></table></figure>
-
-<p><strong>提示:</strong></p>
-<ul>
-<li>二叉树的节点个数的范围是 [1,10<sup>4</sup>]</li>
-<li>-2<sup>31</sup> &lt;&#x3D; Node.val &lt;&#x3D; 2<sup>31</sup> - 1</li>
-</ul>
-<p> </p>
-<p>注意：本题与主站 513 题相同： <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/find-bottom-left-tree-value/">https://leetcode-cn.com/problems/find-bottom-left-tree-value/</a></p>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * struct TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode *left;</span></span><br><span class="line"><span class="comment"> *     TreeNode *right;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x) : val(x), left(NULL), right(NULL) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">Traverse</span><span class="params">(TreeNode* root,<span class="type">int</span> level,<span class="type">int</span> &amp;maxlevel,<span class="type">int</span> &amp;finalData)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(root == <span class="literal">NULL</span>)</span><br><span class="line">            <span class="keyword">return</span> ;</span><br><span class="line">        <span class="keyword">if</span>(level &gt; maxlevel)</span><br><span class="line">        &#123;</span><br><span class="line">            finalData = root -&gt; val;</span><br><span class="line">            maxlevel = level;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">Traverse</span>(root -&gt; left,level + <span class="number">1</span>,maxlevel,finalData);</span><br><span class="line">        <span class="built_in">Traverse</span>(root -&gt; right,level + <span class="number">1</span>,maxlevel,finalData);</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">findBottomLeftValue</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(root == <span class="literal">NULL</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> finalData = root -&gt; val;</span><br><span class="line">        <span class="type">int</span> maxlevel = <span class="number">0</span>;</span><br><span class="line">        <span class="built_in">Traverse</span>(root,<span class="number">0</span>,maxlevel,finalData);</span><br><span class="line">        <span class="keyword">return</span> finalData;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/09/16/%E5%89%91%E6%8C%87-Offer-II-045-%E4%BA%8C%E5%8F%89%E6%A0%91%E6%9C%80%E5%BA%95%E5%B1%82%E6%9C%80%E5%B7%A6%E8%BE%B9%E7%9A%84%E5%80%BC/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -454,29 +532,14 @@
 <p>锁的初始数字为 <code>&#39;0000&#39;</code> ，一个代表四个拨轮的数字的字符串。</p>
 <p>列表 <code>deadends</code> 包含了一组死亡数字，一旦拨轮的数字和列表里的任何一个元素相同，这个锁将会被永久锁定，无法再被旋转。</p>
 <p>字符串 <code>target</code> 代表可以解锁的数字，请给出解锁需要的最小旋转次数，如果无论如何不能解锁，返回 <code>-1</code> 。</p>
-<p><strong>示例 1:</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入：deadends = [&quot;0201&quot;,&quot;0101&quot;,&quot;0102&quot;,&quot;1212&quot;,&quot;2002&quot;], target = &quot;0202&quot;</span><br><span class="line">输出：6</span><br><span class="line">解释：</span><br><span class="line">可能的移动序列为 &quot;0000&quot; -&gt; &quot;1000&quot; -&gt; &quot;1100&quot; -&gt; &quot;1200&quot; -&gt; &quot;1201&quot; -&gt; &quot;1202&quot; -&gt; &quot;0202&quot;。</span><br><span class="line">注意 &quot;0000&quot; -&gt; &quot;0001&quot; -&gt; &quot;0002&quot; -&gt; &quot;0102&quot; -&gt; &quot;0202&quot; 这样的序列是不能解锁的，因为当拨动到 &quot;0102&quot; 时这个锁就会被锁定。</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 2:</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入: deadends = [&quot;8888&quot;], target = &quot;0009&quot;</span><br><span class="line">输出：1</span><br><span class="line">解释：</span><br><span class="line">把最后一位反向旋转一次即可 &quot;0000&quot; -&gt; &quot;0009&quot;。</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 3:</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入: deadends = [&quot;8887&quot;,&quot;8889&quot;,&quot;8878&quot;,&quot;8898&quot;,&quot;8788&quot;,&quot;8988&quot;,&quot;7888&quot;,&quot;9888&quot;], target = &quot;8888&quot;</span><br><span class="line">输出：-1</span><br><span class="line">解释：</span><br><span class="line">无法旋转到目标数字且不被锁定。</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 4:</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: deadends = [&quot;0000&quot;], target = &quot;8888&quot;</span><br><span class="line">输出：-1</span><br></pre></td></tr></table></figure>
-
-<p><strong>提示：</strong></p>
-<ul>
-<li><code>1 &lt;= deadends.length &lt;= 500</code></li>
-<li><code>&lt;font face=&quot;monospace&quot;&gt;deadends[i].length == 4&lt;/font&gt;</code></li>
-<li><code>&lt;font face=&quot;monospace&quot;&gt;target.length == 4&lt;/font&gt;</code></li>
-<li><code>target</code> <strong>不在</strong> <code>deadends</code> 之中</li>
-<li><code>target</code> 和 <code>deadends[i]</code> 仅由若干位数字组成</li>
-</ul>
-<p>注意：本题与主站 752 题相同： <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/open-the-lock/">https://leetcode-cn.com/problems/open-the-lock/</a></p>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">string <span class="title">cal</span><span class="params">(string src, <span class="type">int</span> idx, string op)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (op == <span class="string">&quot;+&quot;</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (src[idx] == <span class="string">&#x27;9&#x27;</span>) &#123;</span><br><span class="line">                src[idx] = <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                src[idx] = <span class="built_in">char</span>(<span class="built_in">int</span>(src[idx]) + <span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (src[idx] == <span class="string">&#x27;0&#x27;</span>) &#123;</span><br><span class="line">                src[idx] = <span class="string">&#x27;9&#x27;</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                src[idx] = <span class="built_in">char</span>(<span class="built_in">int</span>(src[idx]) - <span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> src;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    set&lt;string&gt; visited;</span><br><span class="line">    set&lt;string&gt; booms;</span><br><span class="line">    <span class="type">int</span> count = <span class="number">-1</span>;</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">openLock</span><span class="params">(vector&lt;string&gt;&amp; deadends, string target)</span> </span>&#123;</span><br><span class="line">        queue&lt;string&gt; thisRound;</span><br><span class="line">        <span class="keyword">for</span> (string deadend: deadends) &#123;</span><br><span class="line">            booms.<span class="built_in">insert</span>(deadend);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (booms.<span class="built_in">find</span>(<span class="string">&quot;0000&quot;</span>) != booms.<span class="built_in">end</span>()) &#123;</span><br><span class="line">            <span class="keyword">return</span> count;</span><br><span class="line">        &#125;</span><br><span class="line">        count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span> (target == <span class="string">&quot;0000&quot;</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> count;</span><br><span class="line">        &#125;</span><br><span class="line">        thisRound.<span class="built_in">push</span>(<span class="string">&quot;0000&quot;</span>);</span><br><span class="line">        visited.<span class="built_in">insert</span>(<span class="string">&quot;0000&quot;</span>);</span><br><span class="line">        <span class="keyword">while</span> (thisRound.<span class="built_in">size</span>() != <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="type">int</span> round = thisRound.<span class="built_in">size</span>();</span><br><span class="line">            count++;</span><br><span class="line">            <span class="keyword">while</span> (round &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                string now = thisRound.<span class="built_in">front</span>();</span><br><span class="line">                thisRound.<span class="built_in">pop</span>();</span><br><span class="line">                <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; <span class="number">4</span>;i++) &#123;</span><br><span class="line">                    string addOne = <span class="built_in">cal</span>(now,i,<span class="string">&quot;+&quot;</span>);</span><br><span class="line">                    string subOne = <span class="built_in">cal</span>(now,i,<span class="string">&quot;-&quot;</span>);</span><br><span class="line">                    <span class="keyword">if</span> (booms.<span class="built_in">find</span>(addOne) == booms.<span class="built_in">end</span>() &amp;&amp; visited.<span class="built_in">find</span>(addOne) == visited.<span class="built_in">end</span>()) &#123;</span><br><span class="line">                        <span class="keyword">if</span> (addOne == target) &#123;</span><br><span class="line">                            <span class="keyword">return</span> count;</span><br><span class="line">                        &#125;</span><br><span class="line">                        thisRound.<span class="built_in">push</span>(addOne);</span><br><span class="line">                        visited.<span class="built_in">insert</span>(addOne);</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">if</span> (booms.<span class="built_in">find</span>(subOne) == booms.<span class="built_in">end</span>()  &amp;&amp; visited.<span class="built_in">find</span>(subOne) == visited.<span class="built_in">end</span>()) &#123;</span><br><span class="line">                        <span class="keyword">if</span> (subOne == target) &#123;</span><br><span class="line">                            <span class="keyword">return</span> count;</span><br><span class="line">                        &#125;</span><br><span class="line">                        thisRound.<span class="built_in">push</span>(subOne);</span><br><span class="line">                        visited.<span class="built_in">insert</span>(subOne);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                round--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/09/16/%E5%89%91%E6%8C%87-Offer-II-109-%E5%BC%80%E5%AF%86%E7%A0%81%E9%94%81/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -579,92 +642,8 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/15/%E7%AE%97%E6%B3%95-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%B9%B6%E6%9F%A5%E9%9B%86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="👽">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="😎😴🤯">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 😎😴🤯">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/09/15/%E7%AE%97%E6%B3%95-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%B9%B6%E6%9F%A5%E9%9B%86/" class="post-title-link" itemprop="url">算法&数据结构 并查集</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-09-15 21:40:34" itemprop="dateCreated datePublished" datetime="2022-09-15T21:40:34+08:00">2022-09-15</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-09-18 13:54:46" itemprop="dateModified" datetime="2022-09-18T13:54:46+08:00">2022-09-18</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%AE%97%E6%B3%95-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index"><span itemprop="name">算法&数据结构</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">UFS</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; father;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">findFather</span><span class="params">(<span class="type">int</span> i)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (i == father[i]) &#123;</span><br><span class="line">            <span class="keyword">return</span> i;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            f = <span class="built_in">findFather</span>(father[i]);</span><br><span class="line">            father[i] = f;</span><br><span class="line">            <span class="keyword">return</span> f;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">unionij</span><span class="params">(<span class="type">int</span> i, <span class="type">int</span> j)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> fi = <span class="built_in">findFather</span>(i);</span><br><span class="line">        <span class="type">int</span> fj = <span class="built_in">findFather</span>(j);</span><br><span class="line">        <span class="keyword">if</span> (fi != fj) &#123;</span><br><span class="line">            father[fi] = fj;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/17/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><span class="page-number current">18</span><a class="page-number" href="/page/19/">19</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><a class="extend next" rel="next" href="/page/19/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/17/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><span class="page-number current">18</span><a class="page-number" href="/page/19/">19</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><a class="extend next" rel="next" href="/page/19/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 </div>

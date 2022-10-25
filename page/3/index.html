@@ -152,13 +152,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">110</span>
+          <span class="site-state-item-count">111</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -192,6 +192,97 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/11/LeetCode-1513-%E4%BB%85%E5%90%AB-1-%E7%9A%84%E5%AD%90%E4%B8%B2%E6%95%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="👽">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="😎😴🤯">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 😎😴🤯">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/10/11/LeetCode-1513-%E4%BB%85%E5%90%AB-1-%E7%9A%84%E5%AD%90%E4%B8%B2%E6%95%B0/" class="post-title-link" itemprop="url">LeetCode 1513. 仅含 1 的子串数</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-10-11 20:53:06 / Modified: 20:53:44" itemprop="dateCreated datePublished" datetime="2022-10-11T20:53:06+08:00">2022-10-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="1513-仅含-1-的子串数"><a href="#1513-仅含-1-的子串数" class="headerlink" title="1513. 仅含 1 的子串数"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/number-of-substrings-with-only-1s/">1513. 仅含 1 的子串数</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
+<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/math/">数学</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/string/">字符串</a></p>
+<p>给你一个二进制字符串 <code>s</code>（仅由 ‘0’ 和 ‘1’ 组成的字符串）。</p>
+<p>返回所有字符都为 1 的子字符串的数目。</p>
+<p>由于答案可能很大，请你将它对 10^9 + 7 取模后返回。</p>
+<p><strong>示例 1：</strong></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/10/11/LeetCode-1513-%E4%BB%85%E5%90%AB-1-%E7%9A%84%E5%AD%90%E4%B8%B2%E6%95%B0/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -262,25 +353,14 @@
 <li>不进行任何操作。</li>
 </ul>
 <p>切换 1 个字符的意思是用字母表中该字母的下一个字母替换它（字母表环状接起来，所以 <code>&#39;z&#39;</code> 切换后会变成 <code>&#39;a&#39;</code>）。第 <code>i</code> 次操作意味着该字符应切换 <code>i</code> 次</p>
-<p>请记住任意一个下标 <code>j</code> 最多只能被操作 1 次。</p>
-<p>如果在不超过 <code>k</code> 次操作内可以把字符串 <code>s</code> 转变成 <code>t</code> ，那么请你返回 <code>true</code> ，否则请你返回 <code>false</code> 。</p>
-<p><strong>示例 1：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;input&quot;, t = &quot;ouput&quot;, k = 9</span><br><span class="line">输出：true</span><br><span class="line">解释：第 6 次操作时，我们将 &#x27;i&#x27; 切换 6 次得到 &#x27;o&#x27; 。第 7 次操作时，我们将 &#x27;n&#x27; 切换 7 次得到 &#x27;u&#x27; 。</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 2：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;abc&quot;, t = &quot;bcd&quot;, k = 10</span><br><span class="line">输出：false</span><br><span class="line">解释：我们需要将每个字符切换 1 次才能得到 t 。我们可以在第 1 次操作时将 &#x27;a&#x27; 切换成 &#x27;b&#x27; ，但另外 2 个字母在剩余操作中无法再转变为 t 中对应字母。</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 3：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;aab&quot;, t = &quot;bbb&quot;, k = 27</span><br><span class="line">输出：true</span><br><span class="line">解释：第 1 次操作时，我们将第一个 &#x27;a&#x27; 切换 1 次得到 &#x27;b&#x27; 。在第 27 次操作时，我们将第二个字母 &#x27;a&#x27; 切换 27 次得到 &#x27;b&#x27; 。</span><br></pre></td></tr></table></figure>
-
-<p><strong>提示：</strong></p>
-<ul>
-<li><code>1 &lt;= s.length, t.length &lt;= 10^5</code></li>
-<li><code>0 &lt;= k &lt;= 10^9</code></li>
-<li><code>s</code> 和 <code>t</code> 只包含小写英文字母。</li>
-</ul>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">canConvertString</span><span class="params">(string s, string t, <span class="type">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (s.<span class="built_in">length</span>() != t.<span class="built_in">length</span>()) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        map&lt;<span class="type">int</span>, <span class="type">int</span>&gt; gap;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; s.<span class="built_in">length</span>(); i++) &#123;</span><br><span class="line">            <span class="type">int</span> g = (s[i] &lt;= t[i] ? <span class="built_in">int</span>(t[i] - s[i]) : <span class="built_in">int</span>(t[i] + <span class="number">26</span> - s[i]));</span><br><span class="line">            <span class="keyword">if</span> (g) &#123;</span><br><span class="line">                gap[g]++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">auto</span> it = gap.<span class="built_in">begin</span>(); it != gap.<span class="built_in">end</span>(); it++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="number">26</span> * (it -&gt; second - <span class="number">1</span>) + it -&gt; first &gt; k) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/10/11/LeetCode-1540-K-%E6%AC%A1%E6%93%8D%E4%BD%9C%E8%BD%AC%E5%8F%98%E5%AD%97%E7%AC%A6%E4%B8%B2/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -364,20 +444,14 @@
 <p>对于每两个相邻的 <code>0</code> ，请你将它们之间的所有节点合并成一个节点，其值是所有已合并节点的值之和。然后将所有 <code>0</code> 移除，修改后的链表不应该含有任何 <code>0</code> 。</p>
 <p> 返回修改后链表的头节点 <code>head</code> 。</p>
 <p><strong>示例 1：<br><img src="https://cdn.staticaly.com/gh/Poseidon-HL/image-hosting@master/20221011/ex1-1.1fbw1wwmice8.webp" alt="ex1-1"></strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">输入：head = [0,3,1,0,4,5,2,0]</span><br><span class="line">输出：[4,11]</span><br><span class="line">解释：</span><br><span class="line">上图表示输入的链表。修改后的链表包含：</span><br><span class="line">- 标记为绿色的节点之和：3 + 1 = 4</span><br><span class="line">- 标记为红色的节点之和：4 + 5 + 2 = 11</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 2：<br><img src="https://cdn.staticaly.com/gh/Poseidon-HL/image-hosting@master/20221011/ex2-1.11epibppkfio.webp" alt="ex2-1"></strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">输入：head = [0,1,0,3,0,2,2,0]</span><br><span class="line">输出：[1,3,4]</span><br><span class="line">解释：</span><br><span class="line">上图表示输入的链表。修改后的链表包含：</span><br><span class="line">- 标记为绿色的节点之和：1 = 1</span><br><span class="line">- 标记为红色的节点之和：3 = 3</span><br><span class="line">- 标记为黄色的节点之和：2 + 2 = 4</span><br></pre></td></tr></table></figure>
-
-<p><strong>提示：</strong></p>
-<ul>
-<li>列表中的节点数目在范围 [3, 2 * 10<sup>5</sup>] 内</li>
-<li><code>0 &lt;= Node.val &lt;= 1000</code></li>
-<li><strong>不</strong> 存在连续两个 <code>Node.val == 0</code> 的节点</li>
-<li>链表的 <strong>开端</strong> 和 <strong>末尾</strong> 节点都满足 <code>Node.val == 0</code></li>
-</ul>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode() : val(0), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x, ListNode *next) : val(x), next(next) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">mergeNodes</span><span class="params">(ListNode* head)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> count0 = <span class="number">0</span>, val = <span class="number">0</span>;</span><br><span class="line">        ListNode* helper = <span class="keyword">new</span> <span class="built_in">ListNode</span>(<span class="number">0</span>);</span><br><span class="line">        helper -&gt; next = head;</span><br><span class="line">        ListNode* tra = head;</span><br><span class="line">        ListNode* now = head;</span><br><span class="line">        <span class="keyword">while</span> (tra != <span class="literal">nullptr</span>) &#123;</span><br><span class="line">            val += tra -&gt; val;</span><br><span class="line">            <span class="keyword">if</span> (tra -&gt; val == <span class="number">0</span>) &#123;</span><br><span class="line">                count0++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (count0 == <span class="number">2</span>) &#123;</span><br><span class="line">                count0 = <span class="number">1</span>;</span><br><span class="line">                now -&gt; val = val;</span><br><span class="line">                val = <span class="number">0</span>;</span><br><span class="line">                now = now -&gt; next;</span><br><span class="line">                helper = helper -&gt; next;</span><br><span class="line">            &#125;</span><br><span class="line">            tra = tra -&gt; next;</span><br><span class="line">        &#125;</span><br><span class="line">        helper -&gt; next = <span class="literal">nullptr</span>;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/10/11/LeetCode-2181-%E5%90%88%E5%B9%B6%E9%9B%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E8%8A%82%E7%82%B9/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -464,31 +538,14 @@
 <li>在上、下、左、右任意一个方向上相邻</li>
 </ul>
 <p><strong>连通分量的边界</strong>是指连通分量中满足下述条件之一的所有网格块：</p>
-<ul>
-<li>在上、下、左、右任意一个方向上与不属于同一连通分量的网格块相邻</li>
-<li>在网格的边界上（第一行&#x2F;列或最后一行&#x2F;列）</li>
-</ul>
-<p>请你使用指定颜色 <code>color</code> 为所有包含网格块 <code>grid[row][col]</code> 的 <strong>连通分量的边界</strong> 进行着色，并返回最终的网格 <code>grid</code> 。</p>
-<p><strong>示例 1：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：grid = [[1,1],[1,2]], row = 0, col = 0, color = 3</span><br><span class="line">输出：[[3,3],[3,2]]</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 2：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：grid = [[1,2,2],[2,3,2]], row = 0, col = 1, color = 3</span><br><span class="line">输出：[[1,3,3],[2,3,3]]</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 3：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：grid = [[1,1,1],[1,1,1],[1,1,1]], row = 1, col = 1, color = 2</span><br><span class="line">输出：[[2,2,2],[2,1,2],[2,2,2]]</span><br></pre></td></tr></table></figure>
-
-<p><strong>提示：</strong></p>
-<ul>
-<li><code>m == grid.length</code></li>
-<li><code>n == grid[i].length</code></li>
-<li><code>1 &lt;= m, n &lt;= 50</code></li>
-<li><code>1 &lt;= grid[i][j], color &lt;= 1000</code></li>
-<li><code>0 &lt;= row &lt; m</code></li>
-<li><code>0 &lt;= col &lt; n</code></li>
-</ul>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="type">int</span> indexX[<span class="number">4</span>] = &#123;<span class="number">0</span>, <span class="number">0</span>, <span class="number">-1</span>, <span class="number">1</span>&#125;;</span><br><span class="line">    <span class="type">int</span> indexY[<span class="number">4</span>] = &#123;<span class="number">-1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>&#125;;</span><br><span class="line">    vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; copy;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">isValid</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (x &gt;= <span class="number">0</span> &amp;&amp; x &lt; copy.<span class="built_in">size</span>() &amp;&amp; y &gt;= <span class="number">0</span> &amp;&amp; y &lt; copy[x].<span class="built_in">size</span>());</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">isBoundary</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (x == <span class="number">0</span> || x == copy.<span class="built_in">size</span>() - <span class="number">1</span> || y == <span class="number">0</span> || y == copy[x].<span class="built_in">size</span>() - <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; <span class="built_in">colorBorder</span>(vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;&amp; grid, <span class="type">int</span> row, <span class="type">int</span> col, <span class="type">int</span> color) &#123;</span><br><span class="line">        copy = grid;</span><br><span class="line">        queue&lt;pair&lt;<span class="type">int</span>,<span class="type">int</span>&gt;&gt; tmp;</span><br><span class="line">        <span class="type">int</span> target = grid[row][col];</span><br><span class="line">        vector&lt;vector&lt;<span class="type">bool</span>&gt;&gt; <span class="built_in">visited</span>(grid.<span class="built_in">size</span>(), <span class="built_in">vector</span>&lt;<span class="type">bool</span>&gt; (grid[<span class="number">0</span>].<span class="built_in">size</span>()));</span><br><span class="line">        visited[row][col] = <span class="literal">true</span>;</span><br><span class="line">        tmp.<span class="built_in">push</span>(<span class="built_in">make_pair</span>(row, col));</span><br><span class="line">        <span class="keyword">while</span> (tmp.<span class="built_in">size</span>()) &#123;</span><br><span class="line">            pair&lt;<span class="type">int</span>,<span class="type">int</span>&gt; frontEle = tmp.<span class="built_in">front</span>();</span><br><span class="line">            <span class="type">bool</span> isBound = <span class="literal">false</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; <span class="number">4</span>;i++) &#123;</span><br><span class="line">                <span class="type">int</span> newX = frontEle.first + indexX[i], newY = frontEle.second + indexY[i];</span><br><span class="line">                <span class="keyword">if</span> (<span class="built_in">isValid</span>(newX, newY) &amp;&amp; !visited[newX][newY] &amp;&amp; copy[newX][newY] == target) &#123;</span><br><span class="line">                    visited[newX][newY] = <span class="literal">true</span>;</span><br><span class="line">                    tmp.<span class="built_in">push</span>(<span class="built_in">make_pair</span>(newX, newY));</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (<span class="built_in">isValid</span>(newX, newY) &amp;&amp; copy[newX][newY] != target) &#123;</span><br><span class="line">                    isBound = <span class="literal">true</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (isBound || <span class="built_in">isBoundary</span>(frontEle.first, frontEle.second)) &#123;</span><br><span class="line">                grid[frontEle.first][frontEle.second] = color;</span><br><span class="line">            &#125;</span><br><span class="line">            tmp.<span class="built_in">pop</span>();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> grid;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/10/11/LeetCode-1034-%E8%BE%B9%E7%95%8C%E7%9D%80%E8%89%B2/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -572,97 +629,14 @@
 <p>如果对 <strong>其中一个字符串</strong> 执行 <strong>最多一次字符串交换</strong> 就可以使两个字符串相等，返回 <code>true</code> ；否则，返回 <code>false</code> 。</p>
 <p><strong>示例 1：</strong></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：s1 = &quot;bank&quot;, s2 = &quot;kanb&quot;</span><br><span class="line">输出：true</span><br><span class="line">解释：例如，交换 s2 中的第一个和最后一个字符可以得到 &quot;bank&quot;</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 2：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：s1 = &quot;attack&quot;, s2 = &quot;defend&quot;</span><br><span class="line">输出：false</span><br><span class="line">解释：一次字符串交换无法使两个字符串相等</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 3：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：s1 = &quot;kelb&quot;, s2 = &quot;kelb&quot;</span><br><span class="line">输出：true</span><br><span class="line">解释：两个字符串已经相等，所以不需要进行字符串交换</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 4：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：s1 = &quot;abcd&quot;, s2 = &quot;dcba&quot;</span><br><span class="line">输出：false</span><br></pre></td></tr></table></figure>
-
-<p><strong>提示：</strong></p>
-<ul>
-<li><code>1 &lt;= s1.length, s2.length &lt;= 100</code></li>
-<li><code>s1.length == s2.length</code></li>
-<li><code>s1</code> 和 <code>s2</code> 仅由小写英文字母组成</li>
-</ul>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>C++</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">areAlmostEqual</span><span class="params">(string s1, string s2)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> index1 = <span class="number">-1</span>, index2 = <span class="number">-1</span>, count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; s1.<span class="built_in">length</span>(); i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (s1[i] != s2[i]) &#123;</span><br><span class="line">                <span class="keyword">if</span> (count == <span class="number">0</span>) &#123;</span><br><span class="line">                    index1 = i;</span><br><span class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span>(count == <span class="number">1</span>) &#123;</span><br><span class="line">                    index2 = i;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                count++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (index1 != <span class="number">-1</span> &amp;&amp; index2 != <span class="number">-1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> (s2[index2] == s1[index1] &amp;&amp; s1[index2] == s2[index1]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> (index1 == <span class="number">-1</span> &amp;&amp; index2 == <span class="number">-1</span>) ? <span class="literal">true</span> : <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/10/Reference-C/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="👽">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="😎😴🤯">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 😎😴🤯">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/10/10/Reference-C/" class="post-title-link" itemprop="url">Reference C++</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2022-10-10 20:48:46 / Modified: 20:51:23" itemprop="dateCreated datePublished" datetime="2022-10-10T20:48:46+08:00">2022-10-10</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <div class="note primary"><h4 id="C-Tutorial"><a href="#C-Tutorial" class="headerlink" title="C++ Tutorial"></a>C++ Tutorial</h4><p><a target="_blank" rel="noopener" href="https://www.scaler.com/topics/cpp/">Link🔗</a></p>
-</div>
-
-<div class="note primary"><h4 id="C-by-Example"><a href="#C-by-Example" class="headerlink" title="C by Example"></a>C by Example</h4><p><a target="_blank" rel="noopener" href="https://www.cbyexample.com/">Link🔗</a></p>
-</div>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/10/11/LeetCode-1790-%E4%BB%85%E6%89%A7%E8%A1%8C%E4%B8%80%E6%AC%A1%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%BA%A4%E6%8D%A2%E8%83%BD%E5%90%A6%E4%BD%BF%E4%B8%A4%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9B%B8%E7%AD%89/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -681,7 +655,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 </div>

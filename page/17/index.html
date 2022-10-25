@@ -152,13 +152,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">110</span>
+          <span class="site-state-item-count">111</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -192,6 +192,85 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/18/Linux-hostname-%E5%91%BD%E4%BB%A4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="👽">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="😎😴🤯">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 😎😴🤯">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/09/18/Linux-hostname-%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">Linux hostname 命令</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-09-18 20:33:59 / Modified: 20:36:21" itemprop="dateCreated datePublished" datetime="2022-09-18T20:33:59+08:00">2022-09-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Linux-%E5%91%BD%E4%BB%A4/" itemprop="url" rel="index"><span itemprop="name">Linux 命令</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>Linux hostname 命令用于显示系统的主机名 或用于查看IP地址</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">- Show current host name:</span><br><span class="line">  hostname</span><br><span class="line"></span><br><span class="line">- Show the network address of the host name:</span><br><span class="line">  hostname -i</span><br><span class="line"></span><br><span class="line">- Show all network addresses of the host:</span><br><span class="line">  hostname -I</span><br><span class="line"></span><br><span class="line">- Show the FQDN (Fully Qualified Domain Name):</span><br><span class="line">  hostname --fqdn</span><br><span class="line"></span><br><span class="line">- Set current host name:</span><br><span class="line">  hostname &#123;&#123;new_hostname&#125;&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -271,17 +350,14 @@
 <ul>
 <li>创建Cond实例，传入需要关联的锁</li>
 </ul>
-<h4 id="checker-check-检查是否发生拷贝"><a href="#checker-check-检查是否发生拷贝" class="headerlink" title="checker.check 检查是否发生拷贝"></a>checker.check 检查是否发生拷贝</h4><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> copyChecker <span class="type">uintptr</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(c *copyChecker)</span></span> check() &#123;</span><br><span class="line">	<span class="keyword">if</span> <span class="type">uintptr</span>(*c) != <span class="type">uintptr</span>(unsafe.Pointer(c)) &amp;&amp;</span><br><span class="line">		!atomic.CompareAndSwapUintptr((*<span class="type">uintptr</span>)(c), <span class="number">0</span>, <span class="type">uintptr</span>(unsafe.Pointer(c))) &amp;&amp;</span><br><span class="line">		<span class="type">uintptr</span>(*c) != <span class="type">uintptr</span>(unsafe.Pointer(c)) &#123;</span><br><span class="line">		<span class="built_in">panic</span>(<span class="string">&quot;sync.Cond is copied&quot;</span>)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>copyChecker.check 在Wait Signal Broadcast方法中均会被调用，用于检查是否发生了值拷贝</li>
-<li>第一次执行检查会完成该变量的赋值</li>
-<li>此后若发生了拷贝，则panic</li>
-</ul>
-<h4 id="Wait-等待"><a href="#Wait-等待" class="headerlink" title="Wait 等待"></a>Wait 等待</h4><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(c *Cond)</span></span> Wait() &#123;</span><br><span class="line">	c.checker.check()</span><br><span class="line">	t := runtime_notifyListAdd(&amp;c.notify)</span><br><span class="line">	c.L.Unlock()</span><br><span class="line">	runtime_notifyListWait(&amp;c.notify, t)</span><br><span class="line">	c.L.Lock()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>Wait会自动释放锁，并挂起调用Wait的协程</li>
-</ul>
-<h4 id="Signal-唤醒单个协程"><a href="#Signal-唤醒单个协程" class="headerlink" title="Signal 唤醒单个协程"></a>Signal 唤醒单个协程</h4><h4 id="Broadcast-唤醒所有等待协程"><a href="#Broadcast-唤醒所有等待协程" class="headerlink" title="Broadcast 唤醒所有等待协程"></a>Broadcast 唤醒所有等待协程</h4><h3 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/09/18/go-sync-Cond/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -554,93 +630,8 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/16/Linux-type-%E5%91%BD%E4%BB%A4/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="👽">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="😎😴🤯">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 😎😴🤯">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/09/16/Linux-type-%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">Linux type 命令</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-09-16 14:13:19" itemprop="dateCreated datePublished" datetime="2022-09-16T14:13:19+08:00">2022-09-16</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-09-18 13:54:46" itemprop="dateModified" datetime="2022-09-18T13:54:46+08:00">2022-09-18</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Linux-%E5%91%BD%E4%BB%A4/" itemprop="url" rel="index"><span itemprop="name">Linux 命令</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Linux type 命令用于查看shell执行命令的种类</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">- Display the type of a command:</span><br><span class="line">  type &#123;&#123;command&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Display all locations containing the specified executable:</span><br><span class="line">  type -a &#123;&#123;command&#125;&#125;</span><br><span class="line"></span><br><span class="line">- Display the name of the disk file that would be executed:</span><br><span class="line">  type -p &#123;&#123;command&#125;&#125;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/16/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><span class="page-number current">17</span><a class="page-number" href="/page/18/">18</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><a class="extend next" rel="next" href="/page/18/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/16/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><span class="page-number current">17</span><a class="page-number" href="/page/18/">18</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><a class="extend next" rel="next" href="/page/18/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 </div>
