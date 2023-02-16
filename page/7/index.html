@@ -152,7 +152,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">115</span>
+          <span class="site-state-item-count">121</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -163,7 +163,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">45</span>
+        <span class="site-state-item-count">46</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -201,7 +201,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/03/LeetCode-2390-%E4%BB%8E%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%A7%BB%E9%99%A4%E6%98%9F%E5%8F%B7/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/07/LeetCode-2131-%E8%BF%9E%E6%8E%A5%E4%B8%A4%E5%AD%97%E6%AF%8D%E5%8D%95%E8%AF%8D%E5%BE%97%E5%88%B0%E7%9A%84%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E4%B8%B2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -219,7 +219,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/10/03/LeetCode-2390-%E4%BB%8E%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%A7%BB%E9%99%A4%E6%98%9F%E5%8F%B7/" class="post-title-link" itemprop="url">LeetCode 2390. 从字符串中移除星号</a>
+          <a href="/2022/10/07/LeetCode-2131-%E8%BF%9E%E6%8E%A5%E4%B8%A4%E5%AD%97%E6%AF%8D%E5%8D%95%E8%AF%8D%E5%BE%97%E5%88%B0%E7%9A%84%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E4%B8%B2/" class="post-title-link" itemprop="url">LeetCode 2131. 连接两字母单词得到的最长回文串</a>
         </h2>
 
         <div class="post-meta-container">
@@ -231,7 +231,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-10-03 18:11:53 / Modified: 18:12:24" itemprop="dateCreated datePublished" datetime="2022-10-03T18:11:53+08:00">2022-10-03</time>
+      <time title="Created: 2022-10-07 16:02:16 / Modified: 16:06:51" itemprop="dateCreated datePublished" datetime="2022-10-07T16:02:16+08:00">2022-10-07</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -253,18 +253,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="2390-从字符串中移除星号"><a href="#2390-从字符串中移除星号" class="headerlink" title="2390. 从字符串中移除星号"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/removing-stars-from-a-string/">2390. 从字符串中移除星号</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
-<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/stack/">栈</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/string/">字符串</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/simulation/">模拟</a></p>
-<p>给你一个包含若干星号 <code>*</code> 的字符串 <code>s</code> 。</p>
-<p>在一步操作中，你可以：</p>
-<ul>
-<li>选中 <code>s</code> 中的一个星号。</li>
-<li>移除星号 <strong>左侧</strong> 最近的那个 <strong>非星号</strong> 字符，并移除该星号自身。</li>
-</ul>
-<p>返回移除 <strong>所有</strong> 星号之后的字符串<strong>。</strong></p>
+          <h1 id="2131-连接两字母单词得到的最长回文串"><a href="#2131-连接两字母单词得到的最长回文串" class="headerlink" title="2131. 连接两字母单词得到的最长回文串"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/longest-palindrome-by-concatenating-two-letter-words/">2131. 连接两字母单词得到的最长回文串</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
+<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/greedy/">贪心</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/array/">数组</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/hash-table/">哈希表</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/string/">字符串</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/counting/">计数</a></p>
+<p>给你一个字符串数组 <code>words</code> 。<code>words</code> 中每个元素都是一个包含 <strong>两个</strong> 小写英文字母的单词。</p>
+<p>请你从 <code>words</code> 中选择一些元素并按 <strong>任意顺序</strong> 连接它们，并得到一个 <strong>尽可能长的回文串</strong> 。每个元素 <strong>至多</strong> 只能使用一次。</p>
+<p>请你返回你能得到的最长回文串的 <strong>长度</strong> 。如果没办法得到任何一个回文串，请你返回 <code>0</code> 。</p>
+<p><strong>回文串</strong> 指的是从前往后和从后往前读一样的字符串。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2022/10/03/LeetCode-2390-%E4%BB%8E%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%A7%BB%E9%99%A4%E6%98%9F%E5%8F%B7/#more" rel="contents">
+              <a class="btn" href="/2022/10/07/LeetCode-2131-%E8%BF%9E%E6%8E%A5%E4%B8%A4%E5%AD%97%E6%AF%8D%E5%8D%95%E8%AF%8D%E5%BE%97%E5%88%B0%E7%9A%84%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E4%B8%B2/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -295,7 +292,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/03/LeetCode-2365-%E4%BB%BB%E5%8A%A1%E8%B0%83%E5%BA%A6%E5%99%A8-II/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/07/LeetCode-1343-%E5%A4%A7%E5%B0%8F%E4%B8%BA-K-%E4%B8%94%E5%B9%B3%E5%9D%87%E5%80%BC%E5%A4%A7%E4%BA%8E%E7%AD%89%E4%BA%8E%E9%98%88%E5%80%BC%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84%E6%95%B0%E7%9B%AE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -313,7 +310,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/10/03/LeetCode-2365-%E4%BB%BB%E5%8A%A1%E8%B0%83%E5%BA%A6%E5%99%A8-II/" class="post-title-link" itemprop="url">LeetCode 2365. 任务调度器 II</a>
+          <a href="/2022/10/07/LeetCode-1343-%E5%A4%A7%E5%B0%8F%E4%B8%BA-K-%E4%B8%94%E5%B9%B3%E5%9D%87%E5%80%BC%E5%A4%A7%E4%BA%8E%E7%AD%89%E4%BA%8E%E9%98%88%E5%80%BC%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84%E6%95%B0%E7%9B%AE/" class="post-title-link" itemprop="url">LeetCode 1343. 大小为 K 且平均值大于等于阈值的子数组数目</a>
         </h2>
 
         <div class="post-meta-container">
@@ -325,7 +322,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-10-03 17:51:56 / Modified: 17:52:45" itemprop="dateCreated datePublished" datetime="2022-10-03T17:51:56+08:00">2022-10-03</time>
+      <time title="Created: 2022-10-07 15:25:23 / Modified: 15:25:55" itemprop="dateCreated datePublished" datetime="2022-10-07T15:25:23+08:00">2022-10-07</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -347,109 +344,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="2365-任务调度器-II"><a href="#2365-任务调度器-II" class="headerlink" title="2365. 任务调度器 II"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/task-scheduler-ii/">2365. 任务调度器 II</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
-<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/array/">数组</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/hash-table/">哈希表</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/simulation/">模拟</a></p>
-<p>给你一个下标从 <strong>0</strong> 开始的正整数数组 <code>tasks</code> ，表示需要 <strong>按顺序</strong> 完成的任务，其中 <code>tasks[i]</code> 表示第 <code>i</code> 件任务的 <strong>类型</strong> 。</p>
-<p>同时给你一个正整数 <code>space</code> ，表示一个任务完成 <strong>后</strong> ，另一个 <strong>相同</strong> 类型任务完成前需要间隔的 <strong>最少</strong> 天数。</p>
-<p>在所有任务完成前的每一天，你都必须进行以下两种操作中的一种：</p>
-<ul>
-<li>完成 <code>tasks</code> 中的下一个任务</li>
-<li>休息一天</li>
-</ul>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/10/03/LeetCode-2365-%E4%BB%BB%E5%8A%A1%E8%B0%83%E5%BA%A6%E5%99%A8-II/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/03/LeetCode-75-%E9%A2%9C%E8%89%B2%E5%88%86%E7%B1%BB/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="👽">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="😎😴🤯">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 😎😴🤯">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/10/03/LeetCode-75-%E9%A2%9C%E8%89%B2%E5%88%86%E7%B1%BB/" class="post-title-link" itemprop="url">LeetCode 75. 颜色分类</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2022-10-03 16:43:34 / Modified: 16:46:21" itemprop="dateCreated datePublished" datetime="2022-10-03T16:43:34+08:00">2022-10-03</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="75-颜色分类"><a href="#75-颜色分类" class="headerlink" title="75. 颜色分类"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/sort-colors/">75. 颜色分类</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
-<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/array/">数组</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/two-pointers/">双指针</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/sorting/">排序</a></p>
-<p>给定一个包含红色、白色和蓝色、共 <code>n</code>个元素的数组 <code>nums</code> ，**<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95">原地</a>**对它们进行排序，使得相同颜色的元素相邻，并按照红色、白色、蓝色顺序排列。</p>
-<p>我们使用整数 <code>0</code>、 <code>1</code> 和 <code>2</code> 分别表示红色、白色和蓝色。</p>
-<p>必须在不使用库的sort函数的情况下解决这个问题。</p>
+          <h1 id="1343-大小为-K-且平均值大于等于阈值的子数组数目"><a href="#1343-大小为-K-且平均值大于等于阈值的子数组数目" class="headerlink" title="1343. 大小为 K 且平均值大于等于阈值的子数组数目"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold/">1343. 大小为 K 且平均值大于等于阈值的子数组数目</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
+<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/array/">数组</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/sliding-window/">滑动窗口</a></p>
+<p>给你一个整数数组 <code>arr</code> 和两个整数 <code>k</code> 和 <code>threshold</code> 。</p>
+<p>请你返回长度为 <code>k</code> 且平均值大于等于 <code>threshold</code> 的子数组数目。</p>
 <p><strong>示例 1：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：arr = [2,2,2,2,5,5,5,8], k = 3, threshold = 4</span><br><span class="line">输出：3</span><br><span class="line">解释：子数组 [2,5,5],[5,5,5] 和 [5,5,8] 的平均值分别为 4，5 和 6 。其他长度为 3 的子数组的平均值都小于 4 （threshold 的值)。</span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2022/10/03/LeetCode-75-%E9%A2%9C%E8%89%B2%E5%88%86%E7%B1%BB/#more" rel="contents">
+              <a class="btn" href="/2022/10/07/LeetCode-1343-%E5%A4%A7%E5%B0%8F%E4%B8%BA-K-%E4%B8%94%E5%B9%B3%E5%9D%87%E5%80%BC%E5%A4%A7%E4%BA%8E%E7%AD%89%E4%BA%8E%E9%98%88%E5%80%BC%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84%E6%95%B0%E7%9B%AE/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -480,7 +383,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/03/LeetCode-1170-%E6%AF%94%E8%BE%83%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%9C%80%E5%B0%8F%E5%AD%97%E6%AF%8D%E5%87%BA%E7%8E%B0%E9%A2%91%E6%AC%A1/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/07/LeetCode-811-%E5%AD%90%E5%9F%9F%E5%90%8D%E8%AE%BF%E9%97%AE%E8%AE%A1%E6%95%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -498,7 +401,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/10/03/LeetCode-1170-%E6%AF%94%E8%BE%83%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%9C%80%E5%B0%8F%E5%AD%97%E6%AF%8D%E5%87%BA%E7%8E%B0%E9%A2%91%E6%AC%A1/" class="post-title-link" itemprop="url">LeetCode 1170. 比较字符串最小字母出现频次</a>
+          <a href="/2022/10/07/LeetCode-811-%E5%AD%90%E5%9F%9F%E5%90%8D%E8%AE%BF%E9%97%AE%E8%AE%A1%E6%95%B0/" class="post-title-link" itemprop="url">LeetCode 811. 子域名访问计数</a>
         </h2>
 
         <div class="post-meta-container">
@@ -510,7 +413,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-10-03 16:04:36 / Modified: 16:07:24" itemprop="dateCreated datePublished" datetime="2022-10-03T16:04:36+08:00">2022-10-03</time>
+      <time title="Created: 2022-10-07 15:03:36 / Modified: 15:07:58" itemprop="dateCreated datePublished" datetime="2022-10-07T15:03:36+08:00">2022-10-07</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -532,116 +435,205 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="1170-比较字符串最小字母出现频次"><a href="#1170-比较字符串最小字母出现频次" class="headerlink" title="1170. 比较字符串最小字母出现频次"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/compare-strings-by-frequency-of-the-smallest-character/">1170. 比较字符串最小字母出现频次</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
-<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/array/">数组</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/hash-table/">哈希表</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/string/">字符串</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/binary-search/">二分查找</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/sorting/">排序</a></p>
-<p>定义一个函数 <code>f(s)</code>，统计 <code>s</code>  中<strong>（按字典序比较）最小字母的出现频次</strong> ，其中 <code>s</code> 是一个非空字符串。</p>
-<p>例如，若 <code>s = &quot;dcce&quot;</code>，那么 <code>f(s) = 2</code>，因为字典序最小字母是 <code>&quot;c&quot;</code>，它出现了 2 次。</p>
-<p>现在，给你两个字符串数组待查表 <code>queries</code> 和词汇表 <code>words</code> 。对于每次查询 <code>queries[i]</code> ，需统计 <code>words</code> 中满足 <code>f(queries[i])</code> &lt; <code>f(W)</code> 的 <strong>词的数目</strong> ，<code>W</code> 表示词汇表 <code>words</code> 中的每个词。</p>
-<p>请你返回一个整数数组 <code>answer</code> 作为答案，其中每个 <code>answer[i]</code> 是第 <code>i</code> 次查询的结果。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/10/03/LeetCode-1170-%E6%AF%94%E8%BE%83%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%9C%80%E5%B0%8F%E5%AD%97%E6%AF%8D%E5%87%BA%E7%8E%B0%E9%A2%91%E6%AC%A1/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/02/LeetCode-984-%E4%B8%8D%E5%90%AB-AAA-%E6%88%96-BBB-%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="👽">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="😎😴🤯">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 😎😴🤯">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/10/02/LeetCode-984-%E4%B8%8D%E5%90%AB-AAA-%E6%88%96-BBB-%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2/" class="post-title-link" itemprop="url">LeetCode 984. 不含 AAA 或 BBB 的字符串</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-10-02 23:13:24" itemprop="dateCreated datePublished" datetime="2022-10-02T23:13:24+08:00">2022-10-02</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-10-03 15:40:40" itemprop="dateModified" datetime="2022-10-03T15:40:40+08:00">2022-10-03</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="984-不含-AAA-或-BBB-的字符串"><a href="#984-不含-AAA-或-BBB-的字符串" class="headerlink" title="984. 不含 AAA 或 BBB 的字符串"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/string-without-aaa-or-bbb/">984. 不含 AAA 或 BBB 的字符串</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
-<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/greedy/">贪心</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/string/">字符串</a></p>
-<p>给定两个整数 <code>a</code> 和 <code>b</code> ，返回 <strong>任意</strong> 字符串 <code>s</code> ，要求满足：</p>
+          <h1 id="811-子域名访问计数"><a href="#811-子域名访问计数" class="headerlink" title="811. 子域名访问计数"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/subdomain-visit-count/">811. 子域名访问计数</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
+<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/array/">数组</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/hash-table/">哈希表</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/string/">字符串</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/counting/">计数</a></p>
+<p>网站域名 <code>&quot;discuss.leetcode.com&quot;</code> 由多个子域名组成。顶级域名为 <code>&quot;com&quot;</code> ，二级域名为 <code>&quot;leetcode.com&quot;</code> ，最低一级为 <code>&quot;discuss.leetcode.com&quot;</code> 。当访问域名 <code>&quot;discuss.leetcode.com&quot;</code> 时，同时也会隐式访问其父域名 <code>&quot;leetcode.com&quot;</code> 以及 <code>&quot;com&quot;</code> 。</p>
+<p><strong>计数配对域名</strong> 是遵循 <code>&quot;rep d1.d2.d3&quot;</code> 或 <code>&quot;rep d1.d2&quot;</code> 格式的一个域名表示，其中 <code>rep</code> 表示访问域名的次数，<code>d1.d2.d3</code> 为域名本身。</p>
 <ul>
-<li><code>s</code> 的长度为 <code>a + b</code>，且正好包含<code>a</code> 个 <code>&#39;a&#39;</code> 字母与 <code>b</code> 个 <code>&#39;b&#39;</code> 字母；</li>
-<li>子串 <code>&#39;aaa&#39;</code> 没有出现在 <code>s</code> 中；</li>
-<li>子串 <code>&#39;bbb&#39;</code> 没有出现在 <code>s</code> 中。</li>
+<li>例如，<code>&quot;9001 discuss.leetcode.com&quot;</code> 就是一个 <strong>计数配对域名</strong> ，表示 <code>discuss.leetcode.com</code> 被访问了 <code>9001</code> 次。</li>
 </ul>
-<p><strong>示例 1：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：a = 1, b = 2</span><br><span class="line">输出：&quot;abb&quot;</span><br><span class="line">解释：&quot;abb&quot;, &quot;bab&quot; 和 &quot;bba&quot; 都是正确答案。</span><br></pre></td></tr></table></figure>
+<p>给你一个 <strong>计数配对域名</strong> 组成的数组 <code>cpdomains</code> ，解析得到输入中每个子域名对应的 <strong>计数配对域名</strong> ，并以数组形式返回。可以按 <strong>任意顺序</strong> 返回答案。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2022/10/02/LeetCode-984-%E4%B8%8D%E5%90%AB-AAA-%E6%88%96-BBB-%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2/#more" rel="contents">
+              <a class="btn" href="/2022/10/07/LeetCode-811-%E5%AD%90%E5%9F%9F%E5%90%8D%E8%AE%BF%E9%97%AE%E8%AE%A1%E6%95%B0/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/04/LeetCode-921-%E4%BD%BF%E6%8B%AC%E5%8F%B7%E6%9C%89%E6%95%88%E7%9A%84%E6%9C%80%E5%B0%91%E6%B7%BB%E5%8A%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="👽">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="😎😴🤯">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 😎😴🤯">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/10/04/LeetCode-921-%E4%BD%BF%E6%8B%AC%E5%8F%B7%E6%9C%89%E6%95%88%E7%9A%84%E6%9C%80%E5%B0%91%E6%B7%BB%E5%8A%A0/" class="post-title-link" itemprop="url">LeetCode 921. 使括号有效的最少添加</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-10-04 19:18:39 / Modified: 19:19:03" itemprop="dateCreated datePublished" datetime="2022-10-04T19:18:39+08:00">2022-10-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="921-使括号有效的最少添加"><a href="#921-使括号有效的最少添加" class="headerlink" title="921. 使括号有效的最少添加"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/minimum-add-to-make-parentheses-valid/">921. 使括号有效的最少添加</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
+<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/stack/">栈</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/greedy/">贪心</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/string/">字符串</a></p>
+<p>只有满足下面几点之一，括号字符串才是有效的：</p>
+<ul>
+<li>它是一个空字符串，或者</li>
+<li>它可以被写成 <code>AB</code> （<code>A</code> 与 <code>B</code> 连接）, 其中 <code>A</code> 和 <code>B</code> 都是有效字符串，或者</li>
+<li>它可以被写作 <code>(A)</code>，其中 <code>A</code> 是有效字符串。</li>
+</ul>
+<p>给定一个括号字符串 <code>s</code> ，移动N次，你就可以在字符串的任何位置插入一个括号。</p>
+<ul>
+<li>例如，如果 <code>s = &quot;()))&quot;</code> ，你可以插入一个开始括号为 <code>&quot;(()))&quot;</code> 或结束括号为 <code>&quot;())))&quot;</code> 。</li>
+</ul>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/10/04/LeetCode-921-%E4%BD%BF%E6%8B%AC%E5%8F%B7%E6%9C%89%E6%95%88%E7%9A%84%E6%9C%80%E5%B0%91%E6%B7%BB%E5%8A%A0/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/04/LeetCode-1138-%E5%AD%97%E6%AF%8D%E6%9D%BF%E4%B8%8A%E7%9A%84%E8%B7%AF%E5%BE%84/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="👽">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="😎😴🤯">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 😎😴🤯">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/10/04/LeetCode-1138-%E5%AD%97%E6%AF%8D%E6%9D%BF%E4%B8%8A%E7%9A%84%E8%B7%AF%E5%BE%84/" class="post-title-link" itemprop="url">LeetCode 1138. 字母板上的路径</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-10-04 19:12:53 / Modified: 19:14:25" itemprop="dateCreated datePublished" datetime="2022-10-04T19:12:53+08:00">2022-10-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="1138-字母板上的路径"><a href="#1138-字母板上的路径" class="headerlink" title="1138. 字母板上的路径"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/alphabet-board-path/">1138. 字母板上的路径</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
+<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/hash-table/">哈希表</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/string/">字符串</a></p>
+<p>我们从一块字母板上的位置 <code>(0, 0)</code> 出发，该坐标对应的字符为 <code>board[0][0]</code>。</p>
+<p>在本题里，字母板为<code>board = [&quot;abcde&quot;, &quot;fghij&quot;, &quot;klmno&quot;, &quot;pqrst&quot;, &quot;uvwxy&quot;, &quot;z&quot;]</code>，如下所示。</p>
+<p><img src="https://cdn.staticaly.com/gh/Poseidon-HL/image-hosting@master/20221004/azboard.45g6rpi3maw0.webp" alt="azboard"></p>
+<p>我们可以按下面的指令规则行动：</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/10/04/LeetCode-1138-%E5%AD%97%E6%AF%8D%E6%9D%BF%E4%B8%8A%E7%9A%84%E8%B7%AF%E5%BE%84/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -665,7 +657,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/6/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><a class="extend next" rel="next" href="/page/8/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/6/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/25/">25</a><a class="extend next" rel="next" href="/page/8/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 </div>
@@ -677,7 +669,7 @@
 
 <div class="copyright">
   &copy; 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

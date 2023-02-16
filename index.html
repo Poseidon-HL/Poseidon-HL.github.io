@@ -152,7 +152,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">115</span>
+          <span class="site-state-item-count">121</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -163,7 +163,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">45</span>
+        <span class="site-state-item-count">46</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -313,7 +313,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/25/LeetCode-915-%E5%88%86%E5%89%B2%E6%95%B0%E7%BB%84/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/11/05/LeetCode-2177-%E6%89%BE%E5%88%B0%E5%92%8C%E4%B8%BA%E7%BB%99%E5%AE%9A%E6%95%B4%E6%95%B0%E7%9A%84%E4%B8%89%E4%B8%AA%E8%BF%9E%E7%BB%AD%E6%95%B4%E6%95%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -331,7 +331,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/10/25/LeetCode-915-%E5%88%86%E5%89%B2%E6%95%B0%E7%BB%84/" class="post-title-link" itemprop="url">LeetCode 915. 分割数组</a>
+          <a href="/2022/11/05/LeetCode-2177-%E6%89%BE%E5%88%B0%E5%92%8C%E4%B8%BA%E7%BB%99%E5%AE%9A%E6%95%B4%E6%95%B0%E7%9A%84%E4%B8%89%E4%B8%AA%E8%BF%9E%E7%BB%AD%E6%95%B4%E6%95%B0/" class="post-title-link" itemprop="url">LeetCode 2177. 找到和为给定整数的三个连续整数</a>
         </h2>
 
         <div class="post-meta-container">
@@ -343,7 +343,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-10-25 20:20:06 / Modified: 21:27:09" itemprop="dateCreated datePublished" datetime="2022-10-25T20:20:06+08:00">2022-10-25</time>
+      <time title="Created: 2022-11-05 19:47:41 / Modified: 19:48:05" itemprop="dateCreated datePublished" datetime="2022-11-05T19:47:41+08:00">2022-11-05</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -365,19 +365,16 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="915-分割数组"><a href="#915-分割数组" class="headerlink" title="915. 分割数组"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/partition-array-into-disjoint-intervals/">915. 分割数组</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
-<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/array/">数组</a></p>
-<p>给定一个数组 <code>nums</code> ，将其划分为两个连续子数组 <code>left</code> 和 <code>right</code>， 使得：</p>
-<ul>
-<li><code>left</code> 中的每个元素都小于或等于 <code>right</code> 中的每个元素。</li>
-<li><code>left</code> 和 <code>right</code> 都是非空的。</li>
-<li><code>left</code> 的长度要尽可能小。</li>
-</ul>
-<p>_在完成这样的分组后返回 <code>left</code> 的 **长度 **_。</p>
-<p>用例可以保证存在这样的划分方法。</p>
+          <h1 id="2177-找到和为给定整数的三个连续整数"><a href="#2177-找到和为给定整数的三个连续整数" class="headerlink" title="2177. 找到和为给定整数的三个连续整数"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/find-three-consecutive-integers-that-sum-to-a-given-number/">2177. 找到和为给定整数的三个连续整数</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
+<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/math/">数学</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/simulation/">模拟</a></p>
+<p>给你一个整数 <code>num</code> ，请你返回三个连续的整数，它们的 <strong>和</strong> 为<code>num</code> 。如果 <code>num</code> 无法被表示成三个连续整数的和，请你返回一个 <strong>空</strong> 数组。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入：num = 33</span><br><span class="line">输出：[10,11,12]</span><br><span class="line">解释：33 可以表示为 10 + 11 + 12 = 33 。</span><br><span class="line">10, 11, 12 是 3 个连续整数，所以返回 [10, 11, 12] 。</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2022/10/25/LeetCode-915-%E5%88%86%E5%89%B2%E6%95%B0%E7%BB%84/#more" rel="contents">
+              <a class="btn" href="/2022/11/05/LeetCode-2177-%E6%89%BE%E5%88%B0%E5%92%8C%E4%B8%BA%E7%BB%99%E5%AE%9A%E6%95%B4%E6%95%B0%E7%9A%84%E4%B8%89%E4%B8%AA%E8%BF%9E%E7%BB%AD%E6%95%B4%E6%95%B0/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -408,7 +405,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/25/%F0%9F%93%84Orion-A-Distributed-File-System-for-Non-VolatileMain-Memory-and-RDMA-Capable-Networks/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/11/05/LeetCode-1503-%E6%89%80%E6%9C%89%E8%9A%82%E8%9A%81%E6%8E%89%E4%B8%8B%E6%9D%A5%E5%89%8D%E7%9A%84%E6%9C%80%E5%90%8E%E4%B8%80%E5%88%BB/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -426,7 +423,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/10/25/%F0%9F%93%84Orion-A-Distributed-File-System-for-Non-VolatileMain-Memory-and-RDMA-Capable-Networks/" class="post-title-link" itemprop="url">📄Orion: A Distributed File System for Non-Volatile Main Memory and RDMA-Capable Networks</a>
+          <a href="/2022/11/05/LeetCode-1503-%E6%89%80%E6%9C%89%E8%9A%82%E8%9A%81%E6%8E%89%E4%B8%8B%E6%9D%A5%E5%89%8D%E7%9A%84%E6%9C%80%E5%90%8E%E4%B8%80%E5%88%BB/" class="post-title-link" itemprop="url">LeetCode 1503. 所有蚂蚁掉下来前的最后一刻</a>
         </h2>
 
         <div class="post-meta-container">
@@ -438,7 +435,16 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-10-25 18:43:49 / Modified: 18:44:23" itemprop="dateCreated datePublished" datetime="2022-10-25T18:43:49+08:00">2022-10-25</time>
+      <time title="Created: 2022-11-05 19:42:35 / Modified: 19:43:56" itemprop="dateCreated datePublished" datetime="2022-11-05T19:42:35+08:00">2022-11-05</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
+        </span>
     </span>
 
   
@@ -451,7 +457,20 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <div class="pdf-container" data-target="/pdfs/fast19-yang.pdf" data-height="600px"></div>
+          <h1 id="1503-所有蚂蚁掉下来前的最后一刻"><a href="#1503-所有蚂蚁掉下来前的最后一刻" class="headerlink" title="1503. 所有蚂蚁掉下来前的最后一刻"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/last-moment-before-all-ants-fall-out-of-a-plank/">1503. 所有蚂蚁掉下来前的最后一刻</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
+<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/brainteaser/">脑筋急转弯</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/array/">数组</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/simulation/">模拟</a></p>
+<p>有一块木板，长度为 <code>n</code> 个 <strong>单位</strong> 。一些蚂蚁在木板上移动，每只蚂蚁都以 <strong>每秒一个单位</strong> 的速度移动。其中，一部分蚂蚁向 <strong>左</strong> 移动，其他蚂蚁向 <strong>右</strong> 移动。</p>
+<p>当两只向 <strong>不同</strong> 方向移动的蚂蚁在某个点相遇时，它们会同时改变移动方向并继续移动。假设更改方向不会花费任何额外时间。</p>
+<p>而当蚂蚁在某一时刻 <code>t</code> 到达木板的一端时，它立即从木板上掉下来。</p>
+<p>给你一个整数 <code>n</code> 和两个整数数组 <code>left</code> 以及 <code>right</code> 。两个数组分别标识向左或者向右移动的蚂蚁在 <code>t = 0</code> 时的位置。请你返回最后一只蚂蚁从木板上掉下来的时刻。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/11/05/LeetCode-1503-%E6%89%80%E6%9C%89%E8%9A%82%E8%9A%81%E6%8E%89%E4%B8%8B%E6%9D%A5%E5%89%8D%E7%9A%84%E6%9C%80%E5%90%8E%E4%B8%80%E5%88%BB/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -477,7 +496,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/25/%F0%9F%93%84Assise-Performance-and-Availability-viaClient-local-NVM-in-a-Distributed-File-System/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/11/05/LeetCode-1106-%E8%A7%A3%E6%9E%90%E5%B8%83%E5%B0%94%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -495,7 +514,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/10/25/%F0%9F%93%84Assise-Performance-and-Availability-viaClient-local-NVM-in-a-Distributed-File-System/" class="post-title-link" itemprop="url">📄Assise: Performance and Availability via Client-local NVM in a Distributed File System</a>
+          <a href="/2022/11/05/LeetCode-1106-%E8%A7%A3%E6%9E%90%E5%B8%83%E5%B0%94%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="post-title-link" itemprop="url">LeetCode 1106. 解析布尔表达式</a>
         </h2>
 
         <div class="post-meta-container">
@@ -507,7 +526,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-10-25 18:42:25 / Modified: 19:30:27" itemprop="dateCreated datePublished" datetime="2022-10-25T18:42:25+08:00">2022-10-25</time>
+      <time title="Created: 2022-11-05 16:46:16 / Modified: 16:50:08" itemprop="dateCreated datePublished" datetime="2022-11-05T16:46:16+08:00">2022-11-05</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -515,7 +534,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E8%AE%BA%E6%96%87%E5%90%88%E9%9B%86/" itemprop="url" rel="index"><span itemprop="name">论文合集</span></a>
+          <a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
         </span>
     </span>
 
@@ -529,7 +548,26 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <div class="pdf-container" data-target="/pdfs/osdi20-anderson.pdf" data-height="600px"></div>
+          <h1 id="1106-解析布尔表达式"><a href="#1106-解析布尔表达式" class="headerlink" title="1106. 解析布尔表达式"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/parsing-a-boolean-expression/">1106. 解析布尔表达式</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>困难</strong>  </p>
+<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/stack/">栈</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/recursion/">递归</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/string/">字符串</a></p>
+<p>给你一个以字符串形式表述的 <a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%B8%83%E5%B0%94%E8%A1%A8%E8%BE%BE%E5%BC%8F/1574380?fr=aladdin">布尔表达式</a>（boolean） <code>expression</code>，返回该式的运算结果。</p>
+<p>有效的表达式需遵循以下约定：</p>
+<ul>
+<li><code>&quot;t&quot;</code>，运算结果为 <code>True</code></li>
+<li><code>&quot;f&quot;</code>，运算结果为 <code>False</code></li>
+<li><code>&quot;!(expr)&quot;</code>，运算过程为对内部表达式 <code>expr</code> 进行逻辑 <strong>非的运算</strong>（NOT）</li>
+<li><code>&quot;&amp;(expr1,expr2,...)&quot;</code>，运算过程为对 2 个或以上内部表达式 <code>expr1, expr2, ...</code> 进行逻辑 <strong>与的运算</strong>（AND）</li>
+<li><code>&quot;|(expr1,expr2,...)&quot;</code>，运算过程为对 2 个或以上内部表达式 <code>expr1, expr2, ...</code> 进行逻辑 <strong>或的运算</strong>（OR）</li>
+</ul>
+<p><strong>示例 1：</strong></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/11/05/LeetCode-1106-%E8%A7%A3%E6%9E%90%E5%B8%83%E5%B0%94%E8%A1%A8%E8%BE%BE%E5%BC%8F/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -555,7 +593,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/25/%F0%9F%93%84LineFS-Efficient-SmartNIC-Offload-of-a-DistributedFile-System-with-Pipeline-Parallelism/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/11/05/LeetCode-1145-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9D%80%E8%89%B2%E6%B8%B8%E6%88%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -573,7 +611,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/10/25/%F0%9F%93%84LineFS-Efficient-SmartNIC-Offload-of-a-DistributedFile-System-with-Pipeline-Parallelism/" class="post-title-link" itemprop="url">📄LineFS: Efficient SmartNIC Offload of a Distributed File System with Pipeline Parallelism</a>
+          <a href="/2022/11/05/LeetCode-1145-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9D%80%E8%89%B2%E6%B8%B8%E6%88%8F/" class="post-title-link" itemprop="url">LeetCode 1145. 二叉树着色游戏</a>
         </h2>
 
         <div class="post-meta-container">
@@ -585,7 +623,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-10-25 18:39:49 / Modified: 18:41:15" itemprop="dateCreated datePublished" datetime="2022-10-25T18:39:49+08:00">2022-10-25</time>
+      <time title="Created: 2022-11-05 16:46:02 / Modified: 16:49:36" itemprop="dateCreated datePublished" datetime="2022-11-05T16:46:02+08:00">2022-11-05</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -593,7 +631,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E8%AE%BA%E6%96%87%E5%90%88%E9%9B%86/" itemprop="url" rel="index"><span itemprop="name">论文合集</span></a>
+          <a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
         </span>
     </span>
 
@@ -607,7 +645,20 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <div class="pdf-container" data-target="/pdfs/3477132.3483565.pdf" data-height="600px"></div>
+          <h1 id="1145-二叉树着色游戏"><a href="#1145-二叉树着色游戏" class="headerlink" title="1145. 二叉树着色游戏"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/binary-tree-coloring-game/">1145. 二叉树着色游戏</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Difficulty: <strong>中等</strong>  </p>
+<p>Related Topics: <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/tree/">树</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/depth-first-search/">深度优先搜索</a>, <a target="_blank" rel="noopener" href="https://leetcode.cn/tag/binary-tree/">二叉树</a></p>
+<p>有两位极客玩家参与了一场「二叉树着色」的游戏。游戏中，给出二叉树的根节点 <code>root</code>，树上总共有 <code>n</code> 个节点，且 <code>n</code> 为奇数，其中每个节点上的值从 <code>1</code> 到 <code>n</code> 各不相同。</p>
+<p>游戏从「一号」玩家开始（「一号」玩家为红色，「二号」玩家为蓝色），最开始时，</p>
+<p>「一号」玩家从 <code>[1, n]</code> 中取一个值 <code>x</code>（<code>1 &lt;= x &lt;= n</code>）；</p>
+<p>「二号」玩家也从 <code>[1, n]</code> 中取一个值 <code>y</code>（<code>1 &lt;= y &lt;= n</code>）且 <code>y != x</code>。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/11/05/LeetCode-1145-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9D%80%E8%89%B2%E6%B8%B8%E6%88%8F/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -626,7 +677,7 @@
 
 
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/25/">25</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 </div>
@@ -638,7 +689,7 @@
 
 <div class="copyright">
   &copy; 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
